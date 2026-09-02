@@ -4,6 +4,27 @@ A runnable prototype demonstrating **AI-native billing orchestration** — the i
 
 This repository contains three independent examples, each using a different orchestration or observability framework, all sharing a common set of models, configuration, and validation logic.
 
+## Also in this repository: the public commercial-consistency auditor
+
+`src/promise_audit/` is a separate, self-contained prototype that asks the public half of
+the same question this repository asks internally: **does what a company promises its
+customers actually hold together?**
+
+Point it at a SaaS company's homepage and it finds the pricing page, discovers the docs,
+help articles, FAQs and terms that make commercial promises, extracts those promises as
+structured claims, and reports where the company's own pages disagree — each finding backed
+by two verbatim quotes and two links. No LLM, no database, no authentication; public pages
+only.
+
+```bash
+pip install requests beautifulsoup4 lxml
+PYTHONPATH=src python -m promise_audit.cli https://example.com --name "Example"
+```
+
+See [PROMISE_AUDIT.md](PROMISE_AUDIT.md) for full instructions, the ten-company batch
+experiment in `results/experiment/EXPERIMENT_REPORT.md`, and
+[RECOMMENDATION.md](RECOMMENDATION.md) for whether it is worth publishing.
+
 ## Architecture
 
 The core pattern in every example is the same:

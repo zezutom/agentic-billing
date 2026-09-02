@@ -109,6 +109,18 @@ the eligibility pass.
 
 ---
 
+## Results from the ten-company experiment
+
+* `results/experiment/EXPERIMENT_REPORT.md` — the full write-up: candidate pool, selection
+  method and seed, pages read per company, claims extracted, every finding with its
+  evidence and links, failures, and an honest assessment of false positives.
+* `results/experiment/<company>.json` — structured claims and findings per company.
+* `results/experiment/<company>.html` — the report a founder would receive.
+* `RECOMMENDATION.md` — whether this is worth publishing (short answer: not yet, and why).
+
+Headline: 119 public pages read across ten companies, 386 commercial claims extracted,
+8 findings — two of which a founder would act on, five correct but unsurprising, one wrong.
+
 ## How it works
 
 ```
@@ -133,6 +145,12 @@ Roughly 10–20 pages are read per company.
 
 * It reads public HTML. Promises inside images, videos, tooltips, PDFs or logged-in
   areas are invisible to it.
+* **Client-side rendering is the biggest gap.** A pricing page that ships an empty shell and
+  builds itself in the browser returns no readable text. The headless-Chromium fallback
+  exists for exactly this and runs automatically when a page comes back thin — but in the
+  sandbox the experiment ran in, the browser had no outbound network access, so one of the
+  ten companies (Umami) could not be analysed at all. Use `--no-render` to skip the attempt
+  where it cannot work; the run is much faster without it.
 * Absence-based findings (`condition_off_pricing`) can be wrong if the pricing page
   states the condition in a collapsed accordion the parser did not expand.
 * It does not know which of two conflicting statements is correct — only that they

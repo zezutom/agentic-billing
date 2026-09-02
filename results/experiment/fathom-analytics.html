@@ -1,13 +1,14 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Commercial consistency audit — Fathom Analytics</title><style>
+<title>Commercial consistency audit — Fathom Analytics</title>
+<style>
 :root{--ink:#12151c;--muted:#5d6675;--line:#e3e6ec;--bg:#fbfbfc;--card:#fff;
 --high:#c0392b;--high-bg:#fdf0ee;--med:#b06f13;--med-bg:#fdf6ea;--low:#4a6b8a;--low-bg:#eff4f8;
 --accent:#1a4fa0;}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);
 font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;}
-.wrap{max-width:840px;margin:0 auto;padding:56px 24px 96px;}
+.wrap{max-width:860px;margin:0 auto;padding:56px 24px 96px;}
 .eyebrow{font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
 font-weight:600;margin:0 0 12px;}
 h1{font-size:34px;line-height:1.22;margin:0 0 14px;letter-spacing:-.02em;font-weight:700;}
@@ -27,10 +28,11 @@ padding:4px 9px;border-radius:5px;}
 .chip.low{background:var(--low-bg);color:var(--low)}
 .chip.kind{background:#f1f2f5;color:var(--muted)}
 .chip.conf{background:transparent;color:var(--muted);border:1px solid var(--line);font-weight:600}
+.chip.ok{background:#eef7f0;color:#2f6b40}
 .f h3{font-size:18px;margin:0 0 10px;line-height:1.35;letter-spacing:-.01em}
 .f p{margin:0 0 14px;color:#2b3140}
 .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 0}
-@media(max-width:640px){.pair{grid-template-columns:1fr}}
+@media(max-width:660px){.pair{grid-template-columns:1fr}}
 .side{background:#f7f8fa;border:1px solid var(--line);border-radius:9px;padding:14px 15px;}
 .side .lab{font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);
 font-weight:700;margin-bottom:6px}
@@ -39,15 +41,16 @@ font-weight:700;margin-bottom:6px}
 font-size:13.5px;line-height:1.5;font-style:italic;}
 .side a{font-size:13px;color:var(--accent);text-decoration:none;word-break:break-all}
 .side a:hover{text-decoration:underline}
-.caveat{margin-top:15px;padding-top:13px;border-top:1px dashed var(--line);color:var(--muted);
+.note{margin-top:15px;padding-top:13px;border-top:1px dashed var(--line);color:var(--muted);
 font-size:13.5px;}
-.caveat b{color:#4a5262;font-weight:600}
+.note b{color:#4a5262;font-weight:600}
+.note div{margin:4px 0}
 table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
 th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
 th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 td a{color:var(--accent);text-decoration:none;word-break:break-all}
 .tag{display:inline-block;background:#f1f2f5;color:var(--muted);font-size:11.5px;
-padding:2px 7px;border-radius:4px}
+padding:2px 7px;border-radius:4px;margin-right:4px}
 .close{margin-top:56px;padding:28px 30px;background:#12151c;color:#f2f4f7;border-radius:12px}
 .close h2{color:#fff;margin:0 0 12px;font-size:22px;line-height:1.35}
 .close p{color:#c2c8d2;margin:0;font-size:15.5px}
@@ -56,109 +59,131 @@ font-size:14px;color:var(--muted)}
 .legend div{margin:5px 0}
 .legend b{color:var(--ink)}
 .none{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px}
+details{margin-top:10px}summary{cursor:pointer;color:var(--muted);font-size:14px}
 footer{margin-top:40px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:18px}
-</style></head><body>
-<div class="wrap">
+</style></head><body><div class="wrap">
 <p class="eyebrow">Commercial consistency audit</p>
-<h1>We found 2 commercial promises worth checking.</h1>
-<p class="sub">Everything below is taken word-for-word from
+<h1>We found 4 commercial promises worth checking.</h1>
+<p class="sub">Everything below is quoted word-for-word from
 <a href="https://usefathom.com/" style="color:inherit">usefathom.com</a>.
 Nothing here is inferred from anything private.</p>
-<p class="meta"><b>13</b> public pages read &middot;
-<b>28</b> commercial claims extracted &middot;
-<b>2 low</b> &middot; run 2026-09-02 07:43:08 UTC</p>
+<p class="meta"><b>10</b> public pages read &middot;
+<b>15</b> commercial promises extracted &middot;
+<b>25</b> quotes checked against their source page &middot;
+run 2026-09-02 07:57:21 UTC</p>
+
+<h2>What you appear to sell</h2>
+<div class="legend">Up to 500,000 pageviews — $45 /month, Larger pageview tiers (2M, 10M, 25M+) — priced by pageview band; largest tiers contact us</div>
 
 <h2>What we found</h2>
-<article class="f low">
+<article class="f high">
 <div class="chips">
-  <span class="chip low">low impact</span>
+  <span class="chip high">high impact</span>
+  <span class="chip kind">Likely contradiction</span>
+  <span class="chip conf">high confidence</span>
+  <span class="chip ok">evidence verified</span>
+</div>
+<h3>Your pricing page promises you will never switch analytics off for going over; your terms reserve the right to suspend the account</h3>
+<p>The FAQ on your pricing page is written to remove exactly this worry: you will never turn someone&#x27;s analytics off over a traffic spike, and if they go over two months running you simply offer an upgrade, which they can take or leave with no hard feelings. Your terms and conditions describe a different process. There, a customer who does not upgrade within seven days of being asked can have their account suspended, and an account left suspended for two months can be deleted — with no refund. The terms also add a trigger the FAQ never mentions: significantly exceeding the limit inside the first month, judged at your sole discretion. For a company whose whole brand is candour about pricing, this is the one page where the reassurance does not hold.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">Analytics are never switched off for going over; the customer chooses whether to upgrade or leave</div>
+<blockquote>&ldquo;We&#x27;ll never turn your analytics off for occasional traffic spikes or if a payment fails the first time&rdquo;</blockquote>
+<a href="https://usefathom.com/pricing" target="_blank" rel="noopener">https://usefathom.com/pricing</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">Failing to upgrade within seven days can lead to suspension, and continued suspension to deletion, with no refund</div>
+<blockquote>&ldquo;In the event you fail to upgrade your account within seven days of our request, we reserve the right to suspend your account and restrict your use of our Services anytime after the seventh day following our notice to you.&rdquo;</blockquote>
+<a href="https://usefathom.com/legal/terms" target="_blank" rel="noopener">https://usefathom.com/legal/terms</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> &quot;We&#x27;ll never turn your analytics off&quot; and &quot;we reserve the right to suspend your account and restrict your use of our Services&quot; describe opposite outcomes for the same customer in the same situation.</div><div><b>What would make this a non-issue:</b> The terms describe a right you may never exercise, and the FAQ describes what you actually do in practice. Most companies have this gap; it is more visible here because the FAQ makes such a specific promise. Softening &quot;never&quot; to &quot;we won&#x27;t&quot; and mentioning the first-month trigger would close it.</div></div>
+</article><article class="f high">
+<div class="chips">
+  <span class="chip high">high impact</span>
   <span class="chip kind">Missing information</span>
   <span class="chip conf">high confidence</span>
+  <span class="chip ok">evidence verified</span>
 </div>
-<h3>A commercial condition — a no-refund policy — appears only away from your pricing page</h3>
-<p>Fathom Analytics Terms and Conditions sets out a no-refund policy, but nothing equivalent appears on your pricing page. Conditions that change what a customer actually pays or receives belong where the buying decision is made; discovering them later is where churn and chargebacks start.</p>
-<div class="pair"><div class="side"><div class="lab">What your pricing says</div>
-<div class="claim">Pricing page: condition not stated</div>
-<blockquote>&ldquo;(no equivalent statement found on the pricing page)&rdquo;</blockquote>
-<a href="https://usefathom.com/pricing" target="_blank" rel="noopener">Pricing page</a></div><div class="side"><div class="lab">What another page says</div>
-<div class="claim">Fathom Analytics Terms and Conditions: a no-refund policy</div>
-<blockquote>&ldquo;All Fees paid by you to us are non-refundable, except if required by law.&rdquo;</blockquote>
-<a href="https://usefathom.com/legal/terms" target="_blank" rel="noopener">Fathom Analytics Terms and Conditions</a></div></div>
-<div class="caveat"><b>Worth knowing:</b> This is standard legal wording in the right place; the question is only whether the pricing page sets the same expectation. Detected by absence, so a condition stated in an image, a tooltip or a collapsed accordion on the pricing page would be missed.</div>
+<h3>&quot;Full API access&quot; is on the pricing page; the $19–$399 a month you may need to pay for it is not</h3>
+<p>Your pricing page lists &quot;Full API access with 600 requests per hour included&quot; as a plan feature, in a list whose other entries end with reassurances like &quot;No extra fees&quot;. A separate page reveals that 600 requests an hour is Tier 1 of a six-tier paid ladder, and that going beyond it costs $19, $39, $79, $199 or $399 a month. The top tier is nearly nine times the price of the $45 plan it sits on top of. Anyone sizing a real integration — the person most likely to care about the API at all — will build their business case from the pricing page and find the ladder only after they hit a 429.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">The plan includes full API access with 600 requests per hour</div>
+<blockquote>&ldquo;Full API access with 600 requests per hour included.&rdquo;</blockquote>
+<a href="https://usefathom.com/pricing" target="_blank" rel="noopener">https://usefathom.com/pricing</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">API throughput above the included allowance is a paid upgrade costing up to $399 a month</div>
+<blockquote>&ldquo;Tier 6 | $399/mo | 16,000 | 25&rdquo;</blockquote>
+<a href="https://usefathom.com/api/v1/rate-limits" target="_blank" rel="noopener">https://usefathom.com/api/v1/rate-limits</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> The pricing page names no price for API capacity at all, while the other page prices it in six steps up to $399 a month, so a reader of the pricing page cannot arrive at the real cost of the product they are buying.</div><div><b>What would make this a non-issue:</b> 600 requests an hour is generous for dashboard-style use, and most customers will never leave Tier 1. The issue is that the word &quot;Full&quot; is doing a lot of work in a list that otherwise advertises the absence of extra fees.</div></div>
+</article><article class="f medium">
+<div class="chips">
+  <span class="chip medium">medium impact</span>
+  <span class="chip kind">Ambiguity</span>
+  <span class="chip conf">medium confidence</span>
+  <span class="chip ok">evidence verified</span>
+</div>
+<h3>Event tracking is advertised with &quot;no extra fees&quot;, but events are counted as pageviews, which is what your price is based on</h3>
+<p>Your feature list says conversions, revenue and custom events are tracked on every plan with no extra fees. An FAQ answer much further down the same page confirms that custom events and API requests are counted as if they were pageviews. Since the plan price is set entirely by monthly pageviews, heavy event tracking does raise the bill — it moves the customer into a higher band, and by the terms it can eventually force an upgrade. Both statements are true; read in sequence they land as a contradiction.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">Event and ecommerce tracking is included on every plan with no extra fees</div>
+<blockquote>&ldquo;Track conversions, revenue, and custom events on every plan. No extra fees.&rdquo;</blockquote>
+<a href="https://usefathom.com/pricing" target="_blank" rel="noopener">https://usefathom.com/pricing</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">Custom events and API requests consume the pageview allowance that sets the price</div>
+<blockquote>&ldquo;those requests will be counted as if they were pageviews&rdquo;</blockquote>
+<a href="https://usefathom.com/pricing" target="_blank" rel="noopener">https://usefathom.com/pricing</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> &quot;No extra fees&quot; and &quot;counted as if they were pageviews&quot; have different consequences for the invoice, because pageviews are the only thing your price depends on.</div><div><b>What would make this a non-issue:</b> &quot;No extra fees&quot; is fair if it means there is no separate line item for events, which is true. The two statements are roughly two thousand words apart on the page, so few readers will see both — which is also why it is worth a sentence next to the feature.</div></div>
 </article><article class="f low">
 <div class="chips">
   <span class="chip low">low impact</span>
-  <span class="chip kind">Missing information</span>
-  <span class="chip conf">high confidence</span>
+  <span class="chip kind">Ambiguity</span>
+  <span class="chip conf">medium confidence</span>
+  <span class="chip ok">evidence verified</span>
 </div>
-<h3>A commercial condition — automatic renewal — appears only away from your pricing page</h3>
-<p>Fathom Analytics Terms and Conditions sets out automatic renewal, but nothing equivalent appears on your pricing page. Conditions that change what a customer actually pays or receives belong where the buying decision is made; discovering them later is where churn and chargebacks start.</p>
-<div class="pair"><div class="side"><div class="lab">What your pricing says</div>
-<div class="claim">Pricing page: condition not stated</div>
-<blockquote>&ldquo;(no equivalent statement found on the pricing page)&rdquo;</blockquote>
-<a href="https://usefathom.com/pricing" target="_blank" rel="noopener">Pricing page</a></div><div class="side"><div class="lab">What another page says</div>
-<div class="claim">Fathom Analytics Terms and Conditions: automatic renewal</div>
-<blockquote>&ldquo;At the end of each Billing Cycle, your Subscription will automatically renew unless you or we cancel it pursuant to these Terms.&rdquo;</blockquote>
-<a href="https://usefathom.com/legal/terms" target="_blank" rel="noopener">Fathom Analytics Terms and Conditions</a></div></div>
-<div class="caveat"><b>Worth knowing:</b> This is standard legal wording in the right place; the question is only whether the pricing page sets the same expectation. Detected by absence, so a condition stated in an image, a tooltip or a collapsed accordion on the pricing page would be missed.</div>
+<h3>You state you have never given a discount, while your help centre carries an article called &quot;Discount codes&quot;</h3>
+<p>Your pricing FAQ is emphatic: never any sales or discounts, not even Black Friday, because everyone pays exactly the same price. That claim is part of your positioning. Every documentation page we read carries a help-centre link titled &quot;Discount codes&quot;. If discount codes exist for partners, non-profits or migrations, then &quot;everyone pays the exact same price&quot; needs a qualifier; if they do not, the article title is misleading.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">There have never been and will never be discounts; everyone pays the same price</div>
+<blockquote>&ldquo;We&#x27;ve never done discounts, nor will we ever.&rdquo;</blockquote>
+<a href="https://usefathom.com/pricing" target="_blank" rel="noopener">https://usefathom.com/pricing</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">The help centre documents discount codes</div>
+<blockquote>&ldquo;Discount codes&rdquo;</blockquote>
+<a href="https://usefathom.com/docs/integrations" target="_blank" rel="noopener">https://usefathom.com/docs/integrations</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> A help article dedicated to discount codes implies a mechanism for paying less than list price, which is what the pricing FAQ says does not exist.</div><div><b>What would make this a non-issue:</b> This is the weakest item here and we want to be straight about why: we only saw the article&#x27;s title in a navigation sidebar, not its contents. The article may explain that Fathom does not issue discount codes, or cover codes from a bundle or acquisition. Thirty seconds of checking settles it.</div></div>
 </article>
 
-<h2>How to read these</h2><div class="legend"><div><b>Missing information</b> — Something that changes the deal, published somewhere the buyer will not look.</div></div>
+<h2>How to read these</h2><div class="legend"><div><b>Likely contradiction</b> — Two public statements that cannot both be true.</div><div><b>Ambiguity</b> — Both statements can be true, but a customer cannot tell what they get.</div><div><b>Missing information</b> — Something that changes the deal, published somewhere the buyer will not look.</div></div>
 
 <h2>Pages we read</h2>
-<table><thead><tr><th>Page</th><th>Claims</th><th>Status</th></tr></thead>
+<table><thead><tr><th>Page</th><th>Words</th><th>Status</th></tr></thead>
 <tbody><tr><td><a href="https://usefathom.com/pricing" target="_blank" rel="noopener">
-Simple and sustainable pricing</a><br><span class="tag">Pricing</span>
-</td>
-<td>8</td><td>read</td></tr><tr><td><a href="https://app.usefathom.com/register" target="_blank" rel="noopener">
-https://app.usefathom.com/register</a><br><span class="tag">Trial / signup</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://app.usefathom.com/register?plan=price_1OMiuQJpbH9soFseaah1xMDb" target="_blank" rel="noopener">
-https://app.usefathom.com/register?plan=price_1OMiuQJpbH9soFseaah1xMDb</a><br><span class="tag">Trial / signup</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://usefathom.com/api/v1/rate-limits" target="_blank" rel="noopener">
-Rate limits and concurrency</a><br><span class="tag">Usage limits</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://usefathom.com/docs/integrations" target="_blank" rel="noopener">
-Integrations</a><br><span class="tag">Add-ons</span>
-</td>
-<td>2</td><td>read</td></tr><tr><td><a href="https://usefathom.com/docs" target="_blank" rel="noopener">
-Help Centre</a><br><span class="tag">Documentation</span>
-</td>
-<td>1</td><td>read</td></tr><tr><td><a href="https://usefathom.com/api/v1" target="_blank" rel="noopener">
-Fathom Analytics API</a><br><span class="tag">Documentation</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://usefathom.com/api/llms.txt" target="_blank" rel="noopener">
-https://usefathom.com/api/llms.txt</a><br><span class="tag">Documentation</span>
-</td>
-<td>&mdash;</td><td>failed &mdash; skipped: content-type text/plain; charset=utf-8</td></tr><tr><td><a href="https://usefathom.com/docs/integrations/wordpress" target="_blank" rel="noopener">
-WordPress</a><br><span class="tag">Add-ons</span>
-</td>
-<td>3</td><td>read</td></tr><tr><td><a href="https://usefathom.com/legal/compliance" target="_blank" rel="noopener">
-Privacy law compliance</a><br><span class="tag">Terms</span>
-</td>
-<td>2</td><td>read</td></tr><tr><td><a href="https://usefathom.com/legal/terms" target="_blank" rel="noopener">
-Fathom Analytics Terms and Conditions</a><br><span class="tag">Terms</span>
-</td>
-<td>6</td><td>read</td></tr><tr><td><a href="https://usefathom.com/faq" target="_blank" rel="noopener">
-https://usefathom.com/faq</a><br><span class="tag">FAQ</span>
-</td>
-<td>&mdash;</td><td>failed &mdash; HTTP 404</td></tr><tr><td><a href="https://usefathom.com/help" target="_blank" rel="noopener">
-https://usefathom.com/help</a><br><span class="tag">Help centre</span>
-</td>
-<td>&mdash;</td><td>failed &mdash; HTTP 404</td></tr><tr><td><a href="https://usefathom.com/docs/integrations/discourse" target="_blank" rel="noopener">
-Discourse</a><br><span class="tag">Add-ons</span>
-</td>
-<td>2</td><td>read</td></tr><tr><td><a href="https://usefathom.com/docs/integrations/convertkit" target="_blank" rel="noopener">
-Kit</a><br><span class="tag">Add-ons</span>
-</td>
-<td>2</td><td>read</td></tr><tr><td><a href="https://usefathom.com/docs/integrations/webflow" target="_blank" rel="noopener">
-Webflow</a><br><span class="tag">Add-ons</span>
-</td>
-<td>2</td><td>read</td></tr></tbody></table>
+Simple and sustainable pricing - Fathom Analytics</a><br><span class="tag">Pricing page</span></td><td>940</td>
+<td>read</td></tr><tr><td><a href="https://app.usefathom.com/register" target="_blank" rel="noopener">
+Fathom Analytics</a><br><span class="tag">Trial / signup</span><span class="tag">too little text to read</span></td><td>0</td>
+<td>read</td></tr><tr><td><a href="https://app.usefathom.com/register?plan=price_1OMiuQJpbH9soFseaah1xMDb" target="_blank" rel="noopener">
+Fathom Analytics</a><br><span class="tag">Trial / signup</span><span class="tag">too little text to read</span></td><td>0</td>
+<td>read</td></tr><tr><td><a href="https://usefathom.com/api/v1/rate-limits" target="_blank" rel="noopener">
+Rate limits and concurrency · Fathom Analytics API</a><br><span class="tag">Usage limits / quotas</span></td><td>176</td>
+<td>read</td></tr><tr><td><a href="https://usefathom.com/docs/integrations" target="_blank" rel="noopener">
+Integrations - Fathom Analytics</a><br><span class="tag">Add-ons &amp; integrations</span></td><td>540</td>
+<td>read</td></tr><tr><td><a href="https://usefathom.com/docs" target="_blank" rel="noopener">
+Get help with Fathom Analytics</a><br><span class="tag">Product documentation</span></td><td>298</td>
+<td>read</td></tr><tr><td><a href="https://usefathom.com/api/v1" target="_blank" rel="noopener">
+Fathom Analytics API</a><br><span class="tag">Product documentation</span><span class="tag">too little text to read</span></td><td>108</td>
+<td>read</td></tr><tr><td><a href="https://usefathom.com/docs/integrations/wordpress" target="_blank" rel="noopener">
+WordPress - Fathom Analytics</a><br><span class="tag">Add-ons &amp; integrations</span></td><td>1399</td>
+<td>read</td></tr><tr><td><a href="https://usefathom.com/legal/compliance" target="_blank" rel="noopener">
+Privacy law compliance - Fathom Analytics</a><br><span class="tag">Terms / legal</span></td><td>1292</td>
+<td>read</td></tr><tr><td><a href="https://usefathom.com/legal/terms" target="_blank" rel="noopener">
+Fathom Analytics Terms and Conditions</a><br><span class="tag">Terms / legal</span></td><td>2199</td>
+<td>read</td></tr><tr><td><a href="https://usefathom.com/docs/integrations/discourse" target="_blank" rel="noopener">
+Discourse - Fathom Analytics</a><br><span class="tag">Add-ons &amp; integrations</span></td><td>838</td>
+<td>read</td></tr><tr><td><a href="https://usefathom.com/docs/integrations/convertkit" target="_blank" rel="noopener">
+Kit - Fathom Analytics</a><br><span class="tag">Add-ons &amp; integrations</span></td><td>562</td>
+<td>read</td></tr><tr><td><a href="https://usefathom.com/docs/integrations/webflow" target="_blank" rel="noopener">
+Webflow - Fathom Analytics</a><br><span class="tag">Add-ons &amp; integrations</span></td><td>553</td>
+<td>read</td></tr><tr><td>https://usefathom.com/api/llms.txt<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>skipped: content-type text/plain; charset=utf-8</td></tr><tr><td>https://usefathom.com/faq<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>HTTP 404</td></tr><tr><td>https://usefathom.com/help<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>HTTP 404</td></tr></tbody></table>
 
 <div class="close"><h2>These are the promises your customers can see. Do your billing system and product deliver the same thing?</h2><p>This audit only reads what is published on your website. It cannot see what your billing system actually meters, what your product actually enforces, or what your customer records actually entitle people to. In most companies those three answers have drifted apart quietly, and the public pages are the only place the drift is visible from outside. If the contradictions above are news to you, the more expensive question is what else is out of step behind them.</p></div>
-<footer>Automated read of public pages only. Every finding is shown with the quote it came from
-so you can check it yourself in a minute. No login, no billing data, no customer records were
-involved.</footer>
+<footer>Automated read of public pages only, then checked: every quote above was located in
+the page it is attributed to, and
+0 candidate finding(s) were discarded because their evidence
+could not be verified. No login, no billing data and no customer records were involved.</footer>
 </div></body></html>

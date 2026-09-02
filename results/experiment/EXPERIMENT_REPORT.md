@@ -2,155 +2,192 @@
 
 ### A ten-company experiment with the commercial-consistency auditor
 
-Run 2026-09-02 07:43:30 UTC · random seed `20260902` · candidate pool 36 · eligible 35 · analysed 10
+Harvested 2026-09-02 07:57:41 UTC · analysed 2026-09-02 08:10:40 UTC · analyst backend `agent` · random seed `20260902` · candidate pool 36 · eligible 35 · analysed 10
 
 ## The short version
 
-Ten smaller SaaS companies, drawn at random from a frozen pool of 36, analysed with an
-identical pipeline. **119 public pages read, 386 commercial claims extracted, 8 findings.**
+Ten smaller SaaS companies, drawn at random from a frozen pool of 36. Nine could be read.
+**111 public pages fetched, 90 of them readable, 140 commercial promises extracted,
+19 findings, and 208 quotes verified against the pages they were taken from.**
 
-Reading all eight by hand, one is wrong, five are correct but not news to the company, and
-**two are the kind of thing a founder would want to know**:
+Eight of the nine readable companies had at least one thing worth checking. The strongest
+five:
 
-* **Cronitor** advertises “Unlimited API requests” on its pricing page, while its API
-  documentation says “The API has rate limits to ensure fair usage.” Both statements are
-  defensible; together they are the exact ambiguity that produces an angry support ticket.
-* **Knock** publishes two different API rate limits on two of its own documentation pages —
-  60 requests/second on one, 200 requests/second on the other. Nobody is lying; one page is
-  simply stale, and only a machine reading both at once would notice.
+* **Unkey** documents a free plan that keeps logs for 7 days and audit logs for 30 days.
+  Its pricing page gives the $5 Starter plan 3 days and 7 days. Paying moves you backwards
+  on both, and you have to reach the $50 plan before audit retention matches what free
+  already gave you.
+* **Fathom** promises on its pricing page that it will *never* switch your analytics off
+  for going over. Its terms let it suspend the account seven days after an upgrade request,
+  and delete it two months later, with no refund.
+* **Fathom** again: "Full API access with 600 requests per hour included" sits in a feature
+  list whose neighbours advertise "No extra fees". A separate page prices the next five
+  rungs of API throughput at $19, $39, $79, $199 and $399 a month — the top rung nearly
+  nine times the price of the plan it sits on.
+* **ScreenshotOne** answers "what happens when I exceed my plan?" three different ways on
+  three pages: pay $0.009 per extra, or be billed automatically *if extra charging is
+  enabled*, or be throttled or suspended.
+* **Bento** builds its whole pricing argument on Active Users, explicitly so that dormant
+  contacts do not inflate the bill. Its documentation FAQ says it charges on the number of
+  subscribers, defined as every unique email address in the account.
 
-That is the honest result: **the tool works, finds real things, and finds them rarely.**
+None of these is a gotcha. Every one is two real sentences that a customer could read in
+either order, quoted verbatim, with both links in the report.
 
 ## Does a recurring public commercial-consistency problem exist?
 
-On this evidence, **yes, but it is smaller and duller than the pitch implies** — at least
-among careful, founder-led companies.
+**Yes, and it is more common than we expected — but it is a drift problem, not a dishonesty
+problem.**
 
-Five of ten companies had something worth a second look — Cronitor, Fathom, Knock, SavvyCal
-and ScreenshotOne. (The counts table below also reads "5 of 10", but by a different
-definition: it counts companies with a medium- or high-confidence finding, which includes
-Bento's false positive and excludes Knock's genuine one. The two fives are not the same
-five, which is itself a calibration problem.) The dominant pattern by far
-was not contradiction, it was **placement**: five of the eight findings are commercial
-conditions — no-refund policies, automatic renewal, overage charges, the right to change
-quotas — that appear only in the terms of service or a docs article, never on the page
-where the buying decision is made. ScreenshotOne's terms reserve the right to modify
-“pricing, features, usage limits, quotas, or plan structures at any time” while the pricing
-page says nothing of it; Fathom's fees are non-refundable and its subscriptions auto-renew,
-both stated only in the legal terms.
+Eight of nine readable companies had something. The pattern that recurs is not a company
+misleading anyone; it is a company whose pricing page and documentation were written at
+different times by different people and never reconciled. Unkey's free-plan table almost
+certainly predates a repackaging. Bento's FAQ answer is older copy from before the Active
+Users model. Fathom's terms were last updated in 2021 and its FAQ is current marketing.
 
-That is a real and repeatable observation, and it is not what the hook promises. The hook
-promises contradiction. What the data shows is mostly **disclosure drift**.
+Three shapes came up more than once:
 
-The categories the brief hoped for — a feature assigned to different plans on different
-pages, mismatched trial lengths, prices that do not reconcile, old plan names still in the
-help centre — **did not appear once across ten companies**. The rules for all of them are
-implemented and all of them fire correctly on the test fixture. They simply did not trigger
-in the wild on this sample. Small, careful SaaS companies with three pricing tiers and a
-tidy docs site turn out to be reasonably consistent.
+1. **The pricing page and the docs disagree about a number** (Unkey's retention, Bento's
+   billing metric, Baserow's payment methods). Four findings.
+2. **"Unlimited" or "full" meets a documented limit** (Cronitor, Knock, Fathom's API).
+   Four findings. Never technically false, always the thing a developer wants to know.
+3. **A commercial condition lives only in the terms or a docs page** (Fathom's suspension
+   rights, ScreenshotOne's right to change quotas, Baserow's API concurrency, Knock's
+   Enterprise guides default). Six findings.
+
+The third group is the one to be careful with. Some of it is genuinely load-bearing —
+ScreenshotOne reserving the right to change *usage limits and quotas*, not just prices, is
+a real term about what you receive. Some of it is ordinary boilerplate we rated low on
+purpose.
 
 ## Is it telling companies anything they did not already know?
 
-Split roughly in half.
+For roughly half of the findings, yes, and we can say which half.
 
-* **New information:** Knock's two contradictory rate limits, and Cronitor's unlimited-vs-fair-use
-  gap. Neither is visible unless you read two pages side by side, which nobody at the
-  company does.
-* **Not new:** the auto-renewal and no-refund findings. Every founder knows those clauses
-  are in their terms. The tool is telling them where the clauses live, not that they exist.
-  Framed as “a contradiction we found”, this reads as padding. Framed as “your buyer never
-  sees this”, it is a fair point — but it is a content-strategy observation, not a discovery.
+Nobody at Unkey has sat down with the docs table and the pricing table side by side; if
+they had, the retention inversion would already be fixed. The same goes for Knock's
+Enterprise guides default, ScreenshotOne's three answers, and Bento's billing metric. These
+are all invisible from inside the company because no single person reads both pages in one
+sitting — which is exactly the job worth automating.
 
-## Likely false positives
+The other half — auto-renewal clauses, price-change rights, refund wording — every founder
+knows those are in their terms. Reported as "a contradiction we found", that is padding.
+Reported as "your buyer never sees this", it is a fair point about placement, and we rated
+those findings low or medium accordingly rather than dressing them up.
 
-**One of eight (12.5%).** Bento is flagged because its pricing page promises “unlimited
-marketing sends” and its terms page contains a fair-use sentence — but that sentence is a
-*glossary definition* of what an Acceptable Use Policy is, not a restriction Bento applies
-to its own sends. The rule matched the right words in the wrong role.
+## Likely false positives, honestly
 
-Earlier iterations were far worse, and how they were fixed matters for judging the number:
+**No finding in this run cites evidence that does not exist.** All 208 quotes were located
+character-by-character in the harvested page, and no finding was discarded at verification.
+That number needs a caveat, which we come back to below.
 
-* An API reference saying “defaults to 50 users per page” was read as a seat allowance.
-  Reference and tutorial pages are now excluded from quantity limits (rate limits still count).
-* “429 Too Many Requests” was read as a quota of 429. HTTP status codes are now excluded.
-* “Shopware 6 with custom events” was read as an allowance of 6 events. Bare numbers now
-  need an allowance cue, a pricing-card bullet, or a comparison-table cell.
-* “Inbox coverage” matched the word *overage*. Word boundaries were added.
-* A code sample line numbered `8` became “8 credits”. `<pre>` blocks are now discarded.
-* Baserow's “$10/user/month billed yearly, $12 billed monthly” was read as annual costing
-  more than monthly, because the billing label was matched anywhere in the card rather than
-  next to the price it belongs to.
+The real risk with this design is not fabricated evidence. It is **over-reading**: two real
+sentences, correctly quoted, that anyone at the company would reconcile in a second. Our own
+assessment of the 19:
 
-Every one of those was found by reading the output, not by a test. **The realistic false
-positive rate on an unseen company is higher than 12.5%** — probably 20–30% — because each
-fix above was written after seeing the specific failure. A different ten companies would
-surface a different set.
+* **Nine we would defend to a founder without hedging** — Unkey ×2, Fathom ×2, ScreenshotOne
+  (overage), Bento (billing metric), Knock (Enterprise guides), Cronitor ×2.
+* **Seven that are real but modest** — placement problems, boilerplate in the right place,
+  things a founder will say "yes, we know" to.
+* **Three we would expect an informed reader to push back on**: Fathom's discount-codes item
+  (we saw only a navigation link, and said so in the finding), SavvyCal's price-change clause
+  (ordinary boilerplate), and Bento's "no feature gating" item (where "tier" almost certainly
+  means volume tier, which we flagged in the caveat).
+
+Call it **three soft findings in nineteen, about 16%**, with none of them fabricated and all
+three carrying a caveat that says what would make them wrong. That is a different and better
+failure mode than the alternative, but it is not zero.
+
+Two things would have been false positives and were deliberately not reported, which is
+worth as much as the findings themselves:
+
+* Knock publishes an endpoint rate-limit tier table on two documentation pages. Read
+  mechanically, "60 requests / second" on one page and "200 requests / second" on another
+  looks like a contradiction. It is one table of endpoint scales reproduced twice.
+* Checkly, Baserow and Unkey all render their comparison tables as styled divs. Flattened to
+  text, a monthly/annual toggle or a mis-aligned column produces convincing nonsense. We
+  reported a retention finding for Unkey only after cross-checking the column against the
+  plan cards — the same column that gives Starter 3 days also gives it 1 vCPU, 2 GB, 1 custom
+  domain and $5 of credits, all matching the Starter card — and we said so in the caveat.
 
 ## What actually limits the tool
 
-**Client-side rendering, by a wide margin.** Umami's pricing page returns *zero* words of
-readable text to an HTTP fetch, so Umami could not be analysed at all — 3 pages, 0 claims,
-0 findings. SavvyCal's help and developer sites return 50–115 words per page, so its
-analysis is shallow (8 claims from 13 pages). Sixteen of 119 pages read came back
-effectively empty.
+**Client-side rendering, by a wide margin.** Umami returned *zero* readable words from all
+three pages we reached, including the pricing page, so it could not be analysed at all. That
+is a miss, not a clean result, and we have counted it as one. SavvyCal's comparison table
+rendered as feature names with no values and its FAQ as an empty heading, so its report is
+visibly thinner than the rest. Twenty-one of the 111 pages we fetched came back effectively empty, and a further 29 could
+not be fetched at all. The
+headless-browser fallback is implemented and Chromium launches, but the browser had no
+outbound network access in the sandbox this ran in, so it could never be exercised.
 
-The headless-browser fallback is implemented and Chromium launches correctly, but the
-browser has no outbound network access in the sandbox this experiment ran in, so it could
-not be exercised. On an ordinary machine it would run. This is the single highest-value fix:
-roughly one company in ten is currently invisible, and the affected pages are precisely the
-modern, JS-heavy pricing pages most likely to have drifted.
+**Flattened tables.** Every comparison grid on these sites is divs, not `<table>`. An early
+version of the harvester de-duplicated repeated text lines, which silently destroyed those
+grids — "1", "2" and "Unlimited" repeat down a column and were being dropped. Unkey's
+retention finding, the best in the run, was invisible until that was fixed. There are almost
+certainly equivalent findings we are still missing at the other companies.
 
-**Second: 29 page fetches failed**, almost all conventional-path guesses (`/faq`, `/help`,
-`/docs`) that do not exist on that particular site. They cost nothing but noise in the logs,
-and the reserve-list backfill already replaces them.
+**Discovery spends its budget in the wrong place.** For Checkly, the crawler returned twelve
+pages of which eleven were product documentation and integration guides that make no
+commercial claims at all; it never found a billing or usage-limits article. Checkly's zero is
+partly a real result — their pricing page is the best of the ten, publishing overage rates
+and retention inline — and partly an artefact of having had almost nothing to compare it to.
 
-**Third: findings cluster on the terms of service** because that is where conditions live
-and it is the easiest page to parse. The tool is partly measuring which pages are easy to
-read, not only which pages disagree.
+**The honest caveat about the verification numbers.** Zero rejections out of 208 quotes is
+not evidence that the model does not fabricate. In this run the analyst and the verifier were
+the same model in the same session, and quotes were checked as they were written. The
+verifier was tested adversarially instead: fabricated quotes, paraphrased quotes, quotes
+split from one passage, missing schema fields and invalid severities are all rejected, and a
+real quote attributed to the wrong page is corrected rather than dropped. An unattended API
+run would produce a non-zero rejection rate, and that number is the one worth reporting next
+time.
+
+**Two conflicts of interest we cannot design away here.** The analyst had already seen these
+same ten companies during an earlier rule-based version of this tool, so this was not a blind
+read. And the assessment above — which findings are strong, which are soft — is the analyst
+grading its own work. Both need an independent reviewer before any of this is published.
 
 ## Would a SaaS founder try this?
 
-**Try it, yes. Pay for it, not yet.**
+**Yes, and on this evidence they would get something worth their time.**
 
-The offer costs a founder one URL and thirty seconds, and returns a page with their own
-words quoted back at them and a link to check each one. That is a good trade, and the two
-strong findings above are the kind of thing that gets forwarded to a colleague.
+The offer costs one URL. Eight of nine readable companies got back at least one finding, and
+five got something a founder would forward to whoever owns the docs. The report quotes their
+own words, links both pages, and says in one line what would make each finding wrong — so the
+whole thing is checkable in about two minutes, which is the only standard that matters for a
+cold audit of someone else's website.
 
-But on this sample the median outcome is **one or two low-severity notes about the terms of
-service**. Two of ten companies produced a finding worth acting on. As a lead magnet that is
-thin — a prospect who gets “your terms mention auto-renewal and your pricing page doesn't”
-will not book a call.
+The weakest outcome in the set is instructive. Checkly got zero findings and a paragraph
+explaining that their pricing page publishes more than most companies disclose anywhere. That
+is a perfectly good thing to receive, and it is not an embarrassing result for the tool.
 
-The uncomfortable part is that this is the *good* version of the result. The pool was
-deliberately smaller, independent companies — exactly the ones most likely to have drifted,
-and they mostly had not. A pool of mid-market companies with six tiers, add-ons, legacy
-plans and a five-year-old help centre would almost certainly score worse, and would be the
-better audience.
+What would make us cautious about promising a hit rate: this sample was small, independent,
+mostly developer-tool companies with three or four tiers. That is the easy case. It is also
+not the case with the most money in it.
 
 ## What to improve before publishing
 
-1. **Make JavaScript rendering actually work end to end.** One company in ten is currently
-   unreadable, and they are the ones most worth reading.
-2. **Reach the help centre properly.** The strongest findings came from docs and help
-   articles; the weakest came from terms pages. Discovery should spend its page budget on
-   billing, limits and plan-change articles instead of installation guides and SDK pages.
-3. **Separate the two products.** “We found a contradiction” and “this condition is not on
-   your pricing page” are different claims with different value. Lead with contradictions;
-   demote disclosure gaps to a secondary list so five terms-of-service notes cannot masquerade
-   as five contradictions.
-4. **Fix the confidence calibration.** The best finding in the whole run — Knock's two
-   contradictory rate limits — is labelled *low confidence*, because neither statement names
-   a plan. The rule penalises unscoped claims, which is right for allowances and wrong for
-   a rate limit that applies to everyone. Confidence should reflect how sure we are that the
-   two statements conflict, not how much plan metadata we managed to attach.
-5. **Add a role check to the fair-use rule.** The one false positive would have been caught
-   by asking whether the matched sentence *applies* a restriction or merely *defines* one.
-6. **Test the sales-led case.** Every rule assumes published prices. Companies with
-   “contact us” tiers are where promise-versus-delivery drift is worst and where this tool
-   currently says least.
-7. **Widen the sample before making any claim in public.** Ten companies and eight findings
-   cannot support a headline like “most SaaS companies contradict themselves”. On this
-   evidence, most of them do not.
+1. **Make JavaScript rendering work end to end.** One company in ten was invisible and
+   another was read at a quarter depth. These are the modern, JS-heavy pricing pages most
+   likely to have drifted, so the tool is currently blindest exactly where it should be
+   sharpest.
+2. **Parse comparison grids properly instead of flattening them.** Every one of these sites
+   builds its plan table from divs. Reconstructing the column structure — rather than
+   inferring it and cross-checking against the plan cards by hand, as we did for Unkey —
+   would turn the single richest source of per-plan promises from a hazard into an asset.
+3. **Spend the page budget on billing and limits content.** Discovery gave Checkly eleven
+   documentation pages that make no commercial claims. Prefer billing, quota, plan-change and
+   FAQ articles over SDK references and installation guides.
+4. **Run it unattended through the API backend and report the rejection rate.** The verifier
+   is the reason to trust this design and it has not yet been tested where it matters, with
+   an analyst that has not been double-checking its own quotes as it writes them.
+5. **Separate the two products in the output.** "Your pricing page and your docs disagree"
+   and "this condition is not where your buyer will see it" are different claims with
+   different value. Lead with the first; keep the second as a secondary list so six placement
+   notes cannot read as six contradictions.
+6. **Get an independent reviewer before publishing any hit-rate claim.** The analyst wrote
+   the findings and then graded them, having already seen these companies once. Nothing in
+   the numbers above survives that objection on its own.
 
 ---
 
@@ -159,31 +196,34 @@ better audience.
 | Measure | Value |
 |---|---|
 | Companies analysed | 10 |
-| Companies with at least one finding | 6 of 10 |
-| Companies with at least one **medium or high confidence** finding | 5 of 10 |
-| Total findings | 8 |
-| Findings by severity | 0 high, 4 medium, 4 low |
-| Findings by confidence | 7 high, 0 medium, 1 low |
-| Public pages read | 119 |
-| Pages that could not be read | 29 |
-| Commercial claims extracted | 386 |
-| Pages that returned almost no readable text (client-rendered) | 16 of 119 |
-| Companies whose pricing page could not be read at all | 1 (Umami) |
+| Companies with at least one finding | 8 of 10 |
+| Companies with a medium- or high-confidence finding | 8 of 10 |
+| Total findings (after verification) | 19 |
+| Findings by severity | 5 high, 12 medium, 2 low |
+| Findings by confidence | 12 high, 7 medium, 0 low |
+| Commercial promises extracted | 140 |
+| Public pages fetched | 111 |
+| Pages with enough readable text to analyse | 90 |
+| Pages that returned almost no text (client-rendered) | 21 |
+| Pages that could not be fetched at all | 29 |
+| Companies whose pricing page could not be read | 1 (Umami) |
+
+**Verification** — every quote the analyst produced was checked against the page it was attributed to:
+
+| Check | Count |
+|---|---|
+| Quotes checked against their source page | 208 |
+| Quotes that could not be found anywhere in the harvest | 0 |
+| Quotes real but attributed to the wrong page (corrected) | 0 |
+| Candidate findings discarded as unverifiable | 0 |
 
 **Findings by type**
 
 | Type | Count | What it means |
 |---|---|---|
-| Missing information | 5 | Something that changes the deal, published somewhere the buyer will not look. |
-| Ambiguity | 3 | Both statements can be true, but a customer cannot tell what they get. |
-
-**Which rules fired**
-
-| Rule | Times fired | Companies |
-|---|---|---|
-| `condition_off_pricing` | 5 | Fathom Analytics, SavvyCal, ScreenshotOne |
-| `unlimited_vs_fair_use` | 2 | Bento, Cronitor |
-| `limit_conflict` | 1 | Knock |
+| Missing information | 8 | Something that changes the deal, published somewhere the buyer will not look. |
+| Ambiguity | 6 | Both statements can be true, but a customer cannot tell what they get. |
+| Likely contradiction | 5 | Two public statements that cannot both be true. |
 
 ---
 
@@ -191,435 +231,585 @@ better audience.
 
 ### Baserow
 
-https://baserow.io · no-code database · discovered via category sweep: open-source Airtable alternatives
+https://baserow.io · no-code database · found via category sweep: open-source Airtable alternatives
 
-Read **11** pages (0 needed a headless browser), extracted **59** claims, produced **0** findings in 3.9s.
+Read **7** usable pages of 11 fetched, extracted **20** commercial promises, produced **2** findings. 28 quotes verified, 0 candidate finding(s) discarded.
+
+**Plans found:** Free ($0); Premium ($10 per user/month billed yearly, $12 billed monthly); Advanced ($18 per user/month billed yearly, $22 billed monthly); Enterprise (On request)
 
 <details><summary>Pages read</summary>
 
-| Page | Category | Claims | Status |
+| Page | Type | Words | Status |
 |---|---|---|---|
-| [Free forever. Pay as you grow.](https://baserow.io/pricing) | pricing | 52 | read |
-| [Things you probably wonder](https://baserow.io/faq) | faq | 3 | read |
-| [Create account](https://baserow.io/signup) | trial | 0 | read |
-| [Discover our wide range of integrations](https://baserow.io/product/integrations) | addons | 0 | read |
-| [Welcome back](https://baserow.io/subscriptions/new) | billing_docs | 0 | read |
-| [Table of contents](https://baserow.io/docs/index) | docs | 0 | read |
-| [General Terms and Conditions](https://baserow.io/terms-and-conditions) | terms | 0 | read |
-| [REST API](https://baserow.io/api-docs) | docs | 0 | read |
-| [Baserow user guide index](https://baserow.io/user-docs) | docs | 3 | read |
-| [https://baserow.io/help](https://baserow.io/help) | help | — | failed — HTTP 404 |
-| [https://baserow.io/terms](https://baserow.io/terms) | terms | — | failed — HTTP 404 |
-| [Introduction](https://baserow.io/docs/plugins%2Fintroduction) | docs | 0 | read |
-| [Install with Docker](https://baserow.io/docs/installation%2Finstall-with-docker) | docs | 1 | read |
+| [Pricing](https://baserow.io/pricing) | Pricing page | 623 | read |
+| [FAQ](https://baserow.io/faq) | FAQ | 1163 | read |
+| [Create account - Baserow](https://baserow.io/signup) | Trial / signup | 16 | too little text to read |
+| [Baserow](https://baserow.io/product/integrations) | Add-ons & integrations | 82 | too little text to read |
+| [Welcome back - Baserow](https://baserow.io/subscriptions/new) | Billing & subscription help | 16 | too little text to read |
+| [Table of contents](https://baserow.io/docs/index) | Product documentation | 1297 | read |
+| [General Terms and Conditions](https://baserow.io/terms-and-conditions) | Terms / legal | 3106 | read |
+| [REST API documentation - Baserow](https://baserow.io/api-docs) | Product documentation | 32 | too little text to read |
+| [Baserow table of contents](https://baserow.io/user-docs) | Product documentation | 1949 | read |
+| [Introduction](https://baserow.io/docs/plugins%2Fintroduction) | Product documentation | 524 | read |
+| [Install with Docker](https://baserow.io/docs/installation%2Finstall-with-docker) | Product documentation | 2836 | read |
+| https://baserow.io/help | — | — | HTTP 404 |
+| https://baserow.io/terms | — | — | HTTP 404 |
 
 </details>
 
-Claims extracted: 22 limit, 18 entitlement, 6 plan mention, 5 plan price, 3 condition, 2 unlimited, 2 addon, 1 trial.
+**1. Your pricing page offers Enterprise customers payment by invoice; your FAQ says you only accept credit cards**  
+`medium impact` · `Likely contradiction` · `high confidence`
 
-Inaccessible pages: https://baserow.io/help (HTTP 404); https://baserow.io/terms (HTTP 404).
+"Payment by invoice" is listed as a reason to choose Enterprise, and it appears again in the plan comparison table. Your FAQ answers the question of what payment methods are accepted with a flat statement that credit card is currently the only option. An enterprise buyer doing diligence — exactly the buyer who cannot put a five-figure annual contract on a corporate card — will read the FAQ and conclude that you cannot invoice them.
 
-**No findings.** Nothing on the pages read contradicted anything else with enough evidence to report.
+- **Claim A:** Enterprise customers can pay by invoice
+  - Evidence: “Payment by invoice”
+  - Source: [https://baserow.io/pricing](https://baserow.io/pricing)
+- **Claim B:** Credit card is the only payment method accepted
+  - Evidence: “Currently, you can pay only with a credit card. We plan to add more payment methods in the future.”
+  - Source: [https://baserow.io/faq](https://baserow.io/faq)
+- *Why this is not just wording: One page names invoicing as a purchasable Enterprise benefit and the other states that no payment method other than credit card exists; those are different facts, not different phrasings.*
+- *What would make this a non-issue: The FAQ answer is almost certainly about self-serve checkout, where credit card genuinely is the only route, and invoicing is arranged through sales. As written, though, neither page says so, and the FAQ is the page a buyer searches.*
+
+**2. Every paid plan is capped at the same 10 concurrent API requests, and your plan comparison never mentions it**  
+`medium impact` · `Missing information` · `medium confidence`
+
+Your pricing page sells usage that scales with price: rows go from 3,000 to 1,000,000 and automation credits from 2,000 to 2,000,000 across the tiers. API throughput does not scale at all. The FAQ discloses a flat ceiling of 10 concurrent requests for every Baserow Cloud plan, adds that it is subject to fair use, and reserves the right to lower it. For a product that markets itself as API-first, a customer sizing an integration against the Advanced tier has no way of learning from the pricing page that paying nine times more buys no additional API concurrency.
+
+- **Claim A:** Usage allowances scale by plan on the pricing page — Advanced buys 250,000 rows per workspace
+  - Evidence: “250,000 rows per workspace”
+  - Source: [https://baserow.io/pricing](https://baserow.io/pricing)
+- **Claim B:** API concurrency is fixed at 10 for every Cloud plan and may be reduced at Baserow's discretion
+  - Evidence: “In Baserow Cloud, there's a limit of 10 concurrent API requests. This limit is subject to a fair use policy, and we reserve the right to lower it if it affects overall performance.”
+  - Source: [https://baserow.io/faq](https://baserow.io/faq)
+- *Why this is not just wording: The plan comparison lists every other usage dimension by tier and omits this one entirely, so a reader cannot infer either the cap or the fact that it does not improve with price.*
+- *What would make this a non-issue: Your pricing page does carry a collapsed FAQ item titled "What are the limitations in records, rows, and API requests?", so the answer may be one click away rather than on another page. We could not read the collapsed panel, only its heading.*
+
+*Not checkable from these pages: The plan comparison table on the pricing page is built from styled divs rather than a real table, so when it is flattened to text the values lose their column alignment. Several rows publish three values for four plans (row change history, application users), which may be a genuine gap or may just be how the grid collapses — we could not tell, and did not report it. The Premium plan advertises a "Free trial" with no length stated on any page we read, and nothing anywhere states whether a credit card is required to start it.*
 
 ### Bento
 
-https://bentonow.com · email / newsletters · discovered via category sweep: modern SaaS email tools
+https://bentonow.com · email / newsletters · found via category sweep: modern SaaS email tools
 
-Read **13** pages (0 needed a headless browser), extracted **38** claims, produced **1** findings in 3.8s.
+Read **13** usable pages of 13 fetched, extracted **13** commercial promises, produced **2** findings. 20 quotes verified, 0 candidate finding(s) discarded.
+
+**Plans found:** Marketing Platform ($29/mo up to 5,000 Active Users, then tiered from $0.01 per Active User); Transactional Email ($0/mo — first 100 emails free, then $5/mo to 12,500 and $0.09 per 1,000 after); Bento Chat (add-on) (+$30/mo, requires Marketing Platform)
 
 <details><summary>Pages read</summary>
 
-| Page | Category | Claims | Status |
+| Page | Type | Words | Status |
 |---|---|---|---|
-| [Simple plans, no hidden fees.](https://bentonow.com/pricing) | pricing | 12 | read |
-| [https://bentonow.com/pricing.md](https://bentonow.com/pricing.md) | pricing | — | failed — skipped: content-type text/markdown; charset= |
-| [Frequently Asked Questions](https://bentonow.com/docs/faq) | faq | 4 | read |
-| [Support](https://bentonow.com/docs/support) | help | 1 | read |
-| [Bento Documentation](https://bentonow.com/docs) | docs | 1 | read |
-| [Bento wherever you work.](https://bentonow.com/apps) | addons | 1 | read |
-| [Bento CLI](https://bentonow.com/docs/integrations/cli) | docs | 2 | read |
-| [Developer API](https://bentonow.com/docs/developer_guides/introduction) | docs | 1 | read |
-| [Bento MCP Server](https://bentonow.com/docs/integrations/mcp) | addons | 4 | read |
-| [Email Marketing Glossary](https://bentonow.com/terms) | terms | 5 | read |
-| [Terms & Conditions](https://bentonow.com/legal/terms) | terms | 2 | read |
-| [https://bentonow.com/faq](https://bentonow.com/faq) | faq | — | failed — HTTP 404 |
-| [Documentation](https://bentonow.com/help) | help | 2 | read |
-| [https://app.bentonow.com/pricing?source=pricing&plan=start](https://app.bentonow.com/pricing?source=pricing&plan=starter&users=5000) | pricing | — | failed — blocked by robots.txt |
-| [https://app.bentonow.com/pricing?source=pricing&package=tr](https://app.bentonow.com/pricing?source=pricing&package=transactional-email&emails=0) | pricing | — | failed — blocked by robots.txt |
-| [Bento Skills for AI Agents](https://bentonow.com/docs/integrations/skills) | addons | 1 | read |
-| [https://bentonow.com/docs/integrations/cli.md](https://bentonow.com/docs/integrations/cli.md) | addons | — | failed — skipped: content-type text/markdown; charset= |
-| [Acceptable Use Policy](https://bentonow.com/legal/acceptable-use-policy) | terms | 2 | read |
+| [Bento Pricing - Email Marketing, Chat, and Transactional](https://bentonow.com/pricing) | Pricing page | 814 | read |
+| [Frequently Asked Questions - Bento Documentation](https://bentonow.com/docs/faq) | FAQ | 1201 | read |
+| [Support - Bento Documentation](https://bentonow.com/docs/support) | Help centre | 347 | read |
+| [Bento Documentation](https://bentonow.com/docs) | Product documentation | 176 | read |
+| [Download Bento Apps - Mac, Windows, iOS, Android - Bento](https://bentonow.com/apps) | Add-ons & integrations | 237 | read |
+| [Bento CLI - CLI for Email Marketing - Bento Documentatio](https://bentonow.com/docs/integrations/cli) | Product documentation | 1677 | read |
+| [Developer API Documentation - Bento Documentation](https://bentonow.com/docs/developer_guides/introduction) | Product documentation | 511 | read |
+| [Bento MCP Server - AI-Powered Email Marketing - Bento Do](https://bentonow.com/docs/integrations/mcp) | Add-ons & integrations | 2260 | read |
+| [Email Marketing Glossary: 186 Terms & Definitions - Bent](https://bentonow.com/terms) | Terms / legal | 7456 | read |
+| [Terms & Conditions - Bento](https://bentonow.com/legal/terms) | Terms / legal | 5035 | read |
+| [Documentation & Help Center - Bento Email Marketing - Be](https://bentonow.com/help) | Help centre | 2449 | read |
+| [Bento Skills for AI Agents - Bento Documentation](https://bentonow.com/docs/integrations/skills) | Add-ons & integrations | 383 | read |
+| [Acceptable Use Policy - Bento](https://bentonow.com/legal/acceptable-use-policy) | Terms / legal | 1281 | read |
+| https://bentonow.com/pricing.md | — | — | skipped: content-type text/markdown; charset= |
+| https://bentonow.com/faq | — | — | HTTP 404 |
+| https://app.bentonow.com/pricing?source=pricing&plan=starter&users=5000 | — | — | blocked by robots.txt |
+| https://app.bentonow.com/pricing?source=pricing&package=transactional-email&emails=0 | — | — | blocked by robots.txt |
+| https://bentonow.com/docs/integrations/cli.md | — | — | skipped: content-type text/markdown; charset= |
 
 </details>
 
-Claims extracted: 13 trial, 9 addon, 7 limit, 6 condition, 2 plan mention, 1 unlimited.
+**1. Your pricing page bills on active users; your FAQ says you bill on total subscribers**  
+`high impact` · `Likely contradiction` · `high confidence`
 
-Inaccessible pages: https://bentonow.com/pricing.md (skipped: content-type text/markdown; charset=utf-8); https://bentonow.com/faq (HTTP 404); https://app.bentonow.com/pricing?source=pricing&plan=starter&users=5000 (blocked by robots.txt); https://app.bentonow.com/pricing?source=pricing&package=transactional-email&emails=0 (blocked by robots.txt); https://bentonow.com/docs/integrations/cli.md (skipped: content-type text/markdown; charset=utf-8).
+The entire argument of your pricing page is that you charge for Active Users — people who are subscribed or who did something in the last 30 days — and that dormant contacts do not inflate the bill. Your documentation FAQ answers "How does pricing work?" with a flat statement that you charge on the number of subscribers, and then defines a subscriber as any unique email address in the account. For a list with a long tail of dormant addresses those two rules produce materially different invoices, and the difference is the single reason a prospect would choose you over the competitors your own comparison table names.
 
-**1. “Unlimited” is advertised, but a fair-use restriction is buried on another page**  
-`medium impact` · `Ambiguity` · `high confidence` · `unlimited_vs_fair_use`
+- **Claim A:** Billing is based on Active Users — subscribed, or active in the last 30 days
+  - Evidence: “Subscribed users or people with an event in the last 30 days.”
+  - Source: [https://bentonow.com/pricing](https://bentonow.com/pricing)
+- **Claim B:** Billing is based on the total number of subscribers, meaning every unique email address held
+  - Evidence: “Bento charges based on the number of subscribers you have.”
+  - Source: [https://bentonow.com/docs/faq](https://bentonow.com/docs/faq)
+- *Why this is not just wording: "Active Users in the last 30 days" and "every unique email address in your account" are two different countable populations, so they are two different prices for the same list.*
+- *What would make this a non-issue: The FAQ answer is probably just older copy written before the Active Users model, and "subscriber" may be intended loosely. That is exactly the problem: it is the page a customer searches when they want to know what drives their bill.*
 
-Your commercial pages advertise unlimited marketing sends, while a separate page qualifies usage with a fair-use or acceptable-use restriction. A customer deciding on price never sees the qualifier; a customer who hits it experiences it as a broken promise.
+**2. Your FAQ says every feature is included with no gating, while your pricing page sells chat as a $30/month add-on**  
+`medium impact` · `Ambiguity` · `medium confidence`
 
-- **Claim A:** Unlimited marketing sends (no specific plan)
-  - Evidence: “Pick Marketing Platform for $29/mo for up to 5,000 Active Users * , get unlimited marketing sends on paid plans. Add Bento Chat for $30/mo, or use Transactional Email on its own.”
-  - Source: [Simple plans, no hidden fees.](https://bentonow.com/pricing)
-- **Claim B:** Usage is subject to a fair-use / acceptable-use restriction
-  - Evidence: “An Acceptable Use Policy (AUP) is a set of rules defined by an ESP or ISP that governs what type of content and behavior is allowed on their network.”
-  - Source: [Email Marketing Glossary](https://bentonow.com/terms)
-- *Caveat: Fair-use clauses are standard practice. The issue is placement and wording, not the existence of the clause.*
+"All features are included at every tier - no feature gating" is a strong promise, and it is the answer a prospect gets when they ask how pricing works. Your pricing page then sells Bento Chat — shared inbox, live chat, SMS, routing, AI agents — for an extra $30 a month, and requires the Marketing Platform underneath it. Someone who reads the FAQ first will budget $29 and be surprised at $59.
 
+- **Claim A:** No feature is gated; everything is included at every tier
+  - Evidence: “All features are included at every tier”
+  - Source: [https://bentonow.com/docs/faq](https://bentonow.com/docs/faq)
+- **Claim B:** Chat, SMS and AI agents cost an additional $30/month on top of the Marketing Platform
+  - Evidence: “+$30/mo adds shared inbox, live chat, SMS, routing, saved replies, and AI agents. Requires Marketing Platform.”
+  - Source: [https://bentonow.com/pricing](https://bentonow.com/pricing)
+- *Why this is not just wording: One page states that nothing is behind a paywall while the other puts a named set of features behind a separate monthly charge.*
+- *What would make this a non-issue: "Tier" almost certainly means volume tier — the features genuinely do not change as your list grows — and Chat is arguably a separate product rather than a gated feature. Adding four words to the FAQ answer would remove the ambiguity.*
+
+*Not checkable from these pages: The FAQ's answer to "What's the API rate limit?" is collapsed and did not render, though a table of per-endpoint limits appears on the same page. Nothing we read states whether a credit card is required to start the 30-day trial, or what happens to a list that exceeds fair use on marketing sends — the term is used but never defined anywhere we could read.*
 
 ### Checkly
 
-https://www.checklyhq.com · monitoring · discovered via category sweep: synthetic monitoring
+https://www.checklyhq.com · monitoring · found via category sweep: synthetic monitoring
 
-Read **12** pages (0 needed a headless browser), extracted **22** claims, produced **0** findings in 4.6s.
+Read **10** usable pages of 12 fetched, extracted **16** commercial promises, produced **0** findings. 20 quotes verified, 0 candidate finding(s) discarded.
+
+**Plans found:** Hobby ($0 per month); Starter ($24 per month, billed annually); Team ($64 per month, billed annually); Enterprise (Custom)
 
 <details><summary>Pages read</summary>
 
-| Page | Category | Claims | Status |
+| Page | Type | Words | Status |
 |---|---|---|---|
-| [Reliability starts with a plan](https://www.checklyhq.com/pricing) | pricing | 14 | read |
-| [https://app.checklyhq.com/signup](https://app.checklyhq.com/signup) | trial | — | failed — blocked by robots.txt |
-| [Send Alerts to Discord](https://www.checklyhq.com/docs/integrations/alerts/discord) | addons | 0 | read |
-| [How to get help with Checkly](https://www.checklyhq.com/support) | help | 1 | read |
-| [Checkly Documentation](https://www.checklyhq.com/docs) | docs | 0 | read |
-| [Monitoring that works like your code does](https://www.checklyhq.com/solutions/developers) | docs | 3 | read |
-| [Checkly CLI](https://www.checklyhq.com/docs/cli) | docs | 0 | read |
-| [Terms of use](https://www.checklyhq.com/terms) | terms | 1 | read |
-| [Slack](https://www.checklyhq.com/docs/integrations/alerts/slack) | addons | 3 | read |
-| [Guides to Using Checkly](https://www.checklyhq.com/docs/guides/overview) | help | 0 | read |
-| [https://www.checklyhq.com/faq](https://www.checklyhq.com/faq) | faq | — | failed — HTTP 404 |
-| [https://www.checklyhq.com/help](https://www.checklyhq.com/help) | help | — | failed — HTTP 404 |
-| [https://www.checklyhq.com/docs/llms.txt](https://www.checklyhq.com/docs/llms.txt) | docs | — | failed — skipped: content-type text/plain; charset=utf |
-| [What is Checkly?](https://www.checklyhq.com/docs/what-is-checkly) | docs | 0 | read |
-| [Using the Checkly API](https://www.checklyhq.com/docs/api-reference/overview) | docs | 0 | read |
-| [Checkly Documentation](https://developers.checklyhq.com/) | docs | 0 | read |
+| [Checkly Pricing Plans: Flexible Synthetic Monitoring Sol](https://www.checklyhq.com/pricing) | Pricing page | 1232 | read |
+| [Send Alerts to Discord - Checkly Docs](https://www.checklyhq.com/docs/integrations/alerts/discord) | Add-ons & integrations | 269 | read |
+| [Checkly Support - Get help with Checkly](https://www.checklyhq.com/support) | Help centre | 427 | read |
+| [Checkly Documentation - Checkly Docs](https://www.checklyhq.com/docs) | Product documentation | 179 | read |
+| [Synthetic Monitoring for Developers - Code-First - Check](https://www.checklyhq.com/solutions/developers) | Product documentation | 917 | read |
+| [Checkly CLI - Checkly Docs](https://www.checklyhq.com/docs/cli) | Product documentation | 128 | read |
+| [Checkly Terms of Use](https://www.checklyhq.com/terms) | Terms / legal | 4 | too little text to read |
+| [Slack - Checkly Docs](https://www.checklyhq.com/docs/integrations/alerts/slack) | Add-ons & integrations | 268 | read |
+| [Guides to Using Checkly - Checkly Docs](https://www.checklyhq.com/docs/guides/overview) | Help centre | 222 | read |
+| [What is Checkly? - Checkly Docs](https://www.checklyhq.com/docs/what-is-checkly) | Product documentation | 224 | read |
+| [Using the Checkly API - Checkly Docs](https://www.checklyhq.com/docs/api-reference/overview) | Product documentation | 85 | too little text to read |
+| [Checkly Documentation - Checkly Docs](https://developers.checklyhq.com/) | Product documentation | 179 | read |
+| https://app.checklyhq.com/signup | — | — | blocked by robots.txt |
+| https://www.checklyhq.com/faq | — | — | HTTP 404 |
+| https://www.checklyhq.com/help | — | — | HTTP 404 |
+| https://www.checklyhq.com/docs/llms.txt | — | — | skipped: content-type text/plain; charset=utf |
 
 </details>
 
-Claims extracted: 5 limit, 5 addon, 5 condition, 4 plan mention, 3 entitlement.
-
-Inaccessible pages: https://app.checklyhq.com/signup (blocked by robots.txt); https://www.checklyhq.com/faq (HTTP 404); https://www.checklyhq.com/help (HTTP 404); https://www.checklyhq.com/docs/llms.txt (skipped: content-type text/plain; charset=utf-8).
-
 **No findings.** Nothing on the pages read contradicted anything else with enough evidence to report.
+
+*Not checkable from these pages: Nothing on the pages we read contradicts anything else, and this is a genuinely tidy set of pages: the pricing page publishes included volumes, the pre-purchase rate AND the higher automatic overage rate for both check types, retention periods, SMS credits and seat counts inline, which is more than most companies disclose anywhere. Two caveats on coverage. First, the plan comparison is built from styled divs rather than a real table, so when flattened to text the per-plan values lose their column alignment; we could read the numbers but not always which plan each belongs to, so most allowances above are recorded without a plan. Second, discovery found no billing or usage-limit help article — the other pages we reached are product documentation and integration guides that make no commercial claims — so there was little opportunity for the documentation to disagree with the pricing page. A tidier way to say it: we found nothing wrong, but we also had less to compare than at most companies. The 'Try for Free' button on Starter is not explained anywhere we read: no trial length, and no statement about whether a card is required.*
 
 ### Cronitor
 
-https://cronitor.io · monitoring · discovered via category sweep: independent uptime and cron monitoring
+https://cronitor.io · monitoring · found via category sweep: independent uptime and cron monitoring
 
-Read **12** pages (0 needed a headless browser), extracted **28** claims, produced **1** findings in 1.9s.
+Read **9** usable pages of 12 fetched, extracted **18** commercial promises, produced **2** findings. 25 quotes verified, 0 candidate finding(s) discarded.
+
+**Plans found:** Hacker ($0 free forever); Business ($2 /mo per monitor plus $5 /mo per user); Enterprise (from $6,000 /yr annual invoice billing)
 
 <details><summary>Pages read</summary>
 
-| Page | Category | Claims | Status |
+| Page | Type | Words | Status |
 |---|---|---|---|
-| [Simple Pricing](https://cronitor.io/pricing) | pricing | 22 | read |
-| [Monitoring made for developers.](https://cronitor.io/sign-up) | trial | 1 | read |
-| [Start your free trial](https://cronitor.io/sign-up?flow=trial&plan=metered&billing_frequency=month) | trial | 2 | read |
-| [Integrations](https://cronitor.io/docs/integrations) | addons | 0 | read |
-| [We're here to help.](https://cronitor.io/help) | help | 0 | read |
-| [Cronitor Developer Docs](https://cronitor.io/docs) | docs | 0 | read |
-| [Cronitor API Docs](https://cronitor.io/docs/api) | docs | 1 | read |
-| [https://cronitor.io/terms](https://cronitor.io/terms) | terms | — | failed — blocked by robots.txt |
-| [Cronitor Developer Guides](https://cronitor.io/guides) | help | 1 | read |
-| [How to find and read crontab logs](https://cronitor.io/guides/where-are-cron-logs-stored) | help | 0 | read |
-| [SDKs & Agents](https://cronitor.io/docs/sdks) | docs | 0 | read |
-| [https://cronitor.io/faq](https://cronitor.io/faq) | faq | — | failed — HTTP 404 |
-| [Configuring SAML SSO](https://cronitor.io/docs/saml-sso) | docs | 1 | read |
-| [[Cron] Job Monitoring](https://cronitor.io/docs/cron-job-monitoring) | docs | 0 | read |
+| [Simple Pricing - Cronitor](https://cronitor.io/pricing) | Pricing page | 495 | read |
+| [Sign Up - Cronitor](https://cronitor.io/sign-up) | Trial / signup | 33 | too little text to read |
+| [Sign Up - Cronitor](https://cronitor.io/sign-up?flow=trial&plan=metered&billing_frequency=month) | Trial / signup | 89 | too little text to read |
+| [Integrations](https://cronitor.io/docs/integrations) | Add-ons & integrations | 288 | read |
+| [Help Center - Cronitor](https://cronitor.io/help) | Help centre | 105 | too little text to read |
+| [Cronitor Developer Docs](https://cronitor.io/docs) | Product documentation | 214 | read |
+| [Cronitor API Docs](https://cronitor.io/docs/api) | Product documentation | 738 | read |
+| [Developer Guides - Learn best practices for monitoring m](https://cronitor.io/guides) | Help centre | 799 | read |
+| [How to find and read crontab logs](https://cronitor.io/guides/where-are-cron-logs-stored) | Help centre | 292 | read |
+| [SDKs & Agents](https://cronitor.io/docs/sdks) | Product documentation | 214 | read |
+| [Configuring SAML SSO](https://cronitor.io/docs/saml-sso) | Product documentation | 844 | read |
+| [[Cron] Job Monitoring](https://cronitor.io/docs/cron-job-monitoring) | Product documentation | 881 | read |
+| https://cronitor.io/terms | — | — | blocked by robots.txt |
+| https://cronitor.io/faq | — | — | HTTP 404 |
 
 </details>
 
-Claims extracted: 11 entitlement, 5 trial, 4 limit, 4 plan mention, 3 unlimited, 1 condition.
+**1. Your pricing page sells "unlimited API requests" while your API documentation says the API is rate limited**  
+`medium impact` · `Ambiguity` · `high confidence`
 
-Inaccessible pages: https://cronitor.io/terms (blocked by robots.txt); https://cronitor.io/faq (HTTP 404).
+The Business plan is advertised as including unlimited API requests, which a buyer will read as "I will never be cut off". Your API documentation tells a different story: there are rate limits, and exceeding them returns a 429. Both statements can be true at once — a rate limit throttles the speed of requests rather than capping the total — but nothing on either page says so, and the documentation never publishes the actual numbers. The customer who finds out is a developer whose integration has just started failing in production.
 
-**1. “Unlimited” is advertised, but a fair-use restriction is buried on another page**  
-`medium impact` · `Ambiguity` · `high confidence` · `unlimited_vs_fair_use`
-
-Your commercial pages advertise unlimited API requests, while a separate page qualifies usage with a fair-use or acceptable-use restriction. A customer deciding on price never sees the qualifier; a customer who hits it experiences it as a broken promise.
-
-- **Claim A:** Unlimited API requests (no specific plan)
+- **Claim A:** The Business plan includes unlimited API requests
   - Evidence: “Unlimited API requests”
-  - Source: [Simple Pricing](https://cronitor.io/pricing)
-- **Claim B:** Usage is subject to a fair-use / acceptable-use restriction
-  - Evidence: “The API has rate limits to ensure fair usage.”
-  - Source: [Cronitor API Docs](https://cronitor.io/docs/api)
-- *Caveat: Fair-use clauses are standard practice. The issue is placement and wording, not the existence of the clause.*
+  - Source: [https://cronitor.io/pricing](https://cronitor.io/pricing)
+- **Claim B:** The API is rate limited and rejects requests above the limit
+  - Evidence: “The API has rate limits to ensure fair usage. If you exceed these limits, you'll receive a 429 Too Many Requests response.”
+  - Source: [https://cronitor.io/docs/api](https://cronitor.io/docs/api)
+- *Why this is not just wording: "Unlimited" and "you will be refused with a 429 past a limit we do not publish" are different commercial promises, not two phrasings of one.*
+- *What would make this a non-issue: A throughput limit and a volume allowance really are different things, so this is a clarity problem rather than a broken promise. One sentence on the pricing page, and the actual numbers in the docs, would close it.*
 
+**2. Your SSO documentation tells customers they need the Business plan, without mentioning that SSO costs an extra $5 per user on top**  
+`medium impact` · `Missing information` · `medium confidence`
+
+Your pricing page is clear that SAML single sign-on is a paid add-on for Business customers at $5 per user per month. Your SSO setup guide tells an administrator who finds the button greyed out simply to make sure the team is on the Business plan. An admin following the documentation reasonably concludes that upgrading to Business is all that is required, and only discovers the per-user surcharge when the bill changes. On a twenty-person team that is an unbudgeted $100 a month.
+
+- **Claim A:** SAML SSO is an add-on costing $5 per user per month on Business
+  - Evidence: “SAML SSO (+$5/mo per user)”
+  - Source: [https://cronitor.io/pricing](https://cronitor.io/pricing)
+- **Claim B:** The SSO setup guide gives a Business subscription as the requirement, and says nothing about an additional charge
+  - Evidence: “Note: If the button is disabled, ensure your team is subscribed to the Business plan.”
+  - Source: [https://cronitor.io/docs/saml-sso](https://cronitor.io/docs/saml-sso)
+- *Why this is not just wording: One page states a per-user charge that the other page omits entirely while answering the exact question of what a customer needs in order to use the feature.*
+- *What would make this a non-issue: The documentation is not wrong — a Business subscription genuinely is required. It is incomplete rather than contradictory, and adding six words to that note would fix it.*
+
+*Not checkable from these pages: Both signup pages and the help centre returned almost no readable text, so we could not check whether the 14-day trial requires a credit card, or whether the help centre repeats the pricing page's figures. The API documentation states that rate limits exist but never publishes the numbers, so we could not check them against the 'unlimited' claim or against each other. We also saw no terms of service page, so renewal, refund and price-change terms were not reviewed.*
 
 ### Fathom Analytics
 
-https://usefathom.com · web analytics · discovered via category sweep: privacy-focused web analytics
+https://usefathom.com · web analytics · found via category sweep: privacy-focused web analytics
 
-Read **13** pages (0 needed a headless browser), extracted **28** claims, produced **2** findings in 4.2s.
+Read **10** usable pages of 13 fetched, extracted **15** commercial promises, produced **4** findings. 25 quotes verified, 0 candidate finding(s) discarded.
+
+**Plans found:** Up to 500,000 pageviews ($45 /month); Larger pageview tiers (2M, 10M, 25M+) (priced by pageview band; largest tiers contact us)
 
 <details><summary>Pages read</summary>
 
-| Page | Category | Claims | Status |
+| Page | Type | Words | Status |
 |---|---|---|---|
-| [Simple and sustainable pricing](https://usefathom.com/pricing) | pricing | 8 | read |
-| [https://app.usefathom.com/register](https://app.usefathom.com/register) | trial | 0 | read |
-| [https://app.usefathom.com/register?plan=price_1OMiuQJpbH9s](https://app.usefathom.com/register?plan=price_1OMiuQJpbH9soFseaah1xMDb) | trial | 0 | read |
-| [Rate limits and concurrency](https://usefathom.com/api/v1/rate-limits) | limits | 0 | read |
-| [Integrations](https://usefathom.com/docs/integrations) | addons | 2 | read |
-| [Help Centre](https://usefathom.com/docs) | docs | 1 | read |
-| [Fathom Analytics API](https://usefathom.com/api/v1) | docs | 0 | read |
-| [https://usefathom.com/api/llms.txt](https://usefathom.com/api/llms.txt) | docs | — | failed — skipped: content-type text/plain; charset=utf |
-| [WordPress](https://usefathom.com/docs/integrations/wordpress) | addons | 3 | read |
-| [Privacy law compliance](https://usefathom.com/legal/compliance) | terms | 2 | read |
-| [Fathom Analytics Terms and Conditions](https://usefathom.com/legal/terms) | terms | 6 | read |
-| [https://usefathom.com/faq](https://usefathom.com/faq) | faq | — | failed — HTTP 404 |
-| [https://usefathom.com/help](https://usefathom.com/help) | help | — | failed — HTTP 404 |
-| [Discourse](https://usefathom.com/docs/integrations/discourse) | addons | 2 | read |
-| [Kit](https://usefathom.com/docs/integrations/convertkit) | addons | 2 | read |
-| [Webflow](https://usefathom.com/docs/integrations/webflow) | addons | 2 | read |
+| [Simple and sustainable pricing - Fathom Analytics](https://usefathom.com/pricing) | Pricing page | 940 | read |
+| [Fathom Analytics](https://app.usefathom.com/register) | Trial / signup | 0 | too little text to read |
+| [Fathom Analytics](https://app.usefathom.com/register?plan=price_1OMiuQJpbH9soFseaah1xMDb) | Trial / signup | 0 | too little text to read |
+| [Rate limits and concurrency · Fathom Analytics API](https://usefathom.com/api/v1/rate-limits) | Usage limits / quotas | 176 | read |
+| [Integrations - Fathom Analytics](https://usefathom.com/docs/integrations) | Add-ons & integrations | 540 | read |
+| [Get help with Fathom Analytics](https://usefathom.com/docs) | Product documentation | 298 | read |
+| [Fathom Analytics API](https://usefathom.com/api/v1) | Product documentation | 108 | too little text to read |
+| [WordPress - Fathom Analytics](https://usefathom.com/docs/integrations/wordpress) | Add-ons & integrations | 1399 | read |
+| [Privacy law compliance - Fathom Analytics](https://usefathom.com/legal/compliance) | Terms / legal | 1292 | read |
+| [Fathom Analytics Terms and Conditions](https://usefathom.com/legal/terms) | Terms / legal | 2199 | read |
+| [Discourse - Fathom Analytics](https://usefathom.com/docs/integrations/discourse) | Add-ons & integrations | 838 | read |
+| [Kit - Fathom Analytics](https://usefathom.com/docs/integrations/convertkit) | Add-ons & integrations | 562 | read |
+| [Webflow - Fathom Analytics](https://usefathom.com/docs/integrations/webflow) | Add-ons & integrations | 553 | read |
+| https://usefathom.com/api/llms.txt | — | — | skipped: content-type text/plain; charset=utf |
+| https://usefathom.com/faq | — | — | HTTP 404 |
+| https://usefathom.com/help | — | — | HTTP 404 |
 
 </details>
 
-Claims extracted: 9 trial, 8 limit, 4 addon, 4 condition, 3 unlimited.
+**1. Your pricing page promises you will never switch analytics off for going over; your terms reserve the right to suspend the account**  
+`high impact` · `Likely contradiction` · `high confidence`
 
-Inaccessible pages: https://usefathom.com/api/llms.txt (skipped: content-type text/plain; charset=utf-8); https://usefathom.com/faq (HTTP 404); https://usefathom.com/help (HTTP 404).
+The FAQ on your pricing page is written to remove exactly this worry: you will never turn someone's analytics off over a traffic spike, and if they go over two months running you simply offer an upgrade, which they can take or leave with no hard feelings. Your terms and conditions describe a different process. There, a customer who does not upgrade within seven days of being asked can have their account suspended, and an account left suspended for two months can be deleted — with no refund. The terms also add a trigger the FAQ never mentions: significantly exceeding the limit inside the first month, judged at your sole discretion. For a company whose whole brand is candour about pricing, this is the one page where the reassurance does not hold.
 
-**1. A commercial condition — a no-refund policy — appears only away from your pricing page**  
-`low impact` · `Missing information` · `high confidence` · `condition_off_pricing`
+- **Claim A:** Analytics are never switched off for going over; the customer chooses whether to upgrade or leave
+  - Evidence: “We'll never turn your analytics off for occasional traffic spikes or if a payment fails the first time”
+  - Source: [https://usefathom.com/pricing](https://usefathom.com/pricing)
+- **Claim B:** Failing to upgrade within seven days can lead to suspension, and continued suspension to deletion, with no refund
+  - Evidence: “In the event you fail to upgrade your account within seven days of our request, we reserve the right to suspend your account and restrict your use of our Services anytime after the seventh day following our notice to you.”
+  - Source: [https://usefathom.com/legal/terms](https://usefathom.com/legal/terms)
+- *Why this is not just wording: "We'll never turn your analytics off" and "we reserve the right to suspend your account and restrict your use of our Services" describe opposite outcomes for the same customer in the same situation.*
+- *What would make this a non-issue: The terms describe a right you may never exercise, and the FAQ describes what you actually do in practice. Most companies have this gap; it is more visible here because the FAQ makes such a specific promise. Softening "never" to "we won't" and mentioning the first-month trigger would close it.*
 
-Fathom Analytics Terms and Conditions sets out a no-refund policy, but nothing equivalent appears on your pricing page. Conditions that change what a customer actually pays or receives belong where the buying decision is made; discovering them later is where churn and chargebacks start.
+**2. "Full API access" is on the pricing page; the $19–$399 a month you may need to pay for it is not**  
+`high impact` · `Missing information` · `high confidence`
 
-- **Claim A:** Pricing page: condition not stated
-  - Evidence: “(no equivalent statement found on the pricing page)”
-  - Source: [Pricing page](https://usefathom.com/pricing)
-- **Claim B:** Fathom Analytics Terms and Conditions: a no-refund policy
-  - Evidence: “All Fees paid by you to us are non-refundable, except if required by law.”
-  - Source: [Fathom Analytics Terms and Conditions](https://usefathom.com/legal/terms)
-- *Caveat: This is standard legal wording in the right place; the question is only whether the pricing page sets the same expectation. Detected by absence, so a condition stated in an image, a tooltip or a collapsed accordion on the pricing page would be missed.*
+Your pricing page lists "Full API access with 600 requests per hour included" as a plan feature, in a list whose other entries end with reassurances like "No extra fees". A separate page reveals that 600 requests an hour is Tier 1 of a six-tier paid ladder, and that going beyond it costs $19, $39, $79, $199 or $399 a month. The top tier is nearly nine times the price of the $45 plan it sits on top of. Anyone sizing a real integration — the person most likely to care about the API at all — will build their business case from the pricing page and find the ladder only after they hit a 429.
 
-**2. A commercial condition — automatic renewal — appears only away from your pricing page**  
-`low impact` · `Missing information` · `high confidence` · `condition_off_pricing`
+- **Claim A:** The plan includes full API access with 600 requests per hour
+  - Evidence: “Full API access with 600 requests per hour included.”
+  - Source: [https://usefathom.com/pricing](https://usefathom.com/pricing)
+- **Claim B:** API throughput above the included allowance is a paid upgrade costing up to $399 a month
+  - Evidence: “Tier 6 | $399/mo | 16,000 | 25”
+  - Source: [https://usefathom.com/api/v1/rate-limits](https://usefathom.com/api/v1/rate-limits)
+- *Why this is not just wording: The pricing page names no price for API capacity at all, while the other page prices it in six steps up to $399 a month, so a reader of the pricing page cannot arrive at the real cost of the product they are buying.*
+- *What would make this a non-issue: 600 requests an hour is generous for dashboard-style use, and most customers will never leave Tier 1. The issue is that the word "Full" is doing a lot of work in a list that otherwise advertises the absence of extra fees.*
 
-Fathom Analytics Terms and Conditions sets out automatic renewal, but nothing equivalent appears on your pricing page. Conditions that change what a customer actually pays or receives belong where the buying decision is made; discovering them later is where churn and chargebacks start.
+**3. Event tracking is advertised with "no extra fees", but events are counted as pageviews, which is what your price is based on**  
+`medium impact` · `Ambiguity` · `medium confidence`
 
-- **Claim A:** Pricing page: condition not stated
-  - Evidence: “(no equivalent statement found on the pricing page)”
-  - Source: [Pricing page](https://usefathom.com/pricing)
-- **Claim B:** Fathom Analytics Terms and Conditions: automatic renewal
-  - Evidence: “At the end of each Billing Cycle, your Subscription will automatically renew unless you or we cancel it pursuant to these Terms.”
-  - Source: [Fathom Analytics Terms and Conditions](https://usefathom.com/legal/terms)
-- *Caveat: This is standard legal wording in the right place; the question is only whether the pricing page sets the same expectation. Detected by absence, so a condition stated in an image, a tooltip or a collapsed accordion on the pricing page would be missed.*
+Your feature list says conversions, revenue and custom events are tracked on every plan with no extra fees. An FAQ answer much further down the same page confirms that custom events and API requests are counted as if they were pageviews. Since the plan price is set entirely by monthly pageviews, heavy event tracking does raise the bill — it moves the customer into a higher band, and by the terms it can eventually force an upgrade. Both statements are true; read in sequence they land as a contradiction.
 
+- **Claim A:** Event and ecommerce tracking is included on every plan with no extra fees
+  - Evidence: “Track conversions, revenue, and custom events on every plan. No extra fees.”
+  - Source: [https://usefathom.com/pricing](https://usefathom.com/pricing)
+- **Claim B:** Custom events and API requests consume the pageview allowance that sets the price
+  - Evidence: “those requests will be counted as if they were pageviews”
+  - Source: [https://usefathom.com/pricing](https://usefathom.com/pricing)
+- *Why this is not just wording: "No extra fees" and "counted as if they were pageviews" have different consequences for the invoice, because pageviews are the only thing your price depends on.*
+- *What would make this a non-issue: "No extra fees" is fair if it means there is no separate line item for events, which is true. The two statements are roughly two thousand words apart on the page, so few readers will see both — which is also why it is worth a sentence next to the feature.*
+
+**4. You state you have never given a discount, while your help centre carries an article called "Discount codes"**  
+`low impact` · `Ambiguity` · `medium confidence`
+
+Your pricing FAQ is emphatic: never any sales or discounts, not even Black Friday, because everyone pays exactly the same price. That claim is part of your positioning. Every documentation page we read carries a help-centre link titled "Discount codes". If discount codes exist for partners, non-profits or migrations, then "everyone pays the exact same price" needs a qualifier; if they do not, the article title is misleading.
+
+- **Claim A:** There have never been and will never be discounts; everyone pays the same price
+  - Evidence: “We've never done discounts, nor will we ever.”
+  - Source: [https://usefathom.com/pricing](https://usefathom.com/pricing)
+- **Claim B:** The help centre documents discount codes
+  - Evidence: “Discount codes”
+  - Source: [https://usefathom.com/docs/integrations](https://usefathom.com/docs/integrations)
+- *Why this is not just wording: A help article dedicated to discount codes implies a mechanism for paying less than list price, which is what the pricing FAQ says does not exist.*
+- *What would make this a non-issue: This is the weakest item here and we want to be straight about why: we only saw the article's title in a navigation sidebar, not its contents. The article may explain that Fathom does not issue discount codes, or cover codes from a bundle or acquisition. Thirty seconds of checking settles it.*
+
+*Not checkable from these pages: Discovery did not reach the help articles behind the sidebar titles — "Exceeding your plan limits", "Billing FAQ", "How do free trials work?", "Discount codes" and "Upgrading or downgrading" — which are the pages most likely either to resolve or to worsen the findings above. Nothing we read says whether a credit card is required to begin the 7-day trial. The pricing page's slider shows one pageview band at a time, so we could only read the $45 / 500,000 band and not the prices of the other tiers.*
 
 ### Knock
 
-https://knock.app · notifications API · discovered via category sweep: notification infrastructure
+https://knock.app · notifications API · found via category sweep: notification infrastructure
 
-Read **16** pages (0 needed a headless browser), extracted **80** claims, produced **1** findings in 3.2s.
+Read **8** usable pages of 8 fetched, extracted **17** commercial promises, produced **2** findings. 24 quotes verified, 0 candidate finding(s) discarded.
+
+**Plans found:** Developer ($0 / month); Starter ($250 / month); Enterprise (Contact us)
 
 <details><summary>Pages read</summary>
 
-| Page | Category | Claims | Status |
+| Page | Type | Words | Status |
 |---|---|---|---|
-| [Pricing that scales with you](https://knock.app/pricing) | pricing | 56 | read |
-| [Subscriptions](https://docs.knock.app/concepts/subscriptions) | billing_docs | 0 | read |
-| [Workflows API reference](https://docs.knock.app/api-reference/workflows/cancel) | billing_docs | 0 | read |
-| [Users API reference](https://docs.knock.app/api-reference/users/list_subscriptions) | billing_docs | 3 | read |
-| [API reference](https://docs.knock.app/reference) | docs | 4 | read |
-| [https://dashboard.knock.app/signup](https://dashboard.knock.app/signup) | trial | — | failed — blocked by robots.txt |
-| [API reference](https://docs.knock.app/api-reference/overview) | docs | 4 | read |
-| [API reference](https://docs.knock.app/api-reference/overview/rate-limits) | limits | 4 | read |
-| [API reference](https://docs.knock.app/api-reference/overview/batch-rate-limits) | limits | 4 | read |
-| [Integrations overview](https://docs.knock.app/integrations/overview) | addons | 0 | read |
-| [Powering cross-channel configurable alerts with Knock](https://docs.knock.app/guides/alerting) | help | 0 | read |
-| [Implementing Knock guides in Vue.js](https://docs.knock.app/tutorials/guides-in-vue) | help | 1 | read |
-| [Knock MCP server](https://docs.knock.app/developer-tools/mcp-server) | docs | 1 | read |
-| [Users API reference](https://docs.knock.app/api-reference/users/guides/get_channel) | help | 3 | read |
-| [Integrations](https://knock.app/integrations) | addons | 0 | read |
-| [See how Knock compares](https://knock.app/compare) | compare | 0 | read |
-| [Objects API reference](https://docs.knock.app/api-reference/objects/list_subscriptions) | billing_docs | 0 | read |
+| [Pricing - Knock](https://knock.app/pricing) | Pricing page | 1856 | read |
+| [Subscriptions - Knock Docs](https://docs.knock.app/concepts/subscriptions) | Billing & subscription help | 1150 | read |
+| [Workflows API reference - Knock Docs](https://docs.knock.app/api-reference/workflows/cancel) | Billing & subscription help | 509 | read |
+| [Users API reference - Knock Docs](https://docs.knock.app/api-reference/users/list_subscriptions) | Billing & subscription help | 3661 | read |
+| [API reference - Knock Docs](https://docs.knock.app/reference) | Product documentation | 2033 | read |
+| [API reference - Knock Docs](https://docs.knock.app/api-reference/overview) | Product documentation | 2033 | read |
+| [API reference - Knock Docs](https://docs.knock.app/api-reference/overview/rate-limits) | Usage limits / quotas | 2033 | read |
+| [API reference - Knock Docs](https://docs.knock.app/api-reference/overview/batch-rate-limits) | Usage limits / quotas | 2033 | read |
+| https://dashboard.knock.app/signup | — | — | blocked by robots.txt |
 
 </details>
 
-Claims extracted: 28 unlimited, 20 limit, 13 entitlement, 8 plan price, 6 plan mention, 5 condition.
+**1. Your pricing page says workflow triggers are unlimited on every plan; your API reference rate limits every endpoint**  
+`medium impact` · `Ambiguity` · `high confidence`
 
-Inaccessible pages: https://dashboard.knock.app/signup (blocked by robots.txt).
+"Unlimited" appears against workflow triggers, notification workflows, channels and recipients for all three plans, including the free one. Triggering a workflow is an API call, and your API reference states plainly that every endpoint is rate limited, on a five-tier scale that starts at one request per second, and returns a 429 when exceeded. The two statements are compatible — a rate limit caps the rate, not the total — but the pricing page does not say so, and the rate-limit tiers are never mapped to plans or to specific endpoints, so a developer sizing a launch cannot work out what throughput they have actually bought.
 
-**1. Two different allowances are published for API requests**  
-`medium impact` · `Ambiguity` · `low confidence` · `limit_conflict`
+- **Claim A:** Workflow triggers are unlimited on every plan, including the free one
+  - Evidence: “Workflow triggers | Unlimited | Unlimited | Unlimited”
+  - Source: [https://knock.app/pricing](https://knock.app/pricing)
+- **Claim B:** Every API endpoint is rate limited on a tier scale beginning at one request per second, returning 429 when exceeded
+  - Evidence: “Each endpoint in the Knock API is rate limited. Knock uses a tier system to determine the rate limit scale for each endpoint.”
+  - Source: [https://docs.knock.app/api-reference/overview/rate-limits](https://docs.knock.app/api-reference/overview/rate-limits)
+- *Why this is not just wording: "Unlimited triggers" and "one to a thousand requests per second depending on an unpublished endpoint tier" answer the same buyer question — how much can I send — with different numbers.*
+- *What would make this a non-issue: This is a clarity problem, not a broken promise: rate limits and volume allowances genuinely are different, and your docs invite customers to ask for a higher rate. Naming which tier the trigger endpoint sits in would resolve it in one line.*
 
-API reference states 60 per second and API reference states 200 per second for API requests. Neither figure is tied to a named plan, so a customer cannot work out which applies to them.
+**2. Enterprise customers get the same guides allowance as the $250 Starter plan, and only the FAQ says so**  
+`medium impact` · `Missing information` · `high confidence`
 
-- **Claim A:** 60 API requests per second (no specific plan)
-  - Evidence: “60 requests / second”
-  - Source: [API reference](https://docs.knock.app/reference)
-- **Claim B:** 200 API requests per second (no specific plan)
-  - Evidence: “200 requests / second”
-  - Source: [API reference](https://docs.knock.app/api-reference/overview)
-- *Caveat: The two numbers may be scoped to different plans or to different objects (per workspace vs per account). Treat this as a prompt to check, not proof.*
+In your comparison table the Enterprise column for guide active users says "Contact us", alongside a note about volume discounts. Every reasonable reading of that is "this number is negotiated, and it will be bigger than Starter's". An FAQ answer near the bottom of the same page says something different: unless guides were explicitly written into the enterprise agreement, an Enterprise customer gets 2,500 active users a month — exactly what Starter includes for $250. A customer paying well above Starter, who assumed guides scaled with their contract, finds out when you ask them to get in touch mid-quarter.
 
+- **Claim A:** The Enterprise guides allowance is presented as something to negotiate, with volume discounts available
+  - Evidence: “Contact us Volume-based discounts and monthly notified user pricing available.”
+  - Source: [https://knock.app/pricing](https://knock.app/pricing)
+- **Claim B:** Enterprise defaults to the Starter allowance of 2,500 guide active users a month
+  - Evidence: “you'll have the same guides limit as our Starter plan: 2,500 active users a month”
+  - Source: [https://knock.app/pricing](https://knock.app/pricing)
+- *Why this is not just wording: "Contact us" invites the reader to assume a negotiated, larger number, while the FAQ states a specific default equal to the tier below — that is a fact about the deal, not a phrasing choice.*
+- *What would make this a non-issue: The FAQ is on the same page as the table, so a thorough reader will find it. It is 40 rows below, under a question addressed to existing Enterprise customers rather than to buyers, and the table itself gives no hint that a default exists.*
+
+*Not checkable from these pages: We deliberately did not report the rate-limit tier table appearing on two documentation pages with different numbers in view — it is one table of endpoint scales reproduced on both pages, not two conflicting limits, and an automated reader could easily mistake it for a contradiction. We could not check which tier any given endpoint belongs to, since that mapping is not on the pages we read. Your pricing table promises unlimited feed retention while the API reference refers to data 'subject to deletion according to the data retention policy associated with your account'; the retention policy page was not reachable from our crawl, so we could not tell whether these describe the same data and did not report it. The signup page is blocked by robots.txt, so we could not check trial or card-requirement terms.*
 
 ### SavvyCal
 
-https://savvycal.com · scheduling · discovered via category sweep: independent scheduling tools
+https://savvycal.com · scheduling · found via category sweep: independent scheduling tools
 
-Read **13** pages (0 needed a headless browser), extracted **8** claims, produced **1** findings in 3.5s.
+Read **8** usable pages of 13 fetched, extracted **10** commercial promises, produced **2** findings. 16 quotes verified, 0 candidate finding(s) discarded.
+
+**Plans found:** Basic ($10 /user/mo); Premium ($17 /user/mo)
 
 <details><summary>Pages read</summary>
 
-| Page | Category | Claims | Status |
+| Page | Type | Words | Status |
 |---|---|---|---|
-| [Join thousands of happy customers](https://savvycal.com/pricing) | pricing | 6 | read |
-| [SavvyCal Meetings](https://savvycal.com/signup) | trial | 0 | read |
-| [Integrations](https://savvycal.com/integrations-directory) | addons | 0 | read |
-| [How can we help?](https://docs.savvycal.com/) | help | 0 | read |
-| [SavvyCal Meetings Developer Docs](https://developers.savvycal.com/) | docs | 0 | read |
-| [SavvyCal Terms of Use](https://savvycal.com/terms) | terms | 2 | read |
-| [Free Time Zone API by SavvyCal](https://savvycal.com/time-zone-api) | docs | 0 | read |
-| [https://savvycal.com/faq](https://savvycal.com/faq) | faq | — | failed — HTTP 404 |
-| [REST API](https://developers.savvycal.com/category/rest-api) | docs | 0 | read |
-| [SavvyCal End User License Agreement for Downloadable Tools](https://savvycal.com/eula) | terms | 0 | read |
-| [Authentication](https://developers.savvycal.com/authentication) | help | 0 | read |
-| [Webhooks](https://developers.savvycal.com/webhooks) | help | 0 | read |
-| [Integrations](https://docs.savvycal.com/category/5-integrations) | addons | 0 | read |
-| [Use Cases](https://docs.savvycal.com/category/7-usage) | limits | 0 | read |
-| [https://savvycal.com/help](https://savvycal.com/help) | help | — | failed — HTTP 404 |
-| [https://savvycal.com/docs](https://savvycal.com/docs) | docs | — | failed — HTTP 404 |
+| [Plans & Pricing · SavvyCal](https://savvycal.com/pricing) | Pricing page | 179 | read |
+| [Sign Up for SavvyCal](https://savvycal.com/signup) | Trial / signup | 54 | too little text to read |
+| [Integrations · SavvyCal](https://savvycal.com/integrations-directory) | Add-ons & integrations | 303 | read |
+| [Meetings Help](https://docs.savvycal.com/) | Help centre | 58 | too little text to read |
+| [SavvyCal Meetings Platform - SavvyCal Meetings](https://developers.savvycal.com/) | Product documentation | 152 | read |
+| [SavvyCal Terms of Use](https://savvycal.com/terms) | Terms / legal | 2725 | read |
+| [Free Time Zone API Â· SavvyCal](https://savvycal.com/time-zone-api) | Product documentation | 208 | read |
+| [REST API - SavvyCal Meetings](https://developers.savvycal.com/category/rest-api) | Product documentation | 33 | too little text to read |
+| [SavvyCal End User License Agreement for Downloadable Too](https://savvycal.com/eula) | Terms / legal | 557 | read |
+| [Authentication - SavvyCal Meetings](https://developers.savvycal.com/authentication) | Help centre | 601 | read |
+| [Webhooks - SavvyCal Meetings](https://developers.savvycal.com/webhooks) | Help centre | 679 | read |
+| [Integrations - Meetings Help](https://docs.savvycal.com/category/5-integrations) | Add-ons & integrations | 89 | too little text to read |
+| [Use Cases - Meetings Help](https://docs.savvycal.com/category/7-usage) | Usage limits / quotas | 89 | too little text to read |
+| https://savvycal.com/faq | — | — | HTTP 404 |
+| https://savvycal.com/help | — | — | HTTP 404 |
+| https://savvycal.com/docs | — | — | HTTP 404 |
 
 </details>
 
-Claims extracted: 3 plan mention, 2 unlimited, 2 condition, 1 trial.
+**1. Your pricing page invites people to "kick the tires for free", then shows only two paid plans and never explains what free means**  
+`medium impact` · `Missing information` · `medium confidence`
 
-Inaccessible pages: https://savvycal.com/faq (HTTP 404); https://savvycal.com/help (HTTP 404); https://savvycal.com/docs (HTTP 404).
+The first line above your plans offers a free way in and tells the reader they can upgrade when they are ready to "activate". The plans underneath start at $10 per user per month, and nothing on the page says whether free means a free tier, a time-limited trial, or an unactivated account with reduced functionality. There is no trial length, no statement about whether a card is required, and no explanation of what activation changes. This is the first question a visitor has and the page raises it without answering it.
 
-**1. A commercial condition — automatic renewal — appears only away from your pricing page**  
-`low impact` · `Missing information` · `high confidence` · `condition_off_pricing`
+- **Claim A:** You can start for free and upgrade only when ready to activate
+  - Evidence: “Kick the tires for free and only upgrade when you're ready to activate.”
+  - Source: [https://savvycal.com/pricing](https://savvycal.com/pricing)
+- **Claim B:** The only prices published are $10 and $17 per user per month, with no free option shown
+  - Evidence: “$ 10 /user/mo”
+  - Source: [https://savvycal.com/pricing](https://savvycal.com/pricing)
+- *Why this is not just wording: One sentence offers a free route into the product and the rest of the page documents only paid ones, so the reader cannot find out what they would actually be signing up for.*
+- *What would make this a non-issue: The answer is very likely in the FAQ at the bottom of the page, which is collapsed and did not render for us — so this may be a rendering limitation on our side rather than a gap on yours. The plan comparison table on the same page also rendered as feature names with no values, which is why this report is thinner for SavvyCal than for other companies.*
 
-SavvyCal Terms of Use sets out automatic renewal, but nothing equivalent appears on your pricing page. Conditions that change what a customer actually pays or receives belong where the buying decision is made; discovering them later is where churn and chargebacks start.
+**2. Your terms reserve the right to change prices at any time, with no notice period, and your pricing page does not mention it**  
+`low impact` · `Missing information` · `high confidence`
 
-- **Claim A:** Pricing page: condition not stated
-  - Evidence: “(no equivalent statement found on the pricing page)”
-  - Source: [Pricing page](https://savvycal.com/pricing)
-- **Claim B:** SavvyCal Terms of Use: automatic renewal
+A single sentence in the Fees & Payment section lets you change prices at any time. Unlike most terms of this kind it commits to no notice period at all — not 30 days, not one billing cycle. Combined with automatic renewal, a customer's price can in principle change between one renewal and the next without warning. This is standard drafting and probably not how you behave, but it is the sort of clause a procurement reviewer flags, and nothing on the pricing page sets an expectation either way.
+
+- **Claim A:** Prices may be changed at any time, with no notice period stated
+  - Evidence: “We may change prices at any time.”
+  - Source: [https://savvycal.com/terms](https://savvycal.com/terms)
+- **Claim B:** Subscriptions renew automatically unless cancelled before the period ends
   - Evidence: “Subscriptions will automatically renew for the same subscription period unless you cancel the account by the end of the then-current subscription period.”
-  - Source: [SavvyCal Terms of Use](https://savvycal.com/terms)
-- *Caveat: This is standard legal wording in the right place; the question is only whether the pricing page sets the same expectation. Detected by absence, so a condition stated in an image, a tooltip or a collapsed accordion on the pricing page would be missed.*
+  - Source: [https://savvycal.com/terms](https://savvycal.com/terms)
+- *Why this is not just wording: The two clauses combine into a commercial term — an automatically renewing subscription whose price can move without notice — that appears nowhere the buyer is asked to decide.*
+- *What would make this a non-issue: This is ordinary legal boilerplate in the place boilerplate belongs, and your 30-day money back guarantee already gives customers a way out. We are flagging placement, not conduct.*
 
+*Not checkable from these pages: This is the weakest coverage of the ten companies and we would rather say so than pad the report. The plan comparison table on your pricing page rendered as a list of feature names with no per-plan values, so we could not check a single feature entitlement against your documentation. The FAQ section rendered as a heading with no questions or answers. Your help site returned almost no readable text. As a result we could not check the two things most worth checking here: which features are Basic versus Premium, and what your free entry route actually is. Your 30-day money back guarantee and your refund clause do agree with each other, which is worth saying, because that is the pair that most often does not.*
 
 ### ScreenshotOne
 
-https://screenshotone.com · media API · discovered via category sweep: screenshot APIs
+https://screenshotone.com · media API · found via category sweep: screenshot APIs
 
-Read **15** pages (0 needed a headless browser), extracted **86** claims, produced **2** findings in 2.7s.
+Read **15** usable pages of 15 fetched, extracted **17** commercial promises, produced **3** findings. 27 quotes verified, 0 candidate finding(s) discarded.
+
+**Plans found:** Free ($0 — 100 screenshots per month); Basic ($17 per month); Growth ($79 per month); Scale ($259 per month)
 
 <details><summary>Pages read</summary>
 
-| Page | Category | Claims | Status |
+| Page | Type | Words | Status |
 |---|---|---|---|
-| [Start rendering for free](https://screenshotone.com/pricing) | pricing | 66 | read |
-| [How credits work in ScreenshotOne](https://screenshotone.com/docs/credits) | limits | 3 | read |
-| [https://dash.screenshotone.com/sign-up](https://dash.screenshotone.com/sign-up) | trial | — | failed — blocked by robots.txt |
-| [Automate website screenshots in your workflows](https://screenshotone.com/integrations) | addons | 2 | read |
-| [Get Usage](https://screenshotone.com/docs/get-usage) | limits | 2 | read |
-| [Getting Started](https://screenshotone.com/docs) | docs | 1 | read |
-| [Getting Started](https://screenshotone.com/docs/getting-started) | docs | 1 | read |
-| [Zapier](https://screenshotone.com/integrations/zapier) | addons | 1 | read |
-| [Terms of Service](https://screenshotone.com/terms-of-service) | terms | 3 | read |
-| [Guides](https://screenshotone.com/docs/guides) | help | 1 | read |
-| [Generate PDFs from URLs, HTML, or Markdown via API](https://screenshotone.com/pdf-generation-api) | docs | 1 | read |
-| [Fail rendering if the content contains a string](https://screenshotone.com/docs/guides/fail-if-content-contains) | help | 1 | read |
-| [Upload to S3](https://screenshotone.com/docs/guides/upload-to-s3) | help | 1 | read |
-| [https://screenshotone.com/faq](https://screenshotone.com/faq) | faq | — | failed — HTTP 404 |
-| [https://screenshotone.com/terms](https://screenshotone.com/terms) | terms | — | failed — HTTP 404 |
-| [Airtable](https://screenshotone.com/integrations/airtable) | addons | 1 | read |
-| [Make](https://screenshotone.com/integrations/make) | addons | 1 | read |
-| [Bubble](https://screenshotone.com/integrations/bubble) | addons | 1 | read |
+| [ScreenshotOne Pricing — Website Screenshot API Plans](https://screenshotone.com/pricing) | Pricing page | 617 | read |
+| [How credits work in ScreenshotOne - ScreenshotOne Docs](https://screenshotone.com/docs/credits) | Usage limits / quotas | 317 | read |
+| [ScreenshotOne Integrations](https://screenshotone.com/integrations) | Add-ons & integrations | 483 | read |
+| [Get Usage - ScreenshotOne Docs](https://screenshotone.com/docs/get-usage) | Usage limits / quotas | 198 | read |
+| [Getting Started - ScreenshotOne Docs](https://screenshotone.com/docs) | Product documentation | 393 | read |
+| [Getting Started - ScreenshotOne Docs](https://screenshotone.com/docs/getting-started) | Product documentation | 393 | read |
+| [The Screenshot API for Zapier](https://screenshotone.com/integrations/zapier) | Add-ons & integrations | 178 | read |
+| [Terms of Service](https://screenshotone.com/terms-of-service) | Terms / legal | 953 | read |
+| [Guides - ScreenshotOne Docs](https://screenshotone.com/docs/guides) | Help centre | 153 | read |
+| [HTML and URL to PDF Generation API — ScreenshotOne](https://screenshotone.com/pdf-generation-api) | Product documentation | 1305 | read |
+| [Fail rendering if the content contains a string - Screen](https://screenshotone.com/docs/guides/fail-if-content-contains) | Help centre | 282 | read |
+| [Upload to S3 - ScreenshotOne Docs](https://screenshotone.com/docs/guides/upload-to-s3) | Help centre | 873 | read |
+| [The Screenshot API for Airtable](https://screenshotone.com/integrations/airtable) | Add-ons & integrations | 169 | read |
+| [The Screenshot API for Make](https://screenshotone.com/integrations/make) | Add-ons & integrations | 183 | read |
+| [The Screenshot API for Bubble](https://screenshotone.com/integrations/bubble) | Add-ons & integrations | 167 | read |
+| https://dash.screenshotone.com/sign-up | — | — | blocked by robots.txt |
+| https://screenshotone.com/faq | — | — | HTTP 404 |
+| https://screenshotone.com/terms | — | — | HTTP 404 |
 
 </details>
 
-Claims extracted: 50 entitlement, 12 addon, 10 condition, 6 plan price, 5 limit, 3 plan mention.
+**1. Three of your pages give three different answers to what happens when a customer exceeds their plan**  
+`high impact` · `Ambiguity` · `high confidence`
 
-Inaccessible pages: https://dash.screenshotone.com/sign-up (blocked by robots.txt); https://screenshotone.com/faq (HTTP 404); https://screenshotone.com/terms (HTTP 404).
+This is the question every API customer asks before they build on you, and your site answers it three ways. The pricing page presents it as a simple per-unit price — go over, pay $0.009 each. The credits documentation adds a condition the pricing page never mentions: overage is billed automatically only if extra charging is enabled, leaving the reader to guess what happens when it is not. The terms of service describe a third outcome, where exceeding plan limits may bring throttling or temporary suspension of access. A developer whose product depends on your API cannot tell whether hitting the limit costs them money, degrades their service, or stops it.
 
-**1. A commercial condition — charges that apply once an allowance is exceeded — appears only away from your pricing page**  
-`medium impact` · `Missing information` · `high confidence` · `condition_off_pricing`
+- **Claim A:** Going over the plan is simply billed at a per-screenshot rate
+  - Evidence: “$0.009 per extra”
+  - Source: [https://screenshotone.com/pricing](https://screenshotone.com/pricing)
+- **Claim B:** Exceeding plan limits may instead result in throttling or temporary suspension of access
+  - Evidence: “throttling, or temporary suspension of access”
+  - Source: [https://screenshotone.com/terms-of-service](https://screenshotone.com/terms-of-service)
+- *Why this is not just wording: Paying a few tenths of a cent more, having requests slowed, and losing access are three different outcomes for the same event, not three descriptions of one.*
+- *What would make this a non-issue: The likely reality is that overage billing is the normal path and throttling is a reserve power for abuse. The docs page's "if extra charging is enabled" is the sentence that most needs finishing: it is the only hint that a customer might have the option switched off, and it never says what happens then.*
 
-Terms of Service sets out charges that apply once an allowance is exceeded, but nothing equivalent appears on your pricing page. Conditions that change what a customer actually pays or receives belong where the buying decision is made; discovering them later is where churn and chargebacks start.
+**2. Your terms let you change the usage limits and quotas themselves at any time, not just the price**  
+`medium impact` · `Missing information` · `high confidence`
 
-- **Claim A:** Pricing page: condition not stated
-  - Evidence: “(no equivalent statement found on the pricing page)”
-  - Source: [Pricing page](https://screenshotone.com/pricing)
-- **Claim B:** Terms of Service: charges that apply once an allowance is exceeded
-  - Evidence: “Use of the Service may be subject to pricing plans, quotas, rate limits, and overage charges described on our website or documentation.”
-  - Source: [Terms of Service](https://screenshotone.com/terms-of-service)
-- *Caveat: Detected by absence, so a condition stated in an image, a tooltip or a collapsed accordion on the pricing page would be missed.*
+Most terms of service reserve the right to change prices. Yours goes further and reserves the right to modify usage limits, quotas and plan structures too. The screenshot allowances are the product — 2,000, 10,000 and 50,000 a month are the reason a customer picks one plan over another — so this clause says the thing being bought can be redefined mid-subscription. Nothing on the pricing page hints at it, and no notice period is given anywhere we could read.
 
-**2. A commercial condition — the right to change prices — appears only away from your pricing page**  
-`low impact` · `Missing information` · `high confidence` · `condition_off_pricing`
-
-Terms of Service sets out the right to change prices, but nothing equivalent appears on your pricing page. Conditions that change what a customer actually pays or receives belong where the buying decision is made; discovering them later is where churn and chargebacks start.
-
-- **Claim A:** Pricing page: condition not stated
-  - Evidence: “(no equivalent statement found on the pricing page)”
-  - Source: [Pricing page](https://screenshotone.com/pricing)
-- **Claim B:** Terms of Service: the right to change prices
+- **Claim A:** Each plan is sold on a specific monthly screenshot allowance
+  - Evidence: “50,000 screenshots”
+  - Source: [https://screenshotone.com/pricing](https://screenshotone.com/pricing)
+- **Claim B:** Pricing, features, usage limits, quotas and plan structures may all be changed at any time
   - Evidence: “We reserve the right to modify pricing, features, usage limits, quotas, or plan structures at any time.”
-  - Source: [Terms of Service](https://screenshotone.com/terms-of-service)
-- *Caveat: This is standard legal wording in the right place; the question is only whether the pricing page sets the same expectation. Detected by absence, so a condition stated in an image, a tooltip or a collapsed accordion on the pricing page would be missed.*
+  - Source: [https://screenshotone.com/terms-of-service](https://screenshotone.com/terms-of-service)
+- *Why this is not just wording: A right to change quotas is materially different from a right to change prices, because it can reduce what a customer receives without changing what they pay.*
+- *What would make this a non-issue: This is a clause you probably have no intention of using against existing customers, and a notice commitment on the pricing page would neutralise it entirely.*
 
+**3. Your pricing page offers a full refund within 30 days, no questions asked; your credits documentation says unused credits are never refunded**  
+`medium impact` · `Likely contradiction` · `medium confidence`
+
+"Email us within 30 days and we will refund you in full, no questions asked" is an unconditional promise, and it is one of the reasons someone signs up. Your credits page carries a heading that says the opposite for the most common case: no refunds for unused credits. A customer who buys a Scale plan, uses a fraction of the 50,000 screenshots and asks for their money back inside the first month has been told both that they get everything back and that unused credits simply expire.
+
+- **Claim A:** A full refund is available for any reason within 30 days
+  - Evidence: “email us at support@screenshotone.com within 30 days, and we will refund you in full, no questions asked”
+  - Source: [https://screenshotone.com/pricing](https://screenshotone.com/pricing)
+- **Claim B:** Unused credits are not refunded; they expire at the end of the cycle
+  - Evidence: “No refunds for unused credits”
+  - Source: [https://screenshotone.com/docs/credits](https://screenshotone.com/docs/credits)
+- *Why this is not just wording: One page promises money back for any reason inside 30 days and the other rules out a refund in the situation where a customer would most often ask for one.*
+- *What would make this a non-issue: These probably address different things — the 30-day guarantee refunds the subscription fee, while the credits page is explaining that credit balances have no cash value on cancellation. Read in that order they still conflict, and the credits page is the one a cancelling customer lands on.*
+
+*Not checkable from these pages: This is the most complete set of pages of the ten companies: fifteen pages all readable, with a pricing page that publishes per-plan quotas, rate limits and overage rates inline, and a credits page that explains reset and rollover behaviour properly. What we could not check is what actually happens when extra charging is disabled and the quota runs out — no page we read says. We also could not confirm whether the free tier survives cancellation: the credits page says a cancelled customer is downgraded to the free plan "or if the free plan is not available, you will lose access", without saying when the free plan would not be available.*
 
 ### Umami
 
-https://umami.is · web analytics · discovered via category sweep: open-source analytics with a hosted tier
+https://umami.is · web analytics · found via category sweep: open-source analytics with a hosted tier
 
-Read **3** pages (0 needed a headless browser), extracted **0** claims, produced **0** findings in 2.5s.
+Read **0** usable pages of 3 fetched, extracted **0** commercial promises, produced **0** findings. 0 quotes verified, 0 candidate finding(s) discarded.
 
 <details><summary>Pages read</summary>
 
-| Page | Category | Claims | Status |
+| Page | Type | Words | Status |
 |---|---|---|---|
-| [https://umami.is/pricing](https://umami.is/pricing) | pricing | 0 | read |
-| [Introduction](https://umami.is/docs) | docs | 0 | read |
-| [https://umami.is/terms](https://umami.is/terms) | terms | 0 | read |
+| [Pricing – Umami](https://umami.is/pricing) | Pricing page | 0 | too little text to read |
+| [Introduction – umami](https://umami.is/docs) | Product documentation | 0 | too little text to read |
+| [Terms of Service – Umami](https://umami.is/terms) | Terms / legal | 0 | too little text to read |
 
 </details>
 
 **No findings.** Nothing on the pages read contradicted anything else with enough evidence to report.
+
+*Not checkable from these pages: Nothing could be checked. All three pages we reached, including the pricing page, returned a page shell with no readable text at all: the site builds its content in the browser, and the headless-browser fallback could not run in the environment this experiment was executed in. This is a failure of our tool, not a finding about Umami, and it should be counted as a miss rather than as a clean result. Roughly one company in ten in this sample was invisible for this reason.*
 
 ### Unkey
 
-https://www.unkey.com · API management · discovered via category sweep: API key management
+https://www.unkey.com · API management · found via category sweep: API key management
 
-Read **11** pages (0 needed a headless browser), extracted **37** claims, produced **0** findings in 5.5s.
+Read **10** usable pages of 11 fetched, extracted **14** commercial promises, produced **2** findings. 23 quotes verified, 0 candidate finding(s) discarded.
+
+**Plans found:** Starter ($5 / mo); Pro ($25 / mo); Business ($50 / mo); Enterprise (Contact the team; annual contracts available); Free plan (documented only in the docs) (not published on the pricing page)
 
 <details><summary>Pages read</summary>
 
-| Page | Category | Claims | Status |
+| Page | Type | Words | Status |
 |---|---|---|---|
-| [Start for free, scale as you go with predictable usage-bas](https://www.unkey.com/pricing) | pricing | 36 | read |
-| [What is Unkey?](https://www.unkey.com/docs) | docs | 0 | read |
-| [Billing](https://unkey.com/docs/platform/workspaces/billing) | billing_docs | 1 | read |
-| [What is Unkey?](https://unkey.com/docs/introduction) | docs | 0 | read |
-| [https://www.unkey.com/docs/llms.txt](https://www.unkey.com/docs/llms.txt) | docs | — | failed — skipped: content-type text/plain; charset=utf |
-| [Website Terms of Use](https://www.unkey.com/policies/terms) | terms | 0 | read |
-| [https://www.unkey.com/faq](https://www.unkey.com/faq) | faq | — | failed — HTTP 404 |
-| [https://app.unkey.com/auth/sign-up](https://app.unkey.com/auth/sign-up) | trial | — | failed — HTTP 429 |
-| [https://app.unkey.com/](https://app.unkey.com/) | trial | — | failed — HTTP 429 |
-| [https://www.unkey.com/help](https://www.unkey.com/help) | help | — | failed — HTTP 404 |
-| [https://www.unkey.com/terms](https://www.unkey.com/terms) | terms | — | failed — HTTP 404 |
-| [What is Unkey?](https://www.unkey.com/docs/introduction) | docs | 0 | read |
-| [Regions](https://unkey.com/docs/build-and-deploy/regions) | docs | 0 | read |
-| [Observability](https://unkey.com/docs/observability/overview) | docs | 0 | read |
-| [Overview](https://www.unkey.com/docs/api-reference/overview) | docs | 0 | read |
-| [Deploy your first app](https://www.unkey.com/docs/quickstart/deploy) | docs | 0 | read |
-| [Quickstart](https://www.unkey.com/docs/quickstart/quickstart) | docs | 0 | read |
+| [Pricing - Unkey](https://www.unkey.com/pricing) | Pricing page | 325 | read |
+| [What is Unkey? - Unkey Docs](https://www.unkey.com/docs) | Product documentation | 515 | read |
+| [Billing - Unkey Docs](https://unkey.com/docs/platform/workspaces/billing) | Billing & subscription help | 327 | read |
+| [What is Unkey? - Unkey Docs](https://unkey.com/docs/introduction) | Product documentation | 515 | read |
+| [Website Terms of Use - Unkey Inc. - Unkey](https://www.unkey.com/policies/terms) | Terms / legal | 2898 | read |
+| [What is Unkey? - Unkey Docs](https://www.unkey.com/docs/introduction) | Product documentation | 515 | read |
+| [Regions - Unkey Docs](https://unkey.com/docs/build-and-deploy/regions) | Product documentation | 149 | read |
+| [Observability - Unkey Docs](https://unkey.com/docs/observability/overview) | Product documentation | 81 | too little text to read |
+| [Overview - Unkey Docs](https://www.unkey.com/docs/api-reference/overview) | Product documentation | 253 | read |
+| [Deploy your first app - Unkey Docs](https://www.unkey.com/docs/quickstart/deploy) | Product documentation | 153 | read |
+| [Quickstart - Unkey Docs](https://www.unkey.com/docs/quickstart/quickstart) | Product documentation | 903 | read |
+| https://www.unkey.com/docs/llms.txt | — | — | skipped: content-type text/plain; charset=utf |
+| https://www.unkey.com/faq | — | — | HTTP 404 |
+| https://app.unkey.com/auth/sign-up | — | — | HTTP 429 |
+| https://app.unkey.com/ | — | — | HTTP 429 |
+| https://www.unkey.com/help | — | — | HTTP 404 |
+| https://www.unkey.com/terms | — | — | HTTP 404 |
 
 </details>
 
-Claims extracted: 15 entitlement, 13 plan price, 7 plan mention, 1 unlimited, 1 limit.
+**1. Your free plan keeps logs longer than the $5 plan and audit logs longer than the $25 plan**  
+`high impact` · `Likely contradiction` · `high confidence`
 
-Inaccessible pages: https://www.unkey.com/docs/llms.txt (skipped: content-type text/plain; charset=utf-8); https://www.unkey.com/faq (HTTP 404); https://app.unkey.com/auth/sign-up (HTTP 429); https://app.unkey.com/ (HTTP 429); https://www.unkey.com/help (HTTP 404).
+Your documentation says the free plan retains logs for 7 days and audit logs for 30 days. Your pricing page's comparison table gives Starter, at $5 a month, 3 days of log retention and 7 days of audit log retention — less than free on both counts. Pro, at $25 a month, gets 7 days and 14 days, so it too has less audit log retention than the free plan, and only matches free on ordinary logs. Only Business at $50 finally reaches the free plan's 30 days of audit retention. A customer who upgrades from free to Starter to get a production-grade service will find their observability window has shrunk, which is the opposite of what upgrading is supposed to do.
 
-**No findings.** Nothing on the pages read contradicted anything else with enough evidence to report.
+- **Claim A:** The free plan retains logs for 7 days and audit logs for 30 days
+  - Evidence: “| Audit log retention | 30 days | Varies by plan |”
+  - Source: [https://unkey.com/docs/platform/workspaces/billing](https://unkey.com/docs/platform/workspaces/billing)
+- **Claim B:** The paid comparison table gives Starter 3 days of log retention and 7 days of audit log retention, rising to 14 and 30 only on Business
+  - Evidence: “$5
+1
+3 days
+7 days
+Email”
+  - Source: [https://www.unkey.com/pricing](https://www.unkey.com/pricing)
+- *Why this is not just wording: These are the same two named metrics, measured in the same unit, and the free tier's numbers are larger than the paid tier's — one of the two pages must be wrong about what a paying customer receives.*
+- *What would make this a non-issue: We read the paid figures from a comparison grid that is built from styled divs rather than a real table, so column alignment had to be inferred. We checked it against the plan cards and it holds — the same column that gives Starter 3 days also gives it 1 vCPU, 2 GB, 1 custom domain and $5 of usage credits, all of which match the Starter card exactly. Still worth thirty seconds with the live page before acting.*
+
+**2. Your pricing page says "start for free" but never shows the free plan or what it includes**  
+`medium impact` · `Missing information` · `high confidence`
+
+"Start for free, scale as you go" is the first line of your pricing page and the closing call to action repeats it. The plans below begin at $5 a month, and no free tier appears anywhere on the page. The free plan does exist, and it is specified in your billing documentation with real numbers — 150,000 API requests a month, 7 days of log retention, no team members. A developer evaluating you is told twice that they can start for free and then shown nothing they can start with, which turns the most important question on the page into a support conversation.
+
+- **Claim A:** The pricing page invites developers to start for free
+  - Evidence: “Start for free, scale as you go with predictable usage-based pricing.”
+  - Source: [https://www.unkey.com/pricing](https://www.unkey.com/pricing)
+- **Claim B:** The free plan and its allowances exist, but are documented only in the billing docs
+  - Evidence: “| API requests per month | 150,000 | Varies by plan |”
+  - Source: [https://unkey.com/docs/platform/workspaces/billing](https://unkey.com/docs/platform/workspaces/billing)
+- *Why this is not just wording: A whole plan with published quotas is absent from the page whose job is to list the plans, so the pricing page cannot answer what "free" means.*
+- *What would make this a non-issue: The free tier may be in the process of being retired, or may be offered only at signup. Either way the pricing page still promises it twice.*
+
+*Not checkable from these pages: The pricing page's FAQ rendered as a heading with no questions, so anything it says about the free plan, trials or overage was not visible to us. The pricing page states API request allowances nowhere at all — the docs give the free plan 150,000 a month and say paid plans vary, but no page we read says by how much, so we could not check request quotas against each other. The interactive cost calculator produced a single $188 estimate from its default inputs rather than a price list.*
 
 ---
 
@@ -633,7 +823,7 @@ Inaccessible pages: https://www.unkey.com/docs/llms.txt (skipped: content-type t
    - public documentation, help, FAQ, comparison or terms content can be discovered
 3. **35** candidates passed.
 4. Ten were drawn with `random.Random(20260902).sample(...)` over the eligible candidates sorted by URL, so the draw is reproducible and independent of the order the pre-check finished in.
-5. All ten were analysed with identical settings (`{"max_pages": 16, "max_findings": 12}`). No rule, threshold or prompt was changed for any individual company.
+5. All ten were harvested with identical settings (`{"max_pages": 16}`) and analysed with the identical prompt from `prompts.py`. Nothing was changed for any individual company.
 
 **Selected:** Baserow, Bento, Checkly, Cronitor, Fathom Analytics, Knock, SavvyCal, ScreenshotOne, Umami, Unkey.
 

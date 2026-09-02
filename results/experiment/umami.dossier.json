@@ -1,0 +1,75 @@
+{
+  "company": "Umami",
+  "root_url": "https://umami.is/",
+  "domain": "umami.is",
+  "harvested_at": "2026-09-02 07:57:33 UTC",
+  "pages": [
+    {
+      "url": "https://umami.is/pricing",
+      "final_url": "https://umami.is/pricing",
+      "title": "Pricing \u2013 Umami",
+      "category": "pricing",
+      "why_selected": "url path contains 'pricing' (guessed conventional path, not linked)",
+      "discovered_via": "conventional path guess",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 0,
+      "text": "",
+      "truncated": false,
+      "usable": false
+    },
+    {
+      "url": "https://umami.is/docs",
+      "final_url": "https://docs.umami.is/docs/",
+      "title": "Introduction \u2013 umami",
+      "category": "docs",
+      "why_selected": "url path contains 'docs' (guessed conventional path, not linked)",
+      "discovered_via": "conventional path guess",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 0,
+      "text": "",
+      "truncated": false,
+      "usable": false
+    },
+    {
+      "url": "https://umami.is/terms",
+      "final_url": "https://umami.is/terms",
+      "title": "Terms of Service \u2013 Umami",
+      "category": "terms",
+      "why_selected": "url path contains 'terms' (guessed conventional path, not linked)",
+      "discovered_via": "conventional path guess",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 0,
+      "text": "",
+      "truncated": false,
+      "usable": false
+    }
+  ],
+  "failures": [],
+  "discovery_notes": [],
+  "pricing_urls": [
+    "https://umami.is/pricing"
+  ],
+  "stats": {
+    "pages_selected": 3,
+    "pages_fetched_ok": 3,
+    "pages_usable": 0,
+    "pages_failed": 0,
+    "pages_js_rendered": 0,
+    "urls_considered": 6,
+    "dossier_chars": 0,
+    "harvest_seconds": 2.6,
+    "fetcher": {
+      "network": 3,
+      "cache": 5,
+      "rendered": 0,
+      "blocked": 0,
+      "failed": 3
+    }
+  }
+}

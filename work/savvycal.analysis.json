@@ -1,0 +1,79 @@
+{
+  "company": "SavvyCal",
+  "plans": [
+    {"name": "Basic", "headline_price": "$10 /user/mo", "billing_periods": ["monthly"],
+     "evidence": {"quote": "Great for individuals & small teams with simple scheduling needs.", "url": "https://savvycal.com/pricing"}},
+    {"name": "Premium", "headline_price": "$17 /user/mo", "billing_periods": ["monthly"],
+     "evidence": {"quote": "Ideal for businesses who need a bit more control over their scheduling flows.", "url": "https://savvycal.com/pricing"}}
+  ],
+  "promises": [
+    {"kind": "plan_price", "statement": "Basic is $10 per user per month", "plan": "Basic",
+     "evidence": {"quote": "$ 10 /user/mo", "url": "https://savvycal.com/pricing"}},
+    {"kind": "plan_price", "statement": "Premium is $17 per user per month", "plan": "Premium",
+     "evidence": {"quote": "$ 17 /user/mo", "url": "https://savvycal.com/pricing"}},
+    {"kind": "unlimited", "statement": "Basic includes unlimited calendars", "plan": "Basic",
+     "evidence": {"quote": "Unlimited calendars", "url": "https://savvycal.com/pricing"}},
+    {"kind": "unlimited", "statement": "Basic includes unlimited scheduling links", "plan": "Basic",
+     "evidence": {"quote": "Unlimited links", "url": "https://savvycal.com/pricing"}},
+    {"kind": "entitlement", "statement": "Premium adds custom domains, delegation to an assistant and paid bookings", "plan": "Premium",
+     "evidence": {"quote": "You'll get everything in Basic, plus:", "url": "https://savvycal.com/pricing"}},
+    {"kind": "condition", "statement": "There is a 30-day money back guarantee", "plan": null,
+     "evidence": {"quote": "Backed by a 30-day money back guarantee.", "url": "https://savvycal.com/pricing"}},
+    {"kind": "condition", "statement": "Cancelling within 30 days entitles you to a full refund; after that refunds are discretionary", "plan": null,
+     "evidence": {"quote": "If you cancel within 30 days of starting your subscription, you are entitled to a full refund of fees paid.", "url": "https://savvycal.com/terms"}},
+    {"kind": "condition", "statement": "Subscriptions renew automatically unless cancelled before the period ends", "plan": null,
+     "evidence": {"quote": "Subscriptions will automatically renew for the same subscription period unless you cancel the account by the end of the then-current subscription period.", "url": "https://savvycal.com/terms"}},
+    {"kind": "condition", "statement": "Prices may be changed at any time", "plan": null,
+     "evidence": {"quote": "We may change prices at any time.", "url": "https://savvycal.com/terms"}},
+    {"kind": "condition", "statement": "The service may not be used for reselling", "plan": null,
+     "evidence": {"quote": "You may use these Services for your individual purposes and not for the purpose of reselling.", "url": "https://savvycal.com/terms"}}
+  ],
+  "findings": [
+    {
+      "type": "missing_information",
+      "severity": "medium",
+      "confidence": "medium",
+      "headline": "Your pricing page invites people to \"kick the tires for free\", then shows only two paid plans and never explains what free means",
+      "explanation": "The first line above your plans offers a free way in and tells the reader they can upgrade when they are ready to \"activate\". The plans underneath start at $10 per user per month, and nothing on the page says whether free means a free tier, a time-limited trial, or an unactivated account with reduced functionality. There is no trial length, no statement about whether a card is required, and no explanation of what activation changes. This is the first question a visitor has and the page raises it without answering it.",
+      "claim_a": {
+        "statement": "You can start for free and upgrade only when ready to activate",
+        "quote": "Kick the tires for free and only upgrade when you're ready to activate.",
+        "url": "https://savvycal.com/pricing"
+      },
+      "claim_b": {
+        "statement": "The only prices published are $10 and $17 per user per month, with no free option shown",
+        "quote": "$ 10 /user/mo",
+        "url": "https://savvycal.com/pricing"
+      },
+      "why_not_just_wording": "One sentence offers a free route into the product and the rest of the page documents only paid ones, so the reader cannot find out what they would actually be signing up for.",
+      "caveat": "The answer is very likely in the FAQ at the bottom of the page, which is collapsed and did not render for us — so this may be a rendering limitation on our side rather than a gap on yours. The plan comparison table on the same page also rendered as feature names with no values, which is why this report is thinner for SavvyCal than for other companies."
+    },
+    {
+      "type": "missing_information",
+      "severity": "low",
+      "confidence": "high",
+      "headline": "Your terms reserve the right to change prices at any time, with no notice period, and your pricing page does not mention it",
+      "explanation": "A single sentence in the Fees & Payment section lets you change prices at any time. Unlike most terms of this kind it commits to no notice period at all — not 30 days, not one billing cycle. Combined with automatic renewal, a customer's price can in principle change between one renewal and the next without warning. This is standard drafting and probably not how you behave, but it is the sort of clause a procurement reviewer flags, and nothing on the pricing page sets an expectation either way.",
+      "claim_a": {
+        "statement": "Prices may be changed at any time, with no notice period stated",
+        "quote": "We may change prices at any time.",
+        "url": "https://savvycal.com/terms"
+      },
+      "claim_b": {
+        "statement": "Subscriptions renew automatically unless cancelled before the period ends",
+        "quote": "Subscriptions will automatically renew for the same subscription period unless you cancel the account by the end of the then-current subscription period.",
+        "url": "https://savvycal.com/terms"
+      },
+      "why_not_just_wording": "The two clauses combine into a commercial term — an automatically renewing subscription whose price can move without notice — that appears nowhere the buyer is asked to decide.",
+      "caveat": "This is ordinary legal boilerplate in the place boilerplate belongs, and your 30-day money back guarantee already gives customers a way out. We are flagging placement, not conduct."
+    }
+  ],
+  "coverage_notes": {
+    "unusable_pages": [
+      "https://savvycal.com/faq (HTTP 404)",
+      "https://savvycal.com/help (HTTP 404)",
+      "https://savvycal.com/docs (HTTP 404)"
+    ],
+    "what_was_not_checkable": "This is the weakest coverage of the ten companies and we would rather say so than pad the report. The plan comparison table on your pricing page rendered as a list of feature names with no per-plan values, so we could not check a single feature entitlement against your documentation. The FAQ section rendered as a heading with no questions or answers. Your help site returned almost no readable text. As a result we could not check the two things most worth checking here: which features are Basic versus Premium, and what your free entry route actually is. Your 30-day money back guarantee and your refund clause do agree with each other, which is worth saying, because that is the pair that most often does not."
+  }
+}

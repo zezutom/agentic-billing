@@ -13,3 +13,7 @@ build/
 
 # promise_audit
 .promise_audit_cache/
+
+# promise_audit: regenerable crawl artefacts
+work/*.dossier.json
+work/*.request.md

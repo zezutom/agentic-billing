@@ -1,1675 +1,573 @@
 {
   "company": "ScreenshotOne",
-  "root_url": "https://screenshotone.com/",
-  "domain": "screenshotone.com",
-  "started_at": "2026-09-02 07:43:19 UTC",
-  "duration_seconds": 2.7,
-  "pages": [
+  "plans": [
     {
-      "url": "https://screenshotone.com/pricing",
-      "final_url": "https://screenshotone.com/pricing/",
-      "title": "Start rendering for free",
-      "category": "pricing",
-      "why_selected": "url path contains 'pricing'; link text 'pricing'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 773,
-      "claim_count": 66
+      "name": "Free",
+      "headline_price": "$0 \u2014 100 screenshots per month",
+      "billing_periods": [
+        "free"
+      ],
+      "evidence": {
+        "quote": "You can take up to 100 screenshots of any URL for free per month",
+        "url": "https://screenshotone.com/pricing"
+      },
+      "evidence_verified": true
     },
     {
-      "url": "https://screenshotone.com/docs/credits",
-      "final_url": "https://screenshotone.com/docs/credits/",
-      "title": "How credits work in ScreenshotOne",
-      "category": "limits",
-      "why_selected": "url path contains 'credits'; link text 'credits'",
-      "discovered_via": "linked from docs hub https://screenshotone.com/docs",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 541,
-      "claim_count": 3
+      "name": "Basic",
+      "headline_price": "$17 per month",
+      "billing_periods": [
+        "monthly",
+        "annual"
+      ],
+      "evidence": {
+        "quote": "The essentials to start rendering screenshots today.",
+        "url": "https://screenshotone.com/pricing"
+      },
+      "evidence_verified": true
     },
     {
-      "url": "https://dash.screenshotone.com/sign-up",
-      "final_url": "https://dash.screenshotone.com/sign-up",
-      "title": "",
-      "category": "trial",
-      "why_selected": "url path contains 'sign-up'; link text 'sign up'",
-      "discovered_via": "homepage navigation",
-      "status": null,
-      "ok": false,
-      "error": "blocked by robots.txt",
-      "rendered": false,
-      "word_count": 0,
-      "claim_count": 0
+      "name": "Growth",
+      "headline_price": "$79 per month",
+      "billing_periods": [
+        "monthly",
+        "annual"
+      ],
+      "evidence": {
+        "quote": "A plan that scales with your rapidly growing business.",
+        "url": "https://screenshotone.com/pricing"
+      },
+      "evidence_verified": true
     },
     {
-      "url": "https://screenshotone.com/integrations",
-      "final_url": "https://screenshotone.com/integrations/",
-      "title": "Automate website screenshots in your workflows",
-      "category": "addons",
-      "why_selected": "url path contains 'integrations'; link text 'integrations'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 644,
-      "claim_count": 2
-    },
-    {
-      "url": "https://screenshotone.com/docs/get-usage",
-      "final_url": "https://screenshotone.com/docs/get-usage/",
-      "title": "Get Usage",
-      "category": "limits",
-      "why_selected": "url path contains 'usage'",
-      "discovered_via": "linked from docs hub https://screenshotone.com/docs",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 363,
-      "claim_count": 2
-    },
-    {
-      "url": "https://screenshotone.com/docs",
-      "final_url": "https://screenshotone.com/docs/getting-started/",
-      "title": "Getting Started",
-      "category": "docs",
-      "why_selected": "url path contains 'docs'; link text 'documentation'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 618,
-      "claim_count": 1
-    },
-    {
-      "url": "https://screenshotone.com/docs/getting-started",
-      "final_url": "https://screenshotone.com/docs/getting-started/",
-      "title": "Getting Started",
-      "category": "docs",
-      "why_selected": "url path contains 'docs'; link text 'documentation'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 618,
-      "claim_count": 1
-    },
-    {
-      "url": "https://screenshotone.com/integrations/zapier",
-      "final_url": "https://screenshotone.com/integrations/zapier/",
-      "title": "Zapier",
-      "category": "addons",
-      "why_selected": "url path contains 'integrations'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 348,
-      "claim_count": 1
-    },
-    {
-      "url": "https://screenshotone.com/terms-of-service",
-      "final_url": "https://screenshotone.com/terms-of-service/",
-      "title": "Terms of Service",
-      "category": "terms",
-      "why_selected": "url path contains 'terms'; link text 'terms of service'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 1109,
-      "claim_count": 3
-    },
-    {
-      "url": "https://screenshotone.com/docs/guides",
-      "final_url": "https://screenshotone.com/docs/guides/",
-      "title": "Guides",
-      "category": "help",
-      "why_selected": "url path contains 'guides'",
-      "discovered_via": "linked from docs hub https://screenshotone.com/docs",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 225,
-      "claim_count": 1
-    },
-    {
-      "url": "https://screenshotone.com/pdf-generation-api",
-      "final_url": "https://screenshotone.com/pdf-generation-api/",
-      "title": "Generate PDFs from URLs, HTML, or Markdown via API",
-      "category": "docs",
-      "why_selected": "url path contains 'api'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 724,
-      "claim_count": 1
-    },
-    {
-      "url": "https://screenshotone.com/docs/guides/fail-if-content-contains",
-      "final_url": "https://screenshotone.com/docs/guides/fail-if-content-contains/",
-      "title": "Fail rendering if the content contains a string",
-      "category": "help",
-      "why_selected": "url path contains 'guides'",
-      "discovered_via": "linked from docs hub https://screenshotone.com/docs",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 420,
-      "claim_count": 1
-    },
-    {
-      "url": "https://screenshotone.com/docs/guides/upload-to-s3",
-      "final_url": "https://screenshotone.com/docs/guides/upload-to-s3/",
-      "title": "Upload to S3",
-      "category": "help",
-      "why_selected": "url path contains 'guides'",
-      "discovered_via": "linked from docs hub https://screenshotone.com/docs",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 1117,
-      "claim_count": 1
-    },
-    {
-      "url": "https://screenshotone.com/faq",
-      "final_url": "https://screenshotone.com/faq",
-      "title": "",
-      "category": "faq",
-      "why_selected": "url path contains 'faq' (guessed conventional path, not linked)",
-      "discovered_via": "conventional path guess",
-      "status": 404,
-      "ok": false,
-      "error": "HTTP 404",
-      "rendered": false,
-      "word_count": 0,
-      "claim_count": 0
-    },
-    {
-      "url": "https://screenshotone.com/terms",
-      "final_url": "https://screenshotone.com/terms",
-      "title": "",
-      "category": "terms",
-      "why_selected": "url path contains 'terms' (guessed conventional path, not linked)",
-      "discovered_via": "conventional path guess",
-      "status": 404,
-      "ok": false,
-      "error": "HTTP 404",
-      "rendered": false,
-      "word_count": 0,
-      "claim_count": 0
-    },
-    {
-      "url": "https://screenshotone.com/integrations/airtable",
-      "final_url": "https://screenshotone.com/integrations/airtable/",
-      "title": "Airtable",
-      "category": "addons",
-      "why_selected": "url path contains 'integrations'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 339,
-      "claim_count": 1
-    },
-    {
-      "url": "https://screenshotone.com/integrations/make",
-      "final_url": "https://screenshotone.com/integrations/make/",
-      "title": "Make",
-      "category": "addons",
-      "why_selected": "url path contains 'integrations'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 355,
-      "claim_count": 1
-    },
-    {
-      "url": "https://screenshotone.com/integrations/bubble",
-      "final_url": "https://screenshotone.com/integrations/bubble/",
-      "title": "Bubble",
-      "category": "addons",
-      "why_selected": "url path contains 'integrations'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 340,
-      "claim_count": 1
+      "name": "Scale",
+      "headline_price": "$259 per month",
+      "billing_periods": [
+        "monthly",
+        "annual"
+      ],
+      "evidence": {
+        "quote": "Prioritized support and infrastructure for your company.",
+        "url": "https://screenshotone.com/pricing"
+      },
+      "evidence_verified": true
     }
   ],
-  "failures": [
-    {
-      "url": "https://dash.screenshotone.com/sign-up",
-      "category": "trial",
-      "reason": "blocked by robots.txt"
-    },
-    {
-      "url": "https://screenshotone.com/faq",
-      "category": "faq",
-      "reason": "HTTP 404"
-    },
-    {
-      "url": "https://screenshotone.com/terms",
-      "category": "terms",
-      "reason": "HTTP 404"
-    }
-  ],
-  "claims": [
+  "promises": [
     {
       "kind": "plan_price",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Basic $17 per month The essentials to start rendering screenshots today. 2,000 screenshots 40 reque",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "amount": 17.0,
-        "currency": "USD",
-        "period": "month",
-        "per_seat": false,
-        "billed_annually": false,
-        "billed_monthly": false,
-        "raw": "$17",
-        "page_is_reference": false
+      "statement": "Basic is $17 per month",
+      "plan": "Basic",
+      "evidence": {
+        "quote": "$17 per month",
+        "url": "https://screenshotone.com/pricing"
       },
-      "extractor": "pricing_card"
+      "evidence_verified": true
     },
     {
       "kind": "plan_price",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "screenshots today. 2,000 screenshots 40 requests per minute $0.009 per extra Pay only for successful requests Block ads and cookie banners Render PDFs PNG,",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "amount": 0.0,
-        "currency": "USD",
-        "period": "month",
-        "per_seat": false,
-        "billed_annually": false,
-        "billed_monthly": false,
-        "raw": "$0.00",
-        "page_is_reference": false
+      "statement": "Growth is $79 per month",
+      "plan": "Growth",
+      "evidence": {
+        "quote": "$79 per month",
+        "url": "https://screenshotone.com/pricing"
       },
-      "extractor": "pricing_card"
+      "evidence_verified": true
     },
     {
       "kind": "plan_price",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Growth Recommended $79 per month A plan that scales with your rapidly growing business. 10,000 screenshots 80 re",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "amount": 79.0,
-        "currency": "USD",
-        "period": "month",
-        "per_seat": false,
-        "billed_annually": false,
-        "billed_monthly": false,
-        "raw": "$79",
-        "page_is_reference": false
+      "statement": "Scale is $259 per month",
+      "plan": "Scale",
+      "evidence": {
+        "quote": "$259 per month",
+        "url": "https://screenshotone.com/pricing"
       },
-      "extractor": "pricing_card"
+      "evidence_verified": true
     },
     {
-      "kind": "plan_price",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "growing business. 10,000 screenshots 80 requests per minute $0.006 per extra Pay only for successful requests Block ads and cookie banners Render PDFs PNG,",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "amount": 0.0,
-        "currency": "USD",
-        "period": "month",
-        "per_seat": false,
-        "billed_annually": false,
-        "billed_monthly": false,
-        "raw": "$0.00",
-        "page_is_reference": false
+      "kind": "condition",
+      "statement": "Annual billing gives two months free",
+      "plan": null,
+      "evidence": {
+        "quote": "Annually (2 months free)",
+        "url": "https://screenshotone.com/pricing"
       },
-      "extractor": "pricing_card"
-    },
-    {
-      "kind": "plan_price",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale $259 per month Prioritized support and infrastructure for your company. 50,000 screenshots 150",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "amount": 259.0,
-        "currency": "USD",
-        "period": "month",
-        "per_seat": false,
-        "billed_annually": false,
-        "billed_monthly": false,
-        "raw": "$259",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card"
-    },
-    {
-      "kind": "plan_price",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "or your company. 50,000 screenshots 150 requests per minute $0.004 per extra Pay only for successful requests Block ads and cookie banners Render PDFs PNG,",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "amount": 0.0,
-        "currency": "USD",
-        "period": "month",
-        "per_seat": false,
-        "billed_annually": false,
-        "billed_monthly": false,
-        "raw": "$0.00",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card"
+      "evidence_verified": true
     },
     {
       "kind": "limit",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "40 requests per minute",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "metric": "api_requests",
-        "value": 40.0,
-        "unit": "count",
-        "limit_kind": "rate",
-        "subject": "requests",
-        "window": "minute",
-        "page_is_reference": false
+      "statement": "Basic includes 2,000 screenshots and 40 requests per minute",
+      "plan": "Basic",
+      "evidence": {
+        "quote": "2,000 screenshots",
+        "url": "https://screenshotone.com/pricing"
       },
-      "extractor": "rate_limit"
+      "evidence_verified": true
     },
     {
       "kind": "limit",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "80 requests per minute",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "metric": "api_requests",
-        "value": 80.0,
-        "unit": "count",
-        "limit_kind": "rate",
-        "subject": "requests",
-        "window": "minute",
-        "page_is_reference": false
+      "statement": "Growth includes 10,000 screenshots and 80 requests per minute",
+      "plan": "Growth",
+      "evidence": {
+        "quote": "10,000 screenshots",
+        "url": "https://screenshotone.com/pricing"
       },
-      "extractor": "rate_limit"
+      "evidence_verified": true
     },
     {
       "kind": "limit",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "150 requests per minute",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "metric": "api_requests",
-        "value": 150.0,
-        "unit": "count",
-        "limit_kind": "rate",
-        "subject": "requests",
-        "window": "minute",
-        "page_is_reference": false
+      "statement": "Scale includes 50,000 screenshots and 150 requests per minute",
+      "plan": "Scale",
+      "evidence": {
+        "quote": "50,000 screenshots",
+        "url": "https://screenshotone.com/pricing"
       },
-      "extractor": "rate_limit"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Basic plan includes: 2,000 screenshots",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "feature": "2,000 screenshots",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Basic plan includes: 40 requests per minute",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "feature": "40 requests per minute",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Basic plan includes: Pay only for successful requests",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "feature": "Pay only for successful requests",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Basic plan includes: Block ads and cookie banners",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "feature": "Block ads and cookie banners",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Basic plan includes: Render PDFs",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "feature": "Render PDFs",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Basic plan includes: PNG, WebP, JPEG, and more",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "feature": "PNG, WebP, JPEG, and more",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Basic plan includes: HTML rendering",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "feature": "HTML rendering",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Basic plan includes: Full page screenshots",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "feature": "Full page screenshots",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Basic plan includes: Caching",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "feature": "Caching",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Basic plan includes: Upload to S3",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "feature": "Upload to S3",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Basic plan includes: Zapier, Make, and similar",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "feature": "Zapier, Make, and similar",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Basic plan includes: Webhooks",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "feature": "Webhooks",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Basic plan includes: Signed links",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "feature": "Signed links",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Basic plan includes: Stealth mode",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "feature": "Stealth mode",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Growth plan includes: 10,000 screenshots",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "feature": "10,000 screenshots",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Growth plan includes: 80 requests per minute",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "feature": "80 requests per minute",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Growth plan includes: Pay only for successful requests",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "feature": "Pay only for successful requests",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Growth plan includes: Block ads and cookie banners",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "feature": "Block ads and cookie banners",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Growth plan includes: Render PDFs",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "feature": "Render PDFs",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Growth plan includes: PNG, WebP, JPEG, and more",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "feature": "PNG, WebP, JPEG, and more",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Growth plan includes: HTML rendering",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "feature": "HTML rendering",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Growth plan includes: Full page screenshots",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "feature": "Full page screenshots",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Growth plan includes: Caching",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "feature": "Caching",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Growth plan includes: Upload to S3",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "feature": "Upload to S3",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Growth plan includes: Zapier, Make, and similar",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "feature": "Zapier, Make, and similar",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Growth plan includes: Webhooks",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "feature": "Webhooks",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Growth plan includes: Signed links",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "feature": "Signed links",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Growth plan includes: Stealth mode",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "feature": "Stealth mode",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Growth plan includes: Choose IP location",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "feature": "Choose IP location",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Growth plan includes: Scrolling screenshots",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "feature": "Scrolling screenshots",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Growth plan includes: Generate videos",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "feature": "Generate videos",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: 50,000 screenshots",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "50,000 screenshots",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: 150 requests per minute",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "150 requests per minute",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: Pay only for successful requests",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "Pay only for successful requests",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: Block ads and cookie banners",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "Block ads and cookie banners",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: Render PDFs",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "Render PDFs",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: PNG, WebP, JPEG, and more",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "PNG, WebP, JPEG, and more",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: HTML rendering",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "HTML rendering",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: Full page screenshots",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "Full page screenshots",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: Caching",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "Caching",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: Upload to S3",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "Upload to S3",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: Zapier, Make, and similar",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "Zapier, Make, and similar",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: Webhooks",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "Webhooks",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: Signed links",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "Signed links",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: Stealth mode",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "Stealth mode",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: Choose IP location",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "Choose IP location",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: Scrolling screenshots",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "Scrolling screenshots",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: Generate videos",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "Generate videos",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: GPU rendering",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "GPU rendering",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Scale plan includes: Priority Support",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "feature": "Priority Support",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "plan_mention",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "pricing page heading 'Basic'",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "source": "heading",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_heading"
-    },
-    {
-      "kind": "plan_mention",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "pricing page heading 'Growth'",
-      "plan": "growth",
-      "plan_raw": "Growth",
-      "data": {
-        "source": "heading",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_heading"
-    },
-    {
-      "kind": "plan_mention",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "pricing page heading 'Scale'",
-      "plan": "scale",
-      "plan_raw": "Scale",
-      "data": {
-        "source": "heading",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_heading"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "$0.009 per extra",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "$0.009 per extra",
-        "amount": 0.0,
-        "currency": "USD",
-        "page_is_reference": false
-      },
-      "extractor": "addon_mention"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "$0.006 per extra",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "$0.006 per extra",
-        "amount": 0.0,
-        "currency": "USD",
-        "page_is_reference": false
-      },
-      "extractor": "addon_mention"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "$0.004 per extra",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "$0.004 per extra",
-        "amount": 0.0,
-        "currency": "USD",
-        "page_is_reference": false
-      },
-      "extractor": "addon_mention"
+      "evidence_verified": true
     },
     {
       "kind": "condition",
-      "page_url": "https://screenshotone.com/pricing",
-      "page_title": "Start rendering for free",
-      "page_category": "pricing",
-      "evidence": "Documentation Blog Changelog Customers Pricing Sign in Sign up Book a demo Dashboard",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "contact_sales",
-        "description": "pricing only available by contacting sales",
-        "page_is_reference": false
+      "statement": "Extra screenshots beyond the plan cost $0.009 on Basic",
+      "plan": "Basic",
+      "evidence": {
+        "quote": "$0.009 per extra",
+        "url": "https://screenshotone.com/pricing"
       },
-      "extractor": "condition_contact_sales"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://screenshotone.com/docs/credits",
-      "page_title": "How credits work in ScreenshotOne",
-      "page_category": "limits",
-      "evidence": "Charging Extra",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "Charging Extra",
-        "amount": null,
-        "currency": null,
-        "page_is_reference": false
-      },
-      "extractor": "addon_mention"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://screenshotone.com/docs/credits",
-      "page_title": "How credits work in ScreenshotOne",
-      "page_category": "limits",
-      "evidence": "Overages : If you go over your limit and extra charging is enabled, extra screenshots are billed automatically based on your plan\u2019s per-credit rate .",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "Overages : If you go over your limit and extra charging is enabled, extra screenshots are billed aut",
-        "amount": null,
-        "currency": null,
-        "page_is_reference": false
-      },
-      "extractor": "addon_mention"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://screenshotone.com/docs/credits",
-      "page_title": "How credits work in ScreenshotOne",
-      "page_category": "limits",
-      "evidence": "Previous Charging Extra Next Signed Links",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "Previous Charging Extra Next Signed Links",
-        "amount": null,
-        "currency": null,
-        "page_is_reference": false
-      },
-      "extractor": "addon_mention"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://screenshotone.com/integrations",
-      "page_title": "Automate website screenshots in your workflows",
-      "page_category": "addons",
-      "evidence": "24 integrations",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "integrations",
-        "value": 24.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "integrations",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
+      "evidence_verified": true
     },
     {
       "kind": "condition",
-      "page_url": "https://screenshotone.com/integrations",
-      "page_title": "Automate website screenshots in your workflows",
-      "page_category": "addons",
-      "evidence": "Documentation Blog Changelog Customers Pricing Sign in Sign up Book a demo Dashboard",
+      "statement": "Only successful, uncached screenshots count toward the quota",
       "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "contact_sales",
-        "description": "pricing only available by contacting sales",
-        "page_is_reference": false
+      "evidence": {
+        "quote": "Only screenshots that are successfully rendered (without HTTP, browser, or network errors) and not served from cache count toward your quota.",
+        "url": "https://screenshotone.com/pricing"
       },
-      "extractor": "condition_contact_sales"
+      "evidence_verified": true
     },
     {
-      "kind": "limit",
-      "page_url": "https://screenshotone.com/docs/get-usage",
-      "page_title": "Get Usage",
-      "page_category": "limits",
-      "evidence": "The concurrency values are request-bucket values, not active render counts. For example, if your plan allows 40 requests per minute and concurrency.remaining is 5, you can start 5 requests at once. After that, wait until concurrency.reset before starting more requests.",
+      "kind": "trial",
+      "statement": "No credit card is required to start",
       "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "api_requests",
-        "value": 40.0,
-        "unit": "count",
-        "limit_kind": "rate",
-        "subject": "requests",
-        "window": "minute",
-        "page_is_reference": false
+      "evidence": {
+        "quote": "No credit card required.",
+        "url": "https://screenshotone.com/pricing"
       },
-      "extractor": "rate_limit"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://screenshotone.com/docs/get-usage",
-      "page_title": "Get Usage",
-      "page_category": "limits",
-      "evidence": "Charging Extra",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "Charging Extra",
-        "amount": null,
-        "currency": null,
-        "page_is_reference": false
-      },
-      "extractor": "addon_mention"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://screenshotone.com/docs",
-      "page_title": "Getting Started",
-      "page_category": "docs",
-      "evidence": "Charging Extra",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "Charging Extra",
-        "amount": null,
-        "currency": null,
-        "page_is_reference": false
-      },
-      "extractor": "addon_mention"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://screenshotone.com/docs/getting-started",
-      "page_title": "Getting Started",
-      "page_category": "docs",
-      "evidence": "Charging Extra",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "Charging Extra",
-        "amount": null,
-        "currency": null,
-        "page_is_reference": false
-      },
-      "extractor": "addon_mention"
+      "evidence_verified": true
     },
     {
       "kind": "condition",
-      "page_url": "https://screenshotone.com/integrations/zapier",
-      "page_title": "Zapier",
-      "page_category": "addons",
-      "evidence": "Documentation Blog Changelog Customers Pricing Sign in Sign up Book a demo Dashboard",
+      "statement": "A full refund is available within 30 days, no questions asked",
       "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "contact_sales",
-        "description": "pricing only available by contacting sales",
-        "page_is_reference": false
+      "evidence": {
+        "quote": "email us at support@screenshotone.com within 30 days, and we will refund you in full, no questions asked",
+        "url": "https://screenshotone.com/pricing"
       },
-      "extractor": "condition_contact_sales"
+      "evidence_verified": true
     },
     {
       "kind": "condition",
-      "page_url": "https://screenshotone.com/terms-of-service",
-      "page_title": "Terms of Service",
-      "page_category": "terms",
-      "evidence": "Documentation Blog Changelog Customers Pricing Sign in Sign up Book a demo Dashboard",
+      "statement": "Usage alerts are sent at 90% and 100% of the monthly quota",
       "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "contact_sales",
-        "description": "pricing only available by contacting sales",
-        "page_is_reference": false
+      "evidence": {
+        "quote": "You will receive an email when you are at 90% and 100% usage of your monthly quota.",
+        "url": "https://screenshotone.com/pricing"
       },
-      "extractor": "condition_contact_sales"
+      "evidence_verified": true
     },
     {
       "kind": "condition",
-      "page_url": "https://screenshotone.com/terms-of-service",
-      "page_title": "Terms of Service",
-      "page_category": "terms",
-      "evidence": "Use of the Service may be subject to pricing plans, quotas, rate limits, and overage charges described on our website or documentation.",
+      "statement": "Unused credits do not roll over and expire at the end of each cycle",
       "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "overage",
-        "description": "charges or cut-offs once an allowance is exceeded",
-        "page_is_reference": false
+      "evidence": {
+        "quote": "Unused credits expire at the end of the cycle",
+        "url": "https://screenshotone.com/docs/credits"
       },
-      "extractor": "condition_overage"
+      "evidence_verified": true
     },
     {
       "kind": "condition",
-      "page_url": "https://screenshotone.com/terms-of-service",
-      "page_title": "Terms of Service",
-      "page_category": "terms",
-      "evidence": "We reserve the right to modify pricing, features, usage limits, quotas, or plan structures at any time.",
+      "statement": "Overage is billed automatically only when extra charging is enabled",
       "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "price_change",
-        "description": "the right to change prices",
-        "page_is_reference": false
+      "evidence": {
+        "quote": "If you go over your limit and extra charging is enabled, extra screenshots are billed automatically",
+        "url": "https://screenshotone.com/docs/credits"
       },
-      "extractor": "condition_price_change"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://screenshotone.com/docs/guides",
-      "page_title": "Guides",
-      "page_category": "help",
-      "evidence": "Charging Extra",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "Charging Extra",
-        "amount": null,
-        "currency": null,
-        "page_is_reference": false
-      },
-      "extractor": "addon_mention"
+      "evidence_verified": true
     },
     {
       "kind": "condition",
-      "page_url": "https://screenshotone.com/pdf-generation-api",
-      "page_title": "Generate PDFs from URLs, HTML, or Markdown via API",
-      "page_category": "docs",
-      "evidence": "Documentation Blog Changelog Customers Pricing Sign in Sign up Book a demo Dashboard",
+      "statement": "Unused credits are not refunded",
       "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "contact_sales",
-        "description": "pricing only available by contacting sales",
-        "page_is_reference": false
+      "evidence": {
+        "quote": "No refunds for unused credits",
+        "url": "https://screenshotone.com/docs/credits"
       },
-      "extractor": "condition_contact_sales"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://screenshotone.com/docs/guides/fail-if-content-contains",
-      "page_title": "Fail rendering if the content contains a string",
-      "page_category": "help",
-      "evidence": "Charging Extra",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "Charging Extra",
-        "amount": null,
-        "currency": null,
-        "page_is_reference": true
-      },
-      "extractor": "addon_mention"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://screenshotone.com/docs/guides/upload-to-s3",
-      "page_title": "Upload to S3",
-      "page_category": "help",
-      "evidence": "Charging Extra",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "Charging Extra",
-        "amount": null,
-        "currency": null,
-        "page_is_reference": true
-      },
-      "extractor": "addon_mention"
+      "evidence_verified": true
     },
     {
       "kind": "condition",
-      "page_url": "https://screenshotone.com/integrations/airtable",
-      "page_title": "Airtable",
-      "page_category": "addons",
-      "evidence": "Documentation Blog Changelog Customers Pricing Sign in Sign up Book a demo Dashboard",
+      "statement": "Exceeding plan limits may lead to extra charges, throttling or suspension",
       "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "contact_sales",
-        "description": "pricing only available by contacting sales",
-        "page_is_reference": false
+      "evidence": {
+        "quote": "throttling, or temporary suspension of access",
+        "url": "https://screenshotone.com/terms-of-service"
       },
-      "extractor": "condition_contact_sales"
+      "evidence_verified": true
     },
     {
       "kind": "condition",
-      "page_url": "https://screenshotone.com/integrations/make",
-      "page_title": "Make",
-      "page_category": "addons",
-      "evidence": "Documentation Blog Changelog Customers Pricing Sign in Sign up Book a demo Dashboard",
+      "statement": "Pricing, features, usage limits, quotas and plan structures may be changed at any time",
       "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "contact_sales",
-        "description": "pricing only available by contacting sales",
-        "page_is_reference": false
+      "evidence": {
+        "quote": "We reserve the right to modify pricing, features, usage limits, quotas, or plan structures at any time.",
+        "url": "https://screenshotone.com/terms-of-service"
       },
-      "extractor": "condition_contact_sales"
-    },
-    {
-      "kind": "condition",
-      "page_url": "https://screenshotone.com/integrations/bubble",
-      "page_title": "Bubble",
-      "page_category": "addons",
-      "evidence": "Documentation Blog Changelog Customers Pricing Sign in Sign up Book a demo Dashboard",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "contact_sales",
-        "description": "pricing only available by contacting sales",
-        "page_is_reference": false
-      },
-      "extractor": "condition_contact_sales"
+      "evidence_verified": true
     }
   ],
   "findings": [
     {
-      "rule": "condition_off_pricing",
-      "kind": "missing_information",
+      "type": "ambiguity",
+      "severity": "high",
+      "confidence": "high",
+      "headline": "Three of your pages give three different answers to what happens when a customer exceeds their plan",
+      "explanation": "This is the question every API customer asks before they build on you, and your site answers it three ways. The pricing page presents it as a simple per-unit price \u2014 go over, pay $0.009 each. The credits documentation adds a condition the pricing page never mentions: overage is billed automatically only if extra charging is enabled, leaving the reader to guess what happens when it is not. The terms of service describe a third outcome, where exceeding plan limits may bring throttling or temporary suspension of access. A developer whose product depends on your API cannot tell whether hitting the limit costs them money, degrades their service, or stops it.",
+      "claim_a": {
+        "statement": "Going over the plan is simply billed at a per-screenshot rate",
+        "quote": "$0.009 per extra",
+        "url": "https://screenshotone.com/pricing"
+      },
+      "claim_b": {
+        "statement": "Exceeding plan limits may instead result in throttling or temporary suspension of access",
+        "quote": "throttling, or temporary suspension of access",
+        "url": "https://screenshotone.com/terms-of-service"
+      },
+      "why_not_just_wording": "Paying a few tenths of a cent more, having requests slowed, and losing access are three different outcomes for the same event, not three descriptions of one.",
+      "caveat": "The likely reality is that overage billing is the normal path and throttling is a reserve power for abuse. The docs page's \"if extra charging is enabled\" is the sentence that most needs finishing: it is the only hint that a customer might have the option switched off, and it never says what happens then.",
+      "same_page": false,
+      "score": 9.0
+    },
+    {
+      "type": "missing_information",
       "severity": "medium",
       "confidence": "high",
-      "headline": "A commercial condition \u2014 charges that apply once an allowance is exceeded \u2014 appears only away from your pricing page",
-      "explanation": "Terms of Service sets out charges that apply once an allowance is exceeded, but nothing equivalent appears on your pricing page. Conditions that change what a customer actually pays or receives belong where the buying decision is made; discovering them later is where churn and chargebacks start.",
-      "claim_a": "Pricing page: condition not stated",
-      "claim_b": "Terms of Service: charges that apply once an allowance is exceeded",
-      "evidence_a": {
-        "url": "https://screenshotone.com/pricing",
-        "page_title": "Pricing page",
-        "page_category": "pricing",
-        "quote": "(no equivalent statement found on the pricing page)"
+      "headline": "Your terms let you change the usage limits and quotas themselves at any time, not just the price",
+      "explanation": "Most terms of service reserve the right to change prices. Yours goes further and reserves the right to modify usage limits, quotas and plan structures too. The screenshot allowances are the product \u2014 2,000, 10,000 and 50,000 a month are the reason a customer picks one plan over another \u2014 so this clause says the thing being bought can be redefined mid-subscription. Nothing on the pricing page hints at it, and no notice period is given anywhere we could read.",
+      "claim_a": {
+        "statement": "Each plan is sold on a specific monthly screenshot allowance",
+        "quote": "50,000 screenshots",
+        "url": "https://screenshotone.com/pricing"
       },
-      "evidence_b": {
-        "url": "https://screenshotone.com/terms-of-service",
-        "page_title": "Terms of Service",
-        "page_category": "terms",
-        "quote": "Use of the Service may be subject to pricing plans, quotas, rate limits, and overage charges described on our website or documentation."
+      "claim_b": {
+        "statement": "Pricing, features, usage limits, quotas and plan structures may all be changed at any time",
+        "quote": "We reserve the right to modify pricing, features, usage limits, quotas, or plan structures at any time.",
+        "url": "https://screenshotone.com/terms-of-service"
       },
-      "caveat": "Detected by absence, so a condition stated in an image, a tooltip or a collapsed accordion on the pricing page would be missed.",
-      "tags": [
-        "condition",
-        "overage"
-      ],
+      "why_not_just_wording": "A right to change quotas is materially different from a right to change prices, because it can reduce what a customer receives without changing what they pay.",
+      "caveat": "This is a clause you probably have no intention of using against existing customers, and a notice commitment on the pricing page would neutralise it entirely.",
+      "same_page": false,
       "score": 5.1
     },
     {
-      "rule": "condition_off_pricing",
-      "kind": "missing_information",
-      "severity": "low",
-      "confidence": "high",
-      "headline": "A commercial condition \u2014 the right to change prices \u2014 appears only away from your pricing page",
-      "explanation": "Terms of Service sets out the right to change prices, but nothing equivalent appears on your pricing page. Conditions that change what a customer actually pays or receives belong where the buying decision is made; discovering them later is where churn and chargebacks start.",
-      "claim_a": "Pricing page: condition not stated",
-      "claim_b": "Terms of Service: the right to change prices",
-      "evidence_a": {
+      "type": "likely_contradiction",
+      "severity": "medium",
+      "confidence": "medium",
+      "headline": "Your pricing page offers a full refund within 30 days, no questions asked; your credits documentation says unused credits are never refunded",
+      "explanation": "\"Email us within 30 days and we will refund you in full, no questions asked\" is an unconditional promise, and it is one of the reasons someone signs up. Your credits page carries a heading that says the opposite for the most common case: no refunds for unused credits. A customer who buys a Scale plan, uses a fraction of the 50,000 screenshots and asks for their money back inside the first month has been told both that they get everything back and that unused credits simply expire.",
+      "claim_a": {
+        "statement": "A full refund is available for any reason within 30 days",
+        "quote": "email us at support@screenshotone.com within 30 days, and we will refund you in full, no questions asked",
+        "url": "https://screenshotone.com/pricing"
+      },
+      "claim_b": {
+        "statement": "Unused credits are not refunded; they expire at the end of the cycle",
+        "quote": "No refunds for unused credits",
+        "url": "https://screenshotone.com/docs/credits"
+      },
+      "why_not_just_wording": "One page promises money back for any reason inside 30 days and the other rules out a refund in the situation where a customer would most often ask for one.",
+      "caveat": "These probably address different things \u2014 the 30-day guarantee refunds the subscription fee, while the credits page is explaining that credit balances have no cash value on cancellation. Read in that order they still conflict, and the credits page is the one a cancelling customer lands on.",
+      "same_page": false,
+      "score": 4.6
+    }
+  ],
+  "coverage_notes": {
+    "unusable_pages": [],
+    "what_was_not_checkable": "This is the most complete set of pages of the ten companies: fifteen pages all readable, with a pricing page that publishes per-plan quotas, rate limits and overage rates inline, and a credits page that explains reset and rollover behaviour properly. What we could not check is what actually happens when extra charging is disabled and the quota runs out \u2014 no page we read says. We also could not confirm whether the free tier survives cancellation: the credits page says a cancelled customer is downgraded to the free plan \"or if the free plan is not available, you will lose access\", without saying when the free plan would not be available."
+  },
+  "backend": "agent",
+  "verification": {
+    "findings_in": 3,
+    "findings_out": 3,
+    "findings_rejected": 0,
+    "quotes_checked": 27,
+    "quotes_failed": 0,
+    "url_corrections": 0,
+    "rejections": []
+  },
+  "source": {
+    "root_url": "https://screenshotone.com/",
+    "domain": "screenshotone.com",
+    "harvested_at": "2026-09-02 07:57:31 UTC",
+    "stats": {
+      "pages_selected": 15,
+      "pages_fetched_ok": 15,
+      "pages_usable": 15,
+      "pages_failed": 3,
+      "pages_js_rendered": 0,
+      "urls_considered": 27,
+      "dossier_chars": 35380,
+      "harvest_seconds": 2.8,
+      "fetcher": {
+        "network": 3,
+        "cache": 19,
+        "rendered": 0,
+        "blocked": 1,
+        "failed": 3
+      }
+    },
+    "pages": [
+      {
         "url": "https://screenshotone.com/pricing",
-        "page_title": "Pricing page",
-        "page_category": "pricing",
-        "quote": "(no equivalent statement found on the pricing page)"
+        "final_url": "https://screenshotone.com/pricing/",
+        "title": "ScreenshotOne Pricing \u2014 Website Screenshot API Plans",
+        "category": "pricing",
+        "why_selected": "url path contains 'pricing'; link text 'pricing'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 617,
+        "text": "",
+        "truncated": false,
+        "usable": true
       },
-      "evidence_b": {
+      {
+        "url": "https://screenshotone.com/docs/credits",
+        "final_url": "https://screenshotone.com/docs/credits/",
+        "title": "How credits work in ScreenshotOne | ScreenshotOne Docs",
+        "category": "limits",
+        "why_selected": "url path contains 'credits'; link text 'credits'",
+        "discovered_via": "linked from docs hub https://screenshotone.com/docs",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 317,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://screenshotone.com/integrations",
+        "final_url": "https://screenshotone.com/integrations/",
+        "title": "ScreenshotOne Integrations",
+        "category": "addons",
+        "why_selected": "url path contains 'integrations'; link text 'integrations'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 483,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://screenshotone.com/docs/get-usage",
+        "final_url": "https://screenshotone.com/docs/get-usage/",
+        "title": "Get Usage | ScreenshotOne Docs",
+        "category": "limits",
+        "why_selected": "url path contains 'usage'",
+        "discovered_via": "linked from docs hub https://screenshotone.com/docs",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 198,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://screenshotone.com/docs",
+        "final_url": "https://screenshotone.com/docs/getting-started/",
+        "title": "Getting Started | ScreenshotOne Docs",
+        "category": "docs",
+        "why_selected": "url path contains 'docs'; link text 'documentation'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 393,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://screenshotone.com/docs/getting-started",
+        "final_url": "https://screenshotone.com/docs/getting-started/",
+        "title": "Getting Started | ScreenshotOne Docs",
+        "category": "docs",
+        "why_selected": "url path contains 'docs'; link text 'documentation'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 393,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://screenshotone.com/integrations/zapier",
+        "final_url": "https://screenshotone.com/integrations/zapier/",
+        "title": "The Screenshot API for Zapier",
+        "category": "addons",
+        "why_selected": "url path contains 'integrations'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 178,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
         "url": "https://screenshotone.com/terms-of-service",
-        "page_title": "Terms of Service",
-        "page_category": "terms",
-        "quote": "We reserve the right to modify pricing, features, usage limits, quotas, or plan structures at any time."
+        "final_url": "https://screenshotone.com/terms-of-service/",
+        "title": "Terms of Service",
+        "category": "terms",
+        "why_selected": "url path contains 'terms'; link text 'terms of service'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 953,
+        "text": "",
+        "truncated": true,
+        "usable": true
       },
-      "caveat": "This is standard legal wording in the right place; the question is only whether the pricing page sets the same expectation. Detected by absence, so a condition stated in an image, a tooltip or a collapsed accordion on the pricing page would be missed.",
-      "tags": [
-        "condition",
-        "price_change"
-      ],
-      "score": 2.55
-    }
-  ],
-  "discovery_notes": [],
-  "pricing_urls": [
-    "https://screenshotone.com/pricing"
-  ],
-  "stats": {
-    "pages_selected": 15,
-    "pages_fetched_ok": 15,
-    "pages_failed": 3,
-    "pages_js_rendered": 0,
-    "urls_considered": 27,
-    "claims": 86,
-    "claims_by_kind": {
-      "entitlement": 50,
-      "addon": 12,
-      "condition": 10,
-      "plan_price": 6,
-      "limit": 5,
-      "plan_mention": 3
-    },
-    "findings": 2,
-    "findings_by_severity": {
-      "medium": 1,
-      "low": 1
-    },
-    "findings_by_confidence": {
-      "high": 2
-    },
-    "findings_by_kind": {
-      "missing_information": 2
-    },
-    "fetcher": {
-      "network": 3,
-      "cache": 19,
-      "rendered": 0,
-      "blocked": 1,
-      "failed": 3
-    }
+      {
+        "url": "https://screenshotone.com/docs/guides",
+        "final_url": "https://screenshotone.com/docs/guides/",
+        "title": "Guides | ScreenshotOne Docs",
+        "category": "help",
+        "why_selected": "url path contains 'guides'",
+        "discovered_via": "linked from docs hub https://screenshotone.com/docs",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 153,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://screenshotone.com/pdf-generation-api",
+        "final_url": "https://screenshotone.com/pdf-generation-api/",
+        "title": "HTML and URL to PDF Generation API \u2014 ScreenshotOne",
+        "category": "docs",
+        "why_selected": "url path contains 'api'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 1305,
+        "text": "",
+        "truncated": true,
+        "usable": true
+      },
+      {
+        "url": "https://screenshotone.com/docs/guides/fail-if-content-contains",
+        "final_url": "https://screenshotone.com/docs/guides/fail-if-content-contains/",
+        "title": "Fail rendering if the content contains a string | ScreenshotOne Docs",
+        "category": "help",
+        "why_selected": "url path contains 'guides'",
+        "discovered_via": "linked from docs hub https://screenshotone.com/docs",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 282,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://screenshotone.com/docs/guides/upload-to-s3",
+        "final_url": "https://screenshotone.com/docs/guides/upload-to-s3/",
+        "title": "Upload to S3 | ScreenshotOne Docs",
+        "category": "help",
+        "why_selected": "url path contains 'guides'",
+        "discovered_via": "linked from docs hub https://screenshotone.com/docs",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 873,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://screenshotone.com/integrations/airtable",
+        "final_url": "https://screenshotone.com/integrations/airtable/",
+        "title": "The Screenshot API for Airtable",
+        "category": "addons",
+        "why_selected": "url path contains 'integrations'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 169,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://screenshotone.com/integrations/make",
+        "final_url": "https://screenshotone.com/integrations/make/",
+        "title": "The Screenshot API for Make",
+        "category": "addons",
+        "why_selected": "url path contains 'integrations'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 183,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://screenshotone.com/integrations/bubble",
+        "final_url": "https://screenshotone.com/integrations/bubble/",
+        "title": "The Screenshot API for Bubble",
+        "category": "addons",
+        "why_selected": "url path contains 'integrations'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 167,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      }
+    ],
+    "failures": [
+      {
+        "url": "https://dash.screenshotone.com/sign-up",
+        "category": "trial",
+        "reason": "blocked by robots.txt"
+      },
+      {
+        "url": "https://screenshotone.com/faq",
+        "category": "faq",
+        "reason": "HTTP 404"
+      },
+      {
+        "url": "https://screenshotone.com/terms",
+        "category": "terms",
+        "reason": "HTTP 404"
+      }
+    ]
   }
 }

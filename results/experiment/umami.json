@@ -1,78 +1,94 @@
 {
   "company": "Umami",
-  "root_url": "https://umami.is/",
-  "domain": "umami.is",
-  "started_at": "2026-09-02 07:43:22 UTC",
-  "duration_seconds": 2.5,
-  "pages": [
-    {
-      "url": "https://umami.is/pricing",
-      "final_url": "https://umami.is/pricing",
-      "title": "https://umami.is/pricing",
-      "category": "pricing",
-      "why_selected": "url path contains 'pricing' (guessed conventional path, not linked)",
-      "discovered_via": "conventional path guess",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 0,
-      "claim_count": 0
-    },
-    {
-      "url": "https://umami.is/docs",
-      "final_url": "https://docs.umami.is/docs/",
-      "title": "Introduction",
-      "category": "docs",
-      "why_selected": "url path contains 'docs' (guessed conventional path, not linked)",
-      "discovered_via": "conventional path guess",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 471,
-      "claim_count": 0
-    },
-    {
-      "url": "https://umami.is/terms",
-      "final_url": "https://umami.is/terms",
-      "title": "https://umami.is/terms",
-      "category": "terms",
-      "why_selected": "url path contains 'terms' (guessed conventional path, not linked)",
-      "discovered_via": "conventional path guess",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 0,
-      "claim_count": 0
-    }
-  ],
-  "failures": [],
-  "claims": [],
+  "plans": [],
+  "promises": [],
   "findings": [],
-  "discovery_notes": [],
-  "pricing_urls": [
-    "https://umami.is/pricing"
-  ],
-  "stats": {
-    "pages_selected": 3,
-    "pages_fetched_ok": 3,
-    "pages_failed": 0,
-    "pages_js_rendered": 0,
-    "urls_considered": 6,
-    "claims": 0,
-    "claims_by_kind": {},
-    "findings": 0,
-    "findings_by_severity": {},
-    "findings_by_confidence": {},
-    "findings_by_kind": {},
-    "fetcher": {
-      "network": 3,
-      "cache": 5,
-      "rendered": 0,
-      "blocked": 0,
-      "failed": 3
-    }
+  "coverage_notes": {
+    "unusable_pages": [
+      "https://umami.is/pricing (0 words of readable text)",
+      "https://umami.is/docs (0 words of readable text)",
+      "https://umami.is/terms (0 words of readable text)"
+    ],
+    "what_was_not_checkable": "Nothing could be checked. All three pages we reached, including the pricing page, returned a page shell with no readable text at all: the site builds its content in the browser, and the headless-browser fallback could not run in the environment this experiment was executed in. This is a failure of our tool, not a finding about Umami, and it should be counted as a miss rather than as a clean result. Roughly one company in ten in this sample was invisible for this reason."
+  },
+  "backend": "agent",
+  "verification": {
+    "findings_in": 0,
+    "findings_out": 0,
+    "findings_rejected": 0,
+    "quotes_checked": 0,
+    "quotes_failed": 0,
+    "url_corrections": 0,
+    "rejections": []
+  },
+  "source": {
+    "root_url": "https://umami.is/",
+    "domain": "umami.is",
+    "harvested_at": "2026-09-02 07:57:33 UTC",
+    "stats": {
+      "pages_selected": 3,
+      "pages_fetched_ok": 3,
+      "pages_usable": 0,
+      "pages_failed": 0,
+      "pages_js_rendered": 0,
+      "urls_considered": 6,
+      "dossier_chars": 0,
+      "harvest_seconds": 2.6,
+      "fetcher": {
+        "network": 3,
+        "cache": 5,
+        "rendered": 0,
+        "blocked": 0,
+        "failed": 3
+      }
+    },
+    "pages": [
+      {
+        "url": "https://umami.is/pricing",
+        "final_url": "https://umami.is/pricing",
+        "title": "Pricing \u2013 Umami",
+        "category": "pricing",
+        "why_selected": "url path contains 'pricing' (guessed conventional path, not linked)",
+        "discovered_via": "conventional path guess",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 0,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://umami.is/docs",
+        "final_url": "https://docs.umami.is/docs/",
+        "title": "Introduction \u2013 umami",
+        "category": "docs",
+        "why_selected": "url path contains 'docs' (guessed conventional path, not linked)",
+        "discovered_via": "conventional path guess",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 0,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://umami.is/terms",
+        "final_url": "https://umami.is/terms",
+        "title": "Terms of Service \u2013 Umami",
+        "category": "terms",
+        "why_selected": "url path contains 'terms' (guessed conventional path, not linked)",
+        "discovered_via": "conventional path guess",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 0,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      }
+    ],
+    "failures": []
   }
 }

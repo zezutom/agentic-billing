@@ -1,147 +1,184 @@
 ## The short version
 
-Ten smaller SaaS companies, drawn at random from a frozen pool of 36, analysed with an
-identical pipeline. **119 public pages read, 386 commercial claims extracted, 8 findings.**
+Ten smaller SaaS companies, drawn at random from a frozen pool of 36. Nine could be read.
+**111 public pages fetched, 90 of them readable, 140 commercial promises extracted,
+19 findings, and 208 quotes verified against the pages they were taken from.**
 
-Reading all eight by hand, one is wrong, five are correct but not news to the company, and
-**two are the kind of thing a founder would want to know**:
+Eight of the nine readable companies had at least one thing worth checking. The strongest
+five:
 
-* **Cronitor** advertises “Unlimited API requests” on its pricing page, while its API
-  documentation says “The API has rate limits to ensure fair usage.” Both statements are
-  defensible; together they are the exact ambiguity that produces an angry support ticket.
-* **Knock** publishes two different API rate limits on two of its own documentation pages —
-  60 requests/second on one, 200 requests/second on the other. Nobody is lying; one page is
-  simply stale, and only a machine reading both at once would notice.
+* **Unkey** documents a free plan that keeps logs for 7 days and audit logs for 30 days.
+  Its pricing page gives the $5 Starter plan 3 days and 7 days. Paying moves you backwards
+  on both, and you have to reach the $50 plan before audit retention matches what free
+  already gave you.
+* **Fathom** promises on its pricing page that it will *never* switch your analytics off
+  for going over. Its terms let it suspend the account seven days after an upgrade request,
+  and delete it two months later, with no refund.
+* **Fathom** again: "Full API access with 600 requests per hour included" sits in a feature
+  list whose neighbours advertise "No extra fees". A separate page prices the next five
+  rungs of API throughput at $19, $39, $79, $199 and $399 a month — the top rung nearly
+  nine times the price of the plan it sits on.
+* **ScreenshotOne** answers "what happens when I exceed my plan?" three different ways on
+  three pages: pay $0.009 per extra, or be billed automatically *if extra charging is
+  enabled*, or be throttled or suspended.
+* **Bento** builds its whole pricing argument on Active Users, explicitly so that dormant
+  contacts do not inflate the bill. Its documentation FAQ says it charges on the number of
+  subscribers, defined as every unique email address in the account.
 
-That is the honest result: **the tool works, finds real things, and finds them rarely.**
+None of these is a gotcha. Every one is two real sentences that a customer could read in
+either order, quoted verbatim, with both links in the report.
 
 ## Does a recurring public commercial-consistency problem exist?
 
-On this evidence, **yes, but it is smaller and duller than the pitch implies** — at least
-among careful, founder-led companies.
+**Yes, and it is more common than we expected — but it is a drift problem, not a dishonesty
+problem.**
 
-Five of ten companies had something worth a second look — Cronitor, Fathom, Knock, SavvyCal
-and ScreenshotOne. (The counts table below also reads "5 of 10", but by a different
-definition: it counts companies with a medium- or high-confidence finding, which includes
-Bento's false positive and excludes Knock's genuine one. The two fives are not the same
-five, which is itself a calibration problem.) The dominant pattern by far
-was not contradiction, it was **placement**: five of the eight findings are commercial
-conditions — no-refund policies, automatic renewal, overage charges, the right to change
-quotas — that appear only in the terms of service or a docs article, never on the page
-where the buying decision is made. ScreenshotOne's terms reserve the right to modify
-“pricing, features, usage limits, quotas, or plan structures at any time” while the pricing
-page says nothing of it; Fathom's fees are non-refundable and its subscriptions auto-renew,
-both stated only in the legal terms.
+Eight of nine readable companies had something. The pattern that recurs is not a company
+misleading anyone; it is a company whose pricing page and documentation were written at
+different times by different people and never reconciled. Unkey's free-plan table almost
+certainly predates a repackaging. Bento's FAQ answer is older copy from before the Active
+Users model. Fathom's terms were last updated in 2021 and its FAQ is current marketing.
 
-That is a real and repeatable observation, and it is not what the hook promises. The hook
-promises contradiction. What the data shows is mostly **disclosure drift**.
+Three shapes came up more than once:
 
-The categories the brief hoped for — a feature assigned to different plans on different
-pages, mismatched trial lengths, prices that do not reconcile, old plan names still in the
-help centre — **did not appear once across ten companies**. The rules for all of them are
-implemented and all of them fire correctly on the test fixture. They simply did not trigger
-in the wild on this sample. Small, careful SaaS companies with three pricing tiers and a
-tidy docs site turn out to be reasonably consistent.
+1. **The pricing page and the docs disagree about a number** (Unkey's retention, Bento's
+   billing metric, Baserow's payment methods). Four findings.
+2. **"Unlimited" or "full" meets a documented limit** (Cronitor, Knock, Fathom's API).
+   Four findings. Never technically false, always the thing a developer wants to know.
+3. **A commercial condition lives only in the terms or a docs page** (Fathom's suspension
+   rights, ScreenshotOne's right to change quotas, Baserow's API concurrency, Knock's
+   Enterprise guides default). Six findings.
+
+The third group is the one to be careful with. Some of it is genuinely load-bearing —
+ScreenshotOne reserving the right to change *usage limits and quotas*, not just prices, is
+a real term about what you receive. Some of it is ordinary boilerplate we rated low on
+purpose.
 
 ## Is it telling companies anything they did not already know?
 
-Split roughly in half.
+For roughly half of the findings, yes, and we can say which half.
 
-* **New information:** Knock's two contradictory rate limits, and Cronitor's unlimited-vs-fair-use
-  gap. Neither is visible unless you read two pages side by side, which nobody at the
-  company does.
-* **Not new:** the auto-renewal and no-refund findings. Every founder knows those clauses
-  are in their terms. The tool is telling them where the clauses live, not that they exist.
-  Framed as “a contradiction we found”, this reads as padding. Framed as “your buyer never
-  sees this”, it is a fair point — but it is a content-strategy observation, not a discovery.
+Nobody at Unkey has sat down with the docs table and the pricing table side by side; if
+they had, the retention inversion would already be fixed. The same goes for Knock's
+Enterprise guides default, ScreenshotOne's three answers, and Bento's billing metric. These
+are all invisible from inside the company because no single person reads both pages in one
+sitting — which is exactly the job worth automating.
 
-## Likely false positives
+The other half — auto-renewal clauses, price-change rights, refund wording — every founder
+knows those are in their terms. Reported as "a contradiction we found", that is padding.
+Reported as "your buyer never sees this", it is a fair point about placement, and we rated
+those findings low or medium accordingly rather than dressing them up.
 
-**One of eight (12.5%).** Bento is flagged because its pricing page promises “unlimited
-marketing sends” and its terms page contains a fair-use sentence — but that sentence is a
-*glossary definition* of what an Acceptable Use Policy is, not a restriction Bento applies
-to its own sends. The rule matched the right words in the wrong role.
+## Likely false positives, honestly
 
-Earlier iterations were far worse, and how they were fixed matters for judging the number:
+**No finding in this run cites evidence that does not exist.** All 208 quotes were located
+character-by-character in the harvested page, and no finding was discarded at verification.
+That number needs a caveat, which we come back to below.
 
-* An API reference saying “defaults to 50 users per page” was read as a seat allowance.
-  Reference and tutorial pages are now excluded from quantity limits (rate limits still count).
-* “429 Too Many Requests” was read as a quota of 429. HTTP status codes are now excluded.
-* “Shopware 6 with custom events” was read as an allowance of 6 events. Bare numbers now
-  need an allowance cue, a pricing-card bullet, or a comparison-table cell.
-* “Inbox coverage” matched the word *overage*. Word boundaries were added.
-* A code sample line numbered `8` became “8 credits”. `<pre>` blocks are now discarded.
-* Baserow's “$10/user/month billed yearly, $12 billed monthly” was read as annual costing
-  more than monthly, because the billing label was matched anywhere in the card rather than
-  next to the price it belongs to.
+The real risk with this design is not fabricated evidence. It is **over-reading**: two real
+sentences, correctly quoted, that anyone at the company would reconcile in a second. Our own
+assessment of the 19:
 
-Every one of those was found by reading the output, not by a test. **The realistic false
-positive rate on an unseen company is higher than 12.5%** — probably 20–30% — because each
-fix above was written after seeing the specific failure. A different ten companies would
-surface a different set.
+* **Nine we would defend to a founder without hedging** — Unkey ×2, Fathom ×2, ScreenshotOne
+  (overage), Bento (billing metric), Knock (Enterprise guides), Cronitor ×2.
+* **Seven that are real but modest** — placement problems, boilerplate in the right place,
+  things a founder will say "yes, we know" to.
+* **Three we would expect an informed reader to push back on**: Fathom's discount-codes item
+  (we saw only a navigation link, and said so in the finding), SavvyCal's price-change clause
+  (ordinary boilerplate), and Bento's "no feature gating" item (where "tier" almost certainly
+  means volume tier, which we flagged in the caveat).
+
+Call it **three soft findings in nineteen, about 16%**, with none of them fabricated and all
+three carrying a caveat that says what would make them wrong. That is a different and better
+failure mode than the alternative, but it is not zero.
+
+Two things would have been false positives and were deliberately not reported, which is
+worth as much as the findings themselves:
+
+* Knock publishes an endpoint rate-limit tier table on two documentation pages. Read
+  mechanically, "60 requests / second" on one page and "200 requests / second" on another
+  looks like a contradiction. It is one table of endpoint scales reproduced twice.
+* Checkly, Baserow and Unkey all render their comparison tables as styled divs. Flattened to
+  text, a monthly/annual toggle or a mis-aligned column produces convincing nonsense. We
+  reported a retention finding for Unkey only after cross-checking the column against the
+  plan cards — the same column that gives Starter 3 days also gives it 1 vCPU, 2 GB, 1 custom
+  domain and $5 of credits, all matching the Starter card — and we said so in the caveat.
 
 ## What actually limits the tool
 
-**Client-side rendering, by a wide margin.** Umami's pricing page returns *zero* words of
-readable text to an HTTP fetch, so Umami could not be analysed at all — 3 pages, 0 claims,
-0 findings. SavvyCal's help and developer sites return 50–115 words per page, so its
-analysis is shallow (8 claims from 13 pages). Sixteen of 119 pages read came back
-effectively empty.
+**Client-side rendering, by a wide margin.** Umami returned *zero* readable words from all
+three pages we reached, including the pricing page, so it could not be analysed at all. That
+is a miss, not a clean result, and we have counted it as one. SavvyCal's comparison table
+rendered as feature names with no values and its FAQ as an empty heading, so its report is
+visibly thinner than the rest. Twenty-one of the 111 pages we fetched came back effectively empty, and a further 29 could
+not be fetched at all. The
+headless-browser fallback is implemented and Chromium launches, but the browser had no
+outbound network access in the sandbox this ran in, so it could never be exercised.
 
-The headless-browser fallback is implemented and Chromium launches correctly, but the
-browser has no outbound network access in the sandbox this experiment ran in, so it could
-not be exercised. On an ordinary machine it would run. This is the single highest-value fix:
-roughly one company in ten is currently invisible, and the affected pages are precisely the
-modern, JS-heavy pricing pages most likely to have drifted.
+**Flattened tables.** Every comparison grid on these sites is divs, not `<table>`. An early
+version of the harvester de-duplicated repeated text lines, which silently destroyed those
+grids — "1", "2" and "Unlimited" repeat down a column and were being dropped. Unkey's
+retention finding, the best in the run, was invisible until that was fixed. There are almost
+certainly equivalent findings we are still missing at the other companies.
 
-**Second: 29 page fetches failed**, almost all conventional-path guesses (`/faq`, `/help`,
-`/docs`) that do not exist on that particular site. They cost nothing but noise in the logs,
-and the reserve-list backfill already replaces them.
+**Discovery spends its budget in the wrong place.** For Checkly, the crawler returned twelve
+pages of which eleven were product documentation and integration guides that make no
+commercial claims at all; it never found a billing or usage-limits article. Checkly's zero is
+partly a real result — their pricing page is the best of the ten, publishing overage rates
+and retention inline — and partly an artefact of having had almost nothing to compare it to.
 
-**Third: findings cluster on the terms of service** because that is where conditions live
-and it is the easiest page to parse. The tool is partly measuring which pages are easy to
-read, not only which pages disagree.
+**The honest caveat about the verification numbers.** Zero rejections out of 208 quotes is
+not evidence that the model does not fabricate. In this run the analyst and the verifier were
+the same model in the same session, and quotes were checked as they were written. The
+verifier was tested adversarially instead: fabricated quotes, paraphrased quotes, quotes
+split from one passage, missing schema fields and invalid severities are all rejected, and a
+real quote attributed to the wrong page is corrected rather than dropped. An unattended API
+run would produce a non-zero rejection rate, and that number is the one worth reporting next
+time.
+
+**Two conflicts of interest we cannot design away here.** The analyst had already seen these
+same ten companies during an earlier rule-based version of this tool, so this was not a blind
+read. And the assessment above — which findings are strong, which are soft — is the analyst
+grading its own work. Both need an independent reviewer before any of this is published.
 
 ## Would a SaaS founder try this?
 
-**Try it, yes. Pay for it, not yet.**
+**Yes, and on this evidence they would get something worth their time.**
 
-The offer costs a founder one URL and thirty seconds, and returns a page with their own
-words quoted back at them and a link to check each one. That is a good trade, and the two
-strong findings above are the kind of thing that gets forwarded to a colleague.
+The offer costs one URL. Eight of nine readable companies got back at least one finding, and
+five got something a founder would forward to whoever owns the docs. The report quotes their
+own words, links both pages, and says in one line what would make each finding wrong — so the
+whole thing is checkable in about two minutes, which is the only standard that matters for a
+cold audit of someone else's website.
 
-But on this sample the median outcome is **one or two low-severity notes about the terms of
-service**. Two of ten companies produced a finding worth acting on. As a lead magnet that is
-thin — a prospect who gets “your terms mention auto-renewal and your pricing page doesn't”
-will not book a call.
+The weakest outcome in the set is instructive. Checkly got zero findings and a paragraph
+explaining that their pricing page publishes more than most companies disclose anywhere. That
+is a perfectly good thing to receive, and it is not an embarrassing result for the tool.
 
-The uncomfortable part is that this is the *good* version of the result. The pool was
-deliberately smaller, independent companies — exactly the ones most likely to have drifted,
-and they mostly had not. A pool of mid-market companies with six tiers, add-ons, legacy
-plans and a five-year-old help centre would almost certainly score worse, and would be the
-better audience.
+What would make us cautious about promising a hit rate: this sample was small, independent,
+mostly developer-tool companies with three or four tiers. That is the easy case. It is also
+not the case with the most money in it.
 
 ## What to improve before publishing
 
-1. **Make JavaScript rendering actually work end to end.** One company in ten is currently
-   unreadable, and they are the ones most worth reading.
-2. **Reach the help centre properly.** The strongest findings came from docs and help
-   articles; the weakest came from terms pages. Discovery should spend its page budget on
-   billing, limits and plan-change articles instead of installation guides and SDK pages.
-3. **Separate the two products.** “We found a contradiction” and “this condition is not on
-   your pricing page” are different claims with different value. Lead with contradictions;
-   demote disclosure gaps to a secondary list so five terms-of-service notes cannot masquerade
-   as five contradictions.
-4. **Fix the confidence calibration.** The best finding in the whole run — Knock's two
-   contradictory rate limits — is labelled *low confidence*, because neither statement names
-   a plan. The rule penalises unscoped claims, which is right for allowances and wrong for
-   a rate limit that applies to everyone. Confidence should reflect how sure we are that the
-   two statements conflict, not how much plan metadata we managed to attach.
-5. **Add a role check to the fair-use rule.** The one false positive would have been caught
-   by asking whether the matched sentence *applies* a restriction or merely *defines* one.
-6. **Test the sales-led case.** Every rule assumes published prices. Companies with
-   “contact us” tiers are where promise-versus-delivery drift is worst and where this tool
-   currently says least.
-7. **Widen the sample before making any claim in public.** Ten companies and eight findings
-   cannot support a headline like “most SaaS companies contradict themselves”. On this
-   evidence, most of them do not.
+1. **Make JavaScript rendering work end to end.** One company in ten was invisible and
+   another was read at a quarter depth. These are the modern, JS-heavy pricing pages most
+   likely to have drifted, so the tool is currently blindest exactly where it should be
+   sharpest.
+2. **Parse comparison grids properly instead of flattening them.** Every one of these sites
+   builds its plan table from divs. Reconstructing the column structure — rather than
+   inferring it and cross-checking against the plan cards by hand, as we did for Unkey —
+   would turn the single richest source of per-plan promises from a hazard into an asset.
+3. **Spend the page budget on billing and limits content.** Discovery gave Checkly eleven
+   documentation pages that make no commercial claims. Prefer billing, quota, plan-change and
+   FAQ articles over SDK references and installation guides.
+4. **Run it unattended through the API backend and report the rejection rate.** The verifier
+   is the reason to trust this design and it has not yet been tested where it matters, with
+   an analyst that has not been double-checking its own quotes as it writes them.
+5. **Separate the two products in the output.** "Your pricing page and your docs disagree"
+   and "this condition is not where your buyer will see it" are different claims with
+   different value. Lead with the first; keep the second as a secondary list so six placement
+   notes cannot read as six contradictions.
+6. **Get an independent reviewer before publishing any hit-rate claim.** The analyst wrote
+   the findings and then graded them, having already seen these companies once. Nothing in
+   the numbers above survives that objection on its own.

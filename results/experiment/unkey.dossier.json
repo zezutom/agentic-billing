@@ -1,0 +1,226 @@
+{
+  "company": "Unkey",
+  "root_url": "https://www.unkey.com/",
+  "domain": "unkey.com",
+  "harvested_at": "2026-09-02 08:08:53 UTC",
+  "pages": [
+    {
+      "url": "https://www.unkey.com/pricing",
+      "final_url": "https://www.unkey.com/pricing",
+      "title": "Pricing | Unkey",
+      "category": "pricing",
+      "why_selected": "url path contains 'pricing'; link text 'pricing'",
+      "discovered_via": "homepage navigation",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 325,
+      "text": "## Start for free, scale as you go with predictable usage-based pricing.\n## Pricing plans\n## Starter\nShip small production workloads with simple usage-based billing.\n$5 / mo\nWhat\u2019s included\n- Up to 1 vCPU / 2 GB per Instance\n- 1 concurrent build\n- 1 custom domain\n- Includes $5/mo usage credits\n- Email support\n## Pro\nRun production APIs with more compute and headroom.\n$25 / mo\nWhat\u2019s included\n- Up to 4 vCPU / 8 GB per Instance\n- 1 concurrent build\n- Unlimited custom domains\n- Includes $25/mo usage credits\n- Email support\n## Business\nFor higher workloads and growing teams at global scale.\n$50 / mo\nWhat\u2019s included\n- Up to 16 vCPU / 32 GB per Instance\n- 1 concurrent build\n- Includes $50/mo usage credits\n- Email support\n## Enterprise\nConnect with our team for higher resource limits, dedicated requirements, annual contracts, and more.\n- Custom limits\n- Dedicated infrastructure\n- Dedicated Slack channel\n## Feature Comparison\nProjects\nConcurrent Builds\nMax vCPU per Instance\nMax RAM (GB) per Instance\nMax ephemeral disk per Instance\nCustom domains\nIncluded usage\nTeam members\nLog retention\nAudit log retention\nSupport\nUnlimited\n1\n1\n2\n10 GiB\n1\n$5\n1\n3 days\n7 days\nEmail\nUnlimited\n1\n4\n8\n10 GiB\nUnlimited\n$25\nUnlimited\n7 days\n14 days\nEmail\nUnlimited\n1\n16\n32\n10 GiB\nUnlimited\n$50\nUnlimited\n14 days\n30 days\nEmail\n## Pay for usage. Scale on demand.\nYour spend follows real usage, not plan jumps. Usage charges cover compute, storage, egress, and active keys. Available on every plan.\n## Calculator\nEstimate monthly costs based on your infrastructure and key usage.\n## Estimate\nUsage-based $188\n$188 / mo\nvCPU/sec $ 0.000006944\nMemory/GB/sec $ 0.000003472\nDisk/GB/sec $ 0.00000006\nEgress/GB $ 0.05\nActive key/month $ 0.002\nFAQ\n## Have questions? We\u2019ve got answers.\n## Turn your API stack into one workflow. Start for free, integrate in minutes, and scale when you need to.",
+      "truncated": false,
+      "usable": true
+    },
+    {
+      "url": "https://www.unkey.com/docs",
+      "final_url": "https://www.unkey.com/docs/introduction",
+      "title": "What is Unkey? - Unkey Docs",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text 'unkey docs home page'",
+      "discovered_via": "linked from docs hub https://unkey.com/docs/introduction",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 515,
+      "text": "| Without Unkey | With Unkey |\n| Provision servers, configure load balancers, manage TLS | git push or unkey deploy |\n| Build key storage, hashing, rotation, revocation | Attached to your app or called via SDK |\n| Stand up Redis for rate limiting | unkey.ratelimit.limit() |\n| Wire up usage tracking and dashboards | Built-in analytics |\n## Deploy\nPush to GitHub or run unkey deploy . Multi-region, instant rollbacks, automatic domains, preview environments.\n## Gateway\nAPI key authentication, rate limiting, and IP policies running in front of your app. No middleware to write.\n## API keys\nIssue, verify, revoke. Usage limits, expiration, metadata, identities. Use standalone or attached to a deployment.\n## Analytics\nWho\u2019s using your API, how much, when. Built in, queryable, no pipeline to build.\n\u200b\nUnkey never stores API keys in plain text. Keys are SHA-256 hashed before storage, so even if our database were compromised your keys stay safe.\n\u200b\nShip a production API from your repo\nunkey deploy ghcr.io/acme/payments-api:v1.2.3 \\ --project payments \\ --root-key $UNKEY_ROOT_KEY\nAuthenticate every request before it hits your app\n// Inside your app, the request is already authenticated. // Identity and quota info arrive on request headers. const userId = req . headers [ \"x-unkey-identity\" ];\nIssue API keys to your customers\nconst { meta , data } = await unkey . keys . verifyKey ({ key : \"sk_...\" }); if ( ! data . valid ) return new Response ( \"Unauthorized\" , { status : 401 });\nRate limit anything\nconst { success } = await unkey . ratelimit . limit ({ namespace : \"api.requests\" , identifier : userId , limit : 100 , duration : 60_000 , }); if ( ! success ) return new Response ( \"Too many requests\" , { status : 429 });\nUsage-based billing\nconst { meta , data } = await unkey . keys . createKey ({ apiId : \"api_...\" , credits : { remaining : 10000 , refill : { interval : \"monthly\" , amount : 10000 } } });\n\u200b\n## Deploy your first app\nConnect a GitHub repository (or push a Docker image) and have a live URL in minutes.\n## Issue your first API key\nCreate a keyspace, generate a key, and verify it with curl or your favorite SDK.\n## Framework guides\nStep-by-step recipes for Next.js, Bun, Express, Hono, FastAPI, Go.\n## Cookbook\nReady-to-copy patterns: per-user limits, tiered subscriptions, usage billing.\n\u200b\n## I want to ship an API\nDeploy from GitHub or CLI. Multi-region, rollbacks, preview environments, the gateway in front.\n## I just need API keys or rate limits\nUse the SDK directly from any backend, no deployment required.\n## I'm migrating from another solution\nBring existing keys over without disrupting your users.\n## I want both\nStart by deploying. Add API key auth and rate limits as policies on the deployment.\n\u200b\n## Discord\nChat with the team and community\n## GitHub\nStar the repo and file issues\n## Twitter / X\nFollow for updates\nLast modified on June 24, 2026\nWas this page helpful?\n\u2318 I",
+      "truncated": false,
+      "usable": true
+    },
+    {
+      "url": "https://unkey.com/docs/platform/workspaces/billing",
+      "final_url": "https://www.unkey.com/docs/platform/workspaces/billing",
+      "title": "Billing - Unkey Docs",
+      "category": "billing_docs",
+      "why_selected": "url path contains 'billing'",
+      "discovered_via": "linked from pricing page https://www.unkey.com/pricing",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 327,
+      "text": "| Capability | Free plan | Paid plans |\n| API requests per month | 150,000 | Varies by plan |\n| Log retention | 7 days | Varies by plan |\n| Audit log retention | 30 days | Varies by plan |\n| Team members | Not available | Included |\n| Setting | Behavior |\n| Monthly budget | Whole dollars. Leave empty for no budget. |\n| Email alerts | Sent at 50%, 75%, and 100% of the budget. |\n| Stop workloads at the budget | When enabled, your running Compute workloads stop once usage spend reaches the budget. |\n\u200b\nVisit unkey.com/pricing for the latest plan details and pricing.\n\u200b\n- Navigate to Settings > Billing .\n- Click Add payment method .\n- Complete the Stripe checkout form with your card details and billing address.\n- After saving, you return to the billing page where you can select a plan.\n\u200b\n- Click Change plan on the current plan card.\n- Select a plan from the available options. Each plan shows its monthly price and included request quota.\n- Confirm the selection.\n\u200b\n- Click Cancel plan at the bottom of the billing page.\n- Confirm the cancellation.\n\u200b\n- Click Open Portal .\n- Update or replace your payment method\n- Download past invoices\n- Update billing contact information\n\u200b\n\u200b\n- Usage this period : what you have spent on usage so far this month. This is the number your spend budget is measured against.\n- Per-meter quantities : CPU hours, memory GiB-hours, egress GiB, disk GiB-hours, and active keys.\n- Spend budget (optional): your monthly usage-spend cap and its alert thresholds.\n\u200b\n\u200b\n- Raise the budget above your current spend,\n- Remove the budget,\n- Turn off Stop workloads at the budget , or\n- Reach the next billing period, when usage resets.\n\u200b\nLast modified on August 5, 2026\nWas this page helpful?\n\u2318 I",
+      "truncated": false,
+      "usable": true
+    },
+    {
+      "url": "https://unkey.com/docs/introduction",
+      "final_url": "https://www.unkey.com/docs/introduction",
+      "title": "What is Unkey? - Unkey Docs",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text 'docs'",
+      "discovered_via": "homepage navigation",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 515,
+      "text": "| Without Unkey | With Unkey |\n| Provision servers, configure load balancers, manage TLS | git push or unkey deploy |\n| Build key storage, hashing, rotation, revocation | Attached to your app or called via SDK |\n| Stand up Redis for rate limiting | unkey.ratelimit.limit() |\n| Wire up usage tracking and dashboards | Built-in analytics |\n## Deploy\nPush to GitHub or run unkey deploy . Multi-region, instant rollbacks, automatic domains, preview environments.\n## Gateway\nAPI key authentication, rate limiting, and IP policies running in front of your app. No middleware to write.\n## API keys\nIssue, verify, revoke. Usage limits, expiration, metadata, identities. Use standalone or attached to a deployment.\n## Analytics\nWho\u2019s using your API, how much, when. Built in, queryable, no pipeline to build.\n\u200b\nUnkey never stores API keys in plain text. Keys are SHA-256 hashed before storage, so even if our database were compromised your keys stay safe.\n\u200b\nShip a production API from your repo\nunkey deploy ghcr.io/acme/payments-api:v1.2.3 \\ --project payments \\ --root-key $UNKEY_ROOT_KEY\nAuthenticate every request before it hits your app\n// Inside your app, the request is already authenticated. // Identity and quota info arrive on request headers. const userId = req . headers [ \"x-unkey-identity\" ];\nIssue API keys to your customers\nconst { meta , data } = await unkey . keys . verifyKey ({ key : \"sk_...\" }); if ( ! data . valid ) return new Response ( \"Unauthorized\" , { status : 401 });\nRate limit anything\nconst { success } = await unkey . ratelimit . limit ({ namespace : \"api.requests\" , identifier : userId , limit : 100 , duration : 60_000 , }); if ( ! success ) return new Response ( \"Too many requests\" , { status : 429 });\nUsage-based billing\nconst { meta , data } = await unkey . keys . createKey ({ apiId : \"api_...\" , credits : { remaining : 10000 , refill : { interval : \"monthly\" , amount : 10000 } } });\n\u200b\n## Deploy your first app\nConnect a GitHub repository (or push a Docker image) and have a live URL in minutes.\n## Issue your first API key\nCreate a keyspace, generate a key, and verify it with curl or your favorite SDK.\n## Framework guides\nStep-by-step recipes for Next.js, Bun, Express, Hono, FastAPI, Go.\n## Cookbook\nReady-to-copy patterns: per-user limits, tiered subscriptions, usage billing.\n\u200b\n## I want to ship an API\nDeploy from GitHub or CLI. Multi-region, rollbacks, preview environments, the gateway in front.\n## I just need API keys or rate limits\nUse the SDK directly from any backend, no deployment required.\n## I'm migrating from another solution\nBring existing keys over without disrupting your users.\n## I want both\nStart by deploying. Add API key auth and rate limits as policies on the deployment.\n\u200b\n## Discord\nChat with the team and community\n## GitHub\nStar the repo and file issues\n## Twitter / X\nFollow for updates\nLast modified on June 24, 2026\nWas this page helpful?\n\u2318 I",
+      "truncated": false,
+      "usable": true
+    },
+    {
+      "url": "https://www.unkey.com/policies/terms",
+      "final_url": "https://www.unkey.com/policies/terms",
+      "title": "Website Terms of Use | Unkey Inc. | Unkey",
+      "category": "terms",
+      "why_selected": "url path contains 'terms'; link text 'terms of service'",
+      "discovered_via": "homepage navigation",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 2898,
+      "text": "The website located at https://unkey.com (the \" Site \") is a copyrighted work belonging to Unkey Inc. (\" Company \", \" us \", \" our \", and \" we \"). Certain features of the Site may be subject to additional guidelines, terms, or rules, which will be posted on the Site in connection with such features. All such additional terms, guidelines, and rules are incorporated by reference into these Terms.\nThese Terms of Use (these \" Terms \") set forth the legally binding terms and conditions that govern your use of the Site. By accessing or using the Site, you are accepting these Terms (on behalf of yourself or the entity that you represent), and you represent and warrant that you have the right, authority, and capacity to enter into these Terms (on behalf of yourself or the entity that you represent). you may not access or use the Site or accept the Terms if you are not at least 18 years old. If you do not agree with all of the provisions of these Terms, do not access and/or use the Site.\nPLEASE BE AWARE THAT SECTION 8.2 CONTAINS PROVISIONS GOVERNING HOW TO RESOLVE DISPUTES BETWEEN YOU AND COMPANY. AMONG OTHER THINGS, SECTION 8.2 INCLUDES AN AGREEMENT TO ARBITRATE WHICH REQUIRES, WITH LIMITED EXCEPTIONS, THAT ALL DISPUTES BETWEEN YOU AND US SHALL BE RESOLVED BY BINDING AND FINAL ARBITRATION. SECTION 8.2 ALSO CONTAINS A CLASS ACTION AND JURY TRIAL WAIVER. PLEASE READ SECTION 8.2** CAREFULLY * *.\nUNLESS YOU OPT OUT OF THE AGREEMENT TO ARBITRATE WITHIN 30 DAYS: (1) YOU WILL ONLY BE PERMITTED TO PURSUE DISPUTES OR CLAIMS AND SEEK RELIEF AGAINST US ON AN INDIVIDUAL BASIS, NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY CLASS OR REPRESENTATIVE ACTION OR PROCEEDING AND YOU WAIVE YOUR RIGHT TO PARTICIPATE IN A CLASS ACTION LAWSUIT OR CLASS-WIDE ARBITRATION; AND (2) YOU ARE WAIVING YOUR RIGHT TO PURSUE DISPUTES OR CLAIMS AND SEEK RELIEF IN A COURT OF LAW AND TO HAVE A JURY TRIAL.\n- Account Creation. In order to use certain features of the Site, you must register for an account (\" Account \") and provide certain information about yourself as prompted by the account registration form. You represent and warrant that: (a) all required registration information you submit is truthful and accurate; (b) you will maintain the accuracy of such information. You may delete your Account at any time, for any reason, by following the instructions on the Site. Company may suspend or terminate your Account in accordance with Section 7.\n- Account Responsibilities. You are responsible for maintaining the confidentiality of your Account login information and are fully responsible for all activities that occur under your Account. You agree to immediately notify Company of any unauthorized use, or suspected unauthorized use of your Account or any other breach of security. Company cannot and will not be liable for any loss or damage arising from your failure to comply with the above requirements.\n[...]\n- Feedback. If you provide Company with any feedback or suggestions regarding the Site (\" Feedback \"), you hereby assign to Company all rights in such Feedback and agree that Company shall have the right to use and fully exploit such Feedback and related information in any manner it deems appropriate. Company will treat any Feedback you provide to Company as non-confidential and non-proprietary. You agree that you will not submit to Company any information or ideas that you consider to be confidential or proprietary.\nYou agree to indemnify and hold Company (and its officers, employees, and agents) harmless, including costs and attorneys' fees, from any claim or demand made by any third party due to or arising out of (a) your use of the Site, (b) your violation of these Terms or (c) your violation of applicable laws or regulations. Company reserves the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify us, and you agree to cooperate with our defense of these claims. You agree not to settle any matter without the prior written consent of Company. Company will use reasonable efforts to notify you of any such claim, action or proceeding upon becoming aware of it.\n- Other Users. Your interactions with other Site users are solely between you and such users. You agree that Company will not be responsible for any loss or damage incurred as the result of any such interactions. If there is a dispute between you and any Site user, we are under no obligation to become involved.\nTHE SITE IS PROVIDED ON AN \"AS-IS\" AND \"AS AVAILABLE\" BASIS, AND COMPANY (AND OUR SUPPLIERS) EXPRESSLY DISCLAIM ANY AND ALL WARRANTIES AND CONDITIONS OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING ALL WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, QUIET ENJOYMENT, ACCURACY, OR NON-INFRINGEMENT. WE (AND OUR SUPPLIERS) MAKE NO WARRANTY THAT THE SITE WILL MEET YOUR REQUIREMENTS, WILL BE AVAILABLE ON AN UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE BASIS, OR WILL BE ACCURATE, RELIABLE, FREE OF VIRUSES OR OTHER HARMFUL CODE, COMPLETE, LEGAL, OR SAFE. IF APPLICABLE LAW REQUIRES ANY WARRANTIES WITH RESPECT TO THE SITE, ALL SUCH WARRANTIES ARE LIMITED IN DURATION TO 90 DAYS FROM THE DATE OF FIRST USE.\nSOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO THE ABOVE EXCLUSION MAY NOT APPLY TO YOU. SOME JURISDICTIONS DO NOT ALLOW LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY LASTS, SO THE ABOVE LIMITATION MAY NOT APPLY TO YOU.\nTO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL COMPANY (OR OUR SUPPLIERS) BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY LOST PROFITS, LOST DATA, COSTS OF PROCUREMENT OF SUBSTITUTE PRODUCTS, OR ANY INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL OR PUNITIVE DAMAGES ARISING FROM OR RELATING TO THESE TERMS OR YOUR USE OF, OR INABILITY TO USE, THE SITE, EVEN IF COMPANY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. ACCESS TO, AND USE OF, THE SITE IS AT YOUR OWN DISCRETION AND RISK, AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR DEVICE OR COMPUTER SYSTEM, OR LOSS OF DATA RESULTING THEREFROM.\n[... truncated ...]",
+      "truncated": true,
+      "usable": true
+    },
+    {
+      "url": "https://www.unkey.com/docs/introduction",
+      "final_url": "https://www.unkey.com/docs/introduction",
+      "title": "What is Unkey? - Unkey Docs",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text 'documentation'",
+      "discovered_via": "linked from docs hub https://unkey.com/docs/introduction",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 515,
+      "text": "| Without Unkey | With Unkey |\n| Provision servers, configure load balancers, manage TLS | git push or unkey deploy |\n| Build key storage, hashing, rotation, revocation | Attached to your app or called via SDK |\n| Stand up Redis for rate limiting | unkey.ratelimit.limit() |\n| Wire up usage tracking and dashboards | Built-in analytics |\n## Deploy\nPush to GitHub or run unkey deploy . Multi-region, instant rollbacks, automatic domains, preview environments.\n## Gateway\nAPI key authentication, rate limiting, and IP policies running in front of your app. No middleware to write.\n## API keys\nIssue, verify, revoke. Usage limits, expiration, metadata, identities. Use standalone or attached to a deployment.\n## Analytics\nWho\u2019s using your API, how much, when. Built in, queryable, no pipeline to build.\n\u200b\nUnkey never stores API keys in plain text. Keys are SHA-256 hashed before storage, so even if our database were compromised your keys stay safe.\n\u200b\nShip a production API from your repo\nunkey deploy ghcr.io/acme/payments-api:v1.2.3 \\ --project payments \\ --root-key $UNKEY_ROOT_KEY\nAuthenticate every request before it hits your app\n// Inside your app, the request is already authenticated. // Identity and quota info arrive on request headers. const userId = req . headers [ \"x-unkey-identity\" ];\nIssue API keys to your customers\nconst { meta , data } = await unkey . keys . verifyKey ({ key : \"sk_...\" }); if ( ! data . valid ) return new Response ( \"Unauthorized\" , { status : 401 });\nRate limit anything\nconst { success } = await unkey . ratelimit . limit ({ namespace : \"api.requests\" , identifier : userId , limit : 100 , duration : 60_000 , }); if ( ! success ) return new Response ( \"Too many requests\" , { status : 429 });\nUsage-based billing\nconst { meta , data } = await unkey . keys . createKey ({ apiId : \"api_...\" , credits : { remaining : 10000 , refill : { interval : \"monthly\" , amount : 10000 } } });\n\u200b\n## Deploy your first app\nConnect a GitHub repository (or push a Docker image) and have a live URL in minutes.\n## Issue your first API key\nCreate a keyspace, generate a key, and verify it with curl or your favorite SDK.\n## Framework guides\nStep-by-step recipes for Next.js, Bun, Express, Hono, FastAPI, Go.\n## Cookbook\nReady-to-copy patterns: per-user limits, tiered subscriptions, usage billing.\n\u200b\n## I want to ship an API\nDeploy from GitHub or CLI. Multi-region, rollbacks, preview environments, the gateway in front.\n## I just need API keys or rate limits\nUse the SDK directly from any backend, no deployment required.\n## I'm migrating from another solution\nBring existing keys over without disrupting your users.\n## I want both\nStart by deploying. Add API key auth and rate limits as policies on the deployment.\n\u200b\n## Discord\nChat with the team and community\n## GitHub\nStar the repo and file issues\n## Twitter / X\nFollow for updates\nLast modified on June 24, 2026\nWas this page helpful?\n\u2318 I",
+      "truncated": false,
+      "usable": true
+    },
+    {
+      "url": "https://unkey.com/docs/build-and-deploy/regions",
+      "final_url": "https://www.unkey.com/docs/build-and-deploy/regions",
+      "title": "Regions - Unkey Docs",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text 'read the docs'",
+      "discovered_via": "homepage navigation",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 149,
+      "text": "| Region | Location | Provider |\n| us-east-1 | N. Virginia, US | AWS |\n| us-west-2 | Oregon, US | AWS |\n| eu-central-1 | Frankfurt, Germany | AWS |\n| ap-southeast-1 | Singapore | AWS |\n\u200b\nNeed a region that isn\u2019t listed? Reach out on Discord or email support@unkey.com to request it.\n\u200b\nRegion configuration with different selections for production and preview\n\u200b\nDuring the beta, the maximum is four instances per region. Contact support@unkey.com if you need more.\n\u200b\n\u200b\n- Open your project\u2019s Settings tab.\n- Under Runtime settings , add or remove regions.\n- Save the changes.\n- Trigger a new deployment to apply the updated configuration.\n\u200b\n## App settings\nConfigure instances, CPU, memory, storage, and other runtime settings\n## Custom domains\nServe your app from your own domain\nLast modified on August 12, 2026\nWas this page helpful?\n\u2318 I",
+      "truncated": false,
+      "usable": true
+    },
+    {
+      "url": "https://unkey.com/docs/observability/overview",
+      "final_url": "https://www.unkey.com/docs/observability/overview",
+      "title": "Observability - Unkey Docs",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text 'read the docs'",
+      "discovered_via": "homepage navigation",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 81,
+      "text": "\u200b\n- Logs . Runtime output (stdout and stderr) from your app, with filtering by severity, deployment, environment, and message content\n- Requests . Every HTTP request that passes through the gateway to your app, including method, path, status code, and a full latency breakdown. A logging policy can add headers, bodies, and query data\n- Metrics . RPS and latency charts on each deployment\u2019s overview page\n\u200b\n\u200b\nLast modified on August 17, 2026\nWas this page helpful?\n\u2318 I",
+      "truncated": false,
+      "usable": false
+    },
+    {
+      "url": "https://www.unkey.com/docs/api-reference/overview",
+      "final_url": "https://www.unkey.com/docs/api-reference/overview",
+      "title": "Overview - Unkey Docs",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text 'api reference'",
+      "discovered_via": "linked from docs hub https://unkey.com/docs/introduction",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 253,
+      "text": "\u200b\n- Clear Communication : Structured responses make success and failure equally informative\n- Practical Over Purist : We make pragmatic choices rather than rigidly adhering to any single paradigm\n- Predictable Patterns : Once you learn one endpoint, you\u2019ll understand them all\n\u200b\n{ \" meta \" : { \" requestId \" : \"req_abc123xyz789\" }, \" data \" : { // Operation-specific response data } }\n{ \" meta \" : { \" requestId \" : \"req_abc123xyz789\" , \" timestamp \" : \"2023-11-08T15:22:30Z\" }, \" data \" : [ // Array of items ], \" pagination \" : { \" cursor \" : \"cursor_xyz123\" , \" hasMore \" : true } }\n\u200b\n\u200b\n\u200b\n- Make your initial request\n- Check for pagination.hasMore to see if more items exist\n- If true , use the pagination.cursor value in your next request\n// First request const response = await fetch ( \"https://api.unkey.com/v2/keys.listKeys\" , { method : \"POST\" , headers : { Authorization : `Bearer ${ rootKey } ` }, body : JSON . stringify ({ apiId : \"api_123\" }), }); // Follow-up request with cursor if ( response . pagination ?. hasMore ) { const nextPage = await fetch ( \"https://api.unkey.com/v2/keys.listKeys\" , { method : \"POST\" , headers : { Authorization : `Bearer ${ rootKey } ` }, body : JSON . stringify ({ apiId : \"api_123\" , cursor : response . pagination . cursor , }), }); }\n\u200b\nLast modified on April 7, 2026\nWas this page helpful?\n\u2318 I",
+      "truncated": false,
+      "usable": true
+    },
+    {
+      "url": "https://www.unkey.com/docs/quickstart/deploy",
+      "final_url": "https://www.unkey.com/docs/quickstart/deploy",
+      "title": "Deploy your first app - Unkey Docs",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'",
+      "discovered_via": "linked from docs hub https://unkey.com/docs/introduction",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 153,
+      "text": "\u200b\n- An Unkey account\n- A GitHub repository\n\u200b\n1\nStart a new project\nCreate a new project\n2\nImport from GitHub\nImport a project from GitHub\n3\nSelect a repository\nSelect a repository\nDon\u2019t have a repository ready or want to deploy with the CLI instead? Click Skip for now to finish onboarding without selecting a repository. You can connect GitHub later from your project\u2019s settings.\n4\nConfigure build settings\nConfigure deployment settings\n5\nDeploy\nDeployment in progress\n\u200b\n- Pushes to the default branch (typically main ) deploy to production .\n- Pushes to any other branch deploy to preview .\n\u200b\n## GitHub integration\nBranch mapping, fork protection, and watch paths\n## App settings\nConfigure regions, CPU, memory, health checks, and more\n## Variables\nAdd environment-specific configuration\n## Custom domains\nServe your app from your own domain\nLast modified on August 12, 2026\nWas this page helpful?\n\u2318 I",
+      "truncated": false,
+      "usable": true
+    },
+    {
+      "url": "https://www.unkey.com/docs/quickstart/quickstart",
+      "final_url": "https://www.unkey.com/docs/quickstart/quickstart",
+      "title": "Quickstart - Unkey Docs",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'",
+      "discovered_via": "linked from docs hub https://unkey.com/docs/introduction",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 903,
+      "text": "| Field | Type | Description |\n| valid | boolean | Whether the key passed all checks |\n| code | string | Status code ( VALID , NOT_FOUND , RATE_LIMITED , etc.) |\n| keyId | string | The key\u2019s unique identifier |\n| name | string? | Human-readable name of the key |\n| meta | object? | Custom metadata associated with the key |\n| expires | number? | Unix timestamp (in milliseconds) when the key will expire. (if set) |\n| credits | number? | Remaining uses (if usage limits set) |\n| enabled | boolean | Whether the key is enabled |\n| roles | string[]? | Permissions attached to the key |\n| permissions | string[]? | Permissions attached to the key |\n| identity | object? | Identity info if externalId was set when creating the key |\n| ratelimits | object[]? | Rate limit states (if rate limiting configured) |\nNeed an account? Sign up free , takes 30 seconds.\n\u200b\n\u200b\n- Go to Workspace Settings \u2192 Root Keys\n- Click Create New Root Key\n- Give it a name and select the permissions you need\n- Copy the key, you won\u2019t see it again\nKeep your root key secret. Never expose it in client-side code or commit it to git.\n\u200b\ncurl -X POST https://api.unkey.com/v2/keys.createKey \\ -H \"Authorization: Bearer YOUR_ROOT_KEY\" \\ -H \"Content-Type: application/json\" \\ -d '{ \"apiId\": \"api_xxxx\", \"name\": \"My First Key\" }'\nimport { Unkey } from \"@unkey/api\" ; const unkey = new Unkey ({ rootKey : process . env . UNKEY_ROOT_KEY }); try { const { meta , data } = await unkey . keys . createKey ({ apiId : \"api_xxxx\" , name : \"My First Key\" , }); console . log ( data . key ); // This is the key to give to your user } catch ( err ) { console . error ( err ); }\nfrom unkey import Unkey unkey = Unkey ( root_key = \"your_root_key\" ) result = unkey . keys . create_key ( api_id = \"api_xxxx\" , name = \"My First Key\" ) print ( result . key ) # This is the key to give to your user\npackage main import ( \"context\" \"fmt\" \"os\" unkey \"github.com/unkeyed/sdks/api/go/v2\" \"github.com/unkeyed/sdks/api/go/v2/models/components\" ) func main () { ctx := context . Background () client := unkey . New ( unkey . WithSecurity ( os . Getenv ( \"UNKEY_ROOT_KEY\" )), ) res , err := client . Keys . CreateKey ( ctx , components . V2KeysCreateKeyRequestBody { APIID : \"api_xxxx\" , Name : stringPtr ( \"My First Key\" ), }) if err != nil { panic ( err ) } fmt . Println ( res . V2KeysCreateKeyResponseBody . Key ) // Give this to your user } func stringPtr ( s string ) * string { return & s }\n\u200b\ncurl -X POST https://api.unkey.com/v2/keys.verifyKey \\ -H \"Authorization: Bearer YOUR_ROOT_KEY\" \\ -H \"Content-Type: application/json\" \\ -d '{ \"key\": \"THE_KEY_FROM_STEP_3\" }'\nimport { Unkey } from \"@unkey/api\" ; const unkey = new Unkey ({ rootKey : process . env . UNKEY_ROOT_KEY ! }); try { const { data } = await unkey . keys . verifyKey ({ key : \"THE_KEY_FROM_STEP_3\" , }); if ( ! data . valid ) { // Key is invalid, expired, rate limited, etc. console . log ( \"Denied:\" , data . code ); } // Key is valid, continue with your API logic console . log ( \"Key ID:\" , data . keyId ); } catch ( err ) { console . error ( err ); }\nfrom unkey import Unkey unkey = Unkey ( root_key = \"your_root_key\" ) result = unkey . keys . verify_key ( key = \"THE_KEY_FROM_STEP_3\" ) if not result . valid : print ( \"Denied:\" , result . code ) else : print ( \"Key ID:\" , result . key_id )\npackage main import ( \"context\" \"fmt\" \"os\" unkey \"github.com/unkeyed/sdks/api/go/v2\" \"github.com/unkeyed/sdks/api/go/v2/models/components\" ) func main () { ctx := context . Background () client := unkey . New ( unkey . WithSecurity ( os . Getenv ( \"UNKEY_ROOT_KEY\" )), ) res , err := client . Keys . VerifyKey ( ctx , components . V2KeysVerifyKeyRequestBody { Key : \"THE_KEY_FROM_STEP_3\" , }) if err != nil { panic ( err ) } result := res . V2KeysVerifyKeyResponseBody . Data if ! result . Valid { code := \"unknown\" if result . Code != \"\" { code = string ( result . Code ) } fmt . Println ( \"Denied:\" , code ) return } fmt . Println ( \"Key ID:\" , result . KeyId ) }\n{ \" meta \" : { \" requestId \" : \"req_...\" }, \" data \" : { \" valid \" : true , \" code \" : \"VALID\" , \" keyId \" : \"key_xxxx\" } }\n\u200b\nFields marked with ? are optional and only included when relevant (e.g., remaining only appears if you set a usage limit).\n\u200b\n## Next.js\nProtect API routes with middleware\n## Express\nAdd key verification to Express routes\n## Bun\nFast verification with Bun\u2019s native server\n## Hono\nGlobally distributed API key verification\n## Add rate limiting\nProtect endpoints from abuse\n## Set usage limits\nCap requests per key for billing tiers\n## Add permissions\nFine-grained access control\n## SDK Reference\nFull TypeScript SDK docs\nLast modified on June 2, 2026\nWas this page helpful?\n\u2318 I",
+      "truncated": false,
+      "usable": true
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.unkey.com/docs/llms.txt",
+      "category": "docs",
+      "reason": "skipped: content-type text/plain; charset=utf-8"
+    },
+    {
+      "url": "https://www.unkey.com/faq",
+      "category": "faq",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://app.unkey.com/auth/sign-up",
+      "category": "trial",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://app.unkey.com/",
+      "category": "trial",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://www.unkey.com/help",
+      "category": "help",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.unkey.com/terms",
+      "category": "terms",
+      "reason": "HTTP 404"
+    }
+  ],
+  "discovery_notes": [],
+  "pricing_urls": [
+    "https://www.unkey.com/pricing"
+  ],
+  "stats": {
+    "pages_selected": 11,
+    "pages_fetched_ok": 11,
+    "pages_usable": 10,
+    "pages_failed": 6,
+    "pages_js_rendered": 0,
+    "urls_considered": 11,
+    "dossier_chars": 26201,
+    "harvest_seconds": 5.7,
+    "fetcher": {
+      "network": 7,
+      "cache": 15,
+      "rendered": 0,
+      "blocked": 0,
+      "failed": 6
+    }
+  }
+}

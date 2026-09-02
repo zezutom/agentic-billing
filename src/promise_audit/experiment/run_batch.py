@@ -1,8 +1,10 @@
-"""Batch experiment: pre-check the candidate pool, draw a seeded random sample
-of ten companies, and run the identical analysis pipeline against all of them.
+"""Batch experiment: pre-check the candidate pool, draw a seeded random sample,
+harvest all ten, then verify and render whatever the analyst returns.
 
-The prompts, rules and thresholds are the same for every company. Nothing in
-this script branches on which company is being analysed.
+The analysis itself is a separate step because the analyst is a Claude session,
+not a subprocess. `harvest` writes ten dossiers and ten request files; the
+session answers each one; `finish` verifies every quote and renders the reports.
+Running with `--backend api` collapses the two into one command.
 """
 
 from __future__ import annotations
@@ -15,23 +17,28 @@ import sys
 import time
 from pathlib import Path
 
-from ..audit import audit_site
+from ..analyze import AnalysisPending, analyse, analysis_path
 from ..discover import discover
 from ..fetcher import Fetcher
-from ..report import write_all
-from .pool import CANDIDATE_POOL, EXCLUDED_LARGE_PLATFORMS, RANDOM_SEED, SAMPLE_SIZE, pool_as_dicts
+from ..harvest import Dossier, harvest
+from ..render import write_all
+from .pool import (
+    CANDIDATE_POOL, EXCLUDED_LARGE_PLATFORMS, RANDOM_SEED, SAMPLE_SIZE, pool_as_dicts,
+)
 
 DOC_CATEGORIES = {"docs", "help", "faq", "limits", "billing_docs", "compare", "terms"}
-AUDIT_SETTINGS = {"max_pages": 16, "max_findings": 12}
+HARVEST_SETTINGS = {"max_pages": 16}
 
 
 def slugify(s: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")[:60]
 
 
-def precheck(outdir: Path, delay: float = 1.0) -> dict:
+# ------------------------------------------------------------------- eligibility
+
+def precheck(outdir: Path, delay: float = 1.0, allow_render: bool = True) -> dict:
     """Apply the inclusion criteria to every candidate, before any selection."""
-    fetcher = Fetcher(cache_dir=".promise_audit_cache", delay=delay)
+    fetcher = Fetcher(cache_dir=".promise_audit_cache", delay=delay, allow_render=allow_render)
     records = []
     try:
         for i, cand in enumerate(CANDIDATE_POOL, 1):
@@ -45,14 +52,10 @@ def precheck(outdir: Path, delay: float = 1.0) -> dict:
             try:
                 d = discover(fetcher, cand.url, max_pages=16)
                 cats = {c.category for c in d.selected}
-                has_pricing = bool(d.pricing_urls)
-                has_docs = bool(cats & DOC_CATEGORIES)
-                rec.update(
-                    pricing_urls=d.pricing_urls,
-                    categories_found=sorted(cats),
-                    pages_discovered=len(d.selected),
-                    eligible=bool(has_pricing and has_docs),
-                )
+                has_pricing, has_docs = bool(d.pricing_urls), bool(cats & DOC_CATEGORIES)
+                rec.update(pricing_urls=d.pricing_urls, categories_found=sorted(cats),
+                           pages_discovered=len(d.selected),
+                           eligible=bool(has_pricing and has_docs))
                 if not has_pricing:
                     rec["reason"] = "no public pricing page could be discovered"
                 elif not has_docs:
@@ -84,106 +87,147 @@ def precheck(outdir: Path, delay: float = 1.0) -> dict:
 
 
 def select(eligibility: dict, seed: int = RANDOM_SEED, n: int = SAMPLE_SIZE) -> list[dict]:
-    """Seeded random draw. Sorting by URL first makes the draw reproducible
-    regardless of the order the pre-check happened to finish in."""
+    """Seeded random draw over the eligible candidates, sorted by URL first so
+    the result does not depend on the order the pre-check finished in."""
     eligible = sorted([c for c in eligibility["candidates"] if c.get("eligible")],
                       key=lambda c: c["url"])
     rng = random.Random(seed)
-    if len(eligible) <= n:
-        return eligible
-    return sorted(rng.sample(eligible, n), key=lambda c: c["name"].lower())
+    chosen = eligible if len(eligible) <= n else rng.sample(eligible, n)
+    return sorted(chosen, key=lambda c: c["name"].lower())
 
 
-def run_batch(outdir: str | Path = "results/experiment", delay: float = 1.0,
-              skip_precheck: bool = False, allow_render: bool = True) -> dict:
-    outdir = Path(outdir)
-    outdir.mkdir(parents=True, exist_ok=True)
+# ---------------------------------------------------------------------- phases
 
+def cmd_harvest(args) -> int:
+    outdir, workdir = Path(args.out), Path(args.work)
     elig_path = outdir / "eligibility.json"
-    if skip_precheck and elig_path.exists():
+    if args.skip_precheck and elig_path.exists():
         eligibility = json.loads(elig_path.read_text())
         print(f"Reusing pre-check: {eligibility['eligible']}/{eligibility['pool_size']} eligible")
     else:
-        print(f"Pre-checking {len(CANDIDATE_POOL)} candidates against the inclusion criteria...")
-        eligibility = precheck(outdir, delay=delay)
-        print(f"  {eligibility['eligible']}/{eligibility['pool_size']} candidates eligible")
+        print(f"Pre-checking {len(CANDIDATE_POOL)} candidates ...")
+        eligibility = precheck(outdir, delay=args.delay, allow_render=not args.no_render)
+        print(f"  {eligibility['eligible']}/{eligibility['pool_size']} eligible")
 
     selected = select(eligibility)
     print(f"\nSeeded random sample (seed={RANDOM_SEED}): "
           f"{', '.join(c['name'] for c in selected)}\n")
 
-    runs = []
+    workdir.mkdir(parents=True, exist_ok=True)
+    entries = []
     for i, cand in enumerate(selected, 1):
-        print(f"[{i}/{len(selected)}] auditing {cand['name']} ({cand['url']})", flush=True)
-        fetcher = Fetcher(cache_dir=".promise_audit_cache", delay=delay,
-                          allow_render=allow_render)
+        slug = slugify(cand["name"])
+        print(f"[{i}/{len(selected)}] harvesting {cand['name']} ({cand['url']})", flush=True)
+        fetcher = Fetcher(cache_dir=".promise_audit_cache", delay=args.delay,
+                          allow_render=not args.no_render)
         try:
-            result = audit_site(cand["url"], company=cand["name"], fetcher=fetcher,
-                                verbose=False, **AUDIT_SETTINGS)
+            dossier = harvest(cand["url"], company=cand["name"], fetcher=fetcher,
+                              verbose=False, **HARVEST_SETTINGS)
         except Exception as exc:
-            print(f"    run failed: {exc}")
-            runs.append({"candidate": cand, "error": f"{type(exc).__name__}: {exc}"[:200]})
+            print(f"    harvest failed: {exc}")
+            entries.append({"candidate": cand, "slug": slug,
+                            "error": f"{type(exc).__name__}: {exc}"[:200]})
             continue
         finally:
             fetcher.close()
-        slug = slugify(cand["name"])
-        paths = write_all(result, outdir, slug)
-        sev = result.stats.get("findings_by_severity", {})
-        print(f"    {result.stats.get('pages_fetched_ok',0)} pages, "
-              f"{result.stats.get('claims',0)} claims, "
-              f"{len(result.findings)} findings ({sev or 'none'})", flush=True)
-        runs.append({
-            "candidate": cand,
-            "result_file": str(paths["json"]),
-            "report_file": str(paths["html"]),
-            "summary": {
-                "pages_fetched_ok": result.stats.get("pages_fetched_ok", 0),
-                "pages_failed": result.stats.get("pages_failed", 0),
-                "claims": result.stats.get("claims", 0),
-                "findings": len(result.findings),
-                "by_severity": sev,
-                "by_confidence": result.stats.get("findings_by_confidence", {}),
-                "by_kind": result.stats.get("findings_by_kind", {}),
-                "duration_seconds": result.duration_seconds,
-            },
-        })
+        dossier.save(workdir / f"{slug}.dossier.json")
+        from ..analyze import write_request
+        write_request(dossier, workdir, slug)
+        print(f"    {dossier.stats['pages_usable']}/{dossier.stats['pages_fetched_ok']} usable "
+              f"pages, {dossier.stats['dossier_chars']:,} chars", flush=True)
+        entries.append({"candidate": cand, "slug": slug,
+                        "dossier_file": str(workdir / f"{slug}.dossier.json"),
+                        "request_file": str(workdir / f"{slug}.request.md"),
+                        "harvest_stats": dossier.stats})
 
-    manifest = {
-        "run_at": time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime()),
-        "random_seed": RANDOM_SEED,
-        "sample_size": SAMPLE_SIZE,
-        "audit_settings": AUDIT_SETTINGS,
-        "pool": pool_as_dicts(),
-        "eligibility": eligibility,
-        "selected": selected,
-        "runs": runs,
+    state = {
+        "harvested_at": time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime()),
+        "random_seed": RANDOM_SEED, "sample_size": SAMPLE_SIZE,
+        "harvest_settings": HARVEST_SETTINGS,
+        "pool": pool_as_dicts(), "eligibility": eligibility,
+        "selected": selected, "entries": entries,
     }
+    (outdir / "harvest_state.json").write_text(json.dumps(state, indent=2))
+    print(f"\nWrote {outdir / 'harvest_state.json'}")
+    print(f"\nNext: answer each request in {workdir}/<slug>.request.md by writing")
+    print(f"      {workdir}/<slug>.analysis.json, then run:")
+    print(f"      python -m promise_audit.experiment.run_batch finish --out {outdir} --work {workdir}")
+    return 0
+
+
+def cmd_finish(args) -> int:
+    outdir, workdir = Path(args.out), Path(args.work)
+    state = json.loads((outdir / "harvest_state.json").read_text())
+    runs = []
+    for entry in state["entries"]:
+        slug, cand = entry["slug"], entry["candidate"]
+        if "dossier_file" not in entry:
+            runs.append({**entry, "status": "harvest_failed"})
+            continue
+        dossier = Dossier.load(entry["dossier_file"])
+        try:
+            analysis, report = analyse(dossier, backend=args.backend, workdir=workdir,
+                                       slug=slug, model=args.model)
+        except AnalysisPending:
+            print(f"  {cand['name']:20} no analysis yet ({analysis_path(workdir, slug)})")
+            runs.append({**entry, "status": "awaiting_analysis"})
+            continue
+        except Exception as exc:
+            print(f"  {cand['name']:20} analysis failed: {exc}")
+            runs.append({**entry, "status": "analysis_failed",
+                         "error": f"{type(exc).__name__}: {exc}"[:200]})
+            continue
+        paths = write_all(analysis, dossier, outdir, slug)
+        sev = {}
+        for f in analysis["findings"]:
+            sev[f["severity"]] = sev.get(f["severity"], 0) + 1
+        v = analysis["verification"]
+        print(f"  {cand['name']:20} {len(analysis['findings'])} findings {sev or ''} "
+              f"({v['findings_rejected']} rejected, {v['quotes_checked']} quotes checked)")
+        runs.append({**entry, "status": "ok", "result_file": str(paths["json"]),
+                     "report_file": str(paths["html"]),
+                     "summary": {"findings": len(analysis["findings"]),
+                                 "by_severity": sev,
+                                 "by_confidence": _count(analysis["findings"], "confidence"),
+                                 "by_type": _count(analysis["findings"], "type"),
+                                 "promises": len(analysis.get("promises", [])),
+                                 "plans": len(analysis.get("plans", [])),
+                                 "verification": v}})
+    manifest = {**state, "finished_at": time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime()),
+                "backend": args.backend, "runs": runs}
     (outdir / "manifest.json").write_text(json.dumps(manifest, indent=2))
     print(f"\nWrote {outdir / 'manifest.json'}")
-    return manifest
+    return 0
+
+
+def _count(items: list[dict], key: str) -> dict:
+    out: dict[str, int] = {}
+    for i in items:
+        out[i.get(key, "?")] = out.get(i.get(key, "?"), 0) + 1
+    return dict(sorted(out.items(), key=lambda kv: -kv[1]))
 
 
 def main(argv: list[str] | None = None) -> int:
-    ap = argparse.ArgumentParser(prog="promise-audit-batch",
-                                 description="Run the consistency audit across a seeded random "
-                                             "sample of smaller SaaS companies.")
-    ap.add_argument("--out", default="results/experiment")
-    ap.add_argument("--delay", type=float, default=1.0)
-    ap.add_argument("--precheck-only", action="store_true")
-    ap.add_argument("--skip-precheck", action="store_true",
-                    help="reuse an existing eligibility.json instead of re-checking")
-    ap.add_argument("--no-render", action="store_true",
-                    help="skip the headless-browser fallback (much faster where the "
-                         "browser has no outbound network access)")
+    ap = argparse.ArgumentParser(prog="promise-audit-batch")
+    sub = ap.add_subparsers(dest="cmd", required=True)
+
+    h = sub.add_parser("harvest", help="pre-check, select and harvest the ten companies")
+    h.add_argument("--out", default="results/experiment")
+    h.add_argument("--work", default="work")
+    h.add_argument("--delay", type=float, default=1.0)
+    h.add_argument("--no-render", action="store_true")
+    h.add_argument("--skip-precheck", action="store_true")
+    h.set_defaults(func=cmd_harvest)
+
+    f = sub.add_parser("finish", help="verify and render the analyses")
+    f.add_argument("--out", default="results/experiment")
+    f.add_argument("--work", default="work")
+    f.add_argument("--backend", choices=("agent", "api"), default="agent")
+    f.add_argument("--model", default="claude-opus-5")
+    f.set_defaults(func=cmd_finish)
+
     args = ap.parse_args(argv)
-    outdir = Path(args.out)
-    if args.precheck_only:
-        e = precheck(outdir, delay=args.delay)
-        print(f"{e['eligible']}/{e['pool_size']} eligible; wrote {outdir/'eligibility.json'}")
-        return 0
-    run_batch(outdir, delay=args.delay, skip_precheck=args.skip_precheck,
-              allow_render=not args.no_render)
-    return 0
+    return args.func(args)
 
 
 if __name__ == "__main__":

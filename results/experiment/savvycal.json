@@ -1,433 +1,429 @@
 {
   "company": "SavvyCal",
-  "root_url": "https://savvycal.com/",
-  "domain": "savvycal.com",
-  "started_at": "2026-09-02 07:43:15 UTC",
-  "duration_seconds": 3.5,
-  "pages": [
+  "plans": [
     {
-      "url": "https://savvycal.com/pricing",
-      "final_url": "https://savvycal.com/pricing",
-      "title": "Join thousands of happy customers",
-      "category": "pricing",
-      "why_selected": "url path contains 'pricing'; link text 'pricing'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 247,
-      "claim_count": 6
-    },
-    {
-      "url": "https://savvycal.com/signup",
-      "final_url": "https://savvycal.com/signup",
-      "title": "SavvyCal Meetings",
-      "category": "trial",
-      "why_selected": "url path contains 'signup'; link text 'sign up'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 73,
-      "claim_count": 0
-    },
-    {
-      "url": "https://savvycal.com/integrations-directory",
-      "final_url": "https://savvycal.com/integrations-directory",
-      "title": "Integrations",
-      "category": "addons",
-      "why_selected": "url path contains 'integrations'; link text 'integrations'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 336,
-      "claim_count": 0
-    },
-    {
-      "url": "https://docs.savvycal.com/",
-      "final_url": "https://docs.savvycal.com/",
-      "title": "How can we help?",
-      "category": "help",
-      "why_selected": "link text 'knowledge base'; documentation subdomain 'docs.savvycal.com'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 50,
-      "claim_count": 0
-    },
-    {
-      "url": "https://developers.savvycal.com/",
-      "final_url": "https://developers.savvycal.com/",
-      "title": "SavvyCal Meetings Developer Docs",
-      "category": "docs",
-      "why_selected": "link text 'developers'; documentation subdomain 'developers.savvycal.com'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 180,
-      "claim_count": 0
-    },
-    {
-      "url": "https://savvycal.com/terms",
-      "final_url": "https://savvycal.com/terms",
-      "title": "SavvyCal Terms of Use",
-      "category": "terms",
-      "why_selected": "url path contains 'terms'; link text 'terms of use'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 2418,
-      "claim_count": 2
-    },
-    {
-      "url": "https://savvycal.com/time-zone-api",
-      "final_url": "https://savvycal.com/time-zone-api",
-      "title": "Free Time Zone API by SavvyCal",
-      "category": "docs",
-      "why_selected": "url path contains 'api'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 162,
-      "claim_count": 0
-    },
-    {
-      "url": "https://savvycal.com/faq",
-      "final_url": "https://savvycal.com/faq",
-      "title": "",
-      "category": "faq",
-      "why_selected": "url path contains 'faq' (guessed conventional path, not linked)",
-      "discovered_via": "conventional path guess",
-      "status": 404,
-      "ok": false,
-      "error": "HTTP 404",
-      "rendered": false,
-      "word_count": 0,
-      "claim_count": 0
-    },
-    {
-      "url": "https://developers.savvycal.com/category/rest-api",
-      "final_url": "https://developers.savvycal.com/category/rest-api",
-      "title": "REST API",
-      "category": "docs",
-      "why_selected": "url path contains 'api'; link text 'api reference'; documentation subdomain 'developers.savvycal.com'; penalised for 'category'",
-      "discovered_via": "linked from docs hub https://developers.savvycal.com/",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 58,
-      "claim_count": 0
-    },
-    {
-      "url": "https://savvycal.com/eula",
-      "final_url": "https://savvycal.com/eula",
-      "title": "SavvyCal End User License Agreement for Downloadable Tools",
-      "category": "terms",
-      "why_selected": "url path contains 'eula'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 659,
-      "claim_count": 0
-    },
-    {
-      "url": "https://developers.savvycal.com/authentication",
-      "final_url": "https://developers.savvycal.com/authentication",
-      "title": "Authentication",
-      "category": "help",
-      "why_selected": "documentation subdomain 'developers.savvycal.com'",
-      "discovered_via": "linked from docs hub https://developers.savvycal.com/",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 537,
-      "claim_count": 0
-    },
-    {
-      "url": "https://developers.savvycal.com/webhooks",
-      "final_url": "https://developers.savvycal.com/webhooks",
-      "title": "Webhooks",
-      "category": "help",
-      "why_selected": "documentation subdomain 'developers.savvycal.com'",
-      "discovered_via": "linked from docs hub https://developers.savvycal.com/",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 595,
-      "claim_count": 0
-    },
-    {
-      "url": "https://docs.savvycal.com/category/5-integrations",
-      "final_url": "https://docs.savvycal.com/category/5-integrations",
-      "title": "Integrations",
-      "category": "addons",
-      "why_selected": "url path contains 'integrations'; link text 'integrations 18 articles'; penalised for 'category'",
-      "discovered_via": "linked from help hub https://docs.savvycal.com/",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 111,
-      "claim_count": 0
-    },
-    {
-      "url": "https://docs.savvycal.com/category/7-usage",
-      "final_url": "https://docs.savvycal.com/category/7-usage",
-      "title": "Use Cases",
-      "category": "limits",
-      "why_selected": "url path contains 'usage'; penalised for 'category'",
-      "discovered_via": "linked from help hub https://docs.savvycal.com/",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 115,
-      "claim_count": 0
-    },
-    {
-      "url": "https://savvycal.com/help",
-      "final_url": "https://savvycal.com/help",
-      "title": "",
-      "category": "help",
-      "why_selected": "url path contains 'help' (guessed conventional path, not linked)",
-      "discovered_via": "conventional path guess",
-      "status": 404,
-      "ok": false,
-      "error": "HTTP 404",
-      "rendered": false,
-      "word_count": 0,
-      "claim_count": 0
-    },
-    {
-      "url": "https://savvycal.com/docs",
-      "final_url": "https://savvycal.com/docs",
-      "title": "",
-      "category": "docs",
-      "why_selected": "url path contains 'docs' (guessed conventional path, not linked)",
-      "discovered_via": "conventional path guess",
-      "status": 404,
-      "ok": false,
-      "error": "HTTP 404",
-      "rendered": false,
-      "word_count": 0,
-      "claim_count": 0
-    }
-  ],
-  "failures": [
-    {
-      "url": "https://savvycal.com/faq",
-      "category": "faq",
-      "reason": "HTTP 404"
-    },
-    {
-      "url": "https://savvycal.com/help",
-      "category": "help",
-      "reason": "HTTP 404"
-    },
-    {
-      "url": "https://savvycal.com/docs",
-      "category": "docs",
-      "reason": "HTTP 404"
-    }
-  ],
-  "claims": [
-    {
-      "kind": "trial",
-      "page_url": "https://savvycal.com/pricing",
-      "page_title": "Join thousands of happy customers",
-      "page_category": "pricing",
-      "evidence": "Do you offer a free trial?",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "days": null,
-        "page_is_reference": false
+      "name": "Basic",
+      "headline_price": "$10 /user/mo",
+      "billing_periods": [
+        "monthly"
+      ],
+      "evidence": {
+        "quote": "Great for individuals & small teams with simple scheduling needs.",
+        "url": "https://savvycal.com/pricing"
       },
-      "extractor": "trial_unspecified"
+      "evidence_verified": true
+    },
+    {
+      "name": "Premium",
+      "headline_price": "$17 /user/mo",
+      "billing_periods": [
+        "monthly"
+      ],
+      "evidence": {
+        "quote": "Ideal for businesses who need a bit more control over their scheduling flows.",
+        "url": "https://savvycal.com/pricing"
+      },
+      "evidence_verified": true
+    }
+  ],
+  "promises": [
+    {
+      "kind": "plan_price",
+      "statement": "Basic is $10 per user per month",
+      "plan": "Basic",
+      "evidence": {
+        "quote": "$ 10 /user/mo",
+        "url": "https://savvycal.com/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "plan_price",
+      "statement": "Premium is $17 per user per month",
+      "plan": "Premium",
+      "evidence": {
+        "quote": "$ 17 /user/mo",
+        "url": "https://savvycal.com/pricing"
+      },
+      "evidence_verified": true
     },
     {
       "kind": "unlimited",
-      "page_url": "https://savvycal.com/pricing",
-      "page_title": "Join thousands of happy customers",
-      "page_category": "pricing",
-      "evidence": "Unlimited calendars",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "subject": "calendars",
-        "metric": null,
-        "page_is_reference": false
+      "statement": "Basic includes unlimited calendars",
+      "plan": "Basic",
+      "evidence": {
+        "quote": "Unlimited calendars",
+        "url": "https://savvycal.com/pricing"
       },
-      "extractor": "unlimited_phrase"
+      "evidence_verified": true
     },
     {
       "kind": "unlimited",
-      "page_url": "https://savvycal.com/pricing",
-      "page_title": "Join thousands of happy customers",
-      "page_category": "pricing",
-      "evidence": "Unlimited links",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "subject": "links",
-        "metric": null,
-        "page_is_reference": false
+      "statement": "Basic includes unlimited scheduling links",
+      "plan": "Basic",
+      "evidence": {
+        "quote": "Unlimited links",
+        "url": "https://savvycal.com/pricing"
       },
-      "extractor": "unlimited_phrase"
+      "evidence_verified": true
     },
     {
-      "kind": "plan_mention",
-      "page_url": "https://savvycal.com/pricing",
-      "page_title": "Join thousands of happy customers",
-      "page_category": "pricing",
-      "evidence": "pricing page heading 'Basic'",
-      "plan": "basic",
-      "plan_raw": "Basic",
-      "data": {
-        "source": "heading",
-        "page_is_reference": false
+      "kind": "entitlement",
+      "statement": "Premium adds custom domains, delegation to an assistant and paid bookings",
+      "plan": "Premium",
+      "evidence": {
+        "quote": "You'll get everything in Basic, plus:",
+        "url": "https://savvycal.com/pricing"
       },
-      "extractor": "pricing_heading"
-    },
-    {
-      "kind": "plan_mention",
-      "page_url": "https://savvycal.com/pricing",
-      "page_title": "Join thousands of happy customers",
-      "page_category": "pricing",
-      "evidence": "pricing page heading 'Premium'",
-      "plan": "premium",
-      "plan_raw": "Premium",
-      "data": {
-        "source": "heading",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_heading"
-    },
-    {
-      "kind": "plan_mention",
-      "page_url": "https://savvycal.com/pricing",
-      "page_title": "Join thousands of happy customers",
-      "page_category": "pricing",
-      "evidence": "pricing page heading 'Company'",
-      "plan": "company",
-      "plan_raw": "Company",
-      "data": {
-        "source": "heading",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_heading"
+      "evidence_verified": true
     },
     {
       "kind": "condition",
-      "page_url": "https://savvycal.com/terms",
-      "page_title": "SavvyCal Terms of Use",
-      "page_category": "terms",
-      "evidence": "Subscriptions will automatically renew for the same subscription period unless you cancel the account by the end of the then-current subscription period.",
+      "statement": "There is a 30-day money back guarantee",
       "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "auto_renew",
-        "description": "automatic renewal",
-        "page_is_reference": false
+      "evidence": {
+        "quote": "Backed by a 30-day money back guarantee.",
+        "url": "https://savvycal.com/pricing"
       },
-      "extractor": "condition_auto_renew"
+      "evidence_verified": true
     },
     {
       "kind": "condition",
-      "page_url": "https://savvycal.com/terms",
-      "page_title": "SavvyCal Terms of Use",
-      "page_category": "terms",
-      "evidence": "In order to resolve a complaint regarding the Site or to receive further information regarding use of SavvyCal, please contact us at support@savvycal.com.",
+      "statement": "Cancelling within 30 days entitles you to a full refund; after that refunds are discretionary",
       "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "contact_sales",
-        "description": "pricing only available by contacting sales",
-        "page_is_reference": false
+      "evidence": {
+        "quote": "If you cancel within 30 days of starting your subscription, you are entitled to a full refund of fees paid.",
+        "url": "https://savvycal.com/terms"
       },
-      "extractor": "condition_contact_sales"
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Subscriptions renew automatically unless cancelled before the period ends",
+      "plan": null,
+      "evidence": {
+        "quote": "Subscriptions will automatically renew for the same subscription period unless you cancel the account by the end of the then-current subscription period.",
+        "url": "https://savvycal.com/terms"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Prices may be changed at any time",
+      "plan": null,
+      "evidence": {
+        "quote": "We may change prices at any time.",
+        "url": "https://savvycal.com/terms"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "The service may not be used for reselling",
+      "plan": null,
+      "evidence": {
+        "quote": "You may use these Services for your individual purposes and not for the purpose of reselling.",
+        "url": "https://savvycal.com/terms"
+      },
+      "evidence_verified": true
     }
   ],
   "findings": [
     {
-      "rule": "condition_off_pricing",
-      "kind": "missing_information",
+      "type": "missing_information",
+      "severity": "medium",
+      "confidence": "medium",
+      "headline": "Your pricing page invites people to \"kick the tires for free\", then shows only two paid plans and never explains what free means",
+      "explanation": "The first line above your plans offers a free way in and tells the reader they can upgrade when they are ready to \"activate\". The plans underneath start at $10 per user per month, and nothing on the page says whether free means a free tier, a time-limited trial, or an unactivated account with reduced functionality. There is no trial length, no statement about whether a card is required, and no explanation of what activation changes. This is the first question a visitor has and the page raises it without answering it.",
+      "claim_a": {
+        "statement": "You can start for free and upgrade only when ready to activate",
+        "quote": "Kick the tires for free and only upgrade when you're ready to activate.",
+        "url": "https://savvycal.com/pricing"
+      },
+      "claim_b": {
+        "statement": "The only prices published are $10 and $17 per user per month, with no free option shown",
+        "quote": "$ 10 /user/mo",
+        "url": "https://savvycal.com/pricing"
+      },
+      "why_not_just_wording": "One sentence offers a free route into the product and the rest of the page documents only paid ones, so the reader cannot find out what they would actually be signing up for.",
+      "caveat": "The answer is very likely in the FAQ at the bottom of the page, which is collapsed and did not render for us \u2014 so this may be a rendering limitation on our side rather than a gap on yours. The plan comparison table on the same page also rendered as feature names with no values, which is why this report is thinner for SavvyCal than for other companies.",
+      "same_page": true,
+      "score": 3.4
+    },
+    {
+      "type": "missing_information",
       "severity": "low",
       "confidence": "high",
-      "headline": "A commercial condition \u2014 automatic renewal \u2014 appears only away from your pricing page",
-      "explanation": "SavvyCal Terms of Use sets out automatic renewal, but nothing equivalent appears on your pricing page. Conditions that change what a customer actually pays or receives belong where the buying decision is made; discovering them later is where churn and chargebacks start.",
-      "claim_a": "Pricing page: condition not stated",
-      "claim_b": "SavvyCal Terms of Use: automatic renewal",
-      "evidence_a": {
-        "url": "https://savvycal.com/pricing",
-        "page_title": "Pricing page",
-        "page_category": "pricing",
-        "quote": "(no equivalent statement found on the pricing page)"
+      "headline": "Your terms reserve the right to change prices at any time, with no notice period, and your pricing page does not mention it",
+      "explanation": "A single sentence in the Fees & Payment section lets you change prices at any time. Unlike most terms of this kind it commits to no notice period at all \u2014 not 30 days, not one billing cycle. Combined with automatic renewal, a customer's price can in principle change between one renewal and the next without warning. This is standard drafting and probably not how you behave, but it is the sort of clause a procurement reviewer flags, and nothing on the pricing page sets an expectation either way.",
+      "claim_a": {
+        "statement": "Prices may be changed at any time, with no notice period stated",
+        "quote": "We may change prices at any time.",
+        "url": "https://savvycal.com/terms"
       },
-      "evidence_b": {
-        "url": "https://savvycal.com/terms",
-        "page_title": "SavvyCal Terms of Use",
-        "page_category": "terms",
-        "quote": "Subscriptions will automatically renew for the same subscription period unless you cancel the account by the end of the then-current subscription period."
+      "claim_b": {
+        "statement": "Subscriptions renew automatically unless cancelled before the period ends",
+        "quote": "Subscriptions will automatically renew for the same subscription period unless you cancel the account by the end of the then-current subscription period.",
+        "url": "https://savvycal.com/terms"
       },
-      "caveat": "This is standard legal wording in the right place; the question is only whether the pricing page sets the same expectation. Detected by absence, so a condition stated in an image, a tooltip or a collapsed accordion on the pricing page would be missed.",
-      "tags": [
-        "condition",
-        "auto_renew"
-      ],
+      "why_not_just_wording": "The two clauses combine into a commercial term \u2014 an automatically renewing subscription whose price can move without notice \u2014 that appears nowhere the buyer is asked to decide.",
+      "caveat": "This is ordinary legal boilerplate in the place boilerplate belongs, and your 30-day money back guarantee already gives customers a way out. We are flagging placement, not conduct.",
+      "same_page": true,
       "score": 2.55
     }
   ],
-  "discovery_notes": [],
-  "pricing_urls": [
-    "https://savvycal.com/pricing"
-  ],
-  "stats": {
-    "pages_selected": 14,
-    "pages_fetched_ok": 13,
-    "pages_failed": 3,
-    "pages_js_rendered": 0,
-    "urls_considered": 12,
-    "claims": 8,
-    "claims_by_kind": {
-      "plan_mention": 3,
-      "unlimited": 2,
-      "condition": 2,
-      "trial": 1
+  "coverage_notes": {
+    "unusable_pages": [
+      "https://savvycal.com/faq (HTTP 404)",
+      "https://savvycal.com/help (HTTP 404)",
+      "https://savvycal.com/docs (HTTP 404)"
+    ],
+    "what_was_not_checkable": "This is the weakest coverage of the ten companies and we would rather say so than pad the report. The plan comparison table on your pricing page rendered as a list of feature names with no per-plan values, so we could not check a single feature entitlement against your documentation. The FAQ section rendered as a heading with no questions or answers. Your help site returned almost no readable text. As a result we could not check the two things most worth checking here: which features are Basic versus Premium, and what your free entry route actually is. Your 30-day money back guarantee and your refund clause do agree with each other, which is worth saying, because that is the pair that most often does not."
+  },
+  "backend": "agent",
+  "verification": {
+    "findings_in": 2,
+    "findings_out": 2,
+    "findings_rejected": 0,
+    "quotes_checked": 16,
+    "quotes_failed": 0,
+    "url_corrections": 0,
+    "rejections": []
+  },
+  "source": {
+    "root_url": "https://savvycal.com/",
+    "domain": "savvycal.com",
+    "harvested_at": "2026-09-02 07:57:27 UTC",
+    "stats": {
+      "pages_selected": 14,
+      "pages_fetched_ok": 13,
+      "pages_usable": 8,
+      "pages_failed": 3,
+      "pages_js_rendered": 0,
+      "urls_considered": 12,
+      "dossier_chars": 23971,
+      "harvest_seconds": 3.6,
+      "fetcher": {
+        "network": 4,
+        "cache": 17,
+        "rendered": 0,
+        "blocked": 0,
+        "failed": 4
+      }
     },
-    "findings": 1,
-    "findings_by_severity": {
-      "low": 1
-    },
-    "findings_by_confidence": {
-      "high": 1
-    },
-    "findings_by_kind": {
-      "missing_information": 1
-    },
-    "fetcher": {
-      "network": 4,
-      "cache": 17,
-      "rendered": 0,
-      "blocked": 0,
-      "failed": 4
-    }
+    "pages": [
+      {
+        "url": "https://savvycal.com/pricing",
+        "final_url": "https://savvycal.com/pricing",
+        "title": "Plans & Pricing \u00b7 SavvyCal",
+        "category": "pricing",
+        "why_selected": "url path contains 'pricing'; link text 'pricing'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 179,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://savvycal.com/signup",
+        "final_url": "https://savvycal.com/signup",
+        "title": "Sign Up for SavvyCal",
+        "category": "trial",
+        "why_selected": "url path contains 'signup'; link text 'sign up'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 54,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://savvycal.com/integrations-directory",
+        "final_url": "https://savvycal.com/integrations-directory",
+        "title": "Integrations \u00b7 SavvyCal",
+        "category": "addons",
+        "why_selected": "url path contains 'integrations'; link text 'integrations'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 303,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://docs.savvycal.com/",
+        "final_url": "https://docs.savvycal.com/",
+        "title": "Meetings Help",
+        "category": "help",
+        "why_selected": "link text 'knowledge base'; documentation subdomain 'docs.savvycal.com'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 58,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://developers.savvycal.com/",
+        "final_url": "https://developers.savvycal.com/",
+        "title": "SavvyCal Meetings Platform | SavvyCal Meetings",
+        "category": "docs",
+        "why_selected": "link text 'developers'; documentation subdomain 'developers.savvycal.com'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 152,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://savvycal.com/terms",
+        "final_url": "https://savvycal.com/terms",
+        "title": "SavvyCal Terms of Use",
+        "category": "terms",
+        "why_selected": "url path contains 'terms'; link text 'terms of use'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 2725,
+        "text": "",
+        "truncated": true,
+        "usable": true
+      },
+      {
+        "url": "https://savvycal.com/time-zone-api",
+        "final_url": "https://savvycal.com/time-zone-api",
+        "title": "Free Time Zone API \u00c2\u00b7 SavvyCal",
+        "category": "docs",
+        "why_selected": "url path contains 'api'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 208,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://developers.savvycal.com/category/rest-api",
+        "final_url": "https://developers.savvycal.com/category/rest-api",
+        "title": "REST API | SavvyCal Meetings",
+        "category": "docs",
+        "why_selected": "url path contains 'api'; link text 'api reference'; documentation subdomain 'developers.savvycal.com'; penalised for 'category'",
+        "discovered_via": "linked from docs hub https://developers.savvycal.com/",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 33,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://savvycal.com/eula",
+        "final_url": "https://savvycal.com/eula",
+        "title": "SavvyCal End User License Agreement for Downloadable Tools",
+        "category": "terms",
+        "why_selected": "url path contains 'eula'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 557,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://developers.savvycal.com/authentication",
+        "final_url": "https://developers.savvycal.com/authentication",
+        "title": "Authentication | SavvyCal Meetings",
+        "category": "help",
+        "why_selected": "documentation subdomain 'developers.savvycal.com'",
+        "discovered_via": "linked from docs hub https://developers.savvycal.com/",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 601,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://developers.savvycal.com/webhooks",
+        "final_url": "https://developers.savvycal.com/webhooks",
+        "title": "Webhooks | SavvyCal Meetings",
+        "category": "help",
+        "why_selected": "documentation subdomain 'developers.savvycal.com'",
+        "discovered_via": "linked from docs hub https://developers.savvycal.com/",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 679,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://docs.savvycal.com/category/5-integrations",
+        "final_url": "https://docs.savvycal.com/category/5-integrations",
+        "title": "Integrations - Meetings Help",
+        "category": "addons",
+        "why_selected": "url path contains 'integrations'; link text 'integrations 18 articles'; penalised for 'category'",
+        "discovered_via": "linked from help hub https://docs.savvycal.com/",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 89,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://docs.savvycal.com/category/7-usage",
+        "final_url": "https://docs.savvycal.com/category/7-usage",
+        "title": "Use Cases - Meetings Help",
+        "category": "limits",
+        "why_selected": "url path contains 'usage'; penalised for 'category'",
+        "discovered_via": "linked from help hub https://docs.savvycal.com/",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 89,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      }
+    ],
+    "failures": [
+      {
+        "url": "https://savvycal.com/faq",
+        "category": "faq",
+        "reason": "HTTP 404"
+      },
+      {
+        "url": "https://savvycal.com/help",
+        "category": "help",
+        "reason": "HTTP 404"
+      },
+      {
+        "url": "https://savvycal.com/docs",
+        "category": "docs",
+        "reason": "HTTP 404"
+      }
+    ]
   }
 }

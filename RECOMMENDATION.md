@@ -1,82 +1,95 @@
 # Is this worth publishing?
 
-**Short answer: not as it stands. Publish the idea, not this version of the tool — and only
-after two specific fixes.**
+**Yes — as a lead magnet, after one engineering fix and one independent review.**
 
-## What the experiment actually showed
+That is a change of answer. An earlier version of this tool used a deterministic rule engine
+instead of a model, ran against the same ten companies, and produced two findings a founder
+would act on out of twelve. This version produces nine out of nineteen. The pipeline, the
+crawler and the sample are the same; the analyst is not.
 
-Ten smaller SaaS companies, chosen at random from a frozen pool of 36 with a fixed seed.
-119 public pages read, 386 commercial claims extracted, **8 findings**.
+## What the experiment showed
+
+Ten smaller SaaS companies, drawn at random from a frozen pool of 36 with a fixed seed. Nine
+could be read. 111 pages fetched, 140 commercial promises extracted, **19 findings**, 208
+quotes verified character-by-character against the pages they came from.
 
 | | |
 |---|---|
-| Findings a founder would act on | **2** (Cronitor, Knock) |
-| Findings that are correct but not news | 5 |
-| Findings that are wrong | 1 |
-| Companies producing something worth a second look | 5 of 10 |
-| Companies producing a *strong* finding | 2 of 10 |
+| Companies with at least one finding | **8 of 9 readable** |
+| Findings we would defend to a founder without hedging | **9** |
+| Findings that are real but modest (placement, boilerplate) | 7 |
+| Findings an informed reader would push back on | 3 |
+| Findings citing evidence that does not exist | **0** |
 | Companies that could not be analysed at all | 1 (Umami — client-rendered pricing page) |
 
-The two strong ones are genuinely good. Knock publishes 60 requests/second on one
-documentation page and 200 requests/second on another. Cronitor sells "Unlimited API
-requests" and documents rate limits "to ensure fair usage". Neither is visible without
-reading two pages side by side, which is exactly the job a machine should do.
+The best of them is worth quoting in full, because it is the argument for the whole idea:
+**Unkey's documentation gives its free plan 7 days of log retention and 30 days of audit log
+retention. Its pricing page gives the $5 Starter plan 3 days and 7 days.** Paying moves you
+backwards on both. Nobody inside the company has read those two tables side by side, which is
+precisely the job worth automating.
 
-## Why that is not yet a lead magnet
+## Why this is a lead magnet and the earlier version was not
 
-The hook promises contradictions. The data delivers **disclosure drift** — five of the eight
-findings are ordinary terms-of-service clauses (auto-renewal, no refunds, the right to change
-quotas) that simply are not repeated on the pricing page. True, checkable, and not
-surprising to the person receiving the report.
+The earlier rule engine mostly found that auto-renewal clauses live in terms of service. True,
+checkable, and not news to anyone. Nine of these nineteen are things the company does not
+know, because seeing them requires holding two pages in mind at once and understanding what
+each is promising — reading comprehension, not pattern matching.
 
-None of the headline categories the concept was built around — a feature assigned to
-different plans on different pages, mismatched trial lengths, prices that do not reconcile,
-old plan names still live in the help centre — occurred once in ten companies. The rules for
-all of them work; they fire correctly on the test fixture. Small, tidy, founder-led SaaS
-companies were simply more consistent than the premise assumed.
+Two examples of the difference. The rule engine reported Knock as having conflicting API rate
+limits, 60/second on one page and 200/second on another; they are two rows of one endpoint
+tier table reproduced on two pages, and it was a false positive. This version did not report
+it, and said in its coverage notes why not. Conversely the rule engine found nothing at Unkey;
+the retention inversion needs someone to align a flattened comparison grid against the plan
+cards and notice that the cheaper tier wins.
 
-A prospect whose report says "your terms mention auto-renewal and your pricing page doesn't"
-does not book a call. Publishing at this hit rate risks the tool being remembered as the one
-that found nothing.
+## The one thing that must be fixed first
 
-## The two fixes that would change the answer
+**JavaScript rendering.** Umami returned zero readable words from its pricing page and could
+not be analysed at all. SavvyCal's comparison table rendered as feature names with no values,
+so its report is visibly thinner. One company in ten currently invisible is survivable in an
+experiment and not survivable in a public tool where the first thing a founder does is enter
+their own URL. The fallback is written and Chromium launches; it simply had no outbound
+network access in the sandbox this ran in.
 
-1. **Make JavaScript rendering work end to end.** One company in ten was invisible and
-   another was analysed at a quarter depth, and those are precisely the modern, JS-heavy
-   pricing pages most likely to have drifted. The fallback is implemented and Chromium
-   launches; it simply had no outbound network access in the environment this ran in.
-2. **Point it at the right companies.** The pool was deliberately small and independent.
-   The audience with the actual problem is mid-market: six tiers, add-ons, grandfathered
-   plans, a help centre nobody has audited since the last repackaging. Run the same
-   experiment against twenty of those before deciding anything. If the hit rate there is
-   still 2 in 10, the premise is wrong. If it is 6 in 10, this is a very good lead magnet.
+Close behind it: parse comparison grids properly rather than flattening them. Every one of
+these sites builds its plan table from styled divs. An early version of the harvester
+de-duplicated repeated lines and silently destroyed those grids — the Unkey finding was
+invisible until that was fixed, and there are almost certainly equivalent findings still
+being missed elsewhere.
 
-Also worth doing before publishing: split the output into "contradictions" and "conditions
-your buyer never sees" so five terms-of-service notes cannot read as five contradictions,
-and fix the confidence calibration — the single best finding in the run is currently
-labelled *low confidence* because neither statement happens to name a plan.
+## The one review that must happen first
 
-## What is worth publishing today
+The analyst wrote the findings and then graded them, having already seen these ten companies
+during the earlier rule-based run. Zero rejections out of 208 quotes is also not evidence that
+the model does not fabricate: the analyst and the verifier were the same model in the same
+session, checking quotes as it wrote them. The verifier itself was tested adversarially and
+does reject fabricated quotes, paraphrases, split passages and schema violations — but it has
+not yet been tested where it matters, on an unattended API run.
 
-Not the tool. **The finding.**
+Before publishing any hit-rate claim: run the same ten dossiers through the API backend, report
+the rejection rate, and have someone who did not write the findings mark them.
 
-"We read 119 public pages across ten SaaS companies looking for contradictions in what they
-promise customers. We found two real ones — and something more common: the conditions that
-change what you actually pay are almost never on the page where you decide to pay." That is
-a short, honest, checkable post, every claim of which links to a public page. It earns
-attention without over-claiming, and it sets up the real question the tool cannot answer:
+## What to publish
+
+Publish both, in this order.
+
+1. **The tool**, once rendering works. The offer costs a founder one URL. The report quotes
+   their own words, links both pages, and states in one line what would make each finding
+   wrong — checkable in two minutes, which is the only standard that matters for a cold audit
+   of somebody else's website.
+2. **The experiment write-up**, including the company that could not be read, the two false
+   positives that were caught and suppressed, and the three findings we think are soft. The
+   honesty is the differentiator. Every competitor in this space publishes only its best case.
+
+Do not lead with "most SaaS companies contradict themselves". Lead with what the evidence
+actually supports: *pricing pages and documentation drift apart, nobody inside the company can
+see it, and it is visible from outside in about two minutes.* Then ask the question the tool
+cannot answer:
 
 > These are the promises your customers can see. Do your billing system and product deliver
 > the same thing?
 
-## Recommendation
+## Recommendation in one line
 
-* **Do not publish the tool as a public lead magnet yet.** The median result is too thin.
-* **Do fix rendering and re-run against 20 mid-market companies.** That is roughly a day of
-  work and it decides the question.
-* **Do publish the experiment write-up**, including the false positive and the company that
-  could not be read. The honesty is the differentiator; every competitor in this space
-  publishes only its best case.
-* **Keep the two-quote, two-link evidence format whatever happens.** It is the reason the
-  findings survive being checked, and it is the only part of this that would be hard for
-  someone else to copy well.
+Fix rendering, get an independent mark, then publish — the finding quality is there, and the
+verified-quote format is the part that would be hard for anyone else to copy well.

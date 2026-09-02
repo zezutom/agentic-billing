@@ -1,13 +1,14 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Commercial consistency audit — Cronitor</title><style>
+<title>Commercial consistency audit — Cronitor</title>
+<style>
 :root{--ink:#12151c;--muted:#5d6675;--line:#e3e6ec;--bg:#fbfbfc;--card:#fff;
 --high:#c0392b;--high-bg:#fdf0ee;--med:#b06f13;--med-bg:#fdf6ea;--low:#4a6b8a;--low-bg:#eff4f8;
 --accent:#1a4fa0;}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);
 font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;}
-.wrap{max-width:840px;margin:0 auto;padding:56px 24px 96px;}
+.wrap{max-width:860px;margin:0 auto;padding:56px 24px 96px;}
 .eyebrow{font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
 font-weight:600;margin:0 0 12px;}
 h1{font-size:34px;line-height:1.22;margin:0 0 14px;letter-spacing:-.02em;font-weight:700;}
@@ -27,10 +28,11 @@ padding:4px 9px;border-radius:5px;}
 .chip.low{background:var(--low-bg);color:var(--low)}
 .chip.kind{background:#f1f2f5;color:var(--muted)}
 .chip.conf{background:transparent;color:var(--muted);border:1px solid var(--line);font-weight:600}
+.chip.ok{background:#eef7f0;color:#2f6b40}
 .f h3{font-size:18px;margin:0 0 10px;line-height:1.35;letter-spacing:-.01em}
 .f p{margin:0 0 14px;color:#2b3140}
 .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 0}
-@media(max-width:640px){.pair{grid-template-columns:1fr}}
+@media(max-width:660px){.pair{grid-template-columns:1fr}}
 .side{background:#f7f8fa;border:1px solid var(--line);border-radius:9px;padding:14px 15px;}
 .side .lab{font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);
 font-weight:700;margin-bottom:6px}
@@ -39,15 +41,16 @@ font-weight:700;margin-bottom:6px}
 font-size:13.5px;line-height:1.5;font-style:italic;}
 .side a{font-size:13px;color:var(--accent);text-decoration:none;word-break:break-all}
 .side a:hover{text-decoration:underline}
-.caveat{margin-top:15px;padding-top:13px;border-top:1px dashed var(--line);color:var(--muted);
+.note{margin-top:15px;padding-top:13px;border-top:1px dashed var(--line);color:var(--muted);
 font-size:13.5px;}
-.caveat b{color:#4a5262;font-weight:600}
+.note b{color:#4a5262;font-weight:600}
+.note div{margin:4px 0}
 table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
 th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
 th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 td a{color:var(--accent);text-decoration:none;word-break:break-all}
 .tag{display:inline-block;background:#f1f2f5;color:var(--muted);font-size:11.5px;
-padding:2px 7px;border-radius:4px}
+padding:2px 7px;border-radius:4px;margin-right:4px}
 .close{margin-top:56px;padding:28px 30px;background:#12151c;color:#f2f4f7;border-radius:12px}
 .close h2{color:#fff;margin:0 0 12px;font-size:22px;line-height:1.35}
 .close p{color:#c2c8d2;margin:0;font-size:15.5px}
@@ -56,17 +59,21 @@ font-size:14px;color:var(--muted)}
 .legend div{margin:5px 0}
 .legend b{color:var(--ink)}
 .none{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px}
+details{margin-top:10px}summary{cursor:pointer;color:var(--muted);font-size:14px}
 footer{margin-top:40px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:18px}
-</style></head><body>
-<div class="wrap">
+</style></head><body><div class="wrap">
 <p class="eyebrow">Commercial consistency audit</p>
-<h1>We found 1 commercial promise worth checking.</h1>
-<p class="sub">Everything below is taken word-for-word from
+<h1>We found 2 commercial promises worth checking.</h1>
+<p class="sub">Everything below is quoted word-for-word from
 <a href="https://cronitor.io/" style="color:inherit">cronitor.io</a>.
 Nothing here is inferred from anything private.</p>
-<p class="meta"><b>12</b> public pages read &middot;
-<b>28</b> commercial claims extracted &middot;
-<b>1 medium</b> &middot; run 2026-09-02 07:43:06 UTC</p>
+<p class="meta"><b>9</b> public pages read &middot;
+<b>18</b> commercial promises extracted &middot;
+<b>25</b> quotes checked against their source page &middot;
+run 2026-09-02 07:57:19 UTC</p>
+
+<h2>What you appear to sell</h2>
+<div class="legend">Hacker — $0 free forever, Business — $2 /mo per monitor plus $5 /mo per user, Enterprise — from $6,000 /yr annual invoice billing</div>
 
 <h2>What we found</h2>
 <article class="f medium">
@@ -74,69 +81,72 @@ Nothing here is inferred from anything private.</p>
   <span class="chip medium">medium impact</span>
   <span class="chip kind">Ambiguity</span>
   <span class="chip conf">high confidence</span>
+  <span class="chip ok">evidence verified</span>
 </div>
-<h3>“Unlimited” is advertised, but a fair-use restriction is buried on another page</h3>
-<p>Your commercial pages advertise unlimited API requests, while a separate page qualifies usage with a fair-use or acceptable-use restriction. A customer deciding on price never sees the qualifier; a customer who hits it experiences it as a broken promise.</p>
-<div class="pair"><div class="side"><div class="lab">What your pricing says</div>
-<div class="claim">Unlimited API requests (no specific plan)</div>
+<h3>Your pricing page sells &quot;unlimited API requests&quot; while your API documentation says the API is rate limited</h3>
+<p>The Business plan is advertised as including unlimited API requests, which a buyer will read as &quot;I will never be cut off&quot;. Your API documentation tells a different story: there are rate limits, and exceeding them returns a 429. Both statements can be true at once — a rate limit throttles the speed of requests rather than capping the total — but nothing on either page says so, and the documentation never publishes the actual numbers. The customer who finds out is a developer whose integration has just started failing in production.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">The Business plan includes unlimited API requests</div>
 <blockquote>&ldquo;Unlimited API requests&rdquo;</blockquote>
-<a href="https://cronitor.io/pricing" target="_blank" rel="noopener">Simple Pricing</a></div><div class="side"><div class="lab">What another page says</div>
-<div class="claim">Usage is subject to a fair-use / acceptable-use restriction</div>
-<blockquote>&ldquo;The API has rate limits to ensure fair usage.&rdquo;</blockquote>
-<a href="https://cronitor.io/docs/api" target="_blank" rel="noopener">Cronitor API Docs</a></div></div>
-<div class="caveat"><b>Worth knowing:</b> Fair-use clauses are standard practice. The issue is placement and wording, not the existence of the clause.</div>
+<a href="https://cronitor.io/pricing" target="_blank" rel="noopener">https://cronitor.io/pricing</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">The API is rate limited and rejects requests above the limit</div>
+<blockquote>&ldquo;The API has rate limits to ensure fair usage. If you exceed these limits, you&#x27;ll receive a 429 Too Many Requests response.&rdquo;</blockquote>
+<a href="https://cronitor.io/docs/api" target="_blank" rel="noopener">https://cronitor.io/docs/api</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> &quot;Unlimited&quot; and &quot;you will be refused with a 429 past a limit we do not publish&quot; are different commercial promises, not two phrasings of one.</div><div><b>What would make this a non-issue:</b> A throughput limit and a volume allowance really are different things, so this is a clarity problem rather than a broken promise. One sentence on the pricing page, and the actual numbers in the docs, would close it.</div></div>
+</article><article class="f medium">
+<div class="chips">
+  <span class="chip medium">medium impact</span>
+  <span class="chip kind">Missing information</span>
+  <span class="chip conf">medium confidence</span>
+  <span class="chip ok">evidence verified</span>
+</div>
+<h3>Your SSO documentation tells customers they need the Business plan, without mentioning that SSO costs an extra $5 per user on top</h3>
+<p>Your pricing page is clear that SAML single sign-on is a paid add-on for Business customers at $5 per user per month. Your SSO setup guide tells an administrator who finds the button greyed out simply to make sure the team is on the Business plan. An admin following the documentation reasonably concludes that upgrading to Business is all that is required, and only discovers the per-user surcharge when the bill changes. On a twenty-person team that is an unbudgeted $100 a month.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">SAML SSO is an add-on costing $5 per user per month on Business</div>
+<blockquote>&ldquo;SAML SSO (+$5/mo per user)&rdquo;</blockquote>
+<a href="https://cronitor.io/pricing" target="_blank" rel="noopener">https://cronitor.io/pricing</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">The SSO setup guide gives a Business subscription as the requirement, and says nothing about an additional charge</div>
+<blockquote>&ldquo;Note: If the button is disabled, ensure your team is subscribed to the Business plan.&rdquo;</blockquote>
+<a href="https://cronitor.io/docs/saml-sso" target="_blank" rel="noopener">https://cronitor.io/docs/saml-sso</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> One page states a per-user charge that the other page omits entirely while answering the exact question of what a customer needs in order to use the feature.</div><div><b>What would make this a non-issue:</b> The documentation is not wrong — a Business subscription genuinely is required. It is incomplete rather than contradictory, and adding six words to that note would fix it.</div></div>
 </article>
 
-<h2>How to read these</h2><div class="legend"><div><b>Ambiguity</b> — Both statements can be true, but a customer cannot tell what they get.</div></div>
+<h2>How to read these</h2><div class="legend"><div><b>Ambiguity</b> — Both statements can be true, but a customer cannot tell what they get.</div><div><b>Missing information</b> — Something that changes the deal, published somewhere the buyer will not look.</div></div>
 
 <h2>Pages we read</h2>
-<table><thead><tr><th>Page</th><th>Claims</th><th>Status</th></tr></thead>
+<table><thead><tr><th>Page</th><th>Words</th><th>Status</th></tr></thead>
 <tbody><tr><td><a href="https://cronitor.io/pricing" target="_blank" rel="noopener">
-Simple Pricing</a><br><span class="tag">Pricing</span>
-</td>
-<td>22</td><td>read</td></tr><tr><td><a href="https://cronitor.io/sign-up" target="_blank" rel="noopener">
-Monitoring made for developers.</a><br><span class="tag">Trial / signup</span>
-</td>
-<td>1</td><td>read</td></tr><tr><td><a href="https://cronitor.io/sign-up?flow=trial&amp;plan=metered&amp;billing_frequency=month" target="_blank" rel="noopener">
-Start your free trial</a><br><span class="tag">Trial / signup</span>
-</td>
-<td>2</td><td>read</td></tr><tr><td><a href="https://cronitor.io/docs/integrations" target="_blank" rel="noopener">
-Integrations</a><br><span class="tag">Add-ons</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://cronitor.io/help" target="_blank" rel="noopener">
-We&#x27;re here to help.</a><br><span class="tag">Help centre</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://cronitor.io/docs" target="_blank" rel="noopener">
-Cronitor Developer Docs</a><br><span class="tag">Documentation</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://cronitor.io/docs/api" target="_blank" rel="noopener">
-Cronitor API Docs</a><br><span class="tag">Documentation</span>
-</td>
-<td>1</td><td>read</td></tr><tr><td><a href="https://cronitor.io/terms" target="_blank" rel="noopener">
-https://cronitor.io/terms</a><br><span class="tag">Terms</span>
-</td>
-<td>&mdash;</td><td>failed &mdash; blocked by robots.txt</td></tr><tr><td><a href="https://cronitor.io/guides" target="_blank" rel="noopener">
-Cronitor Developer Guides</a><br><span class="tag">Help centre</span>
-</td>
-<td>1</td><td>read</td></tr><tr><td><a href="https://cronitor.io/guides/where-are-cron-logs-stored" target="_blank" rel="noopener">
-How to find and read crontab logs</a><br><span class="tag">Help centre</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://cronitor.io/docs/sdks" target="_blank" rel="noopener">
-SDKs &amp; Agents</a><br><span class="tag">Documentation</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://cronitor.io/faq" target="_blank" rel="noopener">
-https://cronitor.io/faq</a><br><span class="tag">FAQ</span>
-</td>
-<td>&mdash;</td><td>failed &mdash; HTTP 404</td></tr><tr><td><a href="https://cronitor.io/docs/saml-sso" target="_blank" rel="noopener">
-Configuring SAML SSO</a><br><span class="tag">Documentation</span>
-</td>
-<td>1</td><td>read</td></tr><tr><td><a href="https://cronitor.io/docs/cron-job-monitoring" target="_blank" rel="noopener">
-[Cron] Job Monitoring</a><br><span class="tag">Documentation</span>
-</td>
-<td></td><td>read</td></tr></tbody></table>
+Simple Pricing | Cronitor</a><br><span class="tag">Pricing page</span></td><td>495</td>
+<td>read</td></tr><tr><td><a href="https://cronitor.io/sign-up" target="_blank" rel="noopener">
+Sign Up | Cronitor</a><br><span class="tag">Trial / signup</span><span class="tag">too little text to read</span></td><td>33</td>
+<td>read</td></tr><tr><td><a href="https://cronitor.io/sign-up?flow=trial&amp;plan=metered&amp;billing_frequency=month" target="_blank" rel="noopener">
+Sign Up | Cronitor</a><br><span class="tag">Trial / signup</span><span class="tag">too little text to read</span></td><td>89</td>
+<td>read</td></tr><tr><td><a href="https://cronitor.io/docs/integrations" target="_blank" rel="noopener">
+Integrations</a><br><span class="tag">Add-ons &amp; integrations</span></td><td>288</td>
+<td>read</td></tr><tr><td><a href="https://cronitor.io/help" target="_blank" rel="noopener">
+Help Center | Cronitor</a><br><span class="tag">Help centre</span><span class="tag">too little text to read</span></td><td>105</td>
+<td>read</td></tr><tr><td><a href="https://cronitor.io/docs" target="_blank" rel="noopener">
+Cronitor Developer Docs</a><br><span class="tag">Product documentation</span></td><td>214</td>
+<td>read</td></tr><tr><td><a href="https://cronitor.io/docs/api" target="_blank" rel="noopener">
+Cronitor API Docs</a><br><span class="tag">Product documentation</span></td><td>738</td>
+<td>read</td></tr><tr><td><a href="https://cronitor.io/guides" target="_blank" rel="noopener">
+Developer Guides - Learn best practices for monitoring modern web applications.</a><br><span class="tag">Help centre</span></td><td>799</td>
+<td>read</td></tr><tr><td><a href="https://cronitor.io/guides/where-are-cron-logs-stored" target="_blank" rel="noopener">
+How to find and read crontab logs</a><br><span class="tag">Help centre</span></td><td>292</td>
+<td>read</td></tr><tr><td><a href="https://cronitor.io/docs/sdks" target="_blank" rel="noopener">
+SDKs &amp; Agents</a><br><span class="tag">Product documentation</span></td><td>214</td>
+<td>read</td></tr><tr><td><a href="https://cronitor.io/docs/saml-sso" target="_blank" rel="noopener">
+Configuring SAML SSO</a><br><span class="tag">Product documentation</span></td><td>844</td>
+<td>read</td></tr><tr><td><a href="https://cronitor.io/docs/cron-job-monitoring" target="_blank" rel="noopener">
+[Cron] Job Monitoring</a><br><span class="tag">Product documentation</span></td><td>881</td>
+<td>read</td></tr><tr><td>https://cronitor.io/terms<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>blocked by robots.txt</td></tr><tr><td>https://cronitor.io/faq<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>HTTP 404</td></tr></tbody></table>
 
 <div class="close"><h2>These are the promises your customers can see. Do your billing system and product deliver the same thing?</h2><p>This audit only reads what is published on your website. It cannot see what your billing system actually meters, what your product actually enforces, or what your customer records actually entitle people to. In most companies those three answers have drifted apart quietly, and the public pages are the only place the drift is visible from outside. If the contradictions above are news to you, the more expensive question is what else is out of step behind them.</p></div>
-<footer>Automated read of public pages only. Every finding is shown with the quote it came from
-so you can check it yourself in a minute. No login, no billing data, no customer records were
-involved.</footer>
+<footer>Automated read of public pages only, then checked: every quote above was located in
+the page it is attributed to, and
+0 candidate finding(s) were discarded because their evidence
+could not be verified. No login, no billing data and no customer records were involved.</footer>
 </div></body></html>

@@ -1,13 +1,14 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Commercial consistency audit — Unkey</title><style>
+<title>Commercial consistency audit — Unkey</title>
+<style>
 :root{--ink:#12151c;--muted:#5d6675;--line:#e3e6ec;--bg:#fbfbfc;--card:#fff;
 --high:#c0392b;--high-bg:#fdf0ee;--med:#b06f13;--med-bg:#fdf6ea;--low:#4a6b8a;--low-bg:#eff4f8;
 --accent:#1a4fa0;}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);
 font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;}
-.wrap{max-width:840px;margin:0 auto;padding:56px 24px 96px;}
+.wrap{max-width:860px;margin:0 auto;padding:56px 24px 96px;}
 .eyebrow{font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
 font-weight:600;margin:0 0 12px;}
 h1{font-size:34px;line-height:1.22;margin:0 0 14px;letter-spacing:-.02em;font-weight:700;}
@@ -27,10 +28,11 @@ padding:4px 9px;border-radius:5px;}
 .chip.low{background:var(--low-bg);color:var(--low)}
 .chip.kind{background:#f1f2f5;color:var(--muted)}
 .chip.conf{background:transparent;color:var(--muted);border:1px solid var(--line);font-weight:600}
+.chip.ok{background:#eef7f0;color:#2f6b40}
 .f h3{font-size:18px;margin:0 0 10px;line-height:1.35;letter-spacing:-.01em}
 .f p{margin:0 0 14px;color:#2b3140}
 .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 0}
-@media(max-width:640px){.pair{grid-template-columns:1fr}}
+@media(max-width:660px){.pair{grid-template-columns:1fr}}
 .side{background:#f7f8fa;border:1px solid var(--line);border-radius:9px;padding:14px 15px;}
 .side .lab{font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);
 font-weight:700;margin-bottom:6px}
@@ -39,15 +41,16 @@ font-weight:700;margin-bottom:6px}
 font-size:13.5px;line-height:1.5;font-style:italic;}
 .side a{font-size:13px;color:var(--accent);text-decoration:none;word-break:break-all}
 .side a:hover{text-decoration:underline}
-.caveat{margin-top:15px;padding-top:13px;border-top:1px dashed var(--line);color:var(--muted);
+.note{margin-top:15px;padding-top:13px;border-top:1px dashed var(--line);color:var(--muted);
 font-size:13.5px;}
-.caveat b{color:#4a5262;font-weight:600}
+.note b{color:#4a5262;font-weight:600}
+.note div{margin:4px 0}
 table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
 th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
 th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 td a{color:var(--accent);text-decoration:none;word-break:break-all}
 .tag{display:inline-block;background:#f1f2f5;color:var(--muted);font-size:11.5px;
-padding:2px 7px;border-radius:4px}
+padding:2px 7px;border-radius:4px;margin-right:4px}
 .close{margin-top:56px;padding:28px 30px;background:#12151c;color:#f2f4f7;border-radius:12px}
 .close h2{color:#fff;margin:0 0 12px;font-size:22px;line-height:1.35}
 .close p{color:#c2c8d2;margin:0;font-size:15.5px}
@@ -56,84 +59,100 @@ font-size:14px;color:var(--muted)}
 .legend div{margin:5px 0}
 .legend b{color:var(--ink)}
 .none{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px}
+details{margin-top:10px}summary{cursor:pointer;color:var(--muted);font-size:14px}
 footer{margin-top:40px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:18px}
-</style></head><body>
-<div class="wrap">
+</style></head><body><div class="wrap">
 <p class="eyebrow">Commercial consistency audit</p>
-<h1>We found no clear contradictions in your public commercial promises.</h1>
-<p class="sub">Everything below is taken word-for-word from
+<h1>We found 2 commercial promises worth checking.</h1>
+<p class="sub">Everything below is quoted word-for-word from
 <a href="https://www.unkey.com/" style="color:inherit">unkey.com</a>.
 Nothing here is inferred from anything private.</p>
-<p class="meta"><b>11</b> public pages read &middot;
-<b>37</b> commercial claims extracted &middot;
-<b>none</b> &middot; run 2026-09-02 07:43:24 UTC</p>
+<p class="meta"><b>10</b> public pages read &middot;
+<b>14</b> commercial promises extracted &middot;
+<b>23</b> quotes checked against their source page &middot;
+run 2026-09-02 08:08:53 UTC</p>
 
+<h2>What you appear to sell</h2>
+<div class="legend">Starter — $5 / mo, Pro — $25 / mo, Business — $50 / mo, Enterprise — Contact the team; annual contracts available, Free plan (documented only in the docs) — not published on the pricing page</div>
 
-<div class="none"><p>We read 11
-of your public pages and could not find two statements that clearly disagree with each other.
-That is a genuinely good result — most sites we look at have at least one.</p>
-<p>It does not mean everything reconciles. This tool only reads what is published, and it only
-flags conflicts it can evidence with two quotes.</p></div>
+<h2>What we found</h2>
+<article class="f high">
+<div class="chips">
+  <span class="chip high">high impact</span>
+  <span class="chip kind">Likely contradiction</span>
+  <span class="chip conf">high confidence</span>
+  <span class="chip ok">evidence verified</span>
+</div>
+<h3>Your free plan keeps logs longer than the $5 plan and audit logs longer than the $25 plan</h3>
+<p>Your documentation says the free plan retains logs for 7 days and audit logs for 30 days. Your pricing page&#x27;s comparison table gives Starter, at $5 a month, 3 days of log retention and 7 days of audit log retention — less than free on both counts. Pro, at $25 a month, gets 7 days and 14 days, so it too has less audit log retention than the free plan, and only matches free on ordinary logs. Only Business at $50 finally reaches the free plan&#x27;s 30 days of audit retention. A customer who upgrades from free to Starter to get a production-grade service will find their observability window has shrunk, which is the opposite of what upgrading is supposed to do.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">The free plan retains logs for 7 days and audit logs for 30 days</div>
+<blockquote>&ldquo;| Audit log retention | 30 days | Varies by plan |&rdquo;</blockquote>
+<a href="https://unkey.com/docs/platform/workspaces/billing" target="_blank" rel="noopener">https://unkey.com/docs/platform/workspaces/billing</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">The paid comparison table gives Starter 3 days of log retention and 7 days of audit log retention, rising to 14 and 30 only on Business</div>
+<blockquote>&ldquo;$5
+1
+3 days
+7 days
+Email&rdquo;</blockquote>
+<a href="https://www.unkey.com/pricing" target="_blank" rel="noopener">https://www.unkey.com/pricing</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> These are the same two named metrics, measured in the same unit, and the free tier&#x27;s numbers are larger than the paid tier&#x27;s — one of the two pages must be wrong about what a paying customer receives.</div><div><b>What would make this a non-issue:</b> We read the paid figures from a comparison grid that is built from styled divs rather than a real table, so column alignment had to be inferred. We checked it against the plan cards and it holds — the same column that gives Starter 3 days also gives it 1 vCPU, 2 GB, 1 custom domain and $5 of usage credits, all of which match the Starter card exactly. Still worth thirty seconds with the live page before acting.</div></div>
+</article><article class="f medium">
+<div class="chips">
+  <span class="chip medium">medium impact</span>
+  <span class="chip kind">Missing information</span>
+  <span class="chip conf">high confidence</span>
+  <span class="chip ok">evidence verified</span>
+</div>
+<h3>Your pricing page says &quot;start for free&quot; but never shows the free plan or what it includes</h3>
+<p>&quot;Start for free, scale as you go&quot; is the first line of your pricing page and the closing call to action repeats it. The plans below begin at $5 a month, and no free tier appears anywhere on the page. The free plan does exist, and it is specified in your billing documentation with real numbers — 150,000 API requests a month, 7 days of log retention, no team members. A developer evaluating you is told twice that they can start for free and then shown nothing they can start with, which turns the most important question on the page into a support conversation.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">The pricing page invites developers to start for free</div>
+<blockquote>&ldquo;Start for free, scale as you go with predictable usage-based pricing.&rdquo;</blockquote>
+<a href="https://www.unkey.com/pricing" target="_blank" rel="noopener">https://www.unkey.com/pricing</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">The free plan and its allowances exist, but are documented only in the billing docs</div>
+<blockquote>&ldquo;| API requests per month | 150,000 | Varies by plan |&rdquo;</blockquote>
+<a href="https://unkey.com/docs/platform/workspaces/billing" target="_blank" rel="noopener">https://unkey.com/docs/platform/workspaces/billing</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> A whole plan with published quotas is absent from the page whose job is to list the plans, so the pricing page cannot answer what &quot;free&quot; means.</div><div><b>What would make this a non-issue:</b> The free tier may be in the process of being retired, or may be offered only at signup. Either way the pricing page still promises it twice.</div></div>
+</article>
 
-
+<h2>How to read these</h2><div class="legend"><div><b>Likely contradiction</b> — Two public statements that cannot both be true.</div><div><b>Missing information</b> — Something that changes the deal, published somewhere the buyer will not look.</div></div>
 
 <h2>Pages we read</h2>
-<table><thead><tr><th>Page</th><th>Claims</th><th>Status</th></tr></thead>
+<table><thead><tr><th>Page</th><th>Words</th><th>Status</th></tr></thead>
 <tbody><tr><td><a href="https://www.unkey.com/pricing" target="_blank" rel="noopener">
-Start for free, scale as you go with predictable usage-based pricing.</a><br><span class="tag">Pricing</span>
-</td>
-<td>36</td><td>read</td></tr><tr><td><a href="https://www.unkey.com/docs" target="_blank" rel="noopener">
-What is Unkey?</a><br><span class="tag">Documentation</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://unkey.com/docs/platform/workspaces/billing" target="_blank" rel="noopener">
-Billing</a><br><span class="tag">Billing help</span>
-</td>
-<td>1</td><td>read</td></tr><tr><td><a href="https://unkey.com/docs/introduction" target="_blank" rel="noopener">
-What is Unkey?</a><br><span class="tag">Documentation</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://www.unkey.com/docs/llms.txt" target="_blank" rel="noopener">
-https://www.unkey.com/docs/llms.txt</a><br><span class="tag">Documentation</span>
-</td>
-<td>&mdash;</td><td>failed &mdash; skipped: content-type text/plain; charset=utf-8</td></tr><tr><td><a href="https://www.unkey.com/policies/terms" target="_blank" rel="noopener">
-Website Terms of Use</a><br><span class="tag">Terms</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://www.unkey.com/faq" target="_blank" rel="noopener">
-https://www.unkey.com/faq</a><br><span class="tag">FAQ</span>
-</td>
-<td>&mdash;</td><td>failed &mdash; HTTP 404</td></tr><tr><td><a href="https://app.unkey.com/auth/sign-up" target="_blank" rel="noopener">
-https://app.unkey.com/auth/sign-up</a><br><span class="tag">Trial / signup</span>
-</td>
-<td>&mdash;</td><td>failed &mdash; HTTP 429</td></tr><tr><td><a href="https://app.unkey.com/" target="_blank" rel="noopener">
-https://app.unkey.com/</a><br><span class="tag">Trial / signup</span>
-</td>
-<td>&mdash;</td><td>failed &mdash; HTTP 429</td></tr><tr><td><a href="https://www.unkey.com/help" target="_blank" rel="noopener">
-https://www.unkey.com/help</a><br><span class="tag">Help centre</span>
-</td>
-<td>&mdash;</td><td>failed &mdash; HTTP 404</td></tr><tr><td><a href="https://www.unkey.com/terms" target="_blank" rel="noopener">
-https://www.unkey.com/terms</a><br><span class="tag">Terms</span>
-</td>
-<td>&mdash;</td><td>failed &mdash; HTTP 404</td></tr><tr><td><a href="https://www.unkey.com/docs/introduction" target="_blank" rel="noopener">
-What is Unkey?</a><br><span class="tag">Documentation</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://unkey.com/docs/build-and-deploy/regions" target="_blank" rel="noopener">
-Regions</a><br><span class="tag">Documentation</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://unkey.com/docs/observability/overview" target="_blank" rel="noopener">
-Observability</a><br><span class="tag">Documentation</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://www.unkey.com/docs/api-reference/overview" target="_blank" rel="noopener">
-Overview</a><br><span class="tag">Documentation</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://www.unkey.com/docs/quickstart/deploy" target="_blank" rel="noopener">
-Deploy your first app</a><br><span class="tag">Documentation</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://www.unkey.com/docs/quickstart/quickstart" target="_blank" rel="noopener">
-Quickstart</a><br><span class="tag">Documentation</span>
-</td>
-<td></td><td>read</td></tr></tbody></table>
+Pricing | Unkey</a><br><span class="tag">Pricing page</span></td><td>325</td>
+<td>read</td></tr><tr><td><a href="https://www.unkey.com/docs" target="_blank" rel="noopener">
+What is Unkey? - Unkey Docs</a><br><span class="tag">Product documentation</span></td><td>515</td>
+<td>read</td></tr><tr><td><a href="https://unkey.com/docs/platform/workspaces/billing" target="_blank" rel="noopener">
+Billing - Unkey Docs</a><br><span class="tag">Billing &amp; subscription help</span></td><td>327</td>
+<td>read</td></tr><tr><td><a href="https://unkey.com/docs/introduction" target="_blank" rel="noopener">
+What is Unkey? - Unkey Docs</a><br><span class="tag">Product documentation</span></td><td>515</td>
+<td>read</td></tr><tr><td><a href="https://www.unkey.com/policies/terms" target="_blank" rel="noopener">
+Website Terms of Use | Unkey Inc. | Unkey</a><br><span class="tag">Terms / legal</span></td><td>2898</td>
+<td>read</td></tr><tr><td><a href="https://www.unkey.com/docs/introduction" target="_blank" rel="noopener">
+What is Unkey? - Unkey Docs</a><br><span class="tag">Product documentation</span></td><td>515</td>
+<td>read</td></tr><tr><td><a href="https://unkey.com/docs/build-and-deploy/regions" target="_blank" rel="noopener">
+Regions - Unkey Docs</a><br><span class="tag">Product documentation</span></td><td>149</td>
+<td>read</td></tr><tr><td><a href="https://unkey.com/docs/observability/overview" target="_blank" rel="noopener">
+Observability - Unkey Docs</a><br><span class="tag">Product documentation</span><span class="tag">too little text to read</span></td><td>81</td>
+<td>read</td></tr><tr><td><a href="https://www.unkey.com/docs/api-reference/overview" target="_blank" rel="noopener">
+Overview - Unkey Docs</a><br><span class="tag">Product documentation</span></td><td>253</td>
+<td>read</td></tr><tr><td><a href="https://www.unkey.com/docs/quickstart/deploy" target="_blank" rel="noopener">
+Deploy your first app - Unkey Docs</a><br><span class="tag">Product documentation</span></td><td>153</td>
+<td>read</td></tr><tr><td><a href="https://www.unkey.com/docs/quickstart/quickstart" target="_blank" rel="noopener">
+Quickstart - Unkey Docs</a><br><span class="tag">Product documentation</span></td><td>903</td>
+<td>read</td></tr><tr><td>https://www.unkey.com/docs/llms.txt<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>skipped: content-type text/plain; charset=utf-8</td></tr><tr><td>https://www.unkey.com/faq<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>HTTP 404</td></tr><tr><td>https://app.unkey.com/auth/sign-up<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>HTTP 429</td></tr><tr><td>https://app.unkey.com/<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>HTTP 429</td></tr><tr><td>https://www.unkey.com/help<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>HTTP 404</td></tr><tr><td>https://www.unkey.com/terms<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>HTTP 404</td></tr></tbody></table>
 
 <div class="close"><h2>These are the promises your customers can see. Do your billing system and product deliver the same thing?</h2><p>This audit only reads what is published on your website. It cannot see what your billing system actually meters, what your product actually enforces, or what your customer records actually entitle people to. In most companies those three answers have drifted apart quietly, and the public pages are the only place the drift is visible from outside. If the contradictions above are news to you, the more expensive question is what else is out of step behind them.</p></div>
-<footer>Automated read of public pages only. Every finding is shown with the quote it came from
-so you can check it yourself in a minute. No login, no billing data, no customer records were
-involved.</footer>
+<footer>Automated read of public pages only, then checked: every quote above was located in
+the page it is attributed to, and
+0 candidate finding(s) were discarded because their evidence
+could not be verified. No login, no billing data and no customer records were involved.</footer>
 </div></body></html>

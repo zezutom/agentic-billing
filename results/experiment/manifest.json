@@ -1,10 +1,9 @@
 {
-  "run_at": "2026-09-02 07:43:30 UTC",
+  "harvested_at": "2026-09-02 07:57:41 UTC",
   "random_seed": 20260902,
   "sample_size": 10,
-  "audit_settings": {
-    "max_pages": 16,
-    "max_findings": 12
+  "harvest_settings": {
+    "max_pages": 16
   },
   "pool": [
     {
@@ -261,7 +260,7 @@
     }
   ],
   "eligibility": {
-    "checked_at": "2026-09-02 07:32:26 UTC",
+    "checked_at": "2026-09-02 07:56:14 UTC",
     "pool_size": 36,
     "eligible": 35,
     "criteria": [
@@ -443,10 +442,9 @@
           "faq",
           "help",
           "pricing",
-          "terms",
-          "trial"
+          "terms"
         ],
-        "pages_discovered": 14,
+        "pages_discovered": 13,
         "eligible": true,
         "reason": "pricing page found (https://bentonow.com/pricing) and 4 supporting content types discovered"
       },
@@ -584,7 +582,7 @@
           "terms",
           "trial"
         ],
-        "pages_discovered": 14,
+        "pages_discovered": 13,
         "eligible": true,
         "reason": "pricing page found (https://www.scrapingbee.com/pricing) and 4 supporting content types discovered"
       },
@@ -650,6 +648,7 @@
           "addons",
           "billing_docs",
           "docs",
+          "faq",
           "help",
           "pricing",
           "terms",
@@ -657,7 +656,7 @@
         ],
         "pages_discovered": 16,
         "eligible": true,
-        "reason": "pricing page found (https://www.bannerbear.com/pricing) and 4 supporting content types discovered"
+        "reason": "pricing page found (https://www.bannerbear.com/pricing) and 5 supporting content types discovered"
       },
       {
         "name": "Placid",
@@ -745,7 +744,7 @@
           "terms",
           "trial"
         ],
-        "pages_discovered": 15,
+        "pages_discovered": 14,
         "eligible": true,
         "reason": "pricing page found (https://chartbrew.com/pricing) and 5 supporting content types discovered"
       },
@@ -844,6 +843,7 @@
         "categories_found": [
           "addons",
           "billing_docs",
+          "compare",
           "docs",
           "help",
           "limits",
@@ -852,7 +852,7 @@
         ],
         "pages_discovered": 16,
         "eligible": true,
-        "reason": "pricing page found (https://knock.app/pricing) and 4 supporting content types discovered"
+        "reason": "pricing page found (https://knock.app/pricing) and 5 supporting content types discovered"
       },
       {
         "name": "Svix",
@@ -1121,10 +1121,9 @@
         "faq",
         "help",
         "pricing",
-        "terms",
-        "trial"
+        "terms"
       ],
-      "pages_discovered": 14,
+      "pages_discovered": 13,
       "eligible": true,
       "reason": "pricing page found (https://bentonow.com/pricing) and 4 supporting content types discovered"
     },
@@ -1207,6 +1206,7 @@
       "categories_found": [
         "addons",
         "billing_docs",
+        "compare",
         "docs",
         "help",
         "limits",
@@ -1215,7 +1215,7 @@
       ],
       "pages_discovered": 16,
       "eligible": true,
-      "reason": "pricing page found (https://knock.app/pricing) and 4 supporting content types discovered"
+      "reason": "pricing page found (https://knock.app/pricing) and 5 supporting content types discovered"
     },
     {
       "name": "SavvyCal",
@@ -1304,7 +1304,7 @@
       "reason": "pricing page found (https://www.unkey.com/pricing) and 5 supporting content types discovered"
     }
   ],
-  "runs": [
+  "entries": [
     {
       "candidate": {
         "name": "Baserow",
@@ -1329,17 +1329,25 @@
         "eligible": true,
         "reason": "pricing page found (https://baserow.io/pricing) and 5 supporting content types discovered"
       },
-      "result_file": "results/experiment/baserow.json",
-      "report_file": "results/experiment/baserow.html",
-      "summary": {
+      "slug": "baserow",
+      "dossier_file": "work/baserow.dossier.json",
+      "request_file": "work/baserow.request.md",
+      "harvest_stats": {
+        "pages_selected": 11,
         "pages_fetched_ok": 11,
+        "pages_usable": 7,
         "pages_failed": 2,
-        "claims": 59,
-        "findings": 0,
-        "by_severity": {},
-        "by_confidence": {},
-        "by_kind": {},
-        "duration_seconds": 3.9
+        "pages_js_rendered": 0,
+        "urls_considered": 19,
+        "dossier_chars": 32186,
+        "harvest_seconds": 3.5,
+        "fetcher": {
+          "network": 4,
+          "cache": 14,
+          "rendered": 0,
+          "blocked": 0,
+          "failed": 3
+        }
       }
     },
     {
@@ -1358,30 +1366,31 @@
           "faq",
           "help",
           "pricing",
-          "terms",
-          "trial"
+          "terms"
         ],
-        "pages_discovered": 14,
+        "pages_discovered": 13,
         "eligible": true,
         "reason": "pricing page found (https://bentonow.com/pricing) and 4 supporting content types discovered"
       },
-      "result_file": "results/experiment/bento.json",
-      "report_file": "results/experiment/bento.html",
-      "summary": {
+      "slug": "bento",
+      "dossier_file": "work/bento.dossier.json",
+      "request_file": "work/bento.request.md",
+      "harvest_stats": {
+        "pages_selected": 13,
         "pages_fetched_ok": 13,
+        "pages_usable": 13,
         "pages_failed": 5,
-        "claims": 38,
-        "findings": 1,
-        "by_severity": {
-          "medium": 1
-        },
-        "by_confidence": {
-          "high": 1
-        },
-        "by_kind": {
-          "ambiguity": 1
-        },
-        "duration_seconds": 3.8
+        "pages_js_rendered": 0,
+        "urls_considered": 14,
+        "dossier_chars": 46401,
+        "harvest_seconds": 4.1,
+        "fetcher": {
+          "network": 4,
+          "cache": 17,
+          "rendered": 0,
+          "blocked": 2,
+          "failed": 2
+        }
       }
     },
     {
@@ -1407,17 +1416,25 @@
         "eligible": true,
         "reason": "pricing page found (https://www.checklyhq.com/pricing) and 4 supporting content types discovered"
       },
-      "result_file": "results/experiment/checkly.json",
-      "report_file": "results/experiment/checkly.html",
-      "summary": {
+      "slug": "checkly",
+      "dossier_file": "work/checkly.dossier.json",
+      "request_file": "work/checkly.request.md",
+      "harvest_stats": {
+        "pages_selected": 12,
         "pages_fetched_ok": 12,
+        "pages_usable": 10,
         "pages_failed": 4,
-        "claims": 22,
-        "findings": 0,
-        "by_severity": {},
-        "by_confidence": {},
-        "by_kind": {},
-        "duration_seconds": 4.6
+        "pages_js_rendered": 0,
+        "urls_considered": 39,
+        "dossier_chars": 25865,
+        "harvest_seconds": 4.3,
+        "fetcher": {
+          "network": 4,
+          "cache": 16,
+          "rendered": 0,
+          "blocked": 1,
+          "failed": 3
+        }
       }
     },
     {
@@ -1443,23 +1460,25 @@
         "eligible": true,
         "reason": "pricing page found (https://cronitor.io/pricing) and 4 supporting content types discovered"
       },
-      "result_file": "results/experiment/cronitor.json",
-      "report_file": "results/experiment/cronitor.html",
-      "summary": {
+      "slug": "cronitor",
+      "dossier_file": "work/cronitor.dossier.json",
+      "request_file": "work/cronitor.request.md",
+      "harvest_stats": {
+        "pages_selected": 12,
         "pages_fetched_ok": 12,
+        "pages_usable": 9,
         "pages_failed": 2,
-        "claims": 28,
-        "findings": 1,
-        "by_severity": {
-          "medium": 1
-        },
-        "by_confidence": {
-          "high": 1
-        },
-        "by_kind": {
-          "ambiguity": 1
-        },
-        "duration_seconds": 1.9
+        "pages_js_rendered": 0,
+        "urls_considered": 12,
+        "dossier_chars": 29006,
+        "harvest_seconds": 1.9,
+        "fetcher": {
+          "network": 2,
+          "cache": 16,
+          "rendered": 0,
+          "blocked": 1,
+          "failed": 2
+        }
       }
     },
     {
@@ -1486,23 +1505,25 @@
         "eligible": true,
         "reason": "pricing page found (https://usefathom.com/pricing) and 5 supporting content types discovered"
       },
-      "result_file": "results/experiment/fathom-analytics.json",
-      "report_file": "results/experiment/fathom-analytics.html",
-      "summary": {
+      "slug": "fathom-analytics",
+      "dossier_file": "work/fathom-analytics.dossier.json",
+      "request_file": "work/fathom-analytics.request.md",
+      "harvest_stats": {
+        "pages_selected": 13,
         "pages_fetched_ok": 13,
+        "pages_usable": 10,
         "pages_failed": 3,
-        "claims": 28,
-        "findings": 2,
-        "by_severity": {
-          "low": 2
-        },
-        "by_confidence": {
-          "high": 2
-        },
-        "by_kind": {
-          "missing_information": 2
-        },
-        "duration_seconds": 4.2
+        "pages_js_rendered": 0,
+        "urls_considered": 20,
+        "dossier_chars": 36295,
+        "harvest_seconds": 3.6,
+        "fetcher": {
+          "network": 4,
+          "cache": 17,
+          "rendered": 0,
+          "blocked": 0,
+          "failed": 3
+        }
       }
     },
     {
@@ -1518,6 +1539,7 @@
         "categories_found": [
           "addons",
           "billing_docs",
+          "compare",
           "docs",
           "help",
           "limits",
@@ -1526,25 +1548,27 @@
         ],
         "pages_discovered": 16,
         "eligible": true,
-        "reason": "pricing page found (https://knock.app/pricing) and 4 supporting content types discovered"
+        "reason": "pricing page found (https://knock.app/pricing) and 5 supporting content types discovered"
       },
-      "result_file": "results/experiment/knock.json",
-      "report_file": "results/experiment/knock.html",
-      "summary": {
-        "pages_fetched_ok": 16,
+      "slug": "knock",
+      "dossier_file": "work/knock.dossier.json",
+      "request_file": "work/knock.request.md",
+      "harvest_stats": {
+        "pages_selected": 16,
+        "pages_fetched_ok": 8,
+        "pages_usable": 8,
         "pages_failed": 1,
-        "claims": 80,
-        "findings": 1,
-        "by_severity": {
-          "medium": 1
-        },
-        "by_confidence": {
-          "low": 1
-        },
-        "by_kind": {
-          "ambiguity": 1
-        },
-        "duration_seconds": 3.2
+        "pages_js_rendered": 0,
+        "urls_considered": 19,
+        "dossier_chars": 46170,
+        "harvest_seconds": 2.7,
+        "fetcher": {
+          "network": 1,
+          "cache": 12,
+          "rendered": 0,
+          "blocked": 1,
+          "failed": 1
+        }
       }
     },
     {
@@ -1571,23 +1595,25 @@
         "eligible": true,
         "reason": "pricing page found (https://savvycal.com/pricing) and 5 supporting content types discovered"
       },
-      "result_file": "results/experiment/savvycal.json",
-      "report_file": "results/experiment/savvycal.html",
-      "summary": {
+      "slug": "savvycal",
+      "dossier_file": "work/savvycal.dossier.json",
+      "request_file": "work/savvycal.request.md",
+      "harvest_stats": {
+        "pages_selected": 14,
         "pages_fetched_ok": 13,
+        "pages_usable": 8,
         "pages_failed": 3,
-        "claims": 8,
-        "findings": 1,
-        "by_severity": {
-          "low": 1
-        },
-        "by_confidence": {
-          "high": 1
-        },
-        "by_kind": {
-          "missing_information": 1
-        },
-        "duration_seconds": 3.5
+        "pages_js_rendered": 0,
+        "urls_considered": 12,
+        "dossier_chars": 23971,
+        "harvest_seconds": 3.6,
+        "fetcher": {
+          "network": 4,
+          "cache": 17,
+          "rendered": 0,
+          "blocked": 0,
+          "failed": 4
+        }
       }
     },
     {
@@ -1614,24 +1640,25 @@
         "eligible": true,
         "reason": "pricing page found (https://screenshotone.com/pricing) and 5 supporting content types discovered"
       },
-      "result_file": "results/experiment/screenshotone.json",
-      "report_file": "results/experiment/screenshotone.html",
-      "summary": {
+      "slug": "screenshotone",
+      "dossier_file": "work/screenshotone.dossier.json",
+      "request_file": "work/screenshotone.request.md",
+      "harvest_stats": {
+        "pages_selected": 15,
         "pages_fetched_ok": 15,
+        "pages_usable": 15,
         "pages_failed": 3,
-        "claims": 86,
-        "findings": 2,
-        "by_severity": {
-          "medium": 1,
-          "low": 1
-        },
-        "by_confidence": {
-          "high": 2
-        },
-        "by_kind": {
-          "missing_information": 2
-        },
-        "duration_seconds": 2.7
+        "pages_js_rendered": 0,
+        "urls_considered": 27,
+        "dossier_chars": 35380,
+        "harvest_seconds": 2.8,
+        "fetcher": {
+          "network": 3,
+          "cache": 19,
+          "rendered": 0,
+          "blocked": 1,
+          "failed": 3
+        }
       }
     },
     {
@@ -1653,17 +1680,25 @@
         "eligible": true,
         "reason": "pricing page found (https://umami.is/pricing) and 2 supporting content types discovered"
       },
-      "result_file": "results/experiment/umami.json",
-      "report_file": "results/experiment/umami.html",
-      "summary": {
+      "slug": "umami",
+      "dossier_file": "work/umami.dossier.json",
+      "request_file": "work/umami.request.md",
+      "harvest_stats": {
+        "pages_selected": 3,
         "pages_fetched_ok": 3,
+        "pages_usable": 0,
         "pages_failed": 0,
-        "claims": 0,
-        "findings": 0,
-        "by_severity": {},
-        "by_confidence": {},
-        "by_kind": {},
-        "duration_seconds": 2.5
+        "pages_js_rendered": 0,
+        "urls_considered": 6,
+        "dossier_chars": 0,
+        "harvest_seconds": 2.6,
+        "fetcher": {
+          "network": 3,
+          "cache": 5,
+          "rendered": 0,
+          "blocked": 0,
+          "failed": 3
+        }
       }
     },
     {
@@ -1689,17 +1724,738 @@
         "eligible": true,
         "reason": "pricing page found (https://www.unkey.com/pricing) and 5 supporting content types discovered"
       },
-      "result_file": "results/experiment/unkey.json",
-      "report_file": "results/experiment/unkey.html",
-      "summary": {
+      "slug": "unkey",
+      "dossier_file": "work/unkey.dossier.json",
+      "request_file": "work/unkey.request.md",
+      "harvest_stats": {
+        "pages_selected": 11,
         "pages_fetched_ok": 11,
+        "pages_usable": 10,
         "pages_failed": 6,
-        "claims": 37,
+        "pages_js_rendered": 0,
+        "urls_considered": 11,
+        "dossier_chars": 25886,
+        "harvest_seconds": 5.5,
+        "fetcher": {
+          "network": 7,
+          "cache": 15,
+          "rendered": 0,
+          "blocked": 0,
+          "failed": 6
+        }
+      }
+    }
+  ],
+  "finished_at": "2026-09-02 08:10:40 UTC",
+  "backend": "agent",
+  "runs": [
+    {
+      "candidate": {
+        "name": "Baserow",
+        "url": "https://baserow.io",
+        "category": "no-code database",
+        "discovered_via": "category sweep: open-source Airtable alternatives",
+        "why_qualifies": "Open-core database vendor with public per-seat pricing and extensive docs.",
+        "pricing_urls": [
+          "https://baserow.io/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "billing_docs",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 11,
+        "eligible": true,
+        "reason": "pricing page found (https://baserow.io/pricing) and 5 supporting content types discovered"
+      },
+      "slug": "baserow",
+      "dossier_file": "work/baserow.dossier.json",
+      "request_file": "work/baserow.request.md",
+      "harvest_stats": {
+        "pages_selected": 11,
+        "pages_fetched_ok": 11,
+        "pages_usable": 7,
+        "pages_failed": 2,
+        "pages_js_rendered": 0,
+        "urls_considered": 19,
+        "dossier_chars": 32186,
+        "harvest_seconds": 3.5,
+        "fetcher": {
+          "network": 4,
+          "cache": 14,
+          "rendered": 0,
+          "blocked": 0,
+          "failed": 3
+        }
+      },
+      "status": "ok",
+      "result_file": "results/experiment/baserow.json",
+      "report_file": "results/experiment/baserow.html",
+      "summary": {
+        "findings": 2,
+        "by_severity": {
+          "medium": 2
+        },
+        "by_confidence": {
+          "high": 1,
+          "medium": 1
+        },
+        "by_type": {
+          "likely_contradiction": 1,
+          "missing_information": 1
+        },
+        "promises": 20,
+        "plans": 4,
+        "verification": {
+          "findings_in": 2,
+          "findings_out": 2,
+          "findings_rejected": 0,
+          "quotes_checked": 28,
+          "quotes_failed": 0,
+          "url_corrections": 0,
+          "rejections": []
+        }
+      }
+    },
+    {
+      "candidate": {
+        "name": "Bento",
+        "url": "https://bentonow.com",
+        "category": "email / newsletters",
+        "discovered_via": "category sweep: modern SaaS email tools",
+        "why_qualifies": "Small marketing-automation vendor with published plans and a help centre.",
+        "pricing_urls": [
+          "https://bentonow.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms"
+        ],
+        "pages_discovered": 13,
+        "eligible": true,
+        "reason": "pricing page found (https://bentonow.com/pricing) and 4 supporting content types discovered"
+      },
+      "slug": "bento",
+      "dossier_file": "work/bento.dossier.json",
+      "request_file": "work/bento.request.md",
+      "harvest_stats": {
+        "pages_selected": 13,
+        "pages_fetched_ok": 13,
+        "pages_usable": 13,
+        "pages_failed": 5,
+        "pages_js_rendered": 0,
+        "urls_considered": 14,
+        "dossier_chars": 46401,
+        "harvest_seconds": 4.1,
+        "fetcher": {
+          "network": 4,
+          "cache": 17,
+          "rendered": 0,
+          "blocked": 2,
+          "failed": 2
+        }
+      },
+      "status": "ok",
+      "result_file": "results/experiment/bento.json",
+      "report_file": "results/experiment/bento.html",
+      "summary": {
+        "findings": 2,
+        "by_severity": {
+          "high": 1,
+          "medium": 1
+        },
+        "by_confidence": {
+          "high": 1,
+          "medium": 1
+        },
+        "by_type": {
+          "likely_contradiction": 1,
+          "ambiguity": 1
+        },
+        "promises": 13,
+        "plans": 3,
+        "verification": {
+          "findings_in": 2,
+          "findings_out": 2,
+          "findings_rejected": 0,
+          "quotes_checked": 20,
+          "quotes_failed": 0,
+          "url_corrections": 0,
+          "rejections": []
+        }
+      }
+    },
+    {
+      "candidate": {
+        "name": "Checkly",
+        "url": "https://www.checklyhq.com",
+        "category": "monitoring",
+        "discovered_via": "category sweep: synthetic monitoring",
+        "why_qualifies": "Mid-size independent monitoring vendor with usage-based pricing and full docs.",
+        "pricing_urls": [
+          "https://www.checklyhq.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 12,
+        "eligible": true,
+        "reason": "pricing page found (https://www.checklyhq.com/pricing) and 4 supporting content types discovered"
+      },
+      "slug": "checkly",
+      "dossier_file": "work/checkly.dossier.json",
+      "request_file": "work/checkly.request.md",
+      "harvest_stats": {
+        "pages_selected": 12,
+        "pages_fetched_ok": 12,
+        "pages_usable": 10,
+        "pages_failed": 4,
+        "pages_js_rendered": 0,
+        "urls_considered": 39,
+        "dossier_chars": 25865,
+        "harvest_seconds": 4.3,
+        "fetcher": {
+          "network": 4,
+          "cache": 16,
+          "rendered": 0,
+          "blocked": 1,
+          "failed": 3
+        }
+      },
+      "status": "ok",
+      "result_file": "results/experiment/checkly.json",
+      "report_file": "results/experiment/checkly.html",
+      "summary": {
         "findings": 0,
         "by_severity": {},
         "by_confidence": {},
-        "by_kind": {},
-        "duration_seconds": 5.5
+        "by_type": {},
+        "promises": 16,
+        "plans": 4,
+        "verification": {
+          "findings_in": 0,
+          "findings_out": 0,
+          "findings_rejected": 0,
+          "quotes_checked": 20,
+          "quotes_failed": 0,
+          "url_corrections": 0,
+          "rejections": []
+        }
+      }
+    },
+    {
+      "candidate": {
+        "name": "Cronitor",
+        "url": "https://cronitor.io",
+        "category": "monitoring",
+        "discovered_via": "category sweep: independent uptime and cron monitoring",
+        "why_qualifies": "Small monitoring vendor with public per-monitor pricing and documentation.",
+        "pricing_urls": [
+          "https://cronitor.io/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 12,
+        "eligible": true,
+        "reason": "pricing page found (https://cronitor.io/pricing) and 4 supporting content types discovered"
+      },
+      "slug": "cronitor",
+      "dossier_file": "work/cronitor.dossier.json",
+      "request_file": "work/cronitor.request.md",
+      "harvest_stats": {
+        "pages_selected": 12,
+        "pages_fetched_ok": 12,
+        "pages_usable": 9,
+        "pages_failed": 2,
+        "pages_js_rendered": 0,
+        "urls_considered": 12,
+        "dossier_chars": 29006,
+        "harvest_seconds": 1.9,
+        "fetcher": {
+          "network": 2,
+          "cache": 16,
+          "rendered": 0,
+          "blocked": 1,
+          "failed": 2
+        }
+      },
+      "status": "ok",
+      "result_file": "results/experiment/cronitor.json",
+      "report_file": "results/experiment/cronitor.html",
+      "summary": {
+        "findings": 2,
+        "by_severity": {
+          "medium": 2
+        },
+        "by_confidence": {
+          "high": 1,
+          "medium": 1
+        },
+        "by_type": {
+          "ambiguity": 1,
+          "missing_information": 1
+        },
+        "promises": 18,
+        "plans": 3,
+        "verification": {
+          "findings_in": 2,
+          "findings_out": 2,
+          "findings_rejected": 0,
+          "quotes_checked": 25,
+          "quotes_failed": 0,
+          "url_corrections": 0,
+          "rejections": []
+        }
+      }
+    },
+    {
+      "candidate": {
+        "name": "Fathom Analytics",
+        "url": "https://usefathom.com",
+        "category": "web analytics",
+        "discovered_via": "category sweep: privacy-focused web analytics",
+        "why_qualifies": "Independent, founder-led analytics vendor with a public per-plan pricing page and a public documentation site.",
+        "pricing_urls": [
+          "https://usefathom.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "limits",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 13,
+        "eligible": true,
+        "reason": "pricing page found (https://usefathom.com/pricing) and 5 supporting content types discovered"
+      },
+      "slug": "fathom-analytics",
+      "dossier_file": "work/fathom-analytics.dossier.json",
+      "request_file": "work/fathom-analytics.request.md",
+      "harvest_stats": {
+        "pages_selected": 13,
+        "pages_fetched_ok": 13,
+        "pages_usable": 10,
+        "pages_failed": 3,
+        "pages_js_rendered": 0,
+        "urls_considered": 20,
+        "dossier_chars": 36295,
+        "harvest_seconds": 3.6,
+        "fetcher": {
+          "network": 4,
+          "cache": 17,
+          "rendered": 0,
+          "blocked": 0,
+          "failed": 3
+        }
+      },
+      "status": "ok",
+      "result_file": "results/experiment/fathom-analytics.json",
+      "report_file": "results/experiment/fathom-analytics.html",
+      "summary": {
+        "findings": 4,
+        "by_severity": {
+          "high": 2,
+          "medium": 1,
+          "low": 1
+        },
+        "by_confidence": {
+          "high": 2,
+          "medium": 2
+        },
+        "by_type": {
+          "ambiguity": 2,
+          "likely_contradiction": 1,
+          "missing_information": 1
+        },
+        "promises": 15,
+        "plans": 2,
+        "verification": {
+          "findings_in": 4,
+          "findings_out": 4,
+          "findings_rejected": 0,
+          "quotes_checked": 25,
+          "quotes_failed": 0,
+          "url_corrections": 0,
+          "rejections": []
+        }
+      }
+    },
+    {
+      "candidate": {
+        "name": "Knock",
+        "url": "https://knock.app",
+        "category": "notifications API",
+        "discovered_via": "category sweep: notification infrastructure",
+        "why_qualifies": "Small notifications-infrastructure vendor with public MAU pricing and docs.",
+        "pricing_urls": [
+          "https://knock.app/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "billing_docs",
+          "compare",
+          "docs",
+          "help",
+          "limits",
+          "pricing",
+          "trial"
+        ],
+        "pages_discovered": 16,
+        "eligible": true,
+        "reason": "pricing page found (https://knock.app/pricing) and 5 supporting content types discovered"
+      },
+      "slug": "knock",
+      "dossier_file": "work/knock.dossier.json",
+      "request_file": "work/knock.request.md",
+      "harvest_stats": {
+        "pages_selected": 16,
+        "pages_fetched_ok": 8,
+        "pages_usable": 8,
+        "pages_failed": 1,
+        "pages_js_rendered": 0,
+        "urls_considered": 19,
+        "dossier_chars": 46170,
+        "harvest_seconds": 2.7,
+        "fetcher": {
+          "network": 1,
+          "cache": 12,
+          "rendered": 0,
+          "blocked": 1,
+          "failed": 1
+        }
+      },
+      "status": "ok",
+      "result_file": "results/experiment/knock.json",
+      "report_file": "results/experiment/knock.html",
+      "summary": {
+        "findings": 2,
+        "by_severity": {
+          "medium": 2
+        },
+        "by_confidence": {
+          "high": 2
+        },
+        "by_type": {
+          "ambiguity": 1,
+          "missing_information": 1
+        },
+        "promises": 17,
+        "plans": 3,
+        "verification": {
+          "findings_in": 2,
+          "findings_out": 2,
+          "findings_rejected": 0,
+          "quotes_checked": 24,
+          "quotes_failed": 0,
+          "url_corrections": 0,
+          "rejections": []
+        }
+      }
+    },
+    {
+      "candidate": {
+        "name": "SavvyCal",
+        "url": "https://savvycal.com",
+        "category": "scheduling",
+        "discovered_via": "category sweep: independent scheduling tools",
+        "why_qualifies": "Bootstrapped scheduling product with public pricing and a help centre.",
+        "pricing_urls": [
+          "https://savvycal.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "limits",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 14,
+        "eligible": true,
+        "reason": "pricing page found (https://savvycal.com/pricing) and 5 supporting content types discovered"
+      },
+      "slug": "savvycal",
+      "dossier_file": "work/savvycal.dossier.json",
+      "request_file": "work/savvycal.request.md",
+      "harvest_stats": {
+        "pages_selected": 14,
+        "pages_fetched_ok": 13,
+        "pages_usable": 8,
+        "pages_failed": 3,
+        "pages_js_rendered": 0,
+        "urls_considered": 12,
+        "dossier_chars": 23971,
+        "harvest_seconds": 3.6,
+        "fetcher": {
+          "network": 4,
+          "cache": 17,
+          "rendered": 0,
+          "blocked": 0,
+          "failed": 4
+        }
+      },
+      "status": "ok",
+      "result_file": "results/experiment/savvycal.json",
+      "report_file": "results/experiment/savvycal.html",
+      "summary": {
+        "findings": 2,
+        "by_severity": {
+          "medium": 1,
+          "low": 1
+        },
+        "by_confidence": {
+          "medium": 1,
+          "high": 1
+        },
+        "by_type": {
+          "missing_information": 2
+        },
+        "promises": 10,
+        "plans": 2,
+        "verification": {
+          "findings_in": 2,
+          "findings_out": 2,
+          "findings_rejected": 0,
+          "quotes_checked": 16,
+          "quotes_failed": 0,
+          "url_corrections": 0,
+          "rejections": []
+        }
+      }
+    },
+    {
+      "candidate": {
+        "name": "ScreenshotOne",
+        "url": "https://screenshotone.com",
+        "category": "media API",
+        "discovered_via": "category sweep: screenshot APIs",
+        "why_qualifies": "Solo-founder screenshot API with request-quota pricing and public documentation.",
+        "pricing_urls": [
+          "https://screenshotone.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "limits",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 15,
+        "eligible": true,
+        "reason": "pricing page found (https://screenshotone.com/pricing) and 5 supporting content types discovered"
+      },
+      "slug": "screenshotone",
+      "dossier_file": "work/screenshotone.dossier.json",
+      "request_file": "work/screenshotone.request.md",
+      "harvest_stats": {
+        "pages_selected": 15,
+        "pages_fetched_ok": 15,
+        "pages_usable": 15,
+        "pages_failed": 3,
+        "pages_js_rendered": 0,
+        "urls_considered": 27,
+        "dossier_chars": 35380,
+        "harvest_seconds": 2.8,
+        "fetcher": {
+          "network": 3,
+          "cache": 19,
+          "rendered": 0,
+          "blocked": 1,
+          "failed": 3
+        }
+      },
+      "status": "ok",
+      "result_file": "results/experiment/screenshotone.json",
+      "report_file": "results/experiment/screenshotone.html",
+      "summary": {
+        "findings": 3,
+        "by_severity": {
+          "high": 1,
+          "medium": 2
+        },
+        "by_confidence": {
+          "high": 2,
+          "medium": 1
+        },
+        "by_type": {
+          "ambiguity": 1,
+          "missing_information": 1,
+          "likely_contradiction": 1
+        },
+        "promises": 17,
+        "plans": 4,
+        "verification": {
+          "findings_in": 3,
+          "findings_out": 3,
+          "findings_rejected": 0,
+          "quotes_checked": 27,
+          "quotes_failed": 0,
+          "url_corrections": 0,
+          "rejections": []
+        }
+      }
+    },
+    {
+      "candidate": {
+        "name": "Umami",
+        "url": "https://umami.is",
+        "category": "web analytics",
+        "discovered_via": "category sweep: open-source analytics with a hosted tier",
+        "why_qualifies": "Open-source analytics with a commercial hosted plan and public documentation.",
+        "pricing_urls": [
+          "https://umami.is/pricing"
+        ],
+        "categories_found": [
+          "docs",
+          "pricing",
+          "terms"
+        ],
+        "pages_discovered": 3,
+        "eligible": true,
+        "reason": "pricing page found (https://umami.is/pricing) and 2 supporting content types discovered"
+      },
+      "slug": "umami",
+      "dossier_file": "work/umami.dossier.json",
+      "request_file": "work/umami.request.md",
+      "harvest_stats": {
+        "pages_selected": 3,
+        "pages_fetched_ok": 3,
+        "pages_usable": 0,
+        "pages_failed": 0,
+        "pages_js_rendered": 0,
+        "urls_considered": 6,
+        "dossier_chars": 0,
+        "harvest_seconds": 2.6,
+        "fetcher": {
+          "network": 3,
+          "cache": 5,
+          "rendered": 0,
+          "blocked": 0,
+          "failed": 3
+        }
+      },
+      "status": "ok",
+      "result_file": "results/experiment/umami.json",
+      "report_file": "results/experiment/umami.html",
+      "summary": {
+        "findings": 0,
+        "by_severity": {},
+        "by_confidence": {},
+        "by_type": {},
+        "promises": 0,
+        "plans": 0,
+        "verification": {
+          "findings_in": 0,
+          "findings_out": 0,
+          "findings_rejected": 0,
+          "quotes_checked": 0,
+          "quotes_failed": 0,
+          "url_corrections": 0,
+          "rejections": []
+        }
+      }
+    },
+    {
+      "candidate": {
+        "name": "Unkey",
+        "url": "https://www.unkey.com",
+        "category": "API management",
+        "discovered_via": "category sweep: API key management",
+        "why_qualifies": "Early-stage API management vendor with public request-volume pricing and docs.",
+        "pricing_urls": [
+          "https://www.unkey.com/pricing"
+        ],
+        "categories_found": [
+          "billing_docs",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 11,
+        "eligible": true,
+        "reason": "pricing page found (https://www.unkey.com/pricing) and 5 supporting content types discovered"
+      },
+      "slug": "unkey",
+      "dossier_file": "work/unkey.dossier.json",
+      "request_file": "work/unkey.request.md",
+      "harvest_stats": {
+        "pages_selected": 11,
+        "pages_fetched_ok": 11,
+        "pages_usable": 10,
+        "pages_failed": 6,
+        "pages_js_rendered": 0,
+        "urls_considered": 11,
+        "dossier_chars": 25886,
+        "harvest_seconds": 5.5,
+        "fetcher": {
+          "network": 7,
+          "cache": 15,
+          "rendered": 0,
+          "blocked": 0,
+          "failed": 6
+        }
+      },
+      "status": "ok",
+      "result_file": "results/experiment/unkey.json",
+      "report_file": "results/experiment/unkey.html",
+      "summary": {
+        "findings": 2,
+        "by_severity": {
+          "high": 1,
+          "medium": 1
+        },
+        "by_confidence": {
+          "high": 2
+        },
+        "by_type": {
+          "likely_contradiction": 1,
+          "missing_information": 1
+        },
+        "promises": 14,
+        "plans": 5,
+        "verification": {
+          "findings_in": 2,
+          "findings_out": 2,
+          "findings_rejected": 0,
+          "quotes_checked": 23,
+          "quotes_failed": 0,
+          "url_corrections": 0,
+          "rejections": []
+        }
       }
     }
   ]

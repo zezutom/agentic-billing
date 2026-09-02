@@ -1,13 +1,14 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Commercial consistency audit — ScreenshotOne</title><style>
+<title>Commercial consistency audit — ScreenshotOne</title>
+<style>
 :root{--ink:#12151c;--muted:#5d6675;--line:#e3e6ec;--bg:#fbfbfc;--card:#fff;
 --high:#c0392b;--high-bg:#fdf0ee;--med:#b06f13;--med-bg:#fdf6ea;--low:#4a6b8a;--low-bg:#eff4f8;
 --accent:#1a4fa0;}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);
 font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;}
-.wrap{max-width:840px;margin:0 auto;padding:56px 24px 96px;}
+.wrap{max-width:860px;margin:0 auto;padding:56px 24px 96px;}
 .eyebrow{font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
 font-weight:600;margin:0 0 12px;}
 h1{font-size:34px;line-height:1.22;margin:0 0 14px;letter-spacing:-.02em;font-weight:700;}
@@ -27,10 +28,11 @@ padding:4px 9px;border-radius:5px;}
 .chip.low{background:var(--low-bg);color:var(--low)}
 .chip.kind{background:#f1f2f5;color:var(--muted)}
 .chip.conf{background:transparent;color:var(--muted);border:1px solid var(--line);font-weight:600}
+.chip.ok{background:#eef7f0;color:#2f6b40}
 .f h3{font-size:18px;margin:0 0 10px;line-height:1.35;letter-spacing:-.01em}
 .f p{margin:0 0 14px;color:#2b3140}
 .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 0}
-@media(max-width:640px){.pair{grid-template-columns:1fr}}
+@media(max-width:660px){.pair{grid-template-columns:1fr}}
 .side{background:#f7f8fa;border:1px solid var(--line);border-radius:9px;padding:14px 15px;}
 .side .lab{font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);
 font-weight:700;margin-bottom:6px}
@@ -39,15 +41,16 @@ font-weight:700;margin-bottom:6px}
 font-size:13.5px;line-height:1.5;font-style:italic;}
 .side a{font-size:13px;color:var(--accent);text-decoration:none;word-break:break-all}
 .side a:hover{text-decoration:underline}
-.caveat{margin-top:15px;padding-top:13px;border-top:1px dashed var(--line);color:var(--muted);
+.note{margin-top:15px;padding-top:13px;border-top:1px dashed var(--line);color:var(--muted);
 font-size:13.5px;}
-.caveat b{color:#4a5262;font-weight:600}
+.note b{color:#4a5262;font-weight:600}
+.note div{margin:4px 0}
 table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
 th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
 th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 td a{color:var(--accent);text-decoration:none;word-break:break-all}
 .tag{display:inline-block;background:#f1f2f5;color:var(--muted);font-size:11.5px;
-padding:2px 7px;border-radius:4px}
+padding:2px 7px;border-radius:4px;margin-right:4px}
 .close{margin-top:56px;padding:28px 30px;background:#12151c;color:#f2f4f7;border-radius:12px}
 .close h2{color:#fff;margin:0 0 12px;font-size:22px;line-height:1.35}
 .close p{color:#c2c8d2;margin:0;font-size:15.5px}
@@ -56,115 +59,118 @@ font-size:14px;color:var(--muted)}
 .legend div{margin:5px 0}
 .legend b{color:var(--ink)}
 .none{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px}
+details{margin-top:10px}summary{cursor:pointer;color:var(--muted);font-size:14px}
 footer{margin-top:40px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:18px}
-</style></head><body>
-<div class="wrap">
+</style></head><body><div class="wrap">
 <p class="eyebrow">Commercial consistency audit</p>
-<h1>We found 2 commercial promises worth checking.</h1>
-<p class="sub">Everything below is taken word-for-word from
+<h1>We found 3 commercial promises worth checking.</h1>
+<p class="sub">Everything below is quoted word-for-word from
 <a href="https://screenshotone.com/" style="color:inherit">screenshotone.com</a>.
 Nothing here is inferred from anything private.</p>
 <p class="meta"><b>15</b> public pages read &middot;
-<b>86</b> commercial claims extracted &middot;
-<b>1 medium, 1 low</b> &middot; run 2026-09-02 07:43:19 UTC</p>
+<b>17</b> commercial promises extracted &middot;
+<b>27</b> quotes checked against their source page &middot;
+run 2026-09-02 07:57:31 UTC</p>
+
+<h2>What you appear to sell</h2>
+<div class="legend">Free — $0 — 100 screenshots per month, Basic — $17 per month, Growth — $79 per month, Scale — $259 per month</div>
 
 <h2>What we found</h2>
-<article class="f medium">
+<article class="f high">
+<div class="chips">
+  <span class="chip high">high impact</span>
+  <span class="chip kind">Ambiguity</span>
+  <span class="chip conf">high confidence</span>
+  <span class="chip ok">evidence verified</span>
+</div>
+<h3>Three of your pages give three different answers to what happens when a customer exceeds their plan</h3>
+<p>This is the question every API customer asks before they build on you, and your site answers it three ways. The pricing page presents it as a simple per-unit price — go over, pay $0.009 each. The credits documentation adds a condition the pricing page never mentions: overage is billed automatically only if extra charging is enabled, leaving the reader to guess what happens when it is not. The terms of service describe a third outcome, where exceeding plan limits may bring throttling or temporary suspension of access. A developer whose product depends on your API cannot tell whether hitting the limit costs them money, degrades their service, or stops it.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">Going over the plan is simply billed at a per-screenshot rate</div>
+<blockquote>&ldquo;$0.009 per extra&rdquo;</blockquote>
+<a href="https://screenshotone.com/pricing" target="_blank" rel="noopener">https://screenshotone.com/pricing</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">Exceeding plan limits may instead result in throttling or temporary suspension of access</div>
+<blockquote>&ldquo;throttling, or temporary suspension of access&rdquo;</blockquote>
+<a href="https://screenshotone.com/terms-of-service" target="_blank" rel="noopener">https://screenshotone.com/terms-of-service</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> Paying a few tenths of a cent more, having requests slowed, and losing access are three different outcomes for the same event, not three descriptions of one.</div><div><b>What would make this a non-issue:</b> The likely reality is that overage billing is the normal path and throttling is a reserve power for abuse. The docs page&#x27;s &quot;if extra charging is enabled&quot; is the sentence that most needs finishing: it is the only hint that a customer might have the option switched off, and it never says what happens then.</div></div>
+</article><article class="f medium">
 <div class="chips">
   <span class="chip medium">medium impact</span>
   <span class="chip kind">Missing information</span>
   <span class="chip conf">high confidence</span>
+  <span class="chip ok">evidence verified</span>
 </div>
-<h3>A commercial condition — charges that apply once an allowance is exceeded — appears only away from your pricing page</h3>
-<p>Terms of Service sets out charges that apply once an allowance is exceeded, but nothing equivalent appears on your pricing page. Conditions that change what a customer actually pays or receives belong where the buying decision is made; discovering them later is where churn and chargebacks start.</p>
-<div class="pair"><div class="side"><div class="lab">What your pricing says</div>
-<div class="claim">Pricing page: condition not stated</div>
-<blockquote>&ldquo;(no equivalent statement found on the pricing page)&rdquo;</blockquote>
-<a href="https://screenshotone.com/pricing" target="_blank" rel="noopener">Pricing page</a></div><div class="side"><div class="lab">What another page says</div>
-<div class="claim">Terms of Service: charges that apply once an allowance is exceeded</div>
-<blockquote>&ldquo;Use of the Service may be subject to pricing plans, quotas, rate limits, and overage charges described on our website or documentation.&rdquo;</blockquote>
-<a href="https://screenshotone.com/terms-of-service" target="_blank" rel="noopener">Terms of Service</a></div></div>
-<div class="caveat"><b>Worth knowing:</b> Detected by absence, so a condition stated in an image, a tooltip or a collapsed accordion on the pricing page would be missed.</div>
-</article><article class="f low">
-<div class="chips">
-  <span class="chip low">low impact</span>
-  <span class="chip kind">Missing information</span>
-  <span class="chip conf">high confidence</span>
-</div>
-<h3>A commercial condition — the right to change prices — appears only away from your pricing page</h3>
-<p>Terms of Service sets out the right to change prices, but nothing equivalent appears on your pricing page. Conditions that change what a customer actually pays or receives belong where the buying decision is made; discovering them later is where churn and chargebacks start.</p>
-<div class="pair"><div class="side"><div class="lab">What your pricing says</div>
-<div class="claim">Pricing page: condition not stated</div>
-<blockquote>&ldquo;(no equivalent statement found on the pricing page)&rdquo;</blockquote>
-<a href="https://screenshotone.com/pricing" target="_blank" rel="noopener">Pricing page</a></div><div class="side"><div class="lab">What another page says</div>
-<div class="claim">Terms of Service: the right to change prices</div>
+<h3>Your terms let you change the usage limits and quotas themselves at any time, not just the price</h3>
+<p>Most terms of service reserve the right to change prices. Yours goes further and reserves the right to modify usage limits, quotas and plan structures too. The screenshot allowances are the product — 2,000, 10,000 and 50,000 a month are the reason a customer picks one plan over another — so this clause says the thing being bought can be redefined mid-subscription. Nothing on the pricing page hints at it, and no notice period is given anywhere we could read.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">Each plan is sold on a specific monthly screenshot allowance</div>
+<blockquote>&ldquo;50,000 screenshots&rdquo;</blockquote>
+<a href="https://screenshotone.com/pricing" target="_blank" rel="noopener">https://screenshotone.com/pricing</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">Pricing, features, usage limits, quotas and plan structures may all be changed at any time</div>
 <blockquote>&ldquo;We reserve the right to modify pricing, features, usage limits, quotas, or plan structures at any time.&rdquo;</blockquote>
-<a href="https://screenshotone.com/terms-of-service" target="_blank" rel="noopener">Terms of Service</a></div></div>
-<div class="caveat"><b>Worth knowing:</b> This is standard legal wording in the right place; the question is only whether the pricing page sets the same expectation. Detected by absence, so a condition stated in an image, a tooltip or a collapsed accordion on the pricing page would be missed.</div>
+<a href="https://screenshotone.com/terms-of-service" target="_blank" rel="noopener">https://screenshotone.com/terms-of-service</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> A right to change quotas is materially different from a right to change prices, because it can reduce what a customer receives without changing what they pay.</div><div><b>What would make this a non-issue:</b> This is a clause you probably have no intention of using against existing customers, and a notice commitment on the pricing page would neutralise it entirely.</div></div>
+</article><article class="f medium">
+<div class="chips">
+  <span class="chip medium">medium impact</span>
+  <span class="chip kind">Likely contradiction</span>
+  <span class="chip conf">medium confidence</span>
+  <span class="chip ok">evidence verified</span>
+</div>
+<h3>Your pricing page offers a full refund within 30 days, no questions asked; your credits documentation says unused credits are never refunded</h3>
+<p>&quot;Email us within 30 days and we will refund you in full, no questions asked&quot; is an unconditional promise, and it is one of the reasons someone signs up. Your credits page carries a heading that says the opposite for the most common case: no refunds for unused credits. A customer who buys a Scale plan, uses a fraction of the 50,000 screenshots and asks for their money back inside the first month has been told both that they get everything back and that unused credits simply expire.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">A full refund is available for any reason within 30 days</div>
+<blockquote>&ldquo;email us at support@screenshotone.com within 30 days, and we will refund you in full, no questions asked&rdquo;</blockquote>
+<a href="https://screenshotone.com/pricing" target="_blank" rel="noopener">https://screenshotone.com/pricing</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">Unused credits are not refunded; they expire at the end of the cycle</div>
+<blockquote>&ldquo;No refunds for unused credits&rdquo;</blockquote>
+<a href="https://screenshotone.com/docs/credits" target="_blank" rel="noopener">https://screenshotone.com/docs/credits</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> One page promises money back for any reason inside 30 days and the other rules out a refund in the situation where a customer would most often ask for one.</div><div><b>What would make this a non-issue:</b> These probably address different things — the 30-day guarantee refunds the subscription fee, while the credits page is explaining that credit balances have no cash value on cancellation. Read in that order they still conflict, and the credits page is the one a cancelling customer lands on.</div></div>
 </article>
 
-<h2>How to read these</h2><div class="legend"><div><b>Missing information</b> — Something that changes the deal, published somewhere the buyer will not look.</div></div>
+<h2>How to read these</h2><div class="legend"><div><b>Likely contradiction</b> — Two public statements that cannot both be true.</div><div><b>Ambiguity</b> — Both statements can be true, but a customer cannot tell what they get.</div><div><b>Missing information</b> — Something that changes the deal, published somewhere the buyer will not look.</div></div>
 
 <h2>Pages we read</h2>
-<table><thead><tr><th>Page</th><th>Claims</th><th>Status</th></tr></thead>
+<table><thead><tr><th>Page</th><th>Words</th><th>Status</th></tr></thead>
 <tbody><tr><td><a href="https://screenshotone.com/pricing" target="_blank" rel="noopener">
-Start rendering for free</a><br><span class="tag">Pricing</span>
-</td>
-<td>66</td><td>read</td></tr><tr><td><a href="https://screenshotone.com/docs/credits" target="_blank" rel="noopener">
-How credits work in ScreenshotOne</a><br><span class="tag">Usage limits</span>
-</td>
-<td>3</td><td>read</td></tr><tr><td><a href="https://dash.screenshotone.com/sign-up" target="_blank" rel="noopener">
-https://dash.screenshotone.com/sign-up</a><br><span class="tag">Trial / signup</span>
-</td>
-<td>&mdash;</td><td>failed &mdash; blocked by robots.txt</td></tr><tr><td><a href="https://screenshotone.com/integrations" target="_blank" rel="noopener">
-Automate website screenshots in your workflows</a><br><span class="tag">Add-ons</span>
-</td>
-<td>2</td><td>read</td></tr><tr><td><a href="https://screenshotone.com/docs/get-usage" target="_blank" rel="noopener">
-Get Usage</a><br><span class="tag">Usage limits</span>
-</td>
-<td>2</td><td>read</td></tr><tr><td><a href="https://screenshotone.com/docs" target="_blank" rel="noopener">
-Getting Started</a><br><span class="tag">Documentation</span>
-</td>
-<td>1</td><td>read</td></tr><tr><td><a href="https://screenshotone.com/docs/getting-started" target="_blank" rel="noopener">
-Getting Started</a><br><span class="tag">Documentation</span>
-</td>
-<td>1</td><td>read</td></tr><tr><td><a href="https://screenshotone.com/integrations/zapier" target="_blank" rel="noopener">
-Zapier</a><br><span class="tag">Add-ons</span>
-</td>
-<td>1</td><td>read</td></tr><tr><td><a href="https://screenshotone.com/terms-of-service" target="_blank" rel="noopener">
-Terms of Service</a><br><span class="tag">Terms</span>
-</td>
-<td>3</td><td>read</td></tr><tr><td><a href="https://screenshotone.com/docs/guides" target="_blank" rel="noopener">
-Guides</a><br><span class="tag">Help centre</span>
-</td>
-<td>1</td><td>read</td></tr><tr><td><a href="https://screenshotone.com/pdf-generation-api" target="_blank" rel="noopener">
-Generate PDFs from URLs, HTML, or Markdown via API</a><br><span class="tag">Documentation</span>
-</td>
-<td>1</td><td>read</td></tr><tr><td><a href="https://screenshotone.com/docs/guides/fail-if-content-contains" target="_blank" rel="noopener">
-Fail rendering if the content contains a string</a><br><span class="tag">Help centre</span>
-</td>
-<td>1</td><td>read</td></tr><tr><td><a href="https://screenshotone.com/docs/guides/upload-to-s3" target="_blank" rel="noopener">
-Upload to S3</a><br><span class="tag">Help centre</span>
-</td>
-<td>1</td><td>read</td></tr><tr><td><a href="https://screenshotone.com/faq" target="_blank" rel="noopener">
-https://screenshotone.com/faq</a><br><span class="tag">FAQ</span>
-</td>
-<td>&mdash;</td><td>failed &mdash; HTTP 404</td></tr><tr><td><a href="https://screenshotone.com/terms" target="_blank" rel="noopener">
-https://screenshotone.com/terms</a><br><span class="tag">Terms</span>
-</td>
-<td>&mdash;</td><td>failed &mdash; HTTP 404</td></tr><tr><td><a href="https://screenshotone.com/integrations/airtable" target="_blank" rel="noopener">
-Airtable</a><br><span class="tag">Add-ons</span>
-</td>
-<td>1</td><td>read</td></tr><tr><td><a href="https://screenshotone.com/integrations/make" target="_blank" rel="noopener">
-Make</a><br><span class="tag">Add-ons</span>
-</td>
-<td>1</td><td>read</td></tr><tr><td><a href="https://screenshotone.com/integrations/bubble" target="_blank" rel="noopener">
-Bubble</a><br><span class="tag">Add-ons</span>
-</td>
-<td>1</td><td>read</td></tr></tbody></table>
+ScreenshotOne Pricing — Website Screenshot API Plans</a><br><span class="tag">Pricing page</span></td><td>617</td>
+<td>read</td></tr><tr><td><a href="https://screenshotone.com/docs/credits" target="_blank" rel="noopener">
+How credits work in ScreenshotOne | ScreenshotOne Docs</a><br><span class="tag">Usage limits / quotas</span></td><td>317</td>
+<td>read</td></tr><tr><td><a href="https://screenshotone.com/integrations" target="_blank" rel="noopener">
+ScreenshotOne Integrations</a><br><span class="tag">Add-ons &amp; integrations</span></td><td>483</td>
+<td>read</td></tr><tr><td><a href="https://screenshotone.com/docs/get-usage" target="_blank" rel="noopener">
+Get Usage | ScreenshotOne Docs</a><br><span class="tag">Usage limits / quotas</span></td><td>198</td>
+<td>read</td></tr><tr><td><a href="https://screenshotone.com/docs" target="_blank" rel="noopener">
+Getting Started | ScreenshotOne Docs</a><br><span class="tag">Product documentation</span></td><td>393</td>
+<td>read</td></tr><tr><td><a href="https://screenshotone.com/docs/getting-started" target="_blank" rel="noopener">
+Getting Started | ScreenshotOne Docs</a><br><span class="tag">Product documentation</span></td><td>393</td>
+<td>read</td></tr><tr><td><a href="https://screenshotone.com/integrations/zapier" target="_blank" rel="noopener">
+The Screenshot API for Zapier</a><br><span class="tag">Add-ons &amp; integrations</span></td><td>178</td>
+<td>read</td></tr><tr><td><a href="https://screenshotone.com/terms-of-service" target="_blank" rel="noopener">
+Terms of Service</a><br><span class="tag">Terms / legal</span></td><td>953</td>
+<td>read</td></tr><tr><td><a href="https://screenshotone.com/docs/guides" target="_blank" rel="noopener">
+Guides | ScreenshotOne Docs</a><br><span class="tag">Help centre</span></td><td>153</td>
+<td>read</td></tr><tr><td><a href="https://screenshotone.com/pdf-generation-api" target="_blank" rel="noopener">
+HTML and URL to PDF Generation API — ScreenshotOne</a><br><span class="tag">Product documentation</span></td><td>1305</td>
+<td>read</td></tr><tr><td><a href="https://screenshotone.com/docs/guides/fail-if-content-contains" target="_blank" rel="noopener">
+Fail rendering if the content contains a string | ScreenshotOne Docs</a><br><span class="tag">Help centre</span></td><td>282</td>
+<td>read</td></tr><tr><td><a href="https://screenshotone.com/docs/guides/upload-to-s3" target="_blank" rel="noopener">
+Upload to S3 | ScreenshotOne Docs</a><br><span class="tag">Help centre</span></td><td>873</td>
+<td>read</td></tr><tr><td><a href="https://screenshotone.com/integrations/airtable" target="_blank" rel="noopener">
+The Screenshot API for Airtable</a><br><span class="tag">Add-ons &amp; integrations</span></td><td>169</td>
+<td>read</td></tr><tr><td><a href="https://screenshotone.com/integrations/make" target="_blank" rel="noopener">
+The Screenshot API for Make</a><br><span class="tag">Add-ons &amp; integrations</span></td><td>183</td>
+<td>read</td></tr><tr><td><a href="https://screenshotone.com/integrations/bubble" target="_blank" rel="noopener">
+The Screenshot API for Bubble</a><br><span class="tag">Add-ons &amp; integrations</span></td><td>167</td>
+<td>read</td></tr><tr><td>https://dash.screenshotone.com/sign-up<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>blocked by robots.txt</td></tr><tr><td>https://screenshotone.com/faq<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>HTTP 404</td></tr><tr><td>https://screenshotone.com/terms<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>HTTP 404</td></tr></tbody></table>
 
 <div class="close"><h2>These are the promises your customers can see. Do your billing system and product deliver the same thing?</h2><p>This audit only reads what is published on your website. It cannot see what your billing system actually meters, what your product actually enforces, or what your customer records actually entitle people to. In most companies those three answers have drifted apart quietly, and the public pages are the only place the drift is visible from outside. If the contradictions above are news to you, the more expensive question is what else is out of step behind them.</p></div>
-<footer>Automated read of public pages only. Every finding is shown with the quote it came from
-so you can check it yourself in a minute. No login, no billing data, no customer records were
-involved.</footer>
+<footer>Automated read of public pages only, then checked: every quote above was located in
+the page it is attributed to, and
+0 candidate finding(s) were discarded because their evidence
+could not be verified. No login, no billing data and no customer records were involved.</footer>
 </div></body></html>

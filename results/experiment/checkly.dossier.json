@@ -1,0 +1,231 @@
+{
+  "company": "Checkly",
+  "root_url": "https://www.checklyhq.com/",
+  "domain": "checklyhq.com",
+  "harvested_at": "2026-09-02 07:57:14 UTC",
+  "pages": [
+    {
+      "url": "https://www.checklyhq.com/pricing",
+      "final_url": "https://www.checklyhq.com/pricing/",
+      "title": "Checkly Pricing Plans: Flexible Synthetic Monitoring Solution",
+      "category": "pricing",
+      "why_selected": "url path contains 'pricing'; link text 'pricing'",
+      "discovered_via": "homepage navigation",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 1232,
+      "text": "## Reliability starts with a plan\nChoose yours. Then scale it up.\nTest & Monitor your APIs and websites with comprehensive Uptime and Synthetic monitoring.\nMonthly Annual Save up to 20 %\n## Hobby\nPerfect for personal projects and learning\n$ 0 per month\nGet Started\n## Uptime Monitors\n10\n## Maximum Frequency\n2 Min.\n## Locations\n6\nRetries\n## Synthetic Monitoring\nBrowser/Playwright Checks 1,000\nAPI Checks 10,000\nRound Robin\nPrivate Locations\n## Plus Access To:\nEmail, Slack, Webhooks for Alerting\n## Starter\nGreat for startups and growing projects\n$ 24 per month\nTry for Free\n1 Min.\nBrowser/Playwright Checks\nAPI Checks\nEmail, Slack, SMS, Webhooks for Alerting\n## Team\nIdeal for growing teams and businesses\n$ 64 per month\n30 Sec.\n22\nAll Alerting Channels\n## Enterprise\nCustom solutions for large organizations\nCustom\nContact Sales\n1 Sec.\nRR & Parallel Scheduling\n## World-class engineering and SRE teams depend on Checkly to deliver reliable digital experiences\n## Plan Details\nSwipe left to see all plans\nSelect your billing cycle\n## Detect\nMonitor your APIs and websites with comprehensive uptime and synthetic monitoring\n$ 0 per month, billed annually\n$ 24 per month, billed annually\n$ 64 per month, billed annually\nGet a custom quote\nUptime Monitoring\nHobby\nStarter\nTeam\nEnterprise\nThe network protocols available for monitoring your endpoints and services.\nHTTPS, TCP, DNS, ICMP, SSL/TLS, gRPC, Traceroute, Heartbeat\nThe number of uptime monitors you can create to track the availability of your websites, APIs, and services.\n50\n75\nPurchase additional monitors in blocks of 25 to scale beyond the included amount.\n\u2014\n$8\nHow checks are distributed across locations. Round Robin rotates through locations sequentially. Parallel runs from all locations simultaneously.\nRound Robin & Parallel\nGlobal data center locations from which your checks are executed. More locations help detect regional outages.\nN. Virginia, N. California, Frankfurt, London, Singapore, Sydney Max 3 locations per check\nAll 22 Locations\nRun checks from within your own infrastructure to monitor internal services not exposed to the public internet.\nAutomatically retry a failing check once before triggering an alert, reducing false positives from transient issues.\nAutomatically retry a failing check multiple times before triggering an alert.\nSynthetic Monitoring\nSimulate real user interactions using a headless browser to validate critical user flows like logins, checkouts, and form submissions.\nRun full Playwright test suites as scheduled monitors. Group multiple related browser checks into a single suite.\nThe total number of browser check or Playwright check suite executions included per month.\n1,000 per month\n3,000 per month\n12,000 per month\nPurchase additional browser check runs beyond your included amount at a per-1k rate.\n$4.00 per 1k\nThe per-1k cost charged automatically when you exceed your purchased browser check runs.\n$6.50\n$6.25\nMonitor API endpoints with HTTP requests. Multistep checks chain multiple API calls together to test complex workflows.\nThe total number of API check executions included per month.\n10,000 per month\n25,000 per month\n100,000 per month\nPurchase additional API check runs beyond your included amount at a per-10k rate.\n$1.80 per 10k\nThe per-10k cost charged automatically when you exceed your purchased API check runs.\n$2.60\n$2.50\nAutomatically retry a failing check before triggering an alert, reducing false positives from transient issues.\nAPI and browser checks alert you before the TLS certificate on their target domain expires. For dedicated certificate monitoring, create an SSL monitor.\nRun checks as frequently as every 10 seconds for near real-time monitoring of critical endpoints.\nAutomatically capture and compare screenshots to detect unintended visual changes on your website.\nAlerting\nReceive alert notifications via email when a check fails or recovers.\nSend alert notifications directly to your Slack channels.\nSend alert payloads to any HTTP endpoint for custom integrations with your existing tools.\nIntegrate with incident management platforms like Incident.io, Rootly, PagerDuty, OpsGenie, and more.\nReceive alert notifications via text message. The number shown is your included monthly SMS credits.\n0\n100/month\n200/month\nReceive alert notifications via automated phone calls. The number shown is your included monthly call credits.\nSchedule maintenance windows to pause alerting during planned downtime, preventing false positive alerts.\n## Communicate\nKeep your team and users informed with fast, beautiful status pages and dashboards.\n$ 9 per month, billed annually\n$ 30 per month, billed annually\nStatus Pages\nThe number of individual services or components you can display on your status page.\n20\n25\n100\nThe number of people who can subscribe to receive status page updates via email or RSS.\n250\n500\n1000\n2000\nHost your status page on your own domain (e.g., status.yourcompany.com) instead of a Checkly subdomain.\nApply your own CSS styles to fully customize the look and feel of your status page.\nRestrict access to your status page with a password, useful for internal-only status pages.\nRemove all Checkly branding from your status page for a fully branded experience.\nCreate, update, and resolve incidents directly from your status page to keep users informed during outages.\nSchedule maintenance windows on your status page so subscribers are informed of planned downtime in advance.\nDashboards\nCustom dashboards to visualize and share your monitoring data with your team or stakeholders.\n1\n## Resolve\nDiagnose issues faster with AI-powered root cause analysis\n$ 12 per month, billed annually\n$ 39 per month, billed annually\nAI Root Cause Analysis\nThe number of AI-powered root cause analysis requests you can run per month to diagnose check failures.\n150\nAutomatically trigger root cause analysis when a check fails, so you get insights without manual intervention.\n## Platform\nDeveloper tools, support, and enterprise-grade security features\nGeneral\nThe number of team members who can access your Checkly account.\n3\nData\nHow long individual check run results, logs, and traces are stored before being purged.\n7 days\n30 days\n180 days\nHow long aggregated metrics like response times and availability percentages are retained for trend analysis.\n1 year\n25 months\nIntegrations\nConnect MCP clients to Checkly to inspect checks, test sessions, RCA, result assets, status pages, incidents, and account context.\nManage checks, run tests, and deploy monitoring as code from your terminal using the Checkly CLI.\nDefine and manage your Checkly monitoring infrastructure as code using HashiCorp Terraform.\nDefine and manage your Checkly monitoring infrastructure as code using Pulumi.\nExport your monitoring metrics to Prometheus for integration with Grafana and other observability tools.\nCustomer Support\nPriority access to the Checkly support team with faster response times and dedicated attention.\nGuided onboarding sessions to help your team get set up and running with Checkly quickly.\nA dedicated Checkly engineer assigned to your account to help optimize your monitoring strategy.\nAround-the-clock phone escalation support for critical issues that need immediate attention.\nCustom contracts and invoicing options tailored to your organization's procurement needs.\nAccess to Checkly's security documentation and processes for your organization's vendor assessment.\nSecurity & Privacy\nCheckly is SOC 2 Type II certified, ensuring your data is handled with the highest security standards.\nAdd an extra layer of security to your account with multi-factor authentication (MFA).\nEnable single sign-on (SSO) via SAML to manage access through your identity provider (e.g., Okta, Azure AD).\nA guaranteed 99.9% uptime service level agreement for the Checkly platform itself.\nUse client-side TLS certificates to authenticate checks against services that require mutual TLS (mTLS).\nCreate non-user-bound API keys for service-to-service integrations with the Checkly API.\n## Try out Checkly for free\nStart monitoring your API endpoints and your vital site transactions.\n*No credit card required",
+      "truncated": false,
+      "usable": true
+    },
+    {
+      "url": "https://www.checklyhq.com/docs/integrations/alerts/discord",
+      "final_url": "https://www.checklyhq.com/docs/integrations/alerts/discord/",
+      "title": "Send Alerts to Discord - Checkly Docs",
+      "category": "addons",
+      "why_selected": "url path contains 'integrations'; link text 'all integrations'",
+      "discovered_via": "homepage navigation",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 269,
+      "text": "- First, create a Webhook . Log in to Discord and go to \u201cServer Settings\u201d > \u201cIntegrations\u201d and click \u201cCreate Webhook\u201d.\n- Choose a name for your integration like \u201cCheckly\u201d and add this Checkly icon . Click the \u201cCopy the Webhook URL\u201d to\u2026well\u2026copy the Webhook URL\n- Log in to Checkly and navigate to Alert Settings . Click the \u201cAdd more channels\u201d button, find Discord on the list, and click \u201cAdd channel\u201d.\nNote that we provide a preconfigured message payload but you are free to edit the payload and add more or different variables. Just click the \u201cEdit payload\u201d button and reference the \u201cHelp & variables tab\u201d.\n\u200b\n{ \"embeds\" : [ { \"title\" : \"{{ALERT_TITLE}}\" , \"description\" : \"**Check**: {{CHECK_NAME}} \\n **Location**: {{RUN_LOCATION}} \\n **Response Time**: {{RESPONSE_TIME}}ms\" , \"color\" : \"{{#eq ALERT_TYPE 'ALERT_FAILURE'}}15158332{{else}}{{#eq ALERT_TYPE 'ALERT_DEGRADED'}}16776960{{else}}3066993{{/eq}}{{/eq}}\" , \"fields\" : [ { \"name\" : \"Error\" , \"value\" : \"{{CHECK_ERROR_MESSAGE}}\" , \"inline\" : false }, { \"name\" : \"Started At\" , \"value\" : \"{{STARTED_AT}}\" , \"inline\" : true }, { \"name\" : \"Location\" , \"value\" : \"{{RUN_LOCATION}}\" , \"inline\" : true } ], \"footer\" : { \"text\" : \"Checkly Monitoring\" }, \"timestamp\" : \"{{STARTED_AT}}\" , \"url\" : \"{{RESULT_LINK}}\" } ] }\n- Red (15158332) : Failures and critical alerts\n- Orange (16776960) : Degraded performance alerts\n- Green (3066993) : Recovery notifications\n- Use separate channels for different environments (production, staging, development)\n- Configure appropriate notification settings to avoid alert fatigue\n- Use Discord\u2019s thread feature for grouping related alerts\n- Set up role mentions (@role) for critical alerts that require immediate attention\nWas this page helpful?\nSuggest edits Raise issue",
+      "truncated": false,
+      "usable": true
+    },
+    {
+      "url": "https://www.checklyhq.com/support",
+      "final_url": "https://www.checklyhq.com/support/",
+      "title": "Checkly Support | Get help with Checkly",
+      "category": "help",
+      "why_selected": "url path contains 'support'; link text 'support'",
+      "discovered_via": "homepage navigation",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 427,
+      "text": "Support\n## How to get help with Checkly\nStuck on a check, have a billing question, or found a bug? Pick the channel that fits and we will take it from there.\nEmail support@checklyhq.com\n## Where to reach us\n## Live chat\nUse the chat bubble in the bottom-right corner of this site or inside the Checkly app. Enter and verify your email to start a conversation with the support team.\nBest for: Questions while you are in the product\n## Email support\nReach the Checkly support team directly. This is the right place for anything tied to your account.\nBest for: Account, billing, and technical questions\n## Documentation\nGuides, concepts, and the full API and CLI reference. Most questions are answered here first.\nBest for: Setup, configuration, and how-tos\n## Community Slack\nAsk questions, share what you are building, and learn from other Checkly users and the team.\nBest for: Quick questions and best practices\n## Status page\nLive platform status and incident history. Subscribe to get notified about incidents and maintenance.\nBest for: Checking whether Checkly itself is affected\n## Feature requests\nPropose an idea, add context, and vote on requests from other Checkly users. Product reads every entry.\nBest for: Ideas and product feedback\n## Help us help you\nThe more context a support request carries, the fewer round trips it takes. If you can, include the following when you email us.\n## Which account and check\nThe email address on the account and the name or ID of the affected check, check group, or resource.\n## A link to the check run\nA direct link to a failing or unexpected check result from the Checkly app is the fastest way for us to see what you see.\n## When and where it happened\nTimestamps (with timezone, UTC preferred) and the run location or private location.\n## Expected vs. actual\nWhat you expected to happen, what happened instead, and whether it reproduces every time.\n## Logs, screenshots, or config\nError output, screenshots, and the relevant check configuration or CLI construct. Redact secrets before sending.\n## Need more than email ?\nEnterprise plans add a support layer on top of everything above.\n- Premium support with priority access and faster response times\n- Guided onboarding sessions for your team\n- A dedicated Customer Success Engineer\n- A private communication channel (Slack, MS Teams, etc.) with priority access\n- 24x7 phone escalation for critical issues\nTalk to sales Compare plans\nFound a security vulnerability? Please do not post it publicly. Follow our security response process instead.",
+      "truncated": false,
+      "usable": true
+    },
+    {
+      "url": "https://www.checklyhq.com/docs",
+      "final_url": "https://www.checklyhq.com/docs/",
+      "title": "Checkly Documentation - Checkly Docs",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text 'documentation learn key concepts and fea'",
+      "discovered_via": "homepage navigation",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 179,
+      "text": "\u200b\n## What is Checkly?\nLearn more about how Checkly works for modern teams.\n## Quick Start\nGet up and running with tests and monitors deployed in 5 minutes.\n## Detect\nDetect issues before they happen with multiple layers of detection from around the globe.\n## Communicate\nGet notified when issues happen with smart alerting, status pages, and dashboards.\n## Resolve\nDebug issues with distributed OTel tracing, AI-powered insights, and performance analysis.\n## Constructs\nBuild and deploy monitoring infrastructure with reusable code constructs.\n## CLI\nGet everything you need to monitor and test your applications continuously with the Checkly CLI.\n## API\nExtend the Checkly platform with our powerful REST API and SDKs.\n## Learn\nLearn the fundamentals of reliability and how to build a reliable application.\n## Guides\nImplementation tutorials, best practices, and real-world examples.\n## Community\nAsk questions and get help from the Checkly team and other users.\nPlatform overview\n## Create API Check\nMonitor APIs\n## Set up Alerts\nGet notified\n## Deploy with CLI\nMonitoring as code\nWas this page helpful?\nSuggest edits Raise issue",
+      "truncated": false,
+      "usable": true
+    },
+    {
+      "url": "https://www.checklyhq.com/solutions/developers",
+      "final_url": "https://www.checklyhq.com/solutions/developers/",
+      "title": "Synthetic Monitoring for Developers | Code-First | Checkly",
+      "category": "docs",
+      "why_selected": "url path contains 'developers'; link text 'developers checks in typescript, in your'",
+      "discovered_via": "homepage navigation",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 917,
+      "text": "Synthetic monitoring for developers\n## Monitoring that works like your code does\nWrite checks in TypeScript next to the services they cover, run them on every pull request, and deploy them with your app. Playwright-native, versioned in git, and plain enough that Claude Code or Cursor can write and maintain your monitors alongside the features they cover.\nStart for free Read docs\nTypeScript, not YAML Playwright-native Runs in your CI Alerts + status pages as code\n__checks__/checkout.check.ts\n1 // __checks__/checkout.check.ts\n2 import * as path from 'path'\n3 import { BrowserCheck , Frequency } from 'checkly/constructs'\n4\n5 // A monitor is a file in your repo, like everything else you ship\n6 new BrowserCheck ( 'checkout-flow' , {\n7 name : 'Checkout flow' ,\n8 frequency : Frequency . EVERY_5M ,\n9 locations : [ 'us-east-1' , 'eu-west-1' ] ,\n10 code : {\n11 entrypoint : path . join ( __dirname , 'checkout.spec.ts' ) ,\n12 } ,\n13 } )\n## Trusted by engineers who own what they ship\n\u201c Checkly is a fabulous developer tool. The flexible features and developer-friendly API made the integration super easy, and their support is friendly and knowledgeable. \u201d\nConnor Hicks \u00b7 Lead Developer \u00b7 1Password\n## Why developers end up hating their monitoring tools\nThe category grew up next to IT operations, not next to your repo. It shows.\n## Monitoring feels like an IT tool\nClunky dashboards, checks configured by hand, zero version control. It watches your code, but it works nothing like it.\n## A second language for a first-class job\nMonitoring products want their own DSL, their own editor, their own snowflake config. Your app is code. Your monitoring should not be a dialect of YAML.\n## Green in CI, broken in prod\nTests pass on every merge, then a third-party API, an expired cert, or a bad deploy breaks the flow at 9 p.m. Nothing was watching.\nCheckly is built like a dev tool instead: checks are TypeScript in your repo, they run in CI before they run in production, and Playwright is the native language for browser flows. So is everything that happens after one fails. The channel it alerts, the incident it opens on your status page, and the trace you debug from are all constructs in the same project, shipped in the same pull request.\n\u201c We\u2019ve been using Checkly for months and it\u2019s been phenomenal. Super easy to set up, works flawlessly and intuitively. The team is super receptive and quick to help. \u201d\nJake Cooper\nFounder / Engineer \u00b7 Railway\n## Made for the tools you already use\nPlaywright for the flows, your CI for the pipeline, Slack for the alerts, and an API for everything else.\n## Playwright\nBrowser checks are standard @playwright/test specs, not scripts in a proprietary editor. What you know already applies.\n## GitHub Actions\nRun every check on pull requests with npx checkly test, then deploy them on merge to main.\n## GitLab CI\nThe same workflow on GitLab: test, record a session, and deploy monitors from your pipeline.\n## Vercel\nRun checks against your preview and production deployments as part of the deploy.\n## Slack\nRich alerts in any channel, with failure context and a link to the result.\n## REST API + webhooks\nFull CRUD on every resource for anything you build yourself, plus raw webhooks with full payload control.\n## Status pages\nA StatusPage construct in the same project as your checks. Incidents open and close themselves when a check fails and recovers.\n## Traces\nOpenTelemetry spans link a failed check to the backend request behind it. Export them to Tempo, Honeycomb, or Datadog.\n## Rocky AI\nReads the error, the screenshot, and the trace, then tells you what broke in a sentence you can paste into the PR that fixes it.\n## Developers, on Checkly\n\u201c We\u2019ve saved a lot of time by using Playwright with Checkly. \u201d\nKeegan Donley\nSenior Front-End Engineer \u00b7 Kizen\n\u201c Checkly is incredible: it combines Pingdom, Ghost Inspector, and Assertible in the same app, and the insights are much more detailed. \u201d\nLeo Lamprecht\nSVP Product \u00b7 Vercel\n\u201c Checkly was incredibly easy to integrate. Even our initial traces setup was quick, and the documentation was better than OTel\u2019s own. \u201d\nBrian Stack\nInfrastructure Engineer \u00b7 Render\n\u201c The ease of integration in our pipeline was remarkable. We have everything defined in a CI/CD pipeline using GitHub Actions using the CLI. Everything scaffolds out based on a configuration, so we just update a configuration file which specifies the environments, what services are there, what the URLs are, and from that, we just generate all the groups and their checks. \u201d\nTobias Deekens\nPrincipal Frontend Engineer \u00b7 commercetools\n\u201c Checkly Traces helped us resolve issues faster by showing exactly how long database calls are taking. This insight was crucial in pinpointing N+1 issues and optimizing caching. Having a vendor like Checkly levels up your team to the point where it starts to feel like an unfair advantage. \u201d\nJames Hall\nAWS Hero & Founder \u00b7 Parallax\n\u201c The Checkly CLI has enhanced our engineering team\u2019s ability to quickly build, validate, and deploy an entire suite of checks from their local development environment. \u201d\nTavares Chambless\nManager, Quality Assurance \u00b7 Loyal Health\n## Your next monitor is a pull request\nnpm create checkly, write a spec, open the PR. Your first check can be guarding production this afternoon.\nStart for free Read the CLI docs",
+      "truncated": false,
+      "usable": true
+    },
+    {
+      "url": "https://www.checklyhq.com/docs/cli",
+      "final_url": "https://www.checklyhq.com/docs/cli/overview/",
+      "title": "Checkly CLI - Checkly Docs",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text 'read cli docs'",
+      "discovered_via": "homepage navigation",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 128,
+      "text": "\u200b\nTerminal\nnpx checkly init\nnpx checkly login\nnpx checkly test\nRunning 4 checks in eu-west-1. src/__checks__/api.check.ts \u2714 Books API (222ms) src/__checks__/home.check.ts \u2714 Home page (24s) \u2714 Login Check (5s) src/__checks__/multi-step-spacex.check.ts \u2714 SpaceX MS (4s) 4 passed, 4 total\nnpx checkly deploy\n## Checkly Skills\nInstall Checkly Skills and let AI agents generate Checkly monitoring code for you.\n## Checkly MCP Server\nConnect desktop or sandboxed agents to live Checkly account data and actions.\n## GitHub Actions\nRun Checkly test sessions from GitHub Actions and report results in pull requests.\n## GitLab CI\nRun the Checkly CLI from GitLab CI pipelines, using separate e2e-test and deploy jobs.\n## Jenkins\nRun the Checkly CLI from a Jenkins pipeline using a Jenkinsfile.\nWas this page helpful?\nSuggest edits Raise issue",
+      "truncated": false,
+      "usable": true
+    },
+    {
+      "url": "https://www.checklyhq.com/terms",
+      "final_url": "https://www.checklyhq.com/terms/",
+      "title": "Checkly Terms of Use",
+      "category": "terms",
+      "why_selected": "url path contains 'terms'; link text 'terms of use'",
+      "discovered_via": "homepage navigation",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 4,
+      "text": "## Terms of use",
+      "truncated": false,
+      "usable": false
+    },
+    {
+      "url": "https://www.checklyhq.com/docs/integrations/alerts/slack",
+      "final_url": "https://www.checklyhq.com/docs/integrations/alerts/slack/",
+      "title": "Slack - Checkly Docs",
+      "category": "addons",
+      "why_selected": "url path contains 'integrations'",
+      "discovered_via": "homepage navigation",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 268,
+      "text": "| Permission | Description |\n| app_mentions:read | Detects @mentions to start Cloud Agents and respond to requests |\n| channels:history | Reads previous messages in threads for extra context |\n| channels:join | Automatically joins public channels when invited or requested. |\n| channels:read | Accesses channel metadata (IDs and names) to post replies and updates |\n| chat:write | Sends status updates and notifications on triggered actions like rerunning checks |\n| groups:history | Reads previous messages in private channels for extra context |\n| groups:read | Accesses private channel metadata to post responses |\n| im:history | Accesses direct message history for extra context |\n| mpim:history | Accesses group DM history for multi-participant conversations |\n| users:read | Matches Slack users with Checkly accounts for permissions and secure access |\n| links:read | Read links for allow-listed domains like app.checklyhq.com to provide rich context |\n| links:write | Writes rich context for allow-listed domains like app.checklyhq.com |\n- First, install the Checkly Slack App into your Slack Workspace by going to your integrations page and click \u201cConnect Slack Workspace\u201d.\n- Then, head to your alert settings , click \u201cAdd more channels\u201d and select a new Slack channel.\nIf you\u2019re using a free Slack workspace, be aware of message limits . Exceeding these limits may prevent new alerts from being delivered.\n\u200b\nThe root cause analysis uses AI to analyze your logs, traces, test source code, error information and other artefacts available to Checkly. Be aware that AI can make mistakes so outputs should be verified independently.\nWas this page helpful?\nSuggest edits Raise issue",
+      "truncated": false,
+      "usable": true
+    },
+    {
+      "url": "https://www.checklyhq.com/docs/guides/overview",
+      "final_url": "https://www.checklyhq.com/docs/guides/overview/",
+      "title": "Guides to Using Checkly - Checkly Docs",
+      "category": "help",
+      "why_selected": "url path contains 'guides'",
+      "discovered_via": "homepage navigation",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 222,
+      "text": "\u200b\n## Monitoring as Code\nLearn how to implement monitoring as code using Checkly\u2019s CLI for scalable, version-controlled monitoring\n## Developer Empowerment\nDiscover how Checkly integrates into developer workflows and CI/CD pipelines\n## Playwright to Monitoring\nConvert your existing Playwright tests into production monitoring checks\n## End-to-End Monitoring\nLearn how to monitor complete user journeys and critical business flows\n## Uptime Monitoring\nSet up reliable uptime monitoring for your applications and services\n## Keyword Monitoring\nMonitor specific content and keywords on your websites\n## SDLC Monitoring\nImplement monitoring throughout your software development lifecycle\n## OpenAPI Monitoring\nAutomatically generate monitoring checks from your OpenAPI specifications\n## Stripe API Monitoring\nSet up comprehensive monitoring for Stripe API endpoints and webhooks\n## API Setup Scripts\nCreate setup scripts to prepare your API environment for testing\n## Playwright E-commerce\nMonitor critical e-commerce flows like checkout, search, and user authentication\n## Terraform E-commerce\nInfrastructure as Code approach to e-commerce monitoring\n## Puppeteer Migration\nMigrate your existing Puppeteer scripts to Playwright\n## Developer Fixtures\nUse fixtures to create reusable test data and setup\n## Auto-Waiting Methods\nMaster Playwright\u2019s auto-waiting capabilities for more reliable tests\n## Reading Traces\nUnderstand and analyze distributed tracing data for debugging\n## Broken Link Monitoring\nSet up automated monitoring to detect broken links on your websites\nWas this page helpful?\nSuggest edits Raise issue",
+      "truncated": false,
+      "usable": true
+    },
+    {
+      "url": "https://www.checklyhq.com/docs/what-is-checkly",
+      "final_url": "https://www.checklyhq.com/docs/what-is-checkly/",
+      "title": "What is Checkly? - Checkly Docs",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text 'docs'",
+      "discovered_via": "linked from docs hub https://www.checklyhq.com/docs",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 224,
+      "text": "\u200b\n- Detect : Testing, Uptime Monitoring, and Synthetic Monitoring with Playwright.\n- Communicate : Customizable Alerting, Dashboards, & Status Pages for clear communication.\n- Resolve : Distributed full-stack tracing and AI-powered incident analysis and context.\n## Monitoring as Code\nDefine your entire monitoring setup with TypeScript constructs instead of manual UI configuration.\n## Native Playwright Support\nBrowser monitoring powered natively by Playwright for fast, reliable end-to-end scenario monitoring.\n## Developer-First Experience\nCode-driven platform with constructs, APIs, and a CLI that manages the entire lifecycle of your monitors.\n## Unified Testing, Monitoring, Tracing, and Incident Management\nUnify testing, monitoring, and observability into a single workflow using Playwright and OpenTelemetry.\n## Reliable Error Detection\nDetect both functional and performance errors in pre-production and production environments.\n- Pre-Production Testing \u2014 Validate functionality and performance in staging before deployment, catching regressions early.\n- Production Monitoring \u2014 Continuously monitor critical user journeys, API endpoints, and application performance.\n- Transaction Monitoring \u2014 Monitor checkout flows, payment processing, and product catalog to prevent revenue loss.\n- API Reliability \u2014 Ensure third-party integrations and internal APIs maintain expected response times and availability.\n- Multi-Environment Validation \u2014 Test across different environments, browsers, and devices for consistent functionality.\n- Compliance and SLA Monitoring \u2014 Track uptime and performance metrics to meet SLAs and regulatory requirements.\nWas this page helpful?\nSuggest edits Raise issue",
+      "truncated": false,
+      "usable": true
+    },
+    {
+      "url": "https://www.checklyhq.com/docs/api-reference/overview",
+      "final_url": "https://www.checklyhq.com/docs/api-reference/overview/",
+      "title": "Using the Checkly API - Checkly Docs",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text 'api docs build on the checkly rest api'",
+      "discovered_via": "homepage navigation",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 85,
+      "text": "For creating and updating resources, we recommend using the Checkly CLI or another Monitoring as Code option. Managing resources using the Checkly API is possible, but Monitoring as Code generally provides a better experience for this.\n\u200b\nThe legacy https://api.checklyhq.com/swagger.json specification is deprecated and no longer receives updates. If you generate API clients, validate requests, or inspect the latest API contract, update your tooling to use openapi.json .\nBash\ncurl -H \"Authorization: Bearer [apiKey]\" -H \"X-Checkly-Account: [accountId]\"\nWas this page helpful?\nSuggest edits Raise issue",
+      "truncated": false,
+      "usable": false
+    },
+    {
+      "url": "https://developers.checklyhq.com/",
+      "final_url": "https://www.checklyhq.com/docs/",
+      "title": "Checkly Documentation - Checkly Docs",
+      "category": "docs",
+      "why_selected": "link text 'open api reference'; documentation subdomain 'developers.checklyhq.com'",
+      "discovered_via": "homepage navigation",
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 179,
+      "text": "\u200b\n## What is Checkly?\nLearn more about how Checkly works for modern teams.\n## Quick Start\nGet up and running with tests and monitors deployed in 5 minutes.\n## Detect\nDetect issues before they happen with multiple layers of detection from around the globe.\n## Communicate\nGet notified when issues happen with smart alerting, status pages, and dashboards.\n## Resolve\nDebug issues with distributed OTel tracing, AI-powered insights, and performance analysis.\n## Constructs\nBuild and deploy monitoring infrastructure with reusable code constructs.\n## CLI\nGet everything you need to monitor and test your applications continuously with the Checkly CLI.\n## API\nExtend the Checkly platform with our powerful REST API and SDKs.\n## Learn\nLearn the fundamentals of reliability and how to build a reliable application.\n## Guides\nImplementation tutorials, best practices, and real-world examples.\n## Community\nAsk questions and get help from the Checkly team and other users.\nPlatform overview\n## Create API Check\nMonitor APIs\n## Set up Alerts\nGet notified\n## Deploy with CLI\nMonitoring as code\nWas this page helpful?\nSuggest edits Raise issue",
+      "truncated": false,
+      "usable": true
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://app.checklyhq.com/signup",
+      "category": "trial",
+      "reason": "blocked by robots.txt"
+    },
+    {
+      "url": "https://www.checklyhq.com/faq",
+      "category": "faq",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.checklyhq.com/help",
+      "category": "help",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.checklyhq.com/docs/llms.txt",
+      "category": "docs",
+      "reason": "skipped: content-type text/plain; charset=utf-8"
+    }
+  ],
+  "discovery_notes": [],
+  "pricing_urls": [
+    "https://www.checklyhq.com/pricing"
+  ],
+  "stats": {
+    "pages_selected": 12,
+    "pages_fetched_ok": 12,
+    "pages_usable": 10,
+    "pages_failed": 4,
+    "pages_js_rendered": 0,
+    "urls_considered": 39,
+    "dossier_chars": 25865,
+    "harvest_seconds": 4.3,
+    "fetcher": {
+      "network": 4,
+      "cache": 16,
+      "rendered": 0,
+      "blocked": 1,
+      "failed": 3
+    }
+  }
+}

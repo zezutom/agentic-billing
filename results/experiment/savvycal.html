@@ -1,13 +1,14 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Commercial consistency audit — SavvyCal</title><style>
+<title>Commercial consistency audit — SavvyCal</title>
+<style>
 :root{--ink:#12151c;--muted:#5d6675;--line:#e3e6ec;--bg:#fbfbfc;--card:#fff;
 --high:#c0392b;--high-bg:#fdf0ee;--med:#b06f13;--med-bg:#fdf6ea;--low:#4a6b8a;--low-bg:#eff4f8;
 --accent:#1a4fa0;}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);
 font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;}
-.wrap{max-width:840px;margin:0 auto;padding:56px 24px 96px;}
+.wrap{max-width:860px;margin:0 auto;padding:56px 24px 96px;}
 .eyebrow{font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
 font-weight:600;margin:0 0 12px;}
 h1{font-size:34px;line-height:1.22;margin:0 0 14px;letter-spacing:-.02em;font-weight:700;}
@@ -27,10 +28,11 @@ padding:4px 9px;border-radius:5px;}
 .chip.low{background:var(--low-bg);color:var(--low)}
 .chip.kind{background:#f1f2f5;color:var(--muted)}
 .chip.conf{background:transparent;color:var(--muted);border:1px solid var(--line);font-weight:600}
+.chip.ok{background:#eef7f0;color:#2f6b40}
 .f h3{font-size:18px;margin:0 0 10px;line-height:1.35;letter-spacing:-.01em}
 .f p{margin:0 0 14px;color:#2b3140}
 .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 0}
-@media(max-width:640px){.pair{grid-template-columns:1fr}}
+@media(max-width:660px){.pair{grid-template-columns:1fr}}
 .side{background:#f7f8fa;border:1px solid var(--line);border-radius:9px;padding:14px 15px;}
 .side .lab{font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);
 font-weight:700;margin-bottom:6px}
@@ -39,15 +41,16 @@ font-weight:700;margin-bottom:6px}
 font-size:13.5px;line-height:1.5;font-style:italic;}
 .side a{font-size:13px;color:var(--accent);text-decoration:none;word-break:break-all}
 .side a:hover{text-decoration:underline}
-.caveat{margin-top:15px;padding-top:13px;border-top:1px dashed var(--line);color:var(--muted);
+.note{margin-top:15px;padding-top:13px;border-top:1px dashed var(--line);color:var(--muted);
 font-size:13.5px;}
-.caveat b{color:#4a5262;font-weight:600}
+.note b{color:#4a5262;font-weight:600}
+.note div{margin:4px 0}
 table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
 th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
 th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 td a{color:var(--accent);text-decoration:none;word-break:break-all}
 .tag{display:inline-block;background:#f1f2f5;color:var(--muted);font-size:11.5px;
-padding:2px 7px;border-radius:4px}
+padding:2px 7px;border-radius:4px;margin-right:4px}
 .close{margin-top:56px;padding:28px 30px;background:#12151c;color:#f2f4f7;border-radius:12px}
 .close h2{color:#fff;margin:0 0 12px;font-size:22px;line-height:1.35}
 .close p{color:#c2c8d2;margin:0;font-size:15.5px}
@@ -56,93 +59,97 @@ font-size:14px;color:var(--muted)}
 .legend div{margin:5px 0}
 .legend b{color:var(--ink)}
 .none{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px}
+details{margin-top:10px}summary{cursor:pointer;color:var(--muted);font-size:14px}
 footer{margin-top:40px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:18px}
-</style></head><body>
-<div class="wrap">
+</style></head><body><div class="wrap">
 <p class="eyebrow">Commercial consistency audit</p>
-<h1>We found 1 commercial promise worth checking.</h1>
-<p class="sub">Everything below is taken word-for-word from
+<h1>We found 2 commercial promises worth checking.</h1>
+<p class="sub">Everything below is quoted word-for-word from
 <a href="https://savvycal.com/" style="color:inherit">savvycal.com</a>.
 Nothing here is inferred from anything private.</p>
-<p class="meta"><b>13</b> public pages read &middot;
-<b>8</b> commercial claims extracted &middot;
-<b>1 low</b> &middot; run 2026-09-02 07:43:15 UTC</p>
+<p class="meta"><b>8</b> public pages read &middot;
+<b>10</b> commercial promises extracted &middot;
+<b>16</b> quotes checked against their source page &middot;
+run 2026-09-02 07:57:27 UTC</p>
+
+<h2>What you appear to sell</h2>
+<div class="legend">Basic — $10 /user/mo, Premium — $17 /user/mo</div>
 
 <h2>What we found</h2>
-<article class="f low">
+<article class="f medium">
+<div class="chips">
+  <span class="chip medium">medium impact</span>
+  <span class="chip kind">Missing information</span>
+  <span class="chip conf">medium confidence</span>
+  <span class="chip ok">evidence verified</span>
+</div>
+<h3>Your pricing page invites people to &quot;kick the tires for free&quot;, then shows only two paid plans and never explains what free means</h3>
+<p>The first line above your plans offers a free way in and tells the reader they can upgrade when they are ready to &quot;activate&quot;. The plans underneath start at $10 per user per month, and nothing on the page says whether free means a free tier, a time-limited trial, or an unactivated account with reduced functionality. There is no trial length, no statement about whether a card is required, and no explanation of what activation changes. This is the first question a visitor has and the page raises it without answering it.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">You can start for free and upgrade only when ready to activate</div>
+<blockquote>&ldquo;Kick the tires for free and only upgrade when you&#x27;re ready to activate.&rdquo;</blockquote>
+<a href="https://savvycal.com/pricing" target="_blank" rel="noopener">https://savvycal.com/pricing</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">The only prices published are $10 and $17 per user per month, with no free option shown</div>
+<blockquote>&ldquo;$ 10 /user/mo&rdquo;</blockquote>
+<a href="https://savvycal.com/pricing" target="_blank" rel="noopener">https://savvycal.com/pricing</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> One sentence offers a free route into the product and the rest of the page documents only paid ones, so the reader cannot find out what they would actually be signing up for.</div><div><b>What would make this a non-issue:</b> The answer is very likely in the FAQ at the bottom of the page, which is collapsed and did not render for us — so this may be a rendering limitation on our side rather than a gap on yours. The plan comparison table on the same page also rendered as feature names with no values, which is why this report is thinner for SavvyCal than for other companies.</div></div>
+</article><article class="f low">
 <div class="chips">
   <span class="chip low">low impact</span>
   <span class="chip kind">Missing information</span>
   <span class="chip conf">high confidence</span>
+  <span class="chip ok">evidence verified</span>
 </div>
-<h3>A commercial condition — automatic renewal — appears only away from your pricing page</h3>
-<p>SavvyCal Terms of Use sets out automatic renewal, but nothing equivalent appears on your pricing page. Conditions that change what a customer actually pays or receives belong where the buying decision is made; discovering them later is where churn and chargebacks start.</p>
-<div class="pair"><div class="side"><div class="lab">What your pricing says</div>
-<div class="claim">Pricing page: condition not stated</div>
-<blockquote>&ldquo;(no equivalent statement found on the pricing page)&rdquo;</blockquote>
-<a href="https://savvycal.com/pricing" target="_blank" rel="noopener">Pricing page</a></div><div class="side"><div class="lab">What another page says</div>
-<div class="claim">SavvyCal Terms of Use: automatic renewal</div>
+<h3>Your terms reserve the right to change prices at any time, with no notice period, and your pricing page does not mention it</h3>
+<p>A single sentence in the Fees &amp; Payment section lets you change prices at any time. Unlike most terms of this kind it commits to no notice period at all — not 30 days, not one billing cycle. Combined with automatic renewal, a customer&#x27;s price can in principle change between one renewal and the next without warning. This is standard drafting and probably not how you behave, but it is the sort of clause a procurement reviewer flags, and nothing on the pricing page sets an expectation either way.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">Prices may be changed at any time, with no notice period stated</div>
+<blockquote>&ldquo;We may change prices at any time.&rdquo;</blockquote>
+<a href="https://savvycal.com/terms" target="_blank" rel="noopener">https://savvycal.com/terms</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">Subscriptions renew automatically unless cancelled before the period ends</div>
 <blockquote>&ldquo;Subscriptions will automatically renew for the same subscription period unless you cancel the account by the end of the then-current subscription period.&rdquo;</blockquote>
-<a href="https://savvycal.com/terms" target="_blank" rel="noopener">SavvyCal Terms of Use</a></div></div>
-<div class="caveat"><b>Worth knowing:</b> This is standard legal wording in the right place; the question is only whether the pricing page sets the same expectation. Detected by absence, so a condition stated in an image, a tooltip or a collapsed accordion on the pricing page would be missed.</div>
+<a href="https://savvycal.com/terms" target="_blank" rel="noopener">https://savvycal.com/terms</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> The two clauses combine into a commercial term — an automatically renewing subscription whose price can move without notice — that appears nowhere the buyer is asked to decide.</div><div><b>What would make this a non-issue:</b> This is ordinary legal boilerplate in the place boilerplate belongs, and your 30-day money back guarantee already gives customers a way out. We are flagging placement, not conduct.</div></div>
 </article>
 
 <h2>How to read these</h2><div class="legend"><div><b>Missing information</b> — Something that changes the deal, published somewhere the buyer will not look.</div></div>
 
 <h2>Pages we read</h2>
-<table><thead><tr><th>Page</th><th>Claims</th><th>Status</th></tr></thead>
+<table><thead><tr><th>Page</th><th>Words</th><th>Status</th></tr></thead>
 <tbody><tr><td><a href="https://savvycal.com/pricing" target="_blank" rel="noopener">
-Join thousands of happy customers</a><br><span class="tag">Pricing</span>
-</td>
-<td>6</td><td>read</td></tr><tr><td><a href="https://savvycal.com/signup" target="_blank" rel="noopener">
-SavvyCal Meetings</a><br><span class="tag">Trial / signup</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://savvycal.com/integrations-directory" target="_blank" rel="noopener">
-Integrations</a><br><span class="tag">Add-ons</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://docs.savvycal.com/" target="_blank" rel="noopener">
-How can we help?</a><br><span class="tag">Help centre</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://developers.savvycal.com/" target="_blank" rel="noopener">
-SavvyCal Meetings Developer Docs</a><br><span class="tag">Documentation</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://savvycal.com/terms" target="_blank" rel="noopener">
-SavvyCal Terms of Use</a><br><span class="tag">Terms</span>
-</td>
-<td>2</td><td>read</td></tr><tr><td><a href="https://savvycal.com/time-zone-api" target="_blank" rel="noopener">
-Free Time Zone API by SavvyCal</a><br><span class="tag">Documentation</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://savvycal.com/faq" target="_blank" rel="noopener">
-https://savvycal.com/faq</a><br><span class="tag">FAQ</span>
-</td>
-<td>&mdash;</td><td>failed &mdash; HTTP 404</td></tr><tr><td><a href="https://developers.savvycal.com/category/rest-api" target="_blank" rel="noopener">
-REST API</a><br><span class="tag">Documentation</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://savvycal.com/eula" target="_blank" rel="noopener">
-SavvyCal End User License Agreement for Downloadable Tools</a><br><span class="tag">Terms</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://developers.savvycal.com/authentication" target="_blank" rel="noopener">
-Authentication</a><br><span class="tag">Help centre</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://developers.savvycal.com/webhooks" target="_blank" rel="noopener">
-Webhooks</a><br><span class="tag">Help centre</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://docs.savvycal.com/category/5-integrations" target="_blank" rel="noopener">
-Integrations</a><br><span class="tag">Add-ons</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://docs.savvycal.com/category/7-usage" target="_blank" rel="noopener">
-Use Cases</a><br><span class="tag">Usage limits</span>
-</td>
-<td></td><td>read</td></tr><tr><td><a href="https://savvycal.com/help" target="_blank" rel="noopener">
-https://savvycal.com/help</a><br><span class="tag">Help centre</span>
-</td>
-<td>&mdash;</td><td>failed &mdash; HTTP 404</td></tr><tr><td><a href="https://savvycal.com/docs" target="_blank" rel="noopener">
-https://savvycal.com/docs</a><br><span class="tag">Documentation</span>
-</td>
-<td>&mdash;</td><td>failed &mdash; HTTP 404</td></tr></tbody></table>
+Plans &amp; Pricing · SavvyCal</a><br><span class="tag">Pricing page</span></td><td>179</td>
+<td>read</td></tr><tr><td><a href="https://savvycal.com/signup" target="_blank" rel="noopener">
+Sign Up for SavvyCal</a><br><span class="tag">Trial / signup</span><span class="tag">too little text to read</span></td><td>54</td>
+<td>read</td></tr><tr><td><a href="https://savvycal.com/integrations-directory" target="_blank" rel="noopener">
+Integrations · SavvyCal</a><br><span class="tag">Add-ons &amp; integrations</span></td><td>303</td>
+<td>read</td></tr><tr><td><a href="https://docs.savvycal.com/" target="_blank" rel="noopener">
+Meetings Help</a><br><span class="tag">Help centre</span><span class="tag">too little text to read</span></td><td>58</td>
+<td>read</td></tr><tr><td><a href="https://developers.savvycal.com/" target="_blank" rel="noopener">
+SavvyCal Meetings Platform | SavvyCal Meetings</a><br><span class="tag">Product documentation</span></td><td>152</td>
+<td>read</td></tr><tr><td><a href="https://savvycal.com/terms" target="_blank" rel="noopener">
+SavvyCal Terms of Use</a><br><span class="tag">Terms / legal</span></td><td>2725</td>
+<td>read</td></tr><tr><td><a href="https://savvycal.com/time-zone-api" target="_blank" rel="noopener">
+Free Time Zone API Â· SavvyCal</a><br><span class="tag">Product documentation</span></td><td>208</td>
+<td>read</td></tr><tr><td><a href="https://developers.savvycal.com/category/rest-api" target="_blank" rel="noopener">
+REST API | SavvyCal Meetings</a><br><span class="tag">Product documentation</span><span class="tag">too little text to read</span></td><td>33</td>
+<td>read</td></tr><tr><td><a href="https://savvycal.com/eula" target="_blank" rel="noopener">
+SavvyCal End User License Agreement for Downloadable Tools</a><br><span class="tag">Terms / legal</span></td><td>557</td>
+<td>read</td></tr><tr><td><a href="https://developers.savvycal.com/authentication" target="_blank" rel="noopener">
+Authentication | SavvyCal Meetings</a><br><span class="tag">Help centre</span></td><td>601</td>
+<td>read</td></tr><tr><td><a href="https://developers.savvycal.com/webhooks" target="_blank" rel="noopener">
+Webhooks | SavvyCal Meetings</a><br><span class="tag">Help centre</span></td><td>679</td>
+<td>read</td></tr><tr><td><a href="https://docs.savvycal.com/category/5-integrations" target="_blank" rel="noopener">
+Integrations - Meetings Help</a><br><span class="tag">Add-ons &amp; integrations</span><span class="tag">too little text to read</span></td><td>89</td>
+<td>read</td></tr><tr><td><a href="https://docs.savvycal.com/category/7-usage" target="_blank" rel="noopener">
+Use Cases - Meetings Help</a><br><span class="tag">Usage limits / quotas</span><span class="tag">too little text to read</span></td><td>89</td>
+<td>read</td></tr><tr><td>https://savvycal.com/faq<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>HTTP 404</td></tr><tr><td>https://savvycal.com/help<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>HTTP 404</td></tr><tr><td>https://savvycal.com/docs<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>HTTP 404</td></tr></tbody></table>
 
 <div class="close"><h2>These are the promises your customers can see. Do your billing system and product deliver the same thing?</h2><p>This audit only reads what is published on your website. It cannot see what your billing system actually meters, what your product actually enforces, or what your customer records actually entitle people to. In most companies those three answers have drifted apart quietly, and the public pages are the only place the drift is visible from outside. If the contradictions above are news to you, the more expensive question is what else is out of step behind them.</p></div>
-<footer>Automated read of public pages only. Every finding is shown with the quote it came from
-so you can check it yourself in a minute. No login, no billing data, no customer records were
-involved.</footer>
+<footer>Automated read of public pages only, then checked: every quote above was located in
+the page it is attributed to, and
+0 candidate finding(s) were discarded because their evidence
+could not be verified. No login, no billing data and no customer records were involved.</footer>
 </div></body></html>

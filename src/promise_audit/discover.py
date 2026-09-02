@@ -14,54 +14,64 @@ from .fetcher import Fetcher, canonical_url, registered_domain
 # Each category carries URL-path signals and anchor-text signals.
 CATEGORIES: dict[str, dict] = {
     "pricing": {
+        "label": "Pricing page",
         "weight": 100,
         "path": ["pricing", "prices", "plans", "plans-and-pricing", "pricing-plans", "buy", "subscribe"],
         "anchor": ["pricing", "plans", "price", "see pricing", "view plans"],
     },
     "compare": {
+        "label": "Plan comparison",
         "weight": 70,
         "path": ["compare", "plan-comparison", "compare-plans", "editions", "which-plan", "feature-comparison"],
         "anchor": ["compare plans", "plan comparison", "compare editions", "which plan"],
     },
     "limits": {
+        "label": "Usage limits / quotas",
         "weight": 85,
         "path": ["limits", "quota", "quotas", "rate-limit", "rate-limits", "usage", "usage-limits",
                  "fair-use", "fair-usage", "allowance", "credits", "seats", "overage"],
         "anchor": ["limits", "usage limits", "rate limits", "quotas", "fair use", "credits", "overage"],
     },
     "billing_docs": {
+        "label": "Billing & subscription help",
         "weight": 90,
         "path": ["billing", "subscription", "subscriptions", "invoice", "invoices", "payment",
                  "manage-plan", "change-plan", "upgrade", "downgrade", "cancel", "refund"],
         "anchor": ["billing", "subscription", "manage your plan", "upgrade", "cancel", "refund"],
     },
     "trial": {
+        "label": "Trial / signup",
         "weight": 80,
         "path": ["trial", "free-trial", "start-free", "signup", "sign-up", "get-started",
                  "register"],
         "anchor": ["free trial", "start free", "sign up", "get started", "try free"],
     },
     "addons": {
+        "label": "Add-ons & integrations",
         "weight": 75,
         "path": ["add-on", "add-ons", "addon", "addons", "extras", "marketplace", "apps", "integrations"],
         "anchor": ["add-ons", "add ons", "extras", "integrations"],
     },
     "faq": {
+        "label": "FAQ",
         "weight": 80,
         "path": ["faq", "faqs", "frequently-asked", "questions"],
         "anchor": ["faq", "faqs", "frequently asked questions"],
     },
     "help": {
+        "label": "Help centre",
         "weight": 60,
         "path": ["help", "support", "knowledge-base", "kb", "hc", "articles", "guides"],
         "anchor": ["help", "help centre", "help center", "support", "knowledge base"],
     },
     "docs": {
+        "label": "Product documentation",
         "weight": 55,
         "path": ["docs", "documentation", "developers", "developer", "api", "reference", "manual"],
         "anchor": ["docs", "documentation", "developers", "api reference"],
     },
     "terms": {
+        "label": "Terms / legal",
         "weight": 45,
         "path": ["terms", "tos", "terms-of-service", "terms-and-conditions", "legal",
                  "service-agreement", "msa", "eula", "aup", "acceptable-use"],

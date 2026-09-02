@@ -1,0 +1,93 @@
+{
+  "company": "Knock",
+  "plans": [
+    {"name": "Developer", "headline_price": "$0 / month", "billing_periods": ["free"],
+     "evidence": {"quote": "For testing and evaluation, or small-scale deployments.", "url": "https://knock.app/pricing"}},
+    {"name": "Starter", "headline_price": "$250 / month", "billing_periods": ["monthly"],
+     "evidence": {"quote": "For teams looking to start scaling cross-channel notifications.", "url": "https://knock.app/pricing"}},
+    {"name": "Enterprise", "headline_price": "Contact us", "billing_periods": ["custom"],
+     "evidence": {"quote": "For organizations with high volume, security, control, or support needs.", "url": "https://knock.app/pricing"}}
+  ],
+  "promises": [
+    {"kind": "plan_price", "statement": "Developer is free", "plan": "Developer",
+     "evidence": {"quote": "$ 0 / month", "url": "https://knock.app/pricing"}},
+    {"kind": "plan_price", "statement": "Starter is $250 a month", "plan": "Starter",
+     "evidence": {"quote": "$ 250 / month", "url": "https://knock.app/pricing"}},
+    {"kind": "limit", "statement": "Developer includes up to 10,000 messages; Starter 50,000 then $.005 each", "plan": null,
+     "evidence": {"quote": "50,000 $.005 per additional message sent.", "url": "https://knock.app/pricing"}},
+    {"kind": "limit", "statement": "Starter includes 2,500 guide active users, then $.05 per additional active user", "plan": "Starter",
+     "evidence": {"quote": "2,500 $.05 per additional active user.", "url": "https://knock.app/pricing"}},
+    {"kind": "limit", "statement": "Developer includes 500 AI agent credits and Starter 2,000, at $.01 per additional credit", "plan": null,
+     "evidence": {"quote": "500 $.01 per additional credit.", "url": "https://knock.app/pricing"}},
+    {"kind": "unlimited", "statement": "Notification channels are unlimited on every plan", "plan": null,
+     "evidence": {"quote": "Notification channels | Unlimited | Unlimited | Unlimited", "url": "https://knock.app/pricing"}},
+    {"kind": "unlimited", "statement": "Team members are unlimited on every plan", "plan": null,
+     "evidence": {"quote": "Unlimited team members", "url": "https://knock.app/pricing"}},
+    {"kind": "unlimited", "statement": "Workflow triggers are unlimited on every plan", "plan": null,
+     "evidence": {"quote": "Workflow triggers | Unlimited | Unlimited | Unlimited", "url": "https://knock.app/pricing"}},
+    {"kind": "unlimited", "statement": "Feed retention is unlimited on every plan", "plan": null,
+     "evidence": {"quote": "The number of days a message stays in your users' feeds. No limit, but can be configured.", "url": "https://knock.app/pricing"}},
+    {"kind": "limit", "statement": "Log retention is 30 days on Developer and Starter, 90 days on Enterprise", "plan": null,
+     "evidence": {"quote": "Log retention | 30-day retention | 30-day retention | 90-day retention", "url": "https://knock.app/pricing"}},
+    {"kind": "entitlement", "statement": "A 99.9% uptime SLA is listed for both the free Developer plan and Starter", "plan": null,
+     "evidence": {"quote": "Uptime SLA | 99.9% | 99.9% | Contact us", "url": "https://knock.app/pricing"}},
+    {"kind": "condition", "statement": "Notifications are not hard capped when the free plan limit is exceeded", "plan": "Developer",
+     "evidence": {"quote": "We don't hard cap your notifications.", "url": "https://knock.app/pricing"}},
+    {"kind": "condition", "statement": "Volume discounts are available only on the Enterprise plan", "plan": "Enterprise",
+     "evidence": {"quote": "We do! But only on our enterprise plan.", "url": "https://knock.app/pricing"}},
+    {"kind": "condition", "statement": "Usage overages are billed in arrears on the following month's invoice", "plan": null,
+     "evidence": {"quote": "We bill usage overages in arrears, so any usage you incur in a month will show up on your next month's invoice.", "url": "https://knock.app/pricing"}},
+    {"kind": "condition", "statement": "Customers still pay their downstream providers such as Postmark and Twilio separately", "plan": null,
+     "evidence": {"quote": "Yes. We do not currently manage billing for the downstream platform providers that deliver your notifications.", "url": "https://knock.app/pricing"}},
+    {"kind": "condition", "statement": "Enterprise customers without guides in their agreement default to Starter's 2,500 active users", "plan": "Enterprise",
+     "evidence": {"quote": "you'll have the same guides limit as our Starter plan: 2,500 active users a month", "url": "https://knock.app/pricing"}},
+    {"kind": "limit", "statement": "Every API endpoint is rate limited on a five-tier scale from 1 to 1,000 requests per second", "plan": null,
+     "evidence": {"quote": "Each endpoint in the Knock API is rate limited.", "url": "https://docs.knock.app/api-reference/overview/rate-limits"}}
+  ],
+  "findings": [
+    {
+      "type": "missing_information",
+      "severity": "medium",
+      "confidence": "high",
+      "headline": "Enterprise customers get the same guides allowance as the $250 Starter plan, and only the FAQ says so",
+      "explanation": "In your comparison table the Enterprise column for guide active users says \"Contact us\", alongside a note about volume discounts. Every reasonable reading of that is \"this number is negotiated, and it will be bigger than Starter's\". An FAQ answer near the bottom of the same page says something different: unless guides were explicitly written into the enterprise agreement, an Enterprise customer gets 2,500 active users a month — exactly what Starter includes for $250. A customer paying well above Starter, who assumed guides scaled with their contract, finds out when you ask them to get in touch mid-quarter.",
+      "claim_a": {
+        "statement": "The Enterprise guides allowance is presented as something to negotiate, with volume discounts available",
+        "quote": "Contact us Volume-based discounts and monthly notified user pricing available.",
+        "url": "https://knock.app/pricing"
+      },
+      "claim_b": {
+        "statement": "Enterprise defaults to the Starter allowance of 2,500 guide active users a month",
+        "quote": "you'll have the same guides limit as our Starter plan: 2,500 active users a month",
+        "url": "https://knock.app/pricing"
+      },
+      "why_not_just_wording": "\"Contact us\" invites the reader to assume a negotiated, larger number, while the FAQ states a specific default equal to the tier below — that is a fact about the deal, not a phrasing choice.",
+      "caveat": "The FAQ is on the same page as the table, so a thorough reader will find it. It is 40 rows below, under a question addressed to existing Enterprise customers rather than to buyers, and the table itself gives no hint that a default exists."
+    },
+    {
+      "type": "ambiguity",
+      "severity": "medium",
+      "confidence": "high",
+      "headline": "Your pricing page says workflow triggers are unlimited on every plan; your API reference rate limits every endpoint",
+      "explanation": "\"Unlimited\" appears against workflow triggers, notification workflows, channels and recipients for all three plans, including the free one. Triggering a workflow is an API call, and your API reference states plainly that every endpoint is rate limited, on a five-tier scale that starts at one request per second, and returns a 429 when exceeded. The two statements are compatible — a rate limit caps the rate, not the total — but the pricing page does not say so, and the rate-limit tiers are never mapped to plans or to specific endpoints, so a developer sizing a launch cannot work out what throughput they have actually bought.",
+      "claim_a": {
+        "statement": "Workflow triggers are unlimited on every plan, including the free one",
+        "quote": "Workflow triggers | Unlimited | Unlimited | Unlimited",
+        "url": "https://knock.app/pricing"
+      },
+      "claim_b": {
+        "statement": "Every API endpoint is rate limited on a tier scale beginning at one request per second, returning 429 when exceeded",
+        "quote": "Each endpoint in the Knock API is rate limited. Knock uses a tier system to determine the rate limit scale for each endpoint.",
+        "url": "https://docs.knock.app/api-reference/overview/rate-limits"
+      },
+      "why_not_just_wording": "\"Unlimited triggers\" and \"one to a thousand requests per second depending on an unpublished endpoint tier\" answer the same buyer question — how much can I send — with different numbers.",
+      "caveat": "This is a clarity problem, not a broken promise: rate limits and volume allowances genuinely are different, and your docs invite customers to ask for a higher rate. Naming which tier the trigger endpoint sits in would resolve it in one line."
+    }
+  ],
+  "coverage_notes": {
+    "unusable_pages": [
+      "https://dashboard.knock.app/signup (blocked by robots.txt)"
+    ],
+    "what_was_not_checkable": "We deliberately did not report the rate-limit tier table appearing on two documentation pages with different numbers in view — it is one table of endpoint scales reproduced on both pages, not two conflicting limits, and an automated reader could easily mistake it for a contradiction. We could not check which tier any given endpoint belongs to, since that mapping is not on the pages we read. Your pricing table promises unlimited feed retention while the API reference refers to data 'subject to deletion according to the data retention policy associated with your account'; the retention policy page was not reachable from our crawl, so we could not tell whether these describe the same data and did not report it. The signup page is blocked by robots.txt, so we could not check trial or card-requirement terms."
+  }
+}

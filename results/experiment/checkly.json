@@ -1,636 +1,458 @@
 {
   "company": "Checkly",
-  "root_url": "https://www.checklyhq.com/",
-  "domain": "checklyhq.com",
-  "started_at": "2026-09-02 07:43:01 UTC",
-  "duration_seconds": 4.6,
-  "pages": [
+  "plans": [
     {
-      "url": "https://www.checklyhq.com/pricing",
-      "final_url": "https://www.checklyhq.com/pricing/",
-      "title": "Reliability starts with a plan",
-      "category": "pricing",
-      "why_selected": "url path contains 'pricing'; link text 'pricing'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 3131,
-      "claim_count": 14
+      "name": "Hobby",
+      "headline_price": "$0 per month",
+      "billing_periods": [
+        "free"
+      ],
+      "evidence": {
+        "quote": "Perfect for personal projects and learning",
+        "url": "https://www.checklyhq.com/pricing"
+      },
+      "evidence_verified": true
     },
     {
-      "url": "https://app.checklyhq.com/signup",
-      "final_url": "https://app.checklyhq.com/signup",
-      "title": "",
-      "category": "trial",
-      "why_selected": "url path contains 'signup'; link text 'get started'",
-      "discovered_via": "linked from pricing page https://www.checklyhq.com/pricing",
-      "status": null,
-      "ok": false,
-      "error": "blocked by robots.txt",
-      "rendered": false,
-      "word_count": 0,
-      "claim_count": 0
+      "name": "Starter",
+      "headline_price": "$24 per month, billed annually",
+      "billing_periods": [
+        "monthly",
+        "annual"
+      ],
+      "evidence": {
+        "quote": "$ 24 per month, billed annually",
+        "url": "https://www.checklyhq.com/pricing"
+      },
+      "evidence_verified": true
     },
     {
-      "url": "https://www.checklyhq.com/docs/integrations/alerts/discord",
-      "final_url": "https://www.checklyhq.com/docs/integrations/alerts/discord/",
-      "title": "Send Alerts to Discord",
-      "category": "addons",
-      "why_selected": "url path contains 'integrations'; link text 'all integrations'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 329,
-      "claim_count": 0
+      "name": "Team",
+      "headline_price": "$64 per month, billed annually",
+      "billing_periods": [
+        "monthly",
+        "annual"
+      ],
+      "evidence": {
+        "quote": "$ 64 per month, billed annually",
+        "url": "https://www.checklyhq.com/pricing"
+      },
+      "evidence_verified": true
     },
     {
-      "url": "https://www.checklyhq.com/support",
-      "final_url": "https://www.checklyhq.com/support/",
-      "title": "How to get help with Checkly",
-      "category": "help",
-      "why_selected": "url path contains 'support'; link text 'support'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 779,
-      "claim_count": 1
-    },
-    {
-      "url": "https://www.checklyhq.com/docs",
-      "final_url": "https://www.checklyhq.com/docs/",
-      "title": "Checkly Documentation",
-      "category": "docs",
-      "why_selected": "url path contains 'docs'; link text 'documentation learn key concepts and fea'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 290,
-      "claim_count": 0
-    },
-    {
-      "url": "https://www.checklyhq.com/solutions/developers",
-      "final_url": "https://www.checklyhq.com/solutions/developers/",
-      "title": "Monitoring that works like your code does",
-      "category": "docs",
-      "why_selected": "url path contains 'developers'; link text 'developers checks in typescript, in your'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 2653,
-      "claim_count": 3
-    },
-    {
-      "url": "https://www.checklyhq.com/docs/cli",
-      "final_url": "https://www.checklyhq.com/docs/cli/overview/",
-      "title": "Checkly CLI",
-      "category": "docs",
-      "why_selected": "url path contains 'docs'; link text 'read cli docs'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 263,
-      "claim_count": 0
-    },
-    {
-      "url": "https://www.checklyhq.com/terms",
-      "final_url": "https://www.checklyhq.com/terms/",
-      "title": "Terms of use",
-      "category": "terms",
-      "why_selected": "url path contains 'terms'; link text 'terms of use'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 2569,
-      "claim_count": 1
-    },
-    {
-      "url": "https://www.checklyhq.com/docs/integrations/alerts/slack",
-      "final_url": "https://www.checklyhq.com/docs/integrations/alerts/slack/",
-      "title": "Slack",
-      "category": "addons",
-      "why_selected": "url path contains 'integrations'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 393,
-      "claim_count": 3
-    },
-    {
-      "url": "https://www.checklyhq.com/docs/guides/overview",
-      "final_url": "https://www.checklyhq.com/docs/guides/overview/",
-      "title": "Guides to Using Checkly",
-      "category": "help",
-      "why_selected": "url path contains 'guides'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 413,
-      "claim_count": 0
-    },
-    {
-      "url": "https://www.checklyhq.com/faq",
-      "final_url": "https://www.checklyhq.com/faq/",
-      "title": "",
-      "category": "faq",
-      "why_selected": "url path contains 'faq' (guessed conventional path, not linked)",
-      "discovered_via": "conventional path guess",
-      "status": 404,
-      "ok": false,
-      "error": "HTTP 404",
-      "rendered": false,
-      "word_count": 0,
-      "claim_count": 0
-    },
-    {
-      "url": "https://www.checklyhq.com/help",
-      "final_url": "https://www.checklyhq.com/help/",
-      "title": "",
-      "category": "help",
-      "why_selected": "url path contains 'help' (guessed conventional path, not linked)",
-      "discovered_via": "conventional path guess",
-      "status": 404,
-      "ok": false,
-      "error": "HTTP 404",
-      "rendered": false,
-      "word_count": 0,
-      "claim_count": 0
-    },
-    {
-      "url": "https://www.checklyhq.com/docs/llms.txt",
-      "final_url": "https://www.checklyhq.com/docs/llms.txt",
-      "title": "",
-      "category": "docs",
-      "why_selected": "url path contains 'docs'; link text '/docs/llms.txt'",
-      "discovered_via": "linked from docs hub https://www.checklyhq.com/docs",
-      "status": 200,
-      "ok": false,
-      "error": "skipped: content-type text/plain; charset=utf-8",
-      "rendered": false,
-      "word_count": 0,
-      "claim_count": 0
-    },
-    {
-      "url": "https://www.checklyhq.com/docs/what-is-checkly",
-      "final_url": "https://www.checklyhq.com/docs/what-is-checkly/",
-      "title": "What is Checkly?",
-      "category": "docs",
-      "why_selected": "url path contains 'docs'; link text 'docs'",
-      "discovered_via": "linked from docs hub https://www.checklyhq.com/docs",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 342,
-      "claim_count": 0
-    },
-    {
-      "url": "https://www.checklyhq.com/docs/api-reference/overview",
-      "final_url": "https://www.checklyhq.com/docs/api-reference/overview/",
-      "title": "Using the Checkly API",
-      "category": "docs",
-      "why_selected": "url path contains 'docs'; link text 'api docs build on the checkly rest api'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 287,
-      "claim_count": 0
-    },
-    {
-      "url": "https://developers.checklyhq.com/",
-      "final_url": "https://www.checklyhq.com/docs/",
-      "title": "Checkly Documentation",
-      "category": "docs",
-      "why_selected": "link text 'open api reference'; documentation subdomain 'developers.checklyhq.com'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 290,
-      "claim_count": 0
+      "name": "Enterprise",
+      "headline_price": "Custom",
+      "billing_periods": [
+        "custom"
+      ],
+      "evidence": {
+        "quote": "Custom solutions for large organizations",
+        "url": "https://www.checklyhq.com/pricing"
+      },
+      "evidence_verified": true
     }
   ],
-  "failures": [
+  "promises": [
     {
-      "url": "https://app.checklyhq.com/signup",
-      "category": "trial",
-      "reason": "blocked by robots.txt"
-    },
-    {
-      "url": "https://www.checklyhq.com/faq",
-      "category": "faq",
-      "reason": "HTTP 404"
-    },
-    {
-      "url": "https://www.checklyhq.com/help",
-      "category": "help",
-      "reason": "HTTP 404"
-    },
-    {
-      "url": "https://www.checklyhq.com/docs/llms.txt",
-      "category": "docs",
-      "reason": "skipped: content-type text/plain; charset=utf-8"
-    }
-  ],
-  "claims": [
-    {
-      "kind": "limit",
-      "page_url": "https://www.checklyhq.com/pricing",
-      "page_title": "Reliability starts with a plan",
-      "page_category": "pricing",
-      "evidence": "By signing up for the Hobby plan, you get access to almost all of Checkly\u2019s features. You do not need a credit card to get started. You get access to 10 Uptime Monitors and can execute up to 10,000 API and 1,000 Browser Check runs per month.",
-      "plan": "hobby",
-      "plan_raw": "Hobby",
-      "data": {
-        "metric": "credits",
-        "value": 1000.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "Browser Check runs",
-        "window": null,
-        "page_is_reference": false
+      "kind": "plan_price",
+      "statement": "Hobby is free",
+      "plan": "Hobby",
+      "evidence": {
+        "quote": "$ 0 per month",
+        "url": "https://www.checklyhq.com/pricing"
       },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
+      "evidence_verified": true
     },
     {
-      "kind": "limit",
-      "page_url": "https://www.checklyhq.com/pricing",
-      "page_title": "Reliability starts with a plan",
-      "page_category": "pricing",
-      "evidence": "For example, a check running every hour from 1 location would use 24 check runs a day. If it ran from 2 parallel locations, then that would be 48 runs/day. All retries would be added to that, i.e. 2 retries would result in 2 additional check runs.",
+      "kind": "plan_price",
+      "statement": "Starter is $24 per month",
+      "plan": "Starter",
+      "evidence": {
+        "quote": "$ 24 per month",
+        "url": "https://www.checklyhq.com/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "plan_price",
+      "statement": "Team is $64 per month",
+      "plan": "Team",
+      "evidence": {
+        "quote": "$ 64 per month",
+        "url": "https://www.checklyhq.com/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Annual billing saves up to 20%",
       "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "credits",
-        "value": 24.0,
-        "unit": "count",
-        "limit_kind": "rate",
-        "subject": "check runs",
-        "window": "day",
-        "page_is_reference": false
+      "evidence": {
+        "quote": "Monthly Annual Save up to 20 %",
+        "url": "https://www.checklyhq.com/pricing"
       },
-      "extractor": "rate_limit"
+      "evidence_verified": true
     },
     {
       "kind": "limit",
-      "page_url": "https://www.checklyhq.com/pricing",
-      "page_title": "Reliability starts with a plan",
-      "page_category": "pricing",
-      "evidence": "For example, a check running every hour from 1 location would use 24 check runs a day. If it ran from 2 parallel locations, then that would be 48 runs/day. All retries would be added to that, i.e. 2 retries would result in 2 additional check runs.",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "credits",
-        "value": 48.0,
-        "unit": "count",
-        "limit_kind": "rate",
-        "subject": "runs",
-        "window": "day",
-        "page_is_reference": false
+      "statement": "Hobby includes 10 uptime monitors",
+      "plan": "Hobby",
+      "evidence": {
+        "quote": "## Uptime Monitors\n10",
+        "url": "https://www.checklyhq.com/pricing"
       },
-      "extractor": "rate_limit"
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Hobby includes 1,000 browser/Playwright checks and 10,000 API checks",
+      "plan": "Hobby",
+      "evidence": {
+        "quote": "Browser/Playwright Checks 1,000",
+        "url": "https://www.checklyhq.com/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Included browser check runs are 1,000, 3,000 and 12,000 per month across the plans",
+      "plan": null,
+      "evidence": {
+        "quote": "The total number of browser check or Playwright check suite executions included per month.",
+        "url": "https://www.checklyhq.com/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Included API check runs are 10,000, 25,000 and 100,000 per month across the plans",
+      "plan": null,
+      "evidence": {
+        "quote": "The total number of API check executions included per month.",
+        "url": "https://www.checklyhq.com/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "addon",
+      "statement": "Additional uptime monitors are sold in blocks of 25 at $8",
+      "plan": null,
+      "evidence": {
+        "quote": "Purchase additional monitors in blocks of 25 to scale beyond the included amount.",
+        "url": "https://www.checklyhq.com/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Extra browser check runs can be pre-purchased at $4.00 per 1k",
+      "plan": null,
+      "evidence": {
+        "quote": "$4.00 per 1k",
+        "url": "https://www.checklyhq.com/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Exceeding purchased browser check runs is charged automatically at a higher per-1k rate",
+      "plan": null,
+      "evidence": {
+        "quote": "The per-1k cost charged automatically when you exceed your purchased browser check runs.",
+        "url": "https://www.checklyhq.com/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Exceeding purchased API check runs is charged automatically at a higher per-10k rate",
+      "plan": null,
+      "evidence": {
+        "quote": "The per-10k cost charged automatically when you exceed your purchased API check runs.",
+        "url": "https://www.checklyhq.com/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Check run results, logs and traces are retained for 7, 30 or 180 days depending on plan",
+      "plan": null,
+      "evidence": {
+        "quote": "How long individual check run results, logs, and traces are stored before being purged.",
+        "url": "https://www.checklyhq.com/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "SMS alert credits are 0, 100/month and 200/month across the plans",
+      "plan": null,
+      "evidence": {
+        "quote": "Receive alert notifications via text message. The number shown is your included monthly SMS credits.",
+        "url": "https://www.checklyhq.com/pricing"
+      },
+      "evidence_verified": true
     },
     {
       "kind": "entitlement",
-      "page_url": "https://www.checklyhq.com/pricing",
-      "page_title": "Reliability starts with a plan",
-      "page_category": "pricing",
-      "evidence": "These are available in Team and Enterprise plans.",
-      "plan": "team and enterprise",
-      "plan_raw": "Team and Enterprise",
-      "data": {
-        "feature": "These",
-        "page_is_reference": false
+      "statement": "Enterprise adds premium support, guided onboarding, a dedicated Customer Success Engineer and 24x7 phone escalation",
+      "plan": "Enterprise",
+      "evidence": {
+        "quote": "Enterprise plans add a support layer on top of everything above.",
+        "url": "https://www.checklyhq.com/support"
       },
-      "extractor": "prose_entitlement"
+      "evidence_verified": true
     },
     {
       "kind": "entitlement",
-      "page_url": "https://www.checklyhq.com/pricing",
-      "page_title": "Reliability starts with a plan",
-      "page_category": "pricing",
-      "evidence": "The Hobby plan is hard-capped at 10k API and 1k Browser Check runs. If you need more, upgrade to the Starter or Team plan.",
-      "plan": "starter or team",
-      "plan_raw": "Starter or Team",
-      "data": {
-        "feature": "The Hobby plan is hard-capped at 10k API and 1k Browser Check runs. If you need more",
-        "page_is_reference": false
+      "statement": "Enterprise offers custom contracts and invoicing",
+      "plan": "Enterprise",
+      "evidence": {
+        "quote": "Custom contracts and invoicing options tailored to your organization's procurement needs.",
+        "url": "https://www.checklyhq.com/pricing"
       },
-      "extractor": "prose_entitlement"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://www.checklyhq.com/pricing",
-      "page_title": "Reliability starts with a plan",
-      "page_category": "pricing",
-      "evidence": "The Hobby plan is hard-capped at 10k API and 1k Browser Check runs . We will stop running your checks when your credits are exhausted. If you need more, upgrade to the Starter or Team plan.",
-      "plan": "starter or team",
-      "plan_raw": "Starter or Team",
-      "data": {
-        "feature": "t 10k API and 1k Browser Check runs . We will stop running your checks when your credits are exhausted. If you need more",
-        "page_is_reference": false
-      },
-      "extractor": "prose_entitlement"
-    },
-    {
-      "kind": "plan_mention",
-      "page_url": "https://www.checklyhq.com/pricing",
-      "page_title": "Reliability starts with a plan",
-      "page_category": "pricing",
-      "evidence": "pricing page heading 'Hobby'",
-      "plan": "hobby",
-      "plan_raw": "Hobby",
-      "data": {
-        "source": "heading",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_heading"
-    },
-    {
-      "kind": "plan_mention",
-      "page_url": "https://www.checklyhq.com/pricing",
-      "page_title": "Reliability starts with a plan",
-      "page_category": "pricing",
-      "evidence": "pricing page heading 'Starter'",
-      "plan": "starter",
-      "plan_raw": "Starter",
-      "data": {
-        "source": "heading",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_heading"
-    },
-    {
-      "kind": "plan_mention",
-      "page_url": "https://www.checklyhq.com/pricing",
-      "page_title": "Reliability starts with a plan",
-      "page_category": "pricing",
-      "evidence": "pricing page heading 'Team'",
-      "plan": "team",
-      "plan_raw": "Team",
-      "data": {
-        "source": "heading",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_heading"
-    },
-    {
-      "kind": "plan_mention",
-      "page_url": "https://www.checklyhq.com/pricing",
-      "page_title": "Reliability starts with a plan",
-      "page_category": "pricing",
-      "evidence": "pricing page heading 'Enterprise'",
-      "plan": "enterprise",
-      "plan_raw": "Enterprise",
-      "data": {
-        "source": "heading",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_heading"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://www.checklyhq.com/pricing",
-      "page_title": "Reliability starts with a plan",
-      "page_category": "pricing",
-      "evidence": "Multi-Factor Auth Add an extra layer of security to your account with multi-factor authentication (MFA).",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "Multi-Factor Auth Add an extra layer of security to your account with multi-factor authentication (M",
-        "amount": null,
-        "currency": null,
-        "page_is_reference": false
-      },
-      "extractor": "addon_mention"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://www.checklyhq.com/pricing",
-      "page_title": "Reliability starts with a plan",
-      "page_category": "pricing",
-      "evidence": "On our Enterprise plan, these are available as add-ons and can be purchased separately.",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "On our Enterprise plan, these are available as add-ons and can be purchased separately.",
-        "amount": null,
-        "currency": null,
-        "page_is_reference": false
-      },
-      "extractor": "addon_mention"
-    },
-    {
-      "kind": "condition",
-      "page_url": "https://www.checklyhq.com/pricing",
-      "page_title": "Reliability starts with a plan",
-      "page_category": "pricing",
-      "evidence": "Start for free Book a demo Talk to Sales Monitoring as Code",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "contact_sales",
-        "description": "pricing only available by contacting sales",
-        "page_is_reference": false
-      },
-      "extractor": "condition_contact_sales"
-    },
-    {
-      "kind": "condition",
-      "page_url": "https://www.checklyhq.com/pricing",
-      "page_title": "Reliability starts with a plan",
-      "page_category": "pricing",
-      "evidence": "If you exceed the amount included in your plan, we'll continue running your checks at the overage pricing.",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "overage",
-        "description": "charges or cut-offs once an allowance is exceeded",
-        "page_is_reference": false
-      },
-      "extractor": "condition_overage"
-    },
-    {
-      "kind": "condition",
-      "page_url": "https://www.checklyhq.com/support",
-      "page_title": "How to get help with Checkly",
-      "page_category": "help",
-      "evidence": "Start for free Book a demo Talk to Sales Monitoring as Code",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "contact_sales",
-        "description": "pricing only available by contacting sales",
-        "page_is_reference": false
-      },
-      "extractor": "condition_contact_sales"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://www.checklyhq.com/solutions/developers",
-      "page_title": "Monitoring that works like your code does",
-      "page_category": "docs",
-      "evidence": "9 url : new URL ( process . env . SLACK_WEBHOOK_URL ! ) ,",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "domains",
-        "value": 9.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "url",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://www.checklyhq.com/solutions/developers",
-      "page_title": "Monitoring that works like your code does",
-      "page_category": "docs",
-      "evidence": "36 url : 'acme-status' ,",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "domains",
-        "value": 36.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "url",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "condition",
-      "page_url": "https://www.checklyhq.com/solutions/developers",
-      "page_title": "Monitoring that works like your code does",
-      "page_category": "docs",
-      "evidence": "Start for free Book a demo Talk to Sales Monitoring as Code",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "contact_sales",
-        "description": "pricing only available by contacting sales",
-        "page_is_reference": false
-      },
-      "extractor": "condition_contact_sales"
-    },
-    {
-      "kind": "condition",
-      "page_url": "https://www.checklyhq.com/terms",
-      "page_title": "Terms of use",
-      "page_category": "terms",
-      "evidence": "Start for free Book a demo Talk to Sales Monitoring as Code",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "contact_sales",
-        "description": "pricing only available by contacting sales",
-        "page_is_reference": false
-      },
-      "extractor": "condition_contact_sales"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://www.checklyhq.com/docs/integrations/alerts/slack",
-      "page_title": "Slack",
-      "page_category": "addons",
-      "evidence": "Reads previous messages in threads for extra context",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "Reads previous messages in threads for extra context",
-        "amount": null,
-        "currency": null,
-        "page_is_reference": false
-      },
-      "extractor": "addon_mention"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://www.checklyhq.com/docs/integrations/alerts/slack",
-      "page_title": "Slack",
-      "page_category": "addons",
-      "evidence": "Reads previous messages in private channels for extra context",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "Reads previous messages in private channels for extra context",
-        "amount": null,
-        "currency": null,
-        "page_is_reference": false
-      },
-      "extractor": "addon_mention"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://www.checklyhq.com/docs/integrations/alerts/slack",
-      "page_title": "Slack",
-      "page_category": "addons",
-      "evidence": "Accesses direct message history for extra context",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "Accesses direct message history for extra context",
-        "amount": null,
-        "currency": null,
-        "page_is_reference": false
-      },
-      "extractor": "addon_mention"
+      "evidence_verified": true
     }
   ],
   "findings": [],
-  "discovery_notes": [],
-  "pricing_urls": [
-    "https://www.checklyhq.com/pricing"
-  ],
-  "stats": {
-    "pages_selected": 12,
-    "pages_fetched_ok": 12,
-    "pages_failed": 4,
-    "pages_js_rendered": 0,
-    "urls_considered": 39,
-    "claims": 22,
-    "claims_by_kind": {
-      "limit": 5,
-      "addon": 5,
-      "condition": 5,
-      "plan_mention": 4,
-      "entitlement": 3
+  "coverage_notes": {
+    "unusable_pages": [],
+    "what_was_not_checkable": "Nothing on the pages we read contradicts anything else, and this is a genuinely tidy set of pages: the pricing page publishes included volumes, the pre-purchase rate AND the higher automatic overage rate for both check types, retention periods, SMS credits and seat counts inline, which is more than most companies disclose anywhere. Two caveats on coverage. First, the plan comparison is built from styled divs rather than a real table, so when flattened to text the per-plan values lose their column alignment; we could read the numbers but not always which plan each belongs to, so most allowances above are recorded without a plan. Second, discovery found no billing or usage-limit help article \u2014 the other pages we reached are product documentation and integration guides that make no commercial claims \u2014 so there was little opportunity for the documentation to disagree with the pricing page. A tidier way to say it: we found nothing wrong, but we also had less to compare than at most companies. The 'Try for Free' button on Starter is not explained anywhere we read: no trial length, and no statement about whether a card is required."
+  },
+  "backend": "agent",
+  "verification": {
+    "findings_in": 0,
+    "findings_out": 0,
+    "findings_rejected": 0,
+    "quotes_checked": 20,
+    "quotes_failed": 0,
+    "url_corrections": 0,
+    "rejections": []
+  },
+  "source": {
+    "root_url": "https://www.checklyhq.com/",
+    "domain": "checklyhq.com",
+    "harvested_at": "2026-09-02 07:57:14 UTC",
+    "stats": {
+      "pages_selected": 12,
+      "pages_fetched_ok": 12,
+      "pages_usable": 10,
+      "pages_failed": 4,
+      "pages_js_rendered": 0,
+      "urls_considered": 39,
+      "dossier_chars": 25865,
+      "harvest_seconds": 4.3,
+      "fetcher": {
+        "network": 4,
+        "cache": 16,
+        "rendered": 0,
+        "blocked": 1,
+        "failed": 3
+      }
     },
-    "findings": 0,
-    "findings_by_severity": {},
-    "findings_by_confidence": {},
-    "findings_by_kind": {},
-    "fetcher": {
-      "network": 4,
-      "cache": 16,
-      "rendered": 0,
-      "blocked": 1,
-      "failed": 3
-    }
+    "pages": [
+      {
+        "url": "https://www.checklyhq.com/pricing",
+        "final_url": "https://www.checklyhq.com/pricing/",
+        "title": "Checkly Pricing Plans: Flexible Synthetic Monitoring Solution",
+        "category": "pricing",
+        "why_selected": "url path contains 'pricing'; link text 'pricing'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 1232,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://www.checklyhq.com/docs/integrations/alerts/discord",
+        "final_url": "https://www.checklyhq.com/docs/integrations/alerts/discord/",
+        "title": "Send Alerts to Discord - Checkly Docs",
+        "category": "addons",
+        "why_selected": "url path contains 'integrations'; link text 'all integrations'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 269,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://www.checklyhq.com/support",
+        "final_url": "https://www.checklyhq.com/support/",
+        "title": "Checkly Support | Get help with Checkly",
+        "category": "help",
+        "why_selected": "url path contains 'support'; link text 'support'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 427,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://www.checklyhq.com/docs",
+        "final_url": "https://www.checklyhq.com/docs/",
+        "title": "Checkly Documentation - Checkly Docs",
+        "category": "docs",
+        "why_selected": "url path contains 'docs'; link text 'documentation learn key concepts and fea'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 179,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://www.checklyhq.com/solutions/developers",
+        "final_url": "https://www.checklyhq.com/solutions/developers/",
+        "title": "Synthetic Monitoring for Developers | Code-First | Checkly",
+        "category": "docs",
+        "why_selected": "url path contains 'developers'; link text 'developers checks in typescript, in your'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 917,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://www.checklyhq.com/docs/cli",
+        "final_url": "https://www.checklyhq.com/docs/cli/overview/",
+        "title": "Checkly CLI - Checkly Docs",
+        "category": "docs",
+        "why_selected": "url path contains 'docs'; link text 'read cli docs'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 128,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://www.checklyhq.com/terms",
+        "final_url": "https://www.checklyhq.com/terms/",
+        "title": "Checkly Terms of Use",
+        "category": "terms",
+        "why_selected": "url path contains 'terms'; link text 'terms of use'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 4,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://www.checklyhq.com/docs/integrations/alerts/slack",
+        "final_url": "https://www.checklyhq.com/docs/integrations/alerts/slack/",
+        "title": "Slack - Checkly Docs",
+        "category": "addons",
+        "why_selected": "url path contains 'integrations'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 268,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://www.checklyhq.com/docs/guides/overview",
+        "final_url": "https://www.checklyhq.com/docs/guides/overview/",
+        "title": "Guides to Using Checkly - Checkly Docs",
+        "category": "help",
+        "why_selected": "url path contains 'guides'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 222,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://www.checklyhq.com/docs/what-is-checkly",
+        "final_url": "https://www.checklyhq.com/docs/what-is-checkly/",
+        "title": "What is Checkly? - Checkly Docs",
+        "category": "docs",
+        "why_selected": "url path contains 'docs'; link text 'docs'",
+        "discovered_via": "linked from docs hub https://www.checklyhq.com/docs",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 224,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://www.checklyhq.com/docs/api-reference/overview",
+        "final_url": "https://www.checklyhq.com/docs/api-reference/overview/",
+        "title": "Using the Checkly API - Checkly Docs",
+        "category": "docs",
+        "why_selected": "url path contains 'docs'; link text 'api docs build on the checkly rest api'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 85,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://developers.checklyhq.com/",
+        "final_url": "https://www.checklyhq.com/docs/",
+        "title": "Checkly Documentation - Checkly Docs",
+        "category": "docs",
+        "why_selected": "link text 'open api reference'; documentation subdomain 'developers.checklyhq.com'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 179,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      }
+    ],
+    "failures": [
+      {
+        "url": "https://app.checklyhq.com/signup",
+        "category": "trial",
+        "reason": "blocked by robots.txt"
+      },
+      {
+        "url": "https://www.checklyhq.com/faq",
+        "category": "faq",
+        "reason": "HTTP 404"
+      },
+      {
+        "url": "https://www.checklyhq.com/help",
+        "category": "help",
+        "reason": "HTTP 404"
+      },
+      {
+        "url": "https://www.checklyhq.com/docs/llms.txt",
+        "category": "docs",
+        "reason": "skipped: content-type text/plain; charset=utf-8"
+      }
+    ]
   }
 }

@@ -1,1214 +1,518 @@
 {
   "company": "Baserow",
-  "root_url": "https://baserow.io/",
-  "domain": "baserow.io",
-  "started_at": "2026-09-02 07:42:54 UTC",
-  "duration_seconds": 3.9,
-  "pages": [
+  "plans": [
     {
-      "url": "https://baserow.io/pricing",
-      "final_url": "https://baserow.io/pricing",
-      "title": "Free forever. Pay as you grow.",
-      "category": "pricing",
-      "why_selected": "url path contains 'pricing'; link text 'pricing'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 879,
-      "claim_count": 52
+      "name": "Free",
+      "headline_price": "$0",
+      "billing_periods": [
+        "free"
+      ],
+      "evidence": {
+        "quote": "For individuals and small teams",
+        "url": "https://baserow.io/pricing"
+      },
+      "evidence_verified": true
     },
     {
-      "url": "https://baserow.io/faq",
-      "final_url": "https://baserow.io/faq",
-      "title": "Things you probably wonder",
-      "category": "faq",
-      "why_selected": "url path contains 'faq'; link text 'faq'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 1176,
-      "claim_count": 3
+      "name": "Premium",
+      "headline_price": "$10 per user/month billed yearly, $12 billed monthly",
+      "billing_periods": [
+        "monthly",
+        "yearly"
+      ],
+      "evidence": {
+        "quote": "$10 per user/month billed yearly",
+        "url": "https://baserow.io/pricing"
+      },
+      "evidence_verified": true
     },
     {
-      "url": "https://baserow.io/signup",
-      "final_url": "https://baserow.io/signup",
-      "title": "Create account",
-      "category": "trial",
-      "why_selected": "url path contains 'signup'; link text 'sign up'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 39,
-      "claim_count": 0
+      "name": "Advanced",
+      "headline_price": "$18 per user/month billed yearly, $22 billed monthly",
+      "billing_periods": [
+        "monthly",
+        "yearly"
+      ],
+      "evidence": {
+        "quote": "$18 per user/month billed yearly",
+        "url": "https://baserow.io/pricing"
+      },
+      "evidence_verified": true
     },
     {
-      "url": "https://baserow.io/product/integrations",
-      "final_url": "https://baserow.io/product/integrations",
-      "title": "Discover our wide range of integrations",
-      "category": "addons",
-      "why_selected": "url path contains 'integrations'; link text 'integrations'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 373,
-      "claim_count": 0
-    },
-    {
-      "url": "https://baserow.io/subscriptions/new",
-      "final_url": "https://baserow.io/login?original=/subscriptions/new",
-      "title": "Welcome back",
-      "category": "billing_docs",
-      "why_selected": "url path contains 'subscriptions'",
-      "discovered_via": "linked from pricing page https://baserow.io/pricing",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 20,
-      "claim_count": 0
-    },
-    {
-      "url": "https://baserow.io/docs/index",
-      "final_url": "https://baserow.io/docs/index",
-      "title": "Table of contents",
-      "category": "docs",
-      "why_selected": "url path contains 'docs'; link text 'documentation'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 1169,
-      "claim_count": 0
-    },
-    {
-      "url": "https://baserow.io/terms-and-conditions",
-      "final_url": "https://baserow.io/terms-and-conditions",
-      "title": "General Terms and Conditions",
-      "category": "terms",
-      "why_selected": "url path contains 'terms'; link text 'terms & conditions'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 2660,
-      "claim_count": 0
-    },
-    {
-      "url": "https://baserow.io/api-docs",
-      "final_url": "https://baserow.io/api-docs",
-      "title": "REST API",
-      "category": "docs",
-      "why_selected": "url path contains 'docs'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 31,
-      "claim_count": 0
-    },
-    {
-      "url": "https://baserow.io/user-docs",
-      "final_url": "https://baserow.io/user-docs",
-      "title": "Baserow user guide index",
-      "category": "docs",
-      "why_selected": "url path contains 'docs'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 1677,
-      "claim_count": 3
-    },
-    {
-      "url": "https://baserow.io/help",
-      "final_url": "https://baserow.io/help",
-      "title": "",
-      "category": "help",
-      "why_selected": "url path contains 'help' (guessed conventional path, not linked)",
-      "discovered_via": "conventional path guess",
-      "status": 404,
-      "ok": false,
-      "error": "HTTP 404",
-      "rendered": false,
-      "word_count": 0,
-      "claim_count": 0
-    },
-    {
-      "url": "https://baserow.io/terms",
-      "final_url": "https://baserow.io/terms",
-      "title": "",
-      "category": "terms",
-      "why_selected": "url path contains 'terms' (guessed conventional path, not linked)",
-      "discovered_via": "conventional path guess",
-      "status": 404,
-      "ok": false,
-      "error": "HTTP 404",
-      "rendered": false,
-      "word_count": 0,
-      "claim_count": 0
-    },
-    {
-      "url": "https://baserow.io/docs/plugins%2Fintroduction",
-      "final_url": "https://baserow.io/docs/plugins%2Fintroduction",
-      "title": "Introduction",
-      "category": "docs",
-      "why_selected": "url path contains 'docs'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 450,
-      "claim_count": 0
-    },
-    {
-      "url": "https://baserow.io/docs/installation%2Finstall-with-docker",
-      "final_url": "https://baserow.io/docs/installation%2Finstall-with-docker",
-      "title": "Install with Docker",
-      "category": "docs",
-      "why_selected": "url path contains 'docs'",
-      "discovered_via": "homepage navigation",
-      "status": 200,
-      "ok": true,
-      "error": "",
-      "rendered": false,
-      "word_count": 2559,
-      "claim_count": 1
+      "name": "Enterprise",
+      "headline_price": "On request",
+      "billing_periods": [
+        "on request"
+      ],
+      "evidence": {
+        "quote": "For large organizations",
+        "url": "https://baserow.io/pricing"
+      },
+      "evidence_verified": true
     }
   ],
-  "failures": [
-    {
-      "url": "https://baserow.io/help",
-      "category": "help",
-      "reason": "HTTP 404"
-    },
-    {
-      "url": "https://baserow.io/terms",
-      "category": "terms",
-      "reason": "HTTP 404"
-    }
-  ],
-  "claims": [
+  "promises": [
     {
       "kind": "plan_price",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Free For individuals and small teams $0 Get started Plan includes: 3,000 rows per workspace 2GB of storage per workspace 2,000 au",
-      "plan": "free",
-      "plan_raw": "Free",
-      "data": {
-        "amount": 0.0,
-        "currency": "USD",
-        "period": "unknown",
-        "per_seat": false,
-        "billed_annually": false,
-        "billed_monthly": false,
-        "raw": "$0",
-        "page_is_reference": false
+      "statement": "Premium is $10 per user/month on annual billing",
+      "plan": "Premium",
+      "evidence": {
+        "quote": "$10 per user/month billed yearly",
+        "url": "https://baserow.io/pricing"
       },
-      "extractor": "pricing_card"
+      "evidence_verified": true
     },
     {
       "kind": "plan_price",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Most popular Premium For growing teams $10 per user/month billed yearly $12 billed monthly Get started Plan includes: 50,000 rows pe",
-      "plan": "premium",
-      "plan_raw": "Premium",
-      "data": {
-        "amount": 10.0,
-        "currency": "USD",
-        "period": "month",
-        "per_seat": true,
-        "billed_annually": true,
-        "billed_monthly": false,
-        "raw": "$10",
-        "page_is_reference": false
+      "statement": "Premium is $12 per user/month on monthly billing",
+      "plan": "Premium",
+      "evidence": {
+        "quote": "$12 billed monthly",
+        "url": "https://baserow.io/pricing"
       },
-      "extractor": "pricing_card"
+      "evidence_verified": true
     },
     {
       "kind": "plan_price",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Premium For growing teams $10 per user/month billed yearly $12 billed monthly Get started Plan includes: 50,000 rows per workspace 20GB of storage per w",
-      "plan": "premium",
-      "plan_raw": "Premium",
-      "data": {
-        "amount": 12.0,
-        "currency": "USD",
-        "period": "month",
-        "per_seat": true,
-        "billed_annually": false,
-        "billed_monthly": true,
-        "raw": "$12",
-        "page_is_reference": false
+      "statement": "Advanced is $18 per user/month on annual billing",
+      "plan": "Advanced",
+      "evidence": {
+        "quote": "$18 per user/month billed yearly",
+        "url": "https://baserow.io/pricing"
       },
-      "extractor": "pricing_card"
+      "evidence_verified": true
     },
     {
       "kind": "plan_price",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Free trial Advanced For scaling businesses $18 per user/month billed yearly $22 billed monthly Try now for free Plan includes: 250,000 r",
-      "plan": "advanced",
-      "plan_raw": "Advanced",
-      "data": {
-        "amount": 18.0,
-        "currency": "USD",
-        "period": "month",
-        "per_seat": true,
-        "billed_annually": true,
-        "billed_monthly": false,
-        "raw": "$18",
-        "page_is_reference": false
+      "statement": "Advanced is $22 per user/month on monthly billing",
+      "plan": "Advanced",
+      "evidence": {
+        "quote": "$22 billed monthly",
+        "url": "https://baserow.io/pricing"
       },
-      "extractor": "pricing_card"
+      "evidence_verified": true
     },
     {
       "kind": "plan_price",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "ced For scaling businesses $18 per user/month billed yearly $22 billed monthly Try now for free Plan includes: 250,000 rows per workspace 100GB of storag",
-      "plan": "advanced",
-      "plan_raw": "Advanced",
-      "data": {
-        "amount": 22.0,
-        "currency": "USD",
-        "period": "month",
-        "per_seat": true,
-        "billed_annually": false,
-        "billed_monthly": true,
-        "raw": "$22",
-        "page_is_reference": false
+      "statement": "Enterprise pricing is quoted on request",
+      "plan": "Enterprise",
+      "evidence": {
+        "quote": "On request",
+        "url": "https://baserow.io/pricing"
       },
-      "extractor": "pricing_card"
+      "evidence_verified": true
     },
     {
       "kind": "trial",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Free trial",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "days": null,
-        "page_is_reference": false
+      "statement": "A free trial is offered on Premium, with no stated length",
+      "plan": "Premium",
+      "evidence": {
+        "quote": "Free trial",
+        "url": "https://baserow.io/pricing"
       },
-      "extractor": "trial_unspecified"
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Free is limited to 3,000 rows per workspace",
+      "plan": "Free",
+      "evidence": {
+        "quote": "3,000 rows per workspace",
+        "url": "https://baserow.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Premium is limited to 50,000 rows per workspace",
+      "plan": "Premium",
+      "evidence": {
+        "quote": "50,000 rows per workspace",
+        "url": "https://baserow.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Advanced is limited to 250,000 rows per workspace",
+      "plan": "Advanced",
+      "evidence": {
+        "quote": "250,000 rows per workspace",
+        "url": "https://baserow.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Enterprise is limited to 1,000,000 rows per workspace",
+      "plan": "Enterprise",
+      "evidence": {
+        "quote": "1,000,000 rows per workspace",
+        "url": "https://baserow.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Free includes 2GB of storage per workspace",
+      "plan": "Free",
+      "evidence": {
+        "quote": "2GB of storage per workspace",
+        "url": "https://baserow.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Free includes 2,000 automation credits",
+      "plan": "Free",
+      "evidence": {
+        "quote": "2,000 automation credits",
+        "url": "https://baserow.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Advanced includes 500,000 automation credits",
+      "plan": "Advanced",
+      "evidence": {
+        "quote": "500,000 automation credits",
+        "url": "https://baserow.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Free includes 500 external app users",
+      "plan": "Free",
+      "evidence": {
+        "quote": "500 external app users",
+        "url": "https://baserow.io/pricing"
+      },
+      "evidence_verified": true
     },
     {
       "kind": "unlimited",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Unlimited external app users",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "subject": "external app users",
-        "metric": "seats",
-        "page_is_reference": false
+      "statement": "Enterprise includes unlimited external app users",
+      "plan": "Enterprise",
+      "evidence": {
+        "quote": "Unlimited external app users",
+        "url": "https://baserow.io/pricing"
       },
-      "extractor": "unlimited_phrase"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "3,000 rows per workspace",
-      "plan": "free",
-      "plan_raw": "Free",
-      "data": {
-        "metric": "contacts",
-        "value": 3000.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "rows",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "2,000 automation credits",
-      "plan": "free",
-      "plan_raw": "Free",
-      "data": {
-        "metric": "integrations",
-        "value": 2000.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "automation credits",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "500 external app users",
-      "plan": "free",
-      "plan_raw": "Free",
-      "data": {
-        "metric": "seats",
-        "value": 500.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "external app users",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "50,000 rows per workspace",
-      "plan": "premium",
-      "plan_raw": "Premium",
-      "data": {
-        "metric": "contacts",
-        "value": 50000.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "rows",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "100,000 automation credits",
-      "plan": "premium",
-      "plan_raw": "Premium",
-      "data": {
-        "metric": "integrations",
-        "value": 100000.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "automation credits",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "250,000 rows per workspace",
-      "plan": "advanced",
-      "plan_raw": "Advanced",
-      "data": {
-        "metric": "contacts",
-        "value": 250000.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "rows",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "500,000 automation credits",
-      "plan": "advanced",
-      "plan_raw": "Advanced",
-      "data": {
-        "metric": "integrations",
-        "value": 500000.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "automation credits",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "2,000,000 automation credits",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "integrations",
-        "value": 2000000.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "automation credits",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "3,000 per workspace",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "projects",
-        "value": 3000.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "per workspace",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "50,000 per workspace",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "projects",
-        "value": 50000.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "per workspace",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "250,000 per workspace",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "projects",
-        "value": 250000.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "per workspace",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "1,000,000 per workspace",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "projects",
-        "value": 1000000.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "per workspace",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "2GB per workspace",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "storage",
-        "value": 2.0,
-        "unit": "GB",
-        "limit_kind": "quantity",
-        "subject": "per workspace",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "20GB per workspace",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "storage",
-        "value": 20.0,
-        "unit": "GB",
-        "limit_kind": "quantity",
-        "subject": "per workspace",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "100GB per workspace",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "storage",
-        "value": 100.0,
-        "unit": "GB",
-        "limit_kind": "quantity",
-        "subject": "per workspace",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "1000GB per workspace",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "storage",
-        "value": 1000.0,
-        "unit": "GB",
-        "limit_kind": "quantity",
-        "subject": "per workspace",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "2,000 per workspace",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "projects",
-        "value": 2000.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "per workspace",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "100,000 per workspace",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "projects",
-        "value": 100000.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "per workspace",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "500,000 per workspace",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "projects",
-        "value": 500000.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "per workspace",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "2,000,000 per workspace",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "projects",
-        "value": 2000000.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "per workspace",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Free up to 500 users",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "seats",
-        "value": 500.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "users",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
+      "evidence_verified": true
     },
     {
       "kind": "entitlement",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Free plan includes: 3,000 rows per workspace",
-      "plan": "free",
-      "plan_raw": "Free",
-      "data": {
-        "feature": "3,000 rows per workspace",
-        "page_is_reference": false
+      "statement": "Enterprise can pay by invoice",
+      "plan": "Enterprise",
+      "evidence": {
+        "quote": "Payment by invoice",
+        "url": "https://baserow.io/pricing"
       },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Free plan includes: 2GB of storage per workspace",
-      "plan": "free",
-      "plan_raw": "Free",
-      "data": {
-        "feature": "2GB of storage per workspace",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Free plan includes: 2,000 automation credits",
-      "plan": "free",
-      "plan_raw": "Free",
-      "data": {
-        "feature": "2,000 automation credits",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Free plan includes: 500 external app users",
-      "plan": "free",
-      "plan_raw": "Free",
-      "data": {
-        "feature": "500 external app users",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Free plan includes: Grid, Form & Gallery views",
-      "plan": "free",
-      "plan_raw": "Free",
-      "data": {
-        "feature": "Grid, Form & Gallery views",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Free plan includes: Library of 65+ templates",
-      "plan": "free",
-      "plan_raw": "Free",
-      "data": {
-        "feature": "Library of 65+ templates",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Premium plan includes: 50,000 rows per workspace",
-      "plan": "premium",
-      "plan_raw": "Premium",
-      "data": {
-        "feature": "50,000 rows per workspace",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Premium plan includes: 20GB of storage per workspace",
-      "plan": "premium",
-      "plan_raw": "Premium",
-      "data": {
-        "feature": "20GB of storage per workspace",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Premium plan includes: 100,000 automation credits",
-      "plan": "premium",
-      "plan_raw": "Premium",
-      "data": {
-        "feature": "100,000 automation credits",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Premium plan includes: 500 external app users",
-      "plan": "premium",
-      "plan_raw": "Premium",
-      "data": {
-        "feature": "500 external app users",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Premium plan includes: All views",
-      "plan": "premium",
-      "plan_raw": "Premium",
-      "data": {
-        "feature": "All views",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Premium plan includes: AI features",
-      "plan": "premium",
-      "plan_raw": "Premium",
-      "data": {
-        "feature": "AI features",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Advanced plan includes: 250,000 rows per workspace",
-      "plan": "advanced",
-      "plan_raw": "Advanced",
-      "data": {
-        "feature": "250,000 rows per workspace",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Advanced plan includes: 100GB of storage per workspace",
-      "plan": "advanced",
-      "plan_raw": "Advanced",
-      "data": {
-        "feature": "100GB of storage per workspace",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Advanced plan includes: 500,000 automation credits",
-      "plan": "advanced",
-      "plan_raw": "Advanced",
-      "data": {
-        "feature": "500,000 automation credits",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Advanced plan includes: 500 external app users",
-      "plan": "advanced",
-      "plan_raw": "Advanced",
-      "data": {
-        "feature": "500 external app users",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Advanced plan includes: Role based permissions",
-      "plan": "advanced",
-      "plan_raw": "Advanced",
-      "data": {
-        "feature": "Role based permissions",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "entitlement",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Advanced plan includes: Audit logs",
-      "plan": "advanced",
-      "plan_raw": "Advanced",
-      "data": {
-        "feature": "Audit logs",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_card_bullet"
-    },
-    {
-      "kind": "plan_mention",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "pricing page heading 'Free'",
-      "plan": "free",
-      "plan_raw": "Free",
-      "data": {
-        "source": "heading",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_heading"
-    },
-    {
-      "kind": "plan_mention",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "pricing page heading 'Premium'",
-      "plan": "premium",
-      "plan_raw": "Premium",
-      "data": {
-        "source": "heading",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_heading"
-    },
-    {
-      "kind": "plan_mention",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "pricing page heading 'Advanced'",
-      "plan": "advanced",
-      "plan_raw": "Advanced",
-      "data": {
-        "source": "heading",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_heading"
-    },
-    {
-      "kind": "plan_mention",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "pricing page heading 'Enterprise'",
-      "plan": "enterprise",
-      "plan_raw": "Enterprise",
-      "data": {
-        "source": "heading",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_heading"
-    },
-    {
-      "kind": "plan_mention",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "pricing page heading 'Advanced permissions'",
-      "plan": "advanced permissions",
-      "plan_raw": "Advanced permissions",
-      "data": {
-        "source": "heading",
-        "page_is_reference": false
-      },
-      "extractor": "pricing_heading"
+      "evidence_verified": true
     },
     {
       "kind": "condition",
-      "page_url": "https://baserow.io/pricing",
-      "page_title": "Free forever. Pay as you grow.",
-      "page_category": "pricing",
-      "evidence": "Enterprise On request per user/month Contact sales",
+      "statement": "Cloud is capped at 10 concurrent API requests, subject to fair use and reducible at Baserow's discretion",
       "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "contact_sales",
-        "description": "pricing only available by contacting sales",
-        "page_is_reference": false
+      "evidence": {
+        "quote": "In Baserow Cloud, there's a limit of 10 concurrent API requests. This limit is subject to a fair use policy, and we reserve the right to lower it if it affects overall performance.",
+        "url": "https://baserow.io/faq"
       },
-      "extractor": "condition_contact_sales"
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Exceeding the row limit for 7 days blocks creation of new rows",
+      "plan": null,
+      "evidence": {
+        "quote": "If a workspace exceeds its row limit for 7 days, you won't be able to create new rows.",
+        "url": "https://baserow.io/faq"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Only credit card payment is accepted",
+      "plan": null,
+      "evidence": {
+        "quote": "Currently, you can pay only with a credit card.",
+        "url": "https://baserow.io/faq"
+      },
+      "evidence_verified": true
     },
     {
       "kind": "unlimited",
-      "page_url": "https://baserow.io/faq",
-      "page_title": "Things you probably wonder",
-      "page_category": "faq",
-      "evidence": "Baserow hosted version will remain free, but if you want to store more data you need to upgrade to the next plan. Upgrading will also give you access to the Premium features. The self-hosted version will never have row, storage, or API request limitations. It will always be unlimited and free. However, if you want to activate the Premium features, you need to pay for it on a per-user per-month bas",
+      "statement": "Self-hosted has no row, storage or API request limits",
       "plan": null,
-      "plan_raw": null,
-      "data": {
-        "subject": "and free",
-        "metric": null,
-        "page_is_reference": false
+      "evidence": {
+        "quote": "The self-hosted version will never have row, storage, or API request limitations.",
+        "url": "https://baserow.io/faq"
       },
-      "extractor": "unlimited_phrase"
-    },
-    {
-      "kind": "limit",
-      "page_url": "https://baserow.io/faq",
-      "page_title": "Things you probably wonder",
-      "page_category": "faq",
-      "evidence": "The self-hosted version of Baserow does not have a rate limit. The hosted version has a rate limit of maximum 10 concurrent requests. Requests are typically faster on tables with a lower number of fields and rows.",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "metric": "api_requests",
-        "value": 10.0,
-        "unit": "count",
-        "limit_kind": "quantity",
-        "subject": "current requests",
-        "window": null,
-        "page_is_reference": false
-      },
-      "extractor": "\\b(?:maximum|max\\.?|limi"
-    },
-    {
-      "kind": "condition",
-      "page_url": "https://baserow.io/faq",
-      "page_title": "Things you probably wonder",
-      "page_category": "faq",
-      "evidence": "Yes, we provide offer discounts for non-profits and education.",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "contact_sales",
-        "description": "pricing only available by contacting sales",
-        "page_is_reference": false
-      },
-      "extractor": "condition_contact_sales"
-    },
-    {
-      "kind": "plan_mention",
-      "page_url": "https://baserow.io/user-docs",
-      "page_title": "Baserow user guide index",
-      "page_category": "docs",
-      "evidence": "Enterprise License : Baserow\u2019s Enterprise plan is designed for the needs of large teams. It allows teams to build databases, collaborate on projects, and transform manual processes into digital ones with features like an admin panel, audit logs, and more.",
-      "plan": "enterprise",
-      "plan_raw": "Enterprise",
-      "data": {
-        "source": "prose",
-        "page_is_reference": false
-      },
-      "extractor": "prose_mention"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://baserow.io/user-docs",
-      "page_title": "Baserow user guide index",
-      "page_category": "docs",
-      "evidence": "Leverage the power of generative AI directly within Baserow. This section covers how to use the AI prompt field, automatically generate complex formulas from a text description, and write effective prompts to boost your productivity.",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "Leverage the power of generative AI directly within Baserow. This section covers how to use the AI p",
-        "amount": null,
-        "currency": null,
-        "page_is_reference": false
-      },
-      "extractor": "addon_mention"
-    },
-    {
-      "kind": "addon",
-      "page_url": "https://baserow.io/user-docs",
-      "page_title": "Baserow user guide index",
-      "page_category": "docs",
-      "evidence": "Collaboration : In this chapter, we\u2019ll guide you on how to leverage Baserow to streamline teamwork and boost productivity. Learn how to invite collaborators, manage workspace members, create teams, and share your work publicly.",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "name": "Collaboration : In this chapter, we\u2019ll guide you on how to leverage Baserow to streamline teamwork a",
-        "amount": null,
-        "currency": null,
-        "page_is_reference": false
-      },
-      "extractor": "addon_mention"
-    },
-    {
-      "kind": "condition",
-      "page_url": "https://baserow.io/docs/installation%2Finstall-with-docker",
-      "page_title": "Install with Docker",
-      "page_category": "docs",
-      "evidence": "In that case, copy all of the log output and refer to Baserow community or contact us for further assistance.",
-      "plan": null,
-      "plan_raw": null,
-      "data": {
-        "condition": "contact_sales",
-        "description": "pricing only available by contacting sales",
-        "page_is_reference": false
-      },
-      "extractor": "condition_contact_sales"
+      "evidence_verified": true
     }
   ],
-  "findings": [],
-  "discovery_notes": [],
-  "pricing_urls": [
-    "https://baserow.io/pricing"
-  ],
-  "stats": {
-    "pages_selected": 11,
-    "pages_fetched_ok": 11,
-    "pages_failed": 2,
-    "pages_js_rendered": 0,
-    "urls_considered": 19,
-    "claims": 59,
-    "claims_by_kind": {
-      "limit": 22,
-      "entitlement": 18,
-      "plan_mention": 6,
-      "plan_price": 5,
-      "condition": 3,
-      "unlimited": 2,
-      "addon": 2,
-      "trial": 1
+  "findings": [
+    {
+      "type": "likely_contradiction",
+      "severity": "medium",
+      "confidence": "high",
+      "headline": "Your pricing page offers Enterprise customers payment by invoice; your FAQ says you only accept credit cards",
+      "explanation": "\"Payment by invoice\" is listed as a reason to choose Enterprise, and it appears again in the plan comparison table. Your FAQ answers the question of what payment methods are accepted with a flat statement that credit card is currently the only option. An enterprise buyer doing diligence \u2014 exactly the buyer who cannot put a five-figure annual contract on a corporate card \u2014 will read the FAQ and conclude that you cannot invoice them.",
+      "claim_a": {
+        "statement": "Enterprise customers can pay by invoice",
+        "quote": "Payment by invoice",
+        "url": "https://baserow.io/pricing"
+      },
+      "claim_b": {
+        "statement": "Credit card is the only payment method accepted",
+        "quote": "Currently, you can pay only with a credit card. We plan to add more payment methods in the future.",
+        "url": "https://baserow.io/faq"
+      },
+      "why_not_just_wording": "One page names invoicing as a purchasable Enterprise benefit and the other states that no payment method other than credit card exists; those are different facts, not different phrasings.",
+      "caveat": "The FAQ answer is almost certainly about self-serve checkout, where credit card genuinely is the only route, and invoicing is arranged through sales. As written, though, neither page says so, and the FAQ is the page a buyer searches.",
+      "same_page": false,
+      "score": 6.9
     },
-    "findings": 0,
-    "findings_by_severity": {},
-    "findings_by_confidence": {},
-    "findings_by_kind": {},
-    "fetcher": {
-      "network": 4,
-      "cache": 14,
-      "rendered": 0,
-      "blocked": 0,
-      "failed": 3
+    {
+      "type": "missing_information",
+      "severity": "medium",
+      "confidence": "medium",
+      "headline": "Every paid plan is capped at the same 10 concurrent API requests, and your plan comparison never mentions it",
+      "explanation": "Your pricing page sells usage that scales with price: rows go from 3,000 to 1,000,000 and automation credits from 2,000 to 2,000,000 across the tiers. API throughput does not scale at all. The FAQ discloses a flat ceiling of 10 concurrent requests for every Baserow Cloud plan, adds that it is subject to fair use, and reserves the right to lower it. For a product that markets itself as API-first, a customer sizing an integration against the Advanced tier has no way of learning from the pricing page that paying nine times more buys no additional API concurrency.",
+      "claim_a": {
+        "statement": "Usage allowances scale by plan on the pricing page \u2014 Advanced buys 250,000 rows per workspace",
+        "quote": "250,000 rows per workspace",
+        "url": "https://baserow.io/pricing"
+      },
+      "claim_b": {
+        "statement": "API concurrency is fixed at 10 for every Cloud plan and may be reduced at Baserow's discretion",
+        "quote": "In Baserow Cloud, there's a limit of 10 concurrent API requests. This limit is subject to a fair use policy, and we reserve the right to lower it if it affects overall performance.",
+        "url": "https://baserow.io/faq"
+      },
+      "why_not_just_wording": "The plan comparison lists every other usage dimension by tier and omits this one entirely, so a reader cannot infer either the cap or the fact that it does not improve with price.",
+      "caveat": "Your pricing page does carry a collapsed FAQ item titled \"What are the limitations in records, rows, and API requests?\", so the answer may be one click away rather than on another page. We could not read the collapsed panel, only its heading.",
+      "same_page": false,
+      "score": 3.4
     }
+  ],
+  "coverage_notes": {
+    "unusable_pages": [
+      "https://baserow.io/signup and the subscription pages returned too little text to read"
+    ],
+    "what_was_not_checkable": "The plan comparison table on the pricing page is built from styled divs rather than a real table, so when it is flattened to text the values lose their column alignment. Several rows publish three values for four plans (row change history, application users), which may be a genuine gap or may just be how the grid collapses \u2014 we could not tell, and did not report it. The Premium plan advertises a \"Free trial\" with no length stated on any page we read, and nothing anywhere states whether a credit card is required to start it."
+  },
+  "backend": "agent",
+  "verification": {
+    "findings_in": 2,
+    "findings_out": 2,
+    "findings_rejected": 0,
+    "quotes_checked": 28,
+    "quotes_failed": 0,
+    "url_corrections": 0,
+    "rejections": []
+  },
+  "source": {
+    "root_url": "https://baserow.io/",
+    "domain": "baserow.io",
+    "harvested_at": "2026-09-02 07:57:07 UTC",
+    "stats": {
+      "pages_selected": 11,
+      "pages_fetched_ok": 11,
+      "pages_usable": 7,
+      "pages_failed": 2,
+      "pages_js_rendered": 0,
+      "urls_considered": 19,
+      "dossier_chars": 32186,
+      "harvest_seconds": 3.5,
+      "fetcher": {
+        "network": 4,
+        "cache": 14,
+        "rendered": 0,
+        "blocked": 0,
+        "failed": 3
+      }
+    },
+    "pages": [
+      {
+        "url": "https://baserow.io/pricing",
+        "final_url": "https://baserow.io/pricing",
+        "title": "Pricing",
+        "category": "pricing",
+        "why_selected": "url path contains 'pricing'; link text 'pricing'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 623,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://baserow.io/faq",
+        "final_url": "https://baserow.io/faq",
+        "title": "FAQ",
+        "category": "faq",
+        "why_selected": "url path contains 'faq'; link text 'faq'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 1163,
+        "text": "",
+        "truncated": true,
+        "usable": true
+      },
+      {
+        "url": "https://baserow.io/signup",
+        "final_url": "https://baserow.io/signup",
+        "title": "Create account | Baserow",
+        "category": "trial",
+        "why_selected": "url path contains 'signup'; link text 'sign up'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 16,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://baserow.io/product/integrations",
+        "final_url": "https://baserow.io/product/integrations",
+        "title": "Baserow",
+        "category": "addons",
+        "why_selected": "url path contains 'integrations'; link text 'integrations'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 82,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://baserow.io/subscriptions/new",
+        "final_url": "https://baserow.io/login?original=/subscriptions/new",
+        "title": "Welcome back | Baserow",
+        "category": "billing_docs",
+        "why_selected": "url path contains 'subscriptions'",
+        "discovered_via": "linked from pricing page https://baserow.io/pricing",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 16,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://baserow.io/docs/index",
+        "final_url": "https://baserow.io/docs/index",
+        "title": "Table of contents",
+        "category": "docs",
+        "why_selected": "url path contains 'docs'; link text 'documentation'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 1297,
+        "text": "",
+        "truncated": true,
+        "usable": true
+      },
+      {
+        "url": "https://baserow.io/terms-and-conditions",
+        "final_url": "https://baserow.io/terms-and-conditions",
+        "title": "General Terms and Conditions",
+        "category": "terms",
+        "why_selected": "url path contains 'terms'; link text 'terms & conditions'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 3106,
+        "text": "",
+        "truncated": true,
+        "usable": true
+      },
+      {
+        "url": "https://baserow.io/api-docs",
+        "final_url": "https://baserow.io/api-docs",
+        "title": "REST API documentation | Baserow",
+        "category": "docs",
+        "why_selected": "url path contains 'docs'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 32,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://baserow.io/user-docs",
+        "final_url": "https://baserow.io/user-docs",
+        "title": "Baserow table of contents",
+        "category": "docs",
+        "why_selected": "url path contains 'docs'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 1949,
+        "text": "",
+        "truncated": true,
+        "usable": true
+      },
+      {
+        "url": "https://baserow.io/docs/plugins%2Fintroduction",
+        "final_url": "https://baserow.io/docs/plugins%2Fintroduction",
+        "title": "Introduction",
+        "category": "docs",
+        "why_selected": "url path contains 'docs'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 524,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://baserow.io/docs/installation%2Finstall-with-docker",
+        "final_url": "https://baserow.io/docs/installation%2Finstall-with-docker",
+        "title": "Install with Docker",
+        "category": "docs",
+        "why_selected": "url path contains 'docs'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 2836,
+        "text": "",
+        "truncated": true,
+        "usable": true
+      }
+    ],
+    "failures": [
+      {
+        "url": "https://baserow.io/help",
+        "category": "help",
+        "reason": "HTTP 404"
+      },
+      {
+        "url": "https://baserow.io/terms",
+        "category": "terms",
+        "reason": "HTTP 404"
+      }
+    ]
   }
 }

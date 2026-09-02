@@ -9,7 +9,7 @@
       "https://umami.is/docs (0 words of readable text)",
       "https://umami.is/terms (0 words of readable text)"
     ],
-    "what_was_not_checkable": "Nothing could be checked. All three pages we reached, including the pricing page, returned a page shell with no readable text at all: the site builds its content in the browser, and the headless-browser fallback could not run in the environment this experiment was executed in. This is a failure of our tool, not a finding about Umami, and it should be counted as a miss rather than as a clean result. Roughly one company in ten in this sample was invisible for this reason."
+    "what_was_not_checkable": "Nothing could be checked. All three pages we reached, including the pricing page, returned a page shell with no readable text at all. The site builds its content in the browser, and the headless-browser fallback could not run in the environment this experiment was executed in. This is a failure of our tool, not a finding about Umami, and it should be counted as a miss rather than as a clean result. Roughly one company in ten in this sample was invisible for this reason."
   },
   "backend": "agent",
   "verification": {

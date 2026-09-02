@@ -1,0 +1,169 @@
+<title>Fathom Analytics Promise Audit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#f6f7f9; --surface:#ffffff; --ink:#14181f; --ink-soft:#3b4350;
+  --muted:#5a6371; --rule:#dfe3ea; --rule-soft:#ebeef2;
+  --accent:#26547c; --high:#9e2b25; --medium:#8a5a16; --low:#4a5a6b;
+  --verified:#2c6b4f; --quote:#454f5d; --quote-rule:#c8d0da; --panel:#f0f2f5;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#12151a; --surface:#191d24; --ink:#e6e9ee; --ink-soft:#c3cad3;
+    --muted:#98a2b0; --rule:#2a3038; --rule-soft:#21262d;
+    --accent:#7fb0dc; --high:#e08b84; --medium:#d7a455; --low:#9badc0;
+    --verified:#7fc4a0; --quote:#b3bcc7; --quote-rule:#3a424c; --panel:#1e232a;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#12151a; --surface:#191d24; --ink:#e6e9ee; --ink-soft:#c3cad3;
+  --muted:#98a2b0; --rule:#2a3038; --rule-soft:#21262d;
+  --accent:#7fb0dc; --high:#e08b84; --medium:#d7a455; --low:#9badc0;
+  --verified:#7fc4a0; --quote:#b3bcc7; --quote-rule:#3a424c; --panel:#1e232a;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased;
+}
+.sheet{max-width:76ch;margin:0 auto;padding:clamp(30px,6vw,60px) clamp(18px,5vw,32px) 80px;}
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0 0 16px;
+}
+h1{
+  font-family:Newsreader,Georgia,"Times New Roman",serif;
+  font-size:clamp(29px,5vw,40px); line-height:1.12; font-weight:500;
+  letter-spacing:-.015em; margin:0 0 12px; text-wrap:balance;
+}
+.standfirst{font-size:15.5px;color:var(--muted);margin:0;max-width:60ch;}
+.standfirst a{color:var(--accent);text-decoration:none;}
+.standfirst a:hover{text-decoration:underline}
+.ledger{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:1px; background:var(--rule); border:1px solid var(--rule); margin:30px 0 0;
+}
+.ledger div{background:var(--surface);padding:12px 14px;}
+.ledger dt{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin:0 0 4px;
+}
+.ledger dd{margin:0;font-size:20px;font-weight:600;font-variant-numeric:tabular-nums;}
+h2{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; font-weight:500;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
+  margin:56px 0 0; padding-bottom:8px; border-bottom:1px solid var(--rule);
+}
+.sells{margin:16px 0 0;font-size:15px;color:var(--ink-soft);}
+.sells span{display:block;padding:3px 0;}
+.sells b{font-weight:600;color:var(--ink);}
+.finding{padding:28px 0 6px;border-bottom:1px solid var(--rule-soft);}
+.finding:last-of-type{border-bottom:0}
+.tags{
+  display:flex; flex-wrap:wrap; align-items:center; gap:6px 16px;
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10.5px;
+  letter-spacing:.1em; text-transform:uppercase; margin-bottom:10px;
+}
+.num{color:var(--muted);font-variant-numeric:tabular-nums;}
+.sev{display:inline-flex;align-items:center;gap:6px;font-weight:500}
+.sev::before{content:"";width:8px;height:8px;flex:0 0 auto}
+.sev.high{color:var(--high)} .sev.high::before{background:var(--high)}
+.sev.medium{color:var(--medium)} .sev.medium::before{background:var(--medium)}
+.sev.low{color:var(--low)} .sev.low::before{background:var(--low)}
+.tags .kind,.tags .conf{color:var(--muted)}
+.finding h3{
+  font-family:Newsreader,Georgia,serif; font-weight:500; font-size:23px;
+  line-height:1.22; letter-spacing:-.012em; margin:0 0 16px; text-wrap:balance;
+}
+.versus{
+  display:grid; grid-template-columns:1fr 1fr; gap:1px;
+  background:var(--rule); border:1px solid var(--rule);
+}
+.versus > div{background:var(--surface);padding:14px 16px;}
+@media (max-width:600px){.versus{grid-template-columns:1fr}}
+.where{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin:0 0 7px;
+}
+.value{font-size:17px;font-weight:600;line-height:1.3;margin:0 0 10px;}
+.versus blockquote{
+  margin:0 0 10px; padding-left:11px; border-left:2px solid var(--quote-rule);
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12px;
+  line-height:1.55; color:var(--quote); white-space:pre-wrap; overflow-wrap:anywhere;
+}
+.src{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px;
+  color:var(--accent); text-decoration:none; overflow-wrap:anywhere; display:block;
+}
+.src:hover{text-decoration:underline}
+.meta{
+  display:grid; grid-template-columns:auto 1fr; gap:5px 14px;
+  margin:14px 0 4px; font-size:14px; color:var(--ink-soft); align-items:baseline;
+}
+.meta dt{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
+}
+.meta dd{margin:0}
+.legend{margin:16px 0 0;font-size:14.5px;}
+.legend p{margin:0 0 7px;color:var(--muted);}
+.legend b{color:var(--ink);font-weight:600;}
+.scroller{overflow-x:auto;margin-top:14px;}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:430px;}
+th{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
+  text-align:left; font-weight:500; padding:0 12px 7px 0;
+  border-bottom:1px solid var(--rule);
+}
+td{padding:8px 12px 8px 0;border-bottom:1px solid var(--rule-soft);vertical-align:top;}
+td:last-child,th:last-child{padding-right:0}
+td a{color:var(--accent);text-decoration:none;}
+td a:hover{text-decoration:underline}
+.words{font-variant-numeric:tabular-nums;color:var(--muted);}
+.state{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;
+  color:var(--muted);white-space:nowrap;}
+.state.dim{opacity:.7}
+.kicker{margin:58px 0 0;padding:26px 0 0;border-top:2px solid var(--ink);}
+.kicker h2{
+  font-family:Newsreader,Georgia,serif; font-size:clamp(20px,3.3vw,25px);
+  font-weight:500; line-height:1.25; letter-spacing:-.01em; color:var(--ink);
+  text-transform:none; letter-spacing:-.01em; margin:0 0 12px; padding:0; border:0;
+  text-wrap:balance;
+}
+.kicker p{margin:0;color:var(--ink-soft);font-size:15px;}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:12px;color:var(--muted);}
+.none{margin-top:18px;padding:20px 22px;background:var(--surface);border:1px solid var(--rule);}
+.none p{margin:0 0 10px;color:var(--ink-soft);}
+.none p:last-child{margin-bottom:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<main class="sheet">
+  <p class="eyebrow">Commercial consistency audit</p>
+  <h1>We found 4 commercial promises worth checking.</h1>
+  <p class="standfirst">Every quote below was checked against the page it came from.
+    Public pages of <a href="https://usefathom.com/" target="_blank" rel="noopener">usefathom.com</a>
+    only. Nothing private was used.</p>
+  <dl class="ledger"><div><dt>Pages read</dt><dd>10</dd></div><div><dt>Promises</dt><dd>15</dd></div><div><dt>Quotes verified</dt><dd>25</dd></div><div><dt>Discarded</dt><dd>0</dd></div></dl>
+
+  <h2>Plans found</h2>
+  <p class="sells"><span><b>Up to 500,000 pageviews</b> $45 /month</span><span><b>Larger pageview tiers (2M, 10M, 25M+)</b> priced by pageview band; largest tiers contact us</span></p>
+
+  <h2>Findings</h2>
+  <article class="finding"><p class="tags"><span class="num">01</span><span class="sev high">high</span><span class="kind">Likely contradiction</span><span class="conf">high confidence</span></p><h3>Pricing page says you never switch analytics off. Terms allow suspension.</h3><div class="versus"><div><p class="where">Pricing page</p><p class="value">Never switched off for overage</p><blockquote>We&#x27;ll never turn your analytics off for occasional traffic spikes or if a payment fails the first time</blockquote><a class="src" href="https://usefathom.com/pricing" target="_blank" rel="noopener">usefathom.com/pricing</a></div><div><p class="where">Terms / legal</p><p class="value">Suspension after seven days</p><blockquote>In the event you fail to upgrade your account within seven days of our request, we reserve the right to suspend your account and restrict your use of our Services anytime after the seventh day following our notice to you.</blockquote><a class="src" href="https://usefathom.com/legal/terms" target="_blank" rel="noopener">usefathom.com/legal/terms</a></div></div><dl class="meta"><dt>Impact</dt><dd>The terms also add a first-month trigger the FAQ never mentions, and an account left suspended two months can be deleted with no refund.</dd><dt>Check</dt><dd>The terms describe a right you may never use and the FAQ describes what you actually do. Dropping the word never would close it.</dd></dl></article><article class="finding"><p class="tags"><span class="num">02</span><span class="sev high">high</span><span class="kind">Missing information</span><span class="conf">high confidence</span></p><h3>Pricing page sells full API access. The $19 to $399 ladder is elsewhere.</h3><div class="versus"><div><p class="where">Pricing page</p><p class="value">Full API access, 600 per hour</p><blockquote>Full API access with 600 requests per hour included.</blockquote><a class="src" href="https://usefathom.com/pricing" target="_blank" rel="noopener">usefathom.com/pricing</a></div><div><p class="where">Usage limits / quotas</p><p class="value">Up to $399 a month for more</p><blockquote>Tier 6 | $399/mo | 16,000 | 25</blockquote><a class="src" href="https://usefathom.com/api/v1/rate-limits" target="_blank" rel="noopener">usefathom.com/api/v1/rate-limits</a></div></div><dl class="meta"><dt>Impact</dt><dd>600 an hour is Tier 1 of six. The top tier costs nearly nine times the $45 plan it sits on.</dd><dt>Check</dt><dd>600 requests an hour is generous and most customers stay on Tier 1. The word Full is doing the work in a list that otherwise advertises no extra fees.</dd></dl></article><article class="finding"><p class="tags"><span class="num">03</span><span class="sev medium">medium</span><span class="kind">Ambiguity</span><span class="conf">medium confidence</span></p><h3>Event tracking has no extra fees, but events count as pageviews.</h3><div class="versus"><div><p class="where">Pricing page</p><p class="value">Events included, no extra fees</p><blockquote>Track conversions, revenue, and custom events on every plan. No extra fees.</blockquote><a class="src" href="https://usefathom.com/pricing" target="_blank" rel="noopener">usefathom.com/pricing</a></div><div><p class="where">Same page, further down</p><p class="value">Events counted as pageviews</p><blockquote>those requests will be counted as if they were pageviews</blockquote><a class="src" href="https://usefathom.com/pricing" target="_blank" rel="noopener">usefathom.com/pricing</a></div></div><dl class="meta"><dt>Impact</dt><dd>Your price is set entirely by monthly pageviews, so heavy event tracking moves a customer into a higher band.</dd><dt>Check</dt><dd>No extra fees is fair if it means no separate line item, which is true. The two statements are about 2,000 words apart on the page.</dd></dl></article><article class="finding"><p class="tags"><span class="num">04</span><span class="sev low">low</span><span class="kind">Ambiguity</span><span class="conf">medium confidence</span></p><h3>You say you never discount. Your help centre lists an article on discount codes.</h3><div class="versus"><div><p class="where">Pricing page</p><p class="value">Never any discounts, ever</p><blockquote>We&#x27;ve never done discounts, nor will we ever.</blockquote><a class="src" href="https://usefathom.com/pricing" target="_blank" rel="noopener">usefathom.com/pricing</a></div><div><p class="where">Add-ons &amp; integrations</p><p class="value">Help centre: Discount codes</p><blockquote>Discount codes</blockquote><a class="src" href="https://usefathom.com/docs/integrations" target="_blank" rel="noopener">usefathom.com/docs/integrations</a></div></div><dl class="meta"><dt>Impact</dt><dd>If codes exist for partners or non-profits, everyone pays the exact same price needs a qualifier.</dd><dt>Check</dt><dd>This is the weakest item here. We saw the article title in a sidebar, not its contents, and it may say you do not issue codes.</dd></dl></article>
+
+  <h2>Definitions</h2><div class="legend"><p><b>Likely contradiction:</b> Two public statements that cannot both be true.</p><p><b>Ambiguity:</b> Both statements can be true, but a customer cannot tell what they get.</p><p><b>Missing information:</b> Something that changes the deal, published somewhere the buyer will not look.</p></div>
+
+  <h2>Pages read</h2>
+  <div class="scroller"><table><thead><tr><th>Page</th><th>Type</th><th>Words</th>
+    <th>Status</th></tr></thead><tbody><tr><td><a href="https://usefathom.com/pricing" target="_blank" rel="noopener">Simple and sustainable pricing - Fathom Analytics</a></td><td class="state">Pricing page</td><td class="words">940</td><td class="state">read</td></tr><tr><td><a href="https://app.usefathom.com/register" target="_blank" rel="noopener">Fathom Analytics</a></td><td class="state">Trial / signup</td><td class="words">0</td><td class="state dim">no readable text</td></tr><tr><td><a href="https://app.usefathom.com/register?plan=price_1OMiuQJpbH9soFseaah1xMDb" target="_blank" rel="noopener">Fathom Analytics</a></td><td class="state">Trial / signup</td><td class="words">0</td><td class="state dim">no readable text</td></tr><tr><td><a href="https://usefathom.com/api/v1/rate-limits" target="_blank" rel="noopener">Rate limits and concurrency · Fathom Analytics API</a></td><td class="state">Usage limits / quotas</td><td class="words">176</td><td class="state">read</td></tr><tr><td><a href="https://usefathom.com/docs/integrations" target="_blank" rel="noopener">Integrations - Fathom Analytics</a></td><td class="state">Add-ons &amp; integrations</td><td class="words">540</td><td class="state">read</td></tr><tr><td><a href="https://usefathom.com/docs" target="_blank" rel="noopener">Get help with Fathom Analytics</a></td><td class="state">Product documentation</td><td class="words">298</td><td class="state">read</td></tr><tr><td><a href="https://usefathom.com/api/v1" target="_blank" rel="noopener">Fathom Analytics API</a></td><td class="state">Product documentation</td><td class="words">108</td><td class="state dim">no readable text</td></tr><tr><td><a href="https://usefathom.com/docs/integrations/wordpress" target="_blank" rel="noopener">WordPress - Fathom Analytics</a></td><td class="state">Add-ons &amp; integrations</td><td class="words">1,399</td><td class="state">read</td></tr><tr><td><a href="https://usefathom.com/legal/compliance" target="_blank" rel="noopener">Privacy law compliance - Fathom Analytics</a></td><td class="state">Terms / legal</td><td class="words">1,292</td><td class="state">read</td></tr><tr><td><a href="https://usefathom.com/legal/terms" target="_blank" rel="noopener">Fathom Analytics Terms and Conditions</a></td><td class="state">Terms / legal</td><td class="words">2,199</td><td class="state">read</td></tr><tr><td><a href="https://usefathom.com/docs/integrations/discourse" target="_blank" rel="noopener">Discourse - Fathom Analytics</a></td><td class="state">Add-ons &amp; integrations</td><td class="words">838</td><td class="state">read</td></tr><tr><td><a href="https://usefathom.com/docs/integrations/convertkit" target="_blank" rel="noopener">Kit - Fathom Analytics</a></td><td class="state">Add-ons &amp; integrations</td><td class="words">562</td><td class="state">read</td></tr><tr><td><a href="https://usefathom.com/docs/integrations/webflow" target="_blank" rel="noopener">Webflow - Fathom Analytics</a></td><td class="state">Add-ons &amp; integrations</td><td class="words">553</td><td class="state">read</td></tr><tr><td>https://usefathom.com/api/llms.txt</td><td class="state"></td><td class="words"></td><td class="state dim">skipped: content-type text/plain; charset=ut</td></tr><tr><td>https://usefathom.com/faq</td><td class="state"></td><td class="words"></td><td class="state dim">HTTP 404</td></tr><tr><td>https://usefathom.com/help</td><td class="state"></td><td class="words"></td><td class="state dim">HTTP 404</td></tr></tbody></table></div>
+
+  <section class="kicker"><h2>These are the promises your customers can see. Do your billing system and product deliver the same thing?</h2><p>This audit reads your public pages only. It cannot see what your billing system meters, what your product enforces, or what your customer records entitle people to. If the findings above are news to you, the question worth asking is what else is out of step behind them.</p></section>
+  <footer>Public pages only. Every quote above was located in the page it is attributed to.
+    0 candidate finding(s) were discarded because their evidence
+    could not be verified. No login, no billing data, no customer records.</footer>
+</main>

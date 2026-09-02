@@ -1,9 +1,9 @@
 """Turn a company's public pages into a readable dossier for the analyst.
 
 The model reads prose, not HTML. This stage renders each page as compact
-Markdown-ish text — headings, bullets and table rows preserved, navigation and
-boilerplate dropped — and spends its size budget on the parts of a page that
-actually talk about money, plans and limits.
+Markdown-ish text, keeping headings, bullets and table rows and dropping
+navigation and boilerplate, and spends its size budget on the parts of a page
+that actually talk about money.
 """
 
 from __future__ import annotations
@@ -316,7 +316,7 @@ def harvest(
             )
             dossier.pages.append(page)
             if verbose:
-                flag = "" if page.usable else "  (too little text — client-rendered?)"
+                flag = "" if page.usable else "  (too little text, client-rendered?)"
                 print(f"  [{cand.category:12}] {words:5} words  {cand.url}{flag}")
             if spent >= dossier_budget:
                 dossier.discovery_notes.append(

@@ -1,103 +1,279 @@
 {
   "company": "Baserow",
   "plans": [
-    {"name": "Free", "headline_price": "$0", "billing_periods": ["free"],
-     "evidence": {"quote": "For individuals and small teams", "url": "https://baserow.io/pricing"}},
-    {"name": "Premium", "headline_price": "$10 per user/month billed yearly, $12 billed monthly",
-     "billing_periods": ["monthly", "yearly"],
-     "evidence": {"quote": "$10 per user/month billed yearly", "url": "https://baserow.io/pricing"}},
-    {"name": "Advanced", "headline_price": "$18 per user/month billed yearly, $22 billed monthly",
-     "billing_periods": ["monthly", "yearly"],
-     "evidence": {"quote": "$18 per user/month billed yearly", "url": "https://baserow.io/pricing"}},
-    {"name": "Enterprise", "headline_price": "On request", "billing_periods": ["on request"],
-     "evidence": {"quote": "For large organizations", "url": "https://baserow.io/pricing"}}
+    {
+      "name": "Free",
+      "headline_price": "$0",
+      "billing_periods": [
+        "free"
+      ],
+      "evidence": {
+        "quote": "For individuals and small teams",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "name": "Premium",
+      "headline_price": "$10 per user/month billed yearly, $12 billed monthly",
+      "billing_periods": [
+        "monthly",
+        "yearly"
+      ],
+      "evidence": {
+        "quote": "$10 per user/month billed yearly",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "name": "Advanced",
+      "headline_price": "$18 per user/month billed yearly, $22 billed monthly",
+      "billing_periods": [
+        "monthly",
+        "yearly"
+      ],
+      "evidence": {
+        "quote": "$18 per user/month billed yearly",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "name": "Enterprise",
+      "headline_price": "On request",
+      "billing_periods": [
+        "on request"
+      ],
+      "evidence": {
+        "quote": "For large organizations",
+        "url": "https://baserow.io/pricing"
+      }
+    }
   ],
   "promises": [
-    {"kind": "plan_price", "statement": "Premium is $10 per user/month on annual billing", "plan": "Premium",
-     "evidence": {"quote": "$10 per user/month billed yearly", "url": "https://baserow.io/pricing"}},
-    {"kind": "plan_price", "statement": "Premium is $12 per user/month on monthly billing", "plan": "Premium",
-     "evidence": {"quote": "$12 billed monthly", "url": "https://baserow.io/pricing"}},
-    {"kind": "plan_price", "statement": "Advanced is $18 per user/month on annual billing", "plan": "Advanced",
-     "evidence": {"quote": "$18 per user/month billed yearly", "url": "https://baserow.io/pricing"}},
-    {"kind": "plan_price", "statement": "Advanced is $22 per user/month on monthly billing", "plan": "Advanced",
-     "evidence": {"quote": "$22 billed monthly", "url": "https://baserow.io/pricing"}},
-    {"kind": "plan_price", "statement": "Enterprise pricing is quoted on request", "plan": "Enterprise",
-     "evidence": {"quote": "On request", "url": "https://baserow.io/pricing"}},
-    {"kind": "trial", "statement": "A free trial is offered on Premium, with no stated length", "plan": "Premium",
-     "evidence": {"quote": "Free trial", "url": "https://baserow.io/pricing"}},
-    {"kind": "limit", "statement": "Free is limited to 3,000 rows per workspace", "plan": "Free",
-     "evidence": {"quote": "3,000 rows per workspace", "url": "https://baserow.io/pricing"}},
-    {"kind": "limit", "statement": "Premium is limited to 50,000 rows per workspace", "plan": "Premium",
-     "evidence": {"quote": "50,000 rows per workspace", "url": "https://baserow.io/pricing"}},
-    {"kind": "limit", "statement": "Advanced is limited to 250,000 rows per workspace", "plan": "Advanced",
-     "evidence": {"quote": "250,000 rows per workspace", "url": "https://baserow.io/pricing"}},
-    {"kind": "limit", "statement": "Enterprise is limited to 1,000,000 rows per workspace", "plan": "Enterprise",
-     "evidence": {"quote": "1,000,000 rows per workspace", "url": "https://baserow.io/pricing"}},
-    {"kind": "limit", "statement": "Free includes 2GB of storage per workspace", "plan": "Free",
-     "evidence": {"quote": "2GB of storage per workspace", "url": "https://baserow.io/pricing"}},
-    {"kind": "limit", "statement": "Free includes 2,000 automation credits", "plan": "Free",
-     "evidence": {"quote": "2,000 automation credits", "url": "https://baserow.io/pricing"}},
-    {"kind": "limit", "statement": "Advanced includes 500,000 automation credits", "plan": "Advanced",
-     "evidence": {"quote": "500,000 automation credits", "url": "https://baserow.io/pricing"}},
-    {"kind": "limit", "statement": "Free includes 500 external app users", "plan": "Free",
-     "evidence": {"quote": "500 external app users", "url": "https://baserow.io/pricing"}},
-    {"kind": "unlimited", "statement": "Enterprise includes unlimited external app users", "plan": "Enterprise",
-     "evidence": {"quote": "Unlimited external app users", "url": "https://baserow.io/pricing"}},
-    {"kind": "entitlement", "statement": "Enterprise can pay by invoice", "plan": "Enterprise",
-     "evidence": {"quote": "Payment by invoice", "url": "https://baserow.io/pricing"}},
-    {"kind": "condition", "statement": "Cloud is capped at 10 concurrent API requests, subject to fair use and reducible at Baserow's discretion", "plan": null,
-     "evidence": {"quote": "In Baserow Cloud, there's a limit of 10 concurrent API requests. This limit is subject to a fair use policy, and we reserve the right to lower it if it affects overall performance.", "url": "https://baserow.io/faq"}},
-    {"kind": "condition", "statement": "Exceeding the row limit for 7 days blocks creation of new rows", "plan": null,
-     "evidence": {"quote": "If a workspace exceeds its row limit for 7 days, you won't be able to create new rows.", "url": "https://baserow.io/faq"}},
-    {"kind": "condition", "statement": "Only credit card payment is accepted", "plan": null,
-     "evidence": {"quote": "Currently, you can pay only with a credit card.", "url": "https://baserow.io/faq"}},
-    {"kind": "unlimited", "statement": "Self-hosted has no row, storage or API request limits", "plan": null,
-     "evidence": {"quote": "The self-hosted version will never have row, storage, or API request limitations.", "url": "https://baserow.io/faq"}}
+    {
+      "kind": "plan_price",
+      "statement": "Premium is $10 per user/month on annual billing",
+      "plan": "Premium",
+      "evidence": {
+        "quote": "$10 per user/month billed yearly",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "kind": "plan_price",
+      "statement": "Premium is $12 per user/month on monthly billing",
+      "plan": "Premium",
+      "evidence": {
+        "quote": "$12 billed monthly",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "kind": "plan_price",
+      "statement": "Advanced is $18 per user/month on annual billing",
+      "plan": "Advanced",
+      "evidence": {
+        "quote": "$18 per user/month billed yearly",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "kind": "plan_price",
+      "statement": "Advanced is $22 per user/month on monthly billing",
+      "plan": "Advanced",
+      "evidence": {
+        "quote": "$22 billed monthly",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "kind": "plan_price",
+      "statement": "Enterprise pricing is quoted on request",
+      "plan": "Enterprise",
+      "evidence": {
+        "quote": "On request",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "kind": "trial",
+      "statement": "A free trial is offered on Premium, with no stated length",
+      "plan": "Premium",
+      "evidence": {
+        "quote": "Free trial",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Free is limited to 3,000 rows per workspace",
+      "plan": "Free",
+      "evidence": {
+        "quote": "3,000 rows per workspace",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Premium is limited to 50,000 rows per workspace",
+      "plan": "Premium",
+      "evidence": {
+        "quote": "50,000 rows per workspace",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Advanced is limited to 250,000 rows per workspace",
+      "plan": "Advanced",
+      "evidence": {
+        "quote": "250,000 rows per workspace",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Enterprise is limited to 1,000,000 rows per workspace",
+      "plan": "Enterprise",
+      "evidence": {
+        "quote": "1,000,000 rows per workspace",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Free includes 2GB of storage per workspace",
+      "plan": "Free",
+      "evidence": {
+        "quote": "2GB of storage per workspace",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Free includes 2,000 automation credits",
+      "plan": "Free",
+      "evidence": {
+        "quote": "2,000 automation credits",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Advanced includes 500,000 automation credits",
+      "plan": "Advanced",
+      "evidence": {
+        "quote": "500,000 automation credits",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Free includes 500 external app users",
+      "plan": "Free",
+      "evidence": {
+        "quote": "500 external app users",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "kind": "unlimited",
+      "statement": "Enterprise includes unlimited external app users",
+      "plan": "Enterprise",
+      "evidence": {
+        "quote": "Unlimited external app users",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "kind": "entitlement",
+      "statement": "Enterprise can pay by invoice",
+      "plan": "Enterprise",
+      "evidence": {
+        "quote": "Payment by invoice",
+        "url": "https://baserow.io/pricing"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Cloud is capped at 10 concurrent API requests, subject to fair use and reducible at Baserow's discretion",
+      "plan": null,
+      "evidence": {
+        "quote": "In Baserow Cloud, there's a limit of 10 concurrent API requests. This limit is subject to a fair use policy, and we reserve the right to lower it if it affects overall performance.",
+        "url": "https://baserow.io/faq"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Exceeding the row limit for 7 days blocks creation of new rows",
+      "plan": null,
+      "evidence": {
+        "quote": "If a workspace exceeds its row limit for 7 days, you won't be able to create new rows.",
+        "url": "https://baserow.io/faq"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Only credit card payment is accepted",
+      "plan": null,
+      "evidence": {
+        "quote": "Currently, you can pay only with a credit card.",
+        "url": "https://baserow.io/faq"
+      }
+    },
+    {
+      "kind": "unlimited",
+      "statement": "Self-hosted has no row, storage or API request limits",
+      "plan": null,
+      "evidence": {
+        "quote": "The self-hosted version will never have row, storage, or API request limitations.",
+        "url": "https://baserow.io/faq"
+      }
+    }
   ],
   "findings": [
     {
       "type": "likely_contradiction",
       "severity": "medium",
       "confidence": "high",
-      "headline": "Your pricing page offers Enterprise customers payment by invoice; your FAQ says you only accept credit cards",
-      "explanation": "\"Payment by invoice\" is listed as a reason to choose Enterprise, and it appears again in the plan comparison table. Your FAQ answers the question of what payment methods are accepted with a flat statement that credit card is currently the only option. An enterprise buyer doing diligence — exactly the buyer who cannot put a five-figure annual contract on a corporate card — will read the FAQ and conclude that you cannot invoice them.",
+      "headline": "Pricing page offers invoicing. FAQ says card only.",
+      "explanation": "An enterprise buyer doing diligence reads the FAQ and concludes you cannot invoice them.",
       "claim_a": {
-        "statement": "Enterprise customers can pay by invoice",
+        "statement": "Enterprise pays by invoice",
         "quote": "Payment by invoice",
         "url": "https://baserow.io/pricing"
       },
       "claim_b": {
-        "statement": "Credit card is the only payment method accepted",
+        "statement": "Credit card only",
         "quote": "Currently, you can pay only with a credit card. We plan to add more payment methods in the future.",
         "url": "https://baserow.io/faq"
       },
-      "why_not_just_wording": "One page names invoicing as a purchasable Enterprise benefit and the other states that no payment method other than credit card exists; those are different facts, not different phrasings.",
-      "caveat": "The FAQ answer is almost certainly about self-serve checkout, where credit card genuinely is the only route, and invoicing is arranged through sales. As written, though, neither page says so, and the FAQ is the page a buyer searches."
+      "why_not_just_wording": "One page sells invoicing as an Enterprise benefit, the other says no other payment method exists.",
+      "caveat": "The FAQ answer is probably about self-serve checkout, with invoicing arranged through sales. Neither page says so."
     },
     {
       "type": "missing_information",
       "severity": "medium",
       "confidence": "medium",
-      "headline": "Every paid plan is capped at the same 10 concurrent API requests, and your plan comparison never mentions it",
-      "explanation": "Your pricing page sells usage that scales with price: rows go from 3,000 to 1,000,000 and automation credits from 2,000 to 2,000,000 across the tiers. API throughput does not scale at all. The FAQ discloses a flat ceiling of 10 concurrent requests for every Baserow Cloud plan, adds that it is subject to fair use, and reserves the right to lower it. For a product that markets itself as API-first, a customer sizing an integration against the Advanced tier has no way of learning from the pricing page that paying nine times more buys no additional API concurrency.",
+      "headline": "API concurrency is 10 on every paid plan. The comparison never says so.",
+      "explanation": "Rows scale from 3,000 to 1,000,000 across the tiers. API throughput does not move at all.",
       "claim_a": {
-        "statement": "Usage allowances scale by plan on the pricing page — Advanced buys 250,000 rows per workspace",
+        "statement": "Advanced buys 250,000 rows",
         "quote": "250,000 rows per workspace",
         "url": "https://baserow.io/pricing"
       },
       "claim_b": {
-        "statement": "API concurrency is fixed at 10 for every Cloud plan and may be reduced at Baserow's discretion",
+        "statement": "10 concurrent requests, any plan",
         "quote": "In Baserow Cloud, there's a limit of 10 concurrent API requests. This limit is subject to a fair use policy, and we reserve the right to lower it if it affects overall performance.",
         "url": "https://baserow.io/faq"
       },
-      "why_not_just_wording": "The plan comparison lists every other usage dimension by tier and omits this one entirely, so a reader cannot infer either the cap or the fact that it does not improve with price.",
-      "caveat": "Your pricing page does carry a collapsed FAQ item titled \"What are the limitations in records, rows, and API requests?\", so the answer may be one click away rather than on another page. We could not read the collapsed panel, only its heading."
+      "why_not_just_wording": "Every other usage dimension is listed by tier and this one is absent, so a reader cannot infer either the cap or that it never improves.",
+      "caveat": "Your pricing page carries a collapsed FAQ titled \"What are the limitations in records, rows, and API requests?\". We could read the heading, not the panel."
     }
   ],
   "coverage_notes": {
     "unusable_pages": [
       "https://baserow.io/signup and the subscription pages returned too little text to read"
     ],
-    "what_was_not_checkable": "The plan comparison table on the pricing page is built from styled divs rather than a real table, so when it is flattened to text the values lose their column alignment. Several rows publish three values for four plans (row change history, application users), which may be a genuine gap or may just be how the grid collapses — we could not tell, and did not report it. The Premium plan advertises a \"Free trial\" with no length stated on any page we read, and nothing anywhere states whether a credit card is required to start it."
+    "what_was_not_checkable": "The plan comparison on your pricing page is built from styled divs rather than a real table, so per-plan values lose their column alignment when flattened to text. Several rows publish three values for four plans, including row change history and application users. That may be a real gap or an artefact of the flattening, so we did not report it. The Premium plan advertises a free trial with no length stated on any page we read, and nothing says whether a card is required to start it."
   }
 }

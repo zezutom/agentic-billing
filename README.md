@@ -12,7 +12,7 @@ customers actually hold together?**
 
 Point it at a SaaS company's homepage and it finds the pricing page, discovers the docs,
 help articles, FAQs and terms that make commercial promises, extracts those promises as
-structured claims, and reports where the company's own pages disagree — each finding backed
+structured claims, and reports where the company's own pages disagree. Each finding is backed
 by two verbatim quotes and two links. No LLM, no database, no authentication; public pages
 only.
 

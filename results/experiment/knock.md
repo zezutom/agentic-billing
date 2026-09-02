@@ -1,50 +1,50 @@
-# Commercial consistency audit — Knock
+# Knock: commercial consistency audit
 
 **We found 2 commercial promises worth checking.**
 
-Source: https://knock.app/ · 8 public pages read · 17 commercial promises extracted · 24 quotes verified against their source page · 2026-09-02 07:57:24 UTC
+https://knock.app/ | 8 pages read | 17 promises extracted | 24 quotes verified | 2026-09-02 07:57:24 UTC
 
 ## What you appear to sell
 
-- **Developer** — $0 / month
-- **Starter** — $250 / month
-- **Enterprise** — Contact us
+- **Developer**: $0 / month
+- **Starter**: $250 / month
+- **Enterprise**: Contact us
 
-## 1. Your pricing page says workflow triggers are unlimited on every plan; your API reference rate limits every endpoint
+## 1. Pricing page says triggers are unlimited. Every endpoint is rate limited.
 
-`medium impact` · `Ambiguity` · `high confidence`
+`medium` `Ambiguity` `high confidence`
 
-"Unlimited" appears against workflow triggers, notification workflows, channels and recipients for all three plans, including the free one. Triggering a workflow is an API call, and your API reference states plainly that every endpoint is rate limited, on a five-tier scale that starts at one request per second, and returns a 429 when exceeded. The two statements are compatible — a rate limit caps the rate, not the total — but the pricing page does not say so, and the rate-limit tiers are never mapped to plans or to specific endpoints, so a developer sizing a launch cannot work out what throughput they have actually bought.
+Triggering a workflow is an API call, and the tiers are never mapped to plans or endpoints.
 
-**What one page says:** Workflow triggers are unlimited on every plan, including the free one
+**What one page says:** Unlimited workflow triggers
 > Workflow triggers | Unlimited | Unlimited | Unlimited
-> — [https://knock.app/pricing](https://knock.app/pricing)
+> [https://knock.app/pricing](https://knock.app/pricing)
 
-**What another page says:** Every API endpoint is rate limited on a tier scale beginning at one request per second, returning 429 when exceeded
+**What another page says:** 1 to 1,000 requests per second
 > Each endpoint in the Knock API is rate limited. Knock uses a tier system to determine the rate limit scale for each endpoint.
-> — [https://docs.knock.app/api-reference/overview/rate-limits](https://docs.knock.app/api-reference/overview/rate-limits)
+> [https://docs.knock.app/api-reference/overview/rate-limits](https://docs.knock.app/api-reference/overview/rate-limits)
 
-*Why this is not just wording: "Unlimited triggers" and "one to a thousand requests per second depending on an unpublished endpoint tier" answer the same buyer question — how much can I send — with different numbers.*
+*Why this is not just wording: Unlimited triggers and a per-second ceiling answer the same buyer question with different numbers.*
 
-*What would make this a non-issue: This is a clarity problem, not a broken promise: rate limits and volume allowances genuinely are different, and your docs invite customers to ask for a higher rate. Naming which tier the trigger endpoint sits in would resolve it in one line.*
+*What would make this a non-issue: Rate limits and volume allowances are different, and your docs invite customers to ask for more. Naming the tier for the trigger endpoint would fix it.*
 
-## 2. Enterprise customers get the same guides allowance as the $250 Starter plan, and only the FAQ says so
+## 2. Enterprise guides default to the Starter allowance. Only the FAQ says so.
 
-`medium impact` · `Missing information` · `high confidence`
+`medium` `Missing information` `high confidence`
 
-In your comparison table the Enterprise column for guide active users says "Contact us", alongside a note about volume discounts. Every reasonable reading of that is "this number is negotiated, and it will be bigger than Starter's". An FAQ answer near the bottom of the same page says something different: unless guides were explicitly written into the enterprise agreement, an Enterprise customer gets 2,500 active users a month — exactly what Starter includes for $250. A customer paying well above Starter, who assumed guides scaled with their contract, finds out when you ask them to get in touch mid-quarter.
+A customer paying well above Starter, who assumed guides scaled with their contract, finds out when you ask them to get in touch.
 
-**What one page says:** The Enterprise guides allowance is presented as something to negotiate, with volume discounts available
+**What one page says:** Contact us, volume discounts
 > Contact us Volume-based discounts and monthly notified user pricing available.
-> — [https://knock.app/pricing](https://knock.app/pricing)
+> [https://knock.app/pricing](https://knock.app/pricing)
 
-**What another page says:** Enterprise defaults to the Starter allowance of 2,500 guide active users a month
+**What another page says:** 2,500 users, same as Starter
 > you'll have the same guides limit as our Starter plan: 2,500 active users a month
-> — [https://knock.app/pricing](https://knock.app/pricing)
+> [https://knock.app/pricing](https://knock.app/pricing)
 
-*Why this is not just wording: "Contact us" invites the reader to assume a negotiated, larger number, while the FAQ states a specific default equal to the tier below — that is a fact about the deal, not a phrasing choice.*
+*Why this is not just wording: Contact us invites the reader to assume a negotiated number while the FAQ states a specific default equal to the tier below.*
 
-*What would make this a non-issue: The FAQ is on the same page as the table, so a thorough reader will find it. It is 40 rows below, under a question addressed to existing Enterprise customers rather than to buyers, and the table itself gives no hint that a default exists.*
+*What would make this a non-issue: The FAQ is on the same page, forty rows down, under a question aimed at existing customers rather than buyers.*
 
 ## Pages we read
 
@@ -58,14 +58,14 @@ In your comparison table the Enterprise column for guide active users says "Cont
 | [API reference - Knock Docs](https://docs.knock.app/api-reference/overview) | Product documentation | 2033 | read |
 | [API reference - Knock Docs](https://docs.knock.app/api-reference/overview/rate-limits) | Usage limits / quotas | 2033 | read |
 | [API reference - Knock Docs](https://docs.knock.app/api-reference/overview/batch-rate-limits) | Usage limits / quotas | 2033 | read |
-| https://dashboard.knock.app/signup | — | — | blocked by robots.txt |
+| https://dashboard.knock.app/signup | | | blocked by robots.txt |
 
 ## What we could not check
 
-We deliberately did not report the rate-limit tier table appearing on two documentation pages with different numbers in view — it is one table of endpoint scales reproduced on both pages, not two conflicting limits, and an automated reader could easily mistake it for a contradiction. We could not check which tier any given endpoint belongs to, since that mapping is not on the pages we read. Your pricing table promises unlimited feed retention while the API reference refers to data 'subject to deletion according to the data retention policy associated with your account'; the retention policy page was not reachable from our crawl, so we could not tell whether these describe the same data and did not report it. The signup page is blocked by robots.txt, so we could not check trial or card-requirement terms.
+We did not report the rate-limit tier table that appears on two documentation pages with different numbers in view. It is one table of endpoint scales reproduced on both pages, not two conflicting limits, and an automated reader could easily mistake it for a contradiction. We could not check which tier any given endpoint belongs to, since that mapping is not on the pages we read. Your pricing table promises unlimited feed retention while the API reference refers to data subject to deletion under the retention policy on your account. The retention policy page was not reachable from our crawl, so we could not tell whether these describe the same data and did not report it. The signup page is blocked by robots.txt, so trial and card-requirement terms were not checked.
 
 ---
 
 **These are the promises your customers can see. Do your billing system and product deliver the same thing?**
 
-This audit only reads what is published on your website. It cannot see what your billing system actually meters, what your product actually enforces, or what your customer records actually entitle people to. In most companies those three answers have drifted apart quietly, and the public pages are the only place the drift is visible from outside. If the contradictions above are news to you, the more expensive question is what else is out of step behind them.
+This audit reads your public pages only. It cannot see what your billing system meters, what your product enforces, or what your customer records entitle people to. If the findings above are news to you, the question worth asking is what else is out of step behind them.

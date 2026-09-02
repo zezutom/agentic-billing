@@ -98,7 +98,7 @@ def build(outdir: str | Path = "results/experiment") -> Path:
     A(f"| Companies whose pricing page could not be read | {len(blind)}"
       + (f" ({', '.join(blind)})" if blind else "") + " |")
     A("")
-    A("**Verification** — every quote the analyst produced was checked against the page it "
+    A("**Verification.** Every quote the analyst produced was checked against the page it "
       "was attributed to:")
     A("")
     A("| Check | Count |")
@@ -155,7 +155,7 @@ def build(outdir: str | Path = "results/experiment") -> Path:
             title = (p.get("title") or p["url"]).replace("|", "-")[:56]
             A(f"| [{title}]({p['url']}) | {label} | {p.get('word_count',0)} | {status} |")
         for f in src.get("failures", []):
-            A(f"| {f['url']} | — | — | {f['reason'][:45]} |")
+            A(f"| {f['url']} | | | {f['reason'][:45]} |")
         A("")
         A("</details>")
         A("")
@@ -210,8 +210,8 @@ def build(outdir: str | Path = "results/experiment") -> Path:
     chosen = {c["name"] for c in m["selected"]}
     for i, c in enumerate(m["pool"], 1):
         e = elig.get(c["url"], {})
-        mark = ("**yes — selected**" if c["name"] in chosen else
-                ("yes" if e.get("eligible") else f"no — {e.get('reason','not checked')[:70]}"))
+        mark = ("**yes, selected**" if c["name"] in chosen else
+                ("yes" if e.get("eligible") else f"no: {e.get('reason','not checked')[:70]}"))
         A(f"| {i} | [{c['name']}]({c['url']}) | {c['category']} | {c['discovered_via']} | "
           f"{c['why_qualifies']} | {mark} |")
     A("")

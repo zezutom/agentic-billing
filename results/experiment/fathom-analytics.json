@@ -185,20 +185,20 @@
       "type": "likely_contradiction",
       "severity": "high",
       "confidence": "high",
-      "headline": "Your pricing page promises you will never switch analytics off for going over; your terms reserve the right to suspend the account",
-      "explanation": "The FAQ on your pricing page is written to remove exactly this worry: you will never turn someone's analytics off over a traffic spike, and if they go over two months running you simply offer an upgrade, which they can take or leave with no hard feelings. Your terms and conditions describe a different process. There, a customer who does not upgrade within seven days of being asked can have their account suspended, and an account left suspended for two months can be deleted \u2014 with no refund. The terms also add a trigger the FAQ never mentions: significantly exceeding the limit inside the first month, judged at your sole discretion. For a company whose whole brand is candour about pricing, this is the one page where the reassurance does not hold.",
+      "headline": "Pricing page says you never switch analytics off. Terms allow suspension.",
+      "explanation": "The terms also add a first-month trigger the FAQ never mentions, and an account left suspended two months can be deleted with no refund.",
       "claim_a": {
-        "statement": "Analytics are never switched off for going over; the customer chooses whether to upgrade or leave",
+        "statement": "Never switched off for overage",
         "quote": "We'll never turn your analytics off for occasional traffic spikes or if a payment fails the first time",
         "url": "https://usefathom.com/pricing"
       },
       "claim_b": {
-        "statement": "Failing to upgrade within seven days can lead to suspension, and continued suspension to deletion, with no refund",
+        "statement": "Suspension after seven days",
         "quote": "In the event you fail to upgrade your account within seven days of our request, we reserve the right to suspend your account and restrict your use of our Services anytime after the seventh day following our notice to you.",
         "url": "https://usefathom.com/legal/terms"
       },
-      "why_not_just_wording": "\"We'll never turn your analytics off\" and \"we reserve the right to suspend your account and restrict your use of our Services\" describe opposite outcomes for the same customer in the same situation.",
-      "caveat": "The terms describe a right you may never exercise, and the FAQ describes what you actually do in practice. Most companies have this gap; it is more visible here because the FAQ makes such a specific promise. Softening \"never\" to \"we won't\" and mentioning the first-month trigger would close it.",
+      "why_not_just_wording": "Never turn your analytics off and reserve the right to suspend your account describe opposite outcomes for the same customer.",
+      "caveat": "The terms describe a right you may never use and the FAQ describes what you actually do. Dropping the word never would close it.",
       "same_page": false,
       "score": 10.35
     },
@@ -206,20 +206,20 @@
       "type": "missing_information",
       "severity": "high",
       "confidence": "high",
-      "headline": "\"Full API access\" is on the pricing page; the $19\u2013$399 a month you may need to pay for it is not",
-      "explanation": "Your pricing page lists \"Full API access with 600 requests per hour included\" as a plan feature, in a list whose other entries end with reassurances like \"No extra fees\". A separate page reveals that 600 requests an hour is Tier 1 of a six-tier paid ladder, and that going beyond it costs $19, $39, $79, $199 or $399 a month. The top tier is nearly nine times the price of the $45 plan it sits on top of. Anyone sizing a real integration \u2014 the person most likely to care about the API at all \u2014 will build their business case from the pricing page and find the ladder only after they hit a 429.",
+      "headline": "Pricing page sells full API access. The $19 to $399 ladder is elsewhere.",
+      "explanation": "600 an hour is Tier 1 of six. The top tier costs nearly nine times the $45 plan it sits on.",
       "claim_a": {
-        "statement": "The plan includes full API access with 600 requests per hour",
+        "statement": "Full API access, 600 per hour",
         "quote": "Full API access with 600 requests per hour included.",
         "url": "https://usefathom.com/pricing"
       },
       "claim_b": {
-        "statement": "API throughput above the included allowance is a paid upgrade costing up to $399 a month",
+        "statement": "Up to $399 a month for more",
         "quote": "Tier 6 | $399/mo | 16,000 | 25",
         "url": "https://usefathom.com/api/v1/rate-limits"
       },
-      "why_not_just_wording": "The pricing page names no price for API capacity at all, while the other page prices it in six steps up to $399 a month, so a reader of the pricing page cannot arrive at the real cost of the product they are buying.",
-      "caveat": "600 requests an hour is generous for dashboard-style use, and most customers will never leave Tier 1. The issue is that the word \"Full\" is doing a lot of work in a list that otherwise advertises the absence of extra fees.",
+      "why_not_just_wording": "The pricing page names no price for API capacity while another page prices it in six steps.",
+      "caveat": "600 requests an hour is generous and most customers stay on Tier 1. The word Full is doing the work in a list that otherwise advertises no extra fees.",
       "same_page": false,
       "score": 7.65
     },
@@ -227,20 +227,20 @@
       "type": "ambiguity",
       "severity": "medium",
       "confidence": "medium",
-      "headline": "Event tracking is advertised with \"no extra fees\", but events are counted as pageviews, which is what your price is based on",
-      "explanation": "Your feature list says conversions, revenue and custom events are tracked on every plan with no extra fees. An FAQ answer much further down the same page confirms that custom events and API requests are counted as if they were pageviews. Since the plan price is set entirely by monthly pageviews, heavy event tracking does raise the bill \u2014 it moves the customer into a higher band, and by the terms it can eventually force an upgrade. Both statements are true; read in sequence they land as a contradiction.",
+      "headline": "Event tracking has no extra fees, but events count as pageviews.",
+      "explanation": "Your price is set entirely by monthly pageviews, so heavy event tracking moves a customer into a higher band.",
       "claim_a": {
-        "statement": "Event and ecommerce tracking is included on every plan with no extra fees",
+        "statement": "Events included, no extra fees",
         "quote": "Track conversions, revenue, and custom events on every plan. No extra fees.",
         "url": "https://usefathom.com/pricing"
       },
       "claim_b": {
-        "statement": "Custom events and API requests consume the pageview allowance that sets the price",
+        "statement": "Events counted as pageviews",
         "quote": "those requests will be counted as if they were pageviews",
         "url": "https://usefathom.com/pricing"
       },
-      "why_not_just_wording": "\"No extra fees\" and \"counted as if they were pageviews\" have different consequences for the invoice, because pageviews are the only thing your price depends on.",
-      "caveat": "\"No extra fees\" is fair if it means there is no separate line item for events, which is true. The two statements are roughly two thousand words apart on the page, so few readers will see both \u2014 which is also why it is worth a sentence next to the feature.",
+      "why_not_just_wording": "No extra fees and counted as pageviews have different consequences for the invoice.",
+      "caveat": "No extra fees is fair if it means no separate line item, which is true. The two statements are about 2,000 words apart on the page.",
       "same_page": true,
       "score": 4.0
     },
@@ -248,27 +248,27 @@
       "type": "ambiguity",
       "severity": "low",
       "confidence": "medium",
-      "headline": "You state you have never given a discount, while your help centre carries an article called \"Discount codes\"",
-      "explanation": "Your pricing FAQ is emphatic: never any sales or discounts, not even Black Friday, because everyone pays exactly the same price. That claim is part of your positioning. Every documentation page we read carries a help-centre link titled \"Discount codes\". If discount codes exist for partners, non-profits or migrations, then \"everyone pays the exact same price\" needs a qualifier; if they do not, the article title is misleading.",
+      "headline": "You say you never discount. Your help centre lists an article on discount codes.",
+      "explanation": "If codes exist for partners or non-profits, everyone pays the exact same price needs a qualifier.",
       "claim_a": {
-        "statement": "There have never been and will never be discounts; everyone pays the same price",
+        "statement": "Never any discounts, ever",
         "quote": "We've never done discounts, nor will we ever.",
         "url": "https://usefathom.com/pricing"
       },
       "claim_b": {
-        "statement": "The help centre documents discount codes",
+        "statement": "Help centre: Discount codes",
         "quote": "Discount codes",
         "url": "https://usefathom.com/docs/integrations"
       },
-      "why_not_just_wording": "A help article dedicated to discount codes implies a mechanism for paying less than list price, which is what the pricing FAQ says does not exist.",
-      "caveat": "This is the weakest item here and we want to be straight about why: we only saw the article's title in a navigation sidebar, not its contents. The article may explain that Fathom does not issue discount codes, or cover codes from a bundle or acquisition. Thirty seconds of checking settles it.",
+      "why_not_just_wording": "An article about discount codes implies a way to pay less than list price, which the FAQ says does not exist.",
+      "caveat": "This is the weakest item here. We saw the article title in a sidebar, not its contents, and it may say you do not issue codes.",
       "same_page": false,
       "score": 2.0
     }
   ],
   "coverage_notes": {
     "unusable_pages": [],
-    "what_was_not_checkable": "Discovery did not reach the help articles behind the sidebar titles \u2014 \"Exceeding your plan limits\", \"Billing FAQ\", \"How do free trials work?\", \"Discount codes\" and \"Upgrading or downgrading\" \u2014 which are the pages most likely either to resolve or to worsen the findings above. Nothing we read says whether a credit card is required to begin the 7-day trial. The pricing page's slider shows one pageview band at a time, so we could only read the $45 / 500,000 band and not the prices of the other tiers."
+    "what_was_not_checkable": "Discovery did not reach the help articles behind the sidebar titles: Exceeding your plan limits, Billing FAQ, How do free trials work, Discount codes, and Upgrading or downgrading. Those are the pages most likely either to resolve or to worsen the findings above. Nothing we read says whether a credit card is required to begin the 7-day trial. The pricing page's slider shows one pageview band at a time, so we could only read the $45 band for 500,000 pageviews."
   },
   "backend": "agent",
   "verification": {

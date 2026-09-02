@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Commercial consistency audit — Bento</title>
+<title>Bento Promise Audit</title>
 <style>
 :root{--ink:#12151c;--muted:#5d6675;--line:#e3e6ec;--bg:#fbfbfc;--card:#fff;
 --high:#c0392b;--high-bg:#fdf0ee;--med:#b06f13;--med-bg:#fdf6ea;--low:#4a6b8a;--low-bg:#eff4f8;
@@ -73,7 +73,7 @@ Nothing here is inferred from anything private.</p>
 run 2026-09-02 07:57:10 UTC</p>
 
 <h2>What you appear to sell</h2>
-<div class="legend">Marketing Platform — $29/mo up to 5,000 Active Users, then tiered from $0.01 per Active User, Transactional Email — $0/mo — first 100 emails free, then $5/mo to 12,500 and $0.09 per 1,000 after, Bento Chat (add-on) — +$30/mo, requires Marketing Platform</div>
+<div class="legend">Marketing Platform, $29/mo up to 5,000 Active Users, then tiered from $0.01 per Active User, Transactional Email, $0/mo, first 100 emails free, then $5/mo to 12,500 and $0.09 per 1,000 after, Bento Chat (add-on), +$30/mo, requires Marketing Platform</div>
 
 <h2>What we found</h2>
 <article class="f high">
@@ -83,16 +83,16 @@ run 2026-09-02 07:57:10 UTC</p>
   <span class="chip conf">high confidence</span>
   <span class="chip ok">evidence verified</span>
 </div>
-<h3>Your pricing page bills on active users; your FAQ says you bill on total subscribers</h3>
-<p>The entire argument of your pricing page is that you charge for Active Users — people who are subscribed or who did something in the last 30 days — and that dormant contacts do not inflate the bill. Your documentation FAQ answers &quot;How does pricing work?&quot; with a flat statement that you charge on the number of subscribers, and then defines a subscriber as any unique email address in the account. For a list with a long tail of dormant addresses those two rules produce materially different invoices, and the difference is the single reason a prospect would choose you over the competitors your own comparison table names.</p>
+<h3>Pricing page bills on active users. FAQ says total subscribers.</h3>
+<p>On a list with a long dormant tail those two rules produce different invoices. It is also the reason a prospect picks you over the competitors in your own table.</p>
 <div class="pair"><div class="side"><div class="lab">What one page says</div>
-<div class="claim">Billing is based on Active Users — subscribed, or active in the last 30 days</div>
+<div class="claim">Active users, last 30 days</div>
 <blockquote>&ldquo;Subscribed users or people with an event in the last 30 days.&rdquo;</blockquote>
 <a href="https://bentonow.com/pricing" target="_blank" rel="noopener">https://bentonow.com/pricing</a></div><div class="side"><div class="lab">What another page says</div>
-<div class="claim">Billing is based on the total number of subscribers, meaning every unique email address held</div>
+<div class="claim">Every unique email address</div>
 <blockquote>&ldquo;Bento charges based on the number of subscribers you have.&rdquo;</blockquote>
 <a href="https://bentonow.com/docs/faq" target="_blank" rel="noopener">https://bentonow.com/docs/faq</a></div></div>
-<div class="note"><div><b>Why this is not just wording:</b> &quot;Active Users in the last 30 days&quot; and &quot;every unique email address in your account&quot; are two different countable populations, so they are two different prices for the same list.</div><div><b>What would make this a non-issue:</b> The FAQ answer is probably just older copy written before the Active Users model, and &quot;subscriber&quot; may be intended loosely. That is exactly the problem: it is the page a customer searches when they want to know what drives their bill.</div></div>
+<div class="note"><div><b>Why this is not just wording:</b> Active users in the last 30 days and every email address on file are different countable populations.</div><div><b>What would make this a non-issue:</b> The FAQ is probably older copy from before the Active Users model. It is still the page customers search when they want to know what drives their bill.</div></div>
 </article><article class="f medium">
 <div class="chips">
   <span class="chip medium">medium impact</span>
@@ -100,19 +100,19 @@ run 2026-09-02 07:57:10 UTC</p>
   <span class="chip conf">medium confidence</span>
   <span class="chip ok">evidence verified</span>
 </div>
-<h3>Your FAQ says every feature is included with no gating, while your pricing page sells chat as a $30/month add-on</h3>
-<p>&quot;All features are included at every tier - no feature gating&quot; is a strong promise, and it is the answer a prospect gets when they ask how pricing works. Your pricing page then sells Bento Chat — shared inbox, live chat, SMS, routing, AI agents — for an extra $30 a month, and requires the Marketing Platform underneath it. Someone who reads the FAQ first will budget $29 and be surprised at $59.</p>
+<h3>FAQ says nothing is gated. Pricing page sells chat at $30 a month.</h3>
+<p>Someone who reads the FAQ first budgets $29 and is surprised at $59.</p>
 <div class="pair"><div class="side"><div class="lab">What one page says</div>
-<div class="claim">No feature is gated; everything is included at every tier</div>
+<div class="claim">No feature gating at any tier</div>
 <blockquote>&ldquo;All features are included at every tier&rdquo;</blockquote>
 <a href="https://bentonow.com/docs/faq" target="_blank" rel="noopener">https://bentonow.com/docs/faq</a></div><div class="side"><div class="lab">What another page says</div>
-<div class="claim">Chat, SMS and AI agents cost an additional $30/month on top of the Marketing Platform</div>
+<div class="claim">Chat costs $30 a month extra</div>
 <blockquote>&ldquo;+$30/mo adds shared inbox, live chat, SMS, routing, saved replies, and AI agents. Requires Marketing Platform.&rdquo;</blockquote>
 <a href="https://bentonow.com/pricing" target="_blank" rel="noopener">https://bentonow.com/pricing</a></div></div>
-<div class="note"><div><b>Why this is not just wording:</b> One page states that nothing is behind a paywall while the other puts a named set of features behind a separate monthly charge.</div><div><b>What would make this a non-issue:</b> &quot;Tier&quot; almost certainly means volume tier — the features genuinely do not change as your list grows — and Chat is arguably a separate product rather than a gated feature. Adding four words to the FAQ answer would remove the ambiguity.</div></div>
+<div class="note"><div><b>Why this is not just wording:</b> One page says nothing is behind a paywall, the other puts a named feature set behind a separate charge.</div><div><b>What would make this a non-issue:</b> Tier almost certainly means volume tier, and Chat is arguably a separate product. Four words in the FAQ would settle it.</div></div>
 </article>
 
-<h2>How to read these</h2><div class="legend"><div><b>Likely contradiction</b> — Two public statements that cannot both be true.</div><div><b>Ambiguity</b> — Both statements can be true, but a customer cannot tell what they get.</div></div>
+<h2>How to read these</h2><div class="legend"><div><b>Likely contradiction:</b> Two public statements that cannot both be true.</div><div><b>Ambiguity:</b> Both statements can be true, but a customer cannot tell what they get.</div></div>
 
 <h2>Pages we read</h2>
 <table><thead><tr><th>Page</th><th>Words</th><th>Status</th></tr></thead>
@@ -149,7 +149,7 @@ Acceptable Use Policy | Bento</a><br><span class="tag">Terms / legal</span></td>
 <td>&mdash;</td><td>blocked by robots.txt</td></tr><tr><td>https://bentonow.com/docs/integrations/cli.md<br><span class="tag">not reached</span></td>
 <td>&mdash;</td><td>skipped: content-type text/markdown; charset=utf-8</td></tr></tbody></table>
 
-<div class="close"><h2>These are the promises your customers can see. Do your billing system and product deliver the same thing?</h2><p>This audit only reads what is published on your website. It cannot see what your billing system actually meters, what your product actually enforces, or what your customer records actually entitle people to. In most companies those three answers have drifted apart quietly, and the public pages are the only place the drift is visible from outside. If the contradictions above are news to you, the more expensive question is what else is out of step behind them.</p></div>
+<div class="close"><h2>These are the promises your customers can see. Do your billing system and product deliver the same thing?</h2><p>This audit reads your public pages only. It cannot see what your billing system meters, what your product enforces, or what your customer records entitle people to. If the findings above are news to you, the question worth asking is what else is out of step behind them.</p></div>
 <footer>Automated read of public pages only, then checked: every quote above was located in
 the page it is attributed to, and
 0 candidate finding(s) were discarded because their evidence

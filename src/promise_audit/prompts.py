@@ -54,16 +54,16 @@ Read all of it, then produce a single JSON object.
 
 First, get the commercial picture straight:
 
-- **plans** — every plan the company sells, with its headline price exactly as \
+- **plans**: every plan the company sells, with its headline price exactly as \
 printed (e.g. "$29/user/month billed annually"). Include plans priced only by \
 "contact sales".
-- **promises** — the individual commitments the pages make. Use the `kind` field: \
+- **promises**: the individual commitments the pages make. Use the `kind` field: \
 `plan_price`, `trial`, `limit`, `unlimited`, `entitlement`, `addon`, `condition`. \
 Cover billing periods, trial length and whether a card is required, seats, usage \
 allowances, credits, storage, rate limits, what each plan includes, add-ons, and \
 conditions such as "unlimited", "contact sales", fair use, overage charges and \
 seat minimums. Attach a plan name where the page attaches one, and null where it \
-does not. This is your working set — be thorough, but only record things the \
+does not. This is your working set. Be thorough, but only record things the \
 dossier actually says.
 
 ## What to look for
@@ -76,7 +76,7 @@ assigns it to another.
 is documented elsewhere.
 3. Different trial lengths, or one page saying no card is needed and another \
 requiring one.
-4. Old and new plan names coexisting — help content describing a plan the \
+4. Old and new plan names coexisting, such as help content describing a plan the \
 pricing page no longer sells.
 5. Monthly and annual prices that do not reconcile, or the same plan priced \
 differently on two pages.
@@ -86,25 +86,25 @@ differently on two pages.
 
 The two sides of a finding may come from the same page. A feature bullet near the top of a pricing page and an FAQ answer two thousand words below it are two separate statements, and a pricing page that argues with itself matters more to a buyer than one that argues with the terms of service. What you must not do is quote the same passage twice, or split one sentence in half and present the halves as two claims.
 
-Be careful with monthly/annual toggles. A pricing page rendered to text contains both states of the toggle at once, so two prices for one plan is usually the toggle, not a contradiction. Only report a price conflict when the figures genuinely cannot be reconciled — for instance when the annual rate is higher than the monthly one, or when a stated discount does not match the arithmetic.
+Be careful with monthly/annual toggles. A pricing page rendered to text contains both states of the toggle at once, so two prices for one plan is usually the toggle, not a contradiction. Only report a price conflict when the figures genuinely cannot be reconciled, for instance when the annual rate is higher than the monthly one, or when a stated discount does not match the arithmetic.
 
 ## Classifying what you find
 
 `type` is one of:
 
-- `likely_contradiction` — two statements that cannot both be true.
-- `ambiguity` — both can be true, but a customer cannot tell what they get. \
+- `likely_contradiction`: two statements that cannot both be true.
+- `ambiguity`: both can be true, but a customer cannot tell what they get. \
 An advertised "unlimited" that meets a documented rate limit belongs here, not \
 above, because both statements are technically compatible.
-- `potentially_outdated` — content that looks left over from earlier packaging.
-- `missing_information` — something that changes the deal, published where the \
+- `potentially_outdated`: content that looks left over from earlier packaging.
+- `missing_information`: something that changes the deal, published where the \
 buyer will not look.
 
 `severity` is what it costs the company: high if a customer could buy the wrong \
 plan or feel misled about what they paid for, medium if it causes avoidable \
 support load or hesitation, low if it is a tidiness problem.
 
-`confidence` is how sure you are that the two statements really do conflict — \
+`confidence` is how sure you are that the two statements really do conflict, \
 not how much metadata you attached to them. A rate limit published as two \
 different numbers on two of the company's own pages is high confidence even \
 though neither names a plan. Lower it when the two pages might be scoped to \
@@ -114,7 +114,7 @@ For every finding you must fill in `why_not_just_wording`: one sentence saying \
 why this is a real difference in substance rather than two ways of saying the \
 same thing. If you cannot write that sentence convincingly, delete the finding.
 
-Fill in `caveat` with what would make you wrong — the reading under which the \
+Fill in `caveat` with what would make you wrong: the reading under which the \
 company is fine. Leave it empty only when there genuinely isn't one.
 
 ## Output

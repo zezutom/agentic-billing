@@ -1,90 +1,233 @@
 {
   "company": "Unkey",
   "plans": [
-    {"name": "Starter", "headline_price": "$5 / mo", "billing_periods": ["monthly"],
-     "evidence": {"quote": "Ship small production workloads with simple usage-based billing.", "url": "https://www.unkey.com/pricing"}},
-    {"name": "Pro", "headline_price": "$25 / mo", "billing_periods": ["monthly"],
-     "evidence": {"quote": "Run production APIs with more compute and headroom.", "url": "https://www.unkey.com/pricing"}},
-    {"name": "Business", "headline_price": "$50 / mo", "billing_periods": ["monthly"],
-     "evidence": {"quote": "For higher workloads and growing teams at global scale.", "url": "https://www.unkey.com/pricing"}},
-    {"name": "Enterprise", "headline_price": "Contact the team; annual contracts available", "billing_periods": ["annual", "custom"],
-     "evidence": {"quote": "Connect with our team for higher resource limits, dedicated requirements, annual contracts, and more.", "url": "https://www.unkey.com/pricing"}},
-    {"name": "Free plan (documented only in the docs)", "headline_price": "not published on the pricing page",
-     "billing_periods": ["free"],
-     "evidence": {"quote": "| API requests per month | 150,000 | Varies by plan |", "url": "https://unkey.com/docs/platform/workspaces/billing"}}
+    {
+      "name": "Starter",
+      "headline_price": "$5 / mo",
+      "billing_periods": [
+        "monthly"
+      ],
+      "evidence": {
+        "quote": "Ship small production workloads with simple usage-based billing.",
+        "url": "https://www.unkey.com/pricing"
+      }
+    },
+    {
+      "name": "Pro",
+      "headline_price": "$25 / mo",
+      "billing_periods": [
+        "monthly"
+      ],
+      "evidence": {
+        "quote": "Run production APIs with more compute and headroom.",
+        "url": "https://www.unkey.com/pricing"
+      }
+    },
+    {
+      "name": "Business",
+      "headline_price": "$50 / mo",
+      "billing_periods": [
+        "monthly"
+      ],
+      "evidence": {
+        "quote": "For higher workloads and growing teams at global scale.",
+        "url": "https://www.unkey.com/pricing"
+      }
+    },
+    {
+      "name": "Enterprise",
+      "headline_price": "Contact the team; annual contracts available",
+      "billing_periods": [
+        "annual",
+        "custom"
+      ],
+      "evidence": {
+        "quote": "Connect with our team for higher resource limits, dedicated requirements, annual contracts, and more.",
+        "url": "https://www.unkey.com/pricing"
+      }
+    },
+    {
+      "name": "Free plan (documented only in the docs)",
+      "headline_price": "not published on the pricing page",
+      "billing_periods": [
+        "free"
+      ],
+      "evidence": {
+        "quote": "| API requests per month | 150,000 | Varies by plan |",
+        "url": "https://unkey.com/docs/platform/workspaces/billing"
+      }
+    }
   ],
   "promises": [
-    {"kind": "plan_price", "statement": "Starter is $5 a month", "plan": "Starter",
-     "evidence": {"quote": "$5 / mo", "url": "https://www.unkey.com/pricing"}},
-    {"kind": "plan_price", "statement": "Pro is $25 a month", "plan": "Pro",
-     "evidence": {"quote": "$25 / mo", "url": "https://www.unkey.com/pricing"}},
-    {"kind": "plan_price", "statement": "Business is $50 a month", "plan": "Business",
-     "evidence": {"quote": "$50 / mo", "url": "https://www.unkey.com/pricing"}},
-    {"kind": "entitlement", "statement": "Each paid plan includes usage credits equal to its monthly price", "plan": null,
-     "evidence": {"quote": "Includes $5/mo usage credits", "url": "https://www.unkey.com/pricing"}},
-    {"kind": "limit", "statement": "Starter is limited to 1 vCPU and 2 GB per instance and one custom domain", "plan": "Starter",
-     "evidence": {"quote": "Up to 1 vCPU / 2 GB per Instance", "url": "https://www.unkey.com/pricing"}},
-    {"kind": "limit", "statement": "Pro allows up to 4 vCPU and 8 GB per instance with unlimited custom domains", "plan": "Pro",
-     "evidence": {"quote": "Up to 4 vCPU / 8 GB per Instance", "url": "https://www.unkey.com/pricing"}},
-    {"kind": "limit", "statement": "Business allows up to 16 vCPU and 32 GB per instance", "plan": "Business",
-     "evidence": {"quote": "Up to 16 vCPU / 32 GB per Instance", "url": "https://www.unkey.com/pricing"}},
-    {"kind": "limit", "statement": "Log retention is 3 days on Starter, 7 on Pro and 14 on Business", "plan": null,
-     "evidence": {"quote": "Log retention\nAudit log retention", "url": "https://www.unkey.com/pricing"}},
-    {"kind": "condition", "statement": "Usage is billed per vCPU-second, memory, disk, egress and active key", "plan": null,
-     "evidence": {"quote": "Active key/month $ 0.002", "url": "https://www.unkey.com/pricing"}},
-    {"kind": "condition", "statement": "A monthly spend budget can stop running workloads when reached", "plan": null,
-     "evidence": {"quote": "When enabled, your running Compute workloads stop once usage spend reaches the budget.", "url": "https://unkey.com/docs/platform/workspaces/billing"}},
-    {"kind": "condition", "statement": "Budget alerts are emailed at 50%, 75% and 100% of the budget", "plan": null,
-     "evidence": {"quote": "Sent at 50%, 75%, and 100% of the budget.", "url": "https://unkey.com/docs/platform/workspaces/billing"}},
-    {"kind": "limit", "statement": "The free plan includes 150,000 API requests per month", "plan": "Free plan (documented only in the docs)",
-     "evidence": {"quote": "| API requests per month | 150,000 | Varies by plan |", "url": "https://unkey.com/docs/platform/workspaces/billing"}},
-    {"kind": "limit", "statement": "The free plan has 7 days of log retention and 30 days of audit log retention", "plan": "Free plan (documented only in the docs)",
-     "evidence": {"quote": "| Log retention | 7 days | Varies by plan |", "url": "https://unkey.com/docs/platform/workspaces/billing"}},
-    {"kind": "entitlement", "statement": "Team members are not available on the free plan", "plan": "Free plan (documented only in the docs)",
-     "evidence": {"quote": "| Team members | Not available | Included |", "url": "https://unkey.com/docs/platform/workspaces/billing"}}
+    {
+      "kind": "plan_price",
+      "statement": "Starter is $5 a month",
+      "plan": "Starter",
+      "evidence": {
+        "quote": "$5 / mo",
+        "url": "https://www.unkey.com/pricing"
+      }
+    },
+    {
+      "kind": "plan_price",
+      "statement": "Pro is $25 a month",
+      "plan": "Pro",
+      "evidence": {
+        "quote": "$25 / mo",
+        "url": "https://www.unkey.com/pricing"
+      }
+    },
+    {
+      "kind": "plan_price",
+      "statement": "Business is $50 a month",
+      "plan": "Business",
+      "evidence": {
+        "quote": "$50 / mo",
+        "url": "https://www.unkey.com/pricing"
+      }
+    },
+    {
+      "kind": "entitlement",
+      "statement": "Each paid plan includes usage credits equal to its monthly price",
+      "plan": null,
+      "evidence": {
+        "quote": "Includes $5/mo usage credits",
+        "url": "https://www.unkey.com/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Starter is limited to 1 vCPU and 2 GB per instance and one custom domain",
+      "plan": "Starter",
+      "evidence": {
+        "quote": "Up to 1 vCPU / 2 GB per Instance",
+        "url": "https://www.unkey.com/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Pro allows up to 4 vCPU and 8 GB per instance with unlimited custom domains",
+      "plan": "Pro",
+      "evidence": {
+        "quote": "Up to 4 vCPU / 8 GB per Instance",
+        "url": "https://www.unkey.com/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Business allows up to 16 vCPU and 32 GB per instance",
+      "plan": "Business",
+      "evidence": {
+        "quote": "Up to 16 vCPU / 32 GB per Instance",
+        "url": "https://www.unkey.com/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Log retention is 3 days on Starter, 7 on Pro and 14 on Business",
+      "plan": null,
+      "evidence": {
+        "quote": "Log retention\nAudit log retention",
+        "url": "https://www.unkey.com/pricing"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Usage is billed per vCPU-second, memory, disk, egress and active key",
+      "plan": null,
+      "evidence": {
+        "quote": "Active key/month $ 0.002",
+        "url": "https://www.unkey.com/pricing"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "A monthly spend budget can stop running workloads when reached",
+      "plan": null,
+      "evidence": {
+        "quote": "When enabled, your running Compute workloads stop once usage spend reaches the budget.",
+        "url": "https://unkey.com/docs/platform/workspaces/billing"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Budget alerts are emailed at 50%, 75% and 100% of the budget",
+      "plan": null,
+      "evidence": {
+        "quote": "Sent at 50%, 75%, and 100% of the budget.",
+        "url": "https://unkey.com/docs/platform/workspaces/billing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "The free plan includes 150,000 API requests per month",
+      "plan": "Free plan (documented only in the docs)",
+      "evidence": {
+        "quote": "| API requests per month | 150,000 | Varies by plan |",
+        "url": "https://unkey.com/docs/platform/workspaces/billing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "The free plan has 7 days of log retention and 30 days of audit log retention",
+      "plan": "Free plan (documented only in the docs)",
+      "evidence": {
+        "quote": "| Log retention | 7 days | Varies by plan |",
+        "url": "https://unkey.com/docs/platform/workspaces/billing"
+      }
+    },
+    {
+      "kind": "entitlement",
+      "statement": "Team members are not available on the free plan",
+      "plan": "Free plan (documented only in the docs)",
+      "evidence": {
+        "quote": "| Team members | Not available | Included |",
+        "url": "https://unkey.com/docs/platform/workspaces/billing"
+      }
+    }
   ],
   "findings": [
     {
       "type": "likely_contradiction",
       "severity": "high",
       "confidence": "high",
-      "headline": "Your free plan keeps logs longer than the $5 plan and audit logs longer than the $25 plan",
-      "explanation": "Your documentation says the free plan retains logs for 7 days and audit logs for 30 days. Your pricing page's comparison table gives Starter, at $5 a month, 3 days of log retention and 7 days of audit log retention — less than free on both counts. Pro, at $25 a month, gets 7 days and 14 days, so it too has less audit log retention than the free plan, and only matches free on ordinary logs. Only Business at $50 finally reaches the free plan's 30 days of audit retention. A customer who upgrades from free to Starter to get a production-grade service will find their observability window has shrunk, which is the opposite of what upgrading is supposed to do.",
+      "headline": "Free plan keeps logs longer than the $5 plan.",
+      "explanation": "Pro at $25 still has less audit retention than free. Only Business at $50 matches it.",
       "claim_a": {
-        "statement": "The free plan retains logs for 7 days and audit logs for 30 days",
+        "statement": "Free: 7 days logs, 30 audit",
         "quote": "| Audit log retention | 30 days | Varies by plan |",
         "url": "https://unkey.com/docs/platform/workspaces/billing"
       },
       "claim_b": {
-        "statement": "The paid comparison table gives Starter 3 days of log retention and 7 days of audit log retention, rising to 14 and 30 only on Business",
+        "statement": "Starter: 3 days logs, 7 audit",
         "quote": "$5\n1\n3 days\n7 days\nEmail",
         "url": "https://www.unkey.com/pricing"
       },
-      "why_not_just_wording": "These are the same two named metrics, measured in the same unit, and the free tier's numbers are larger than the paid tier's — one of the two pages must be wrong about what a paying customer receives.",
-      "caveat": "We read the paid figures from a comparison grid that is built from styled divs rather than a real table, so column alignment had to be inferred. We checked it against the plan cards and it holds — the same column that gives Starter 3 days also gives it 1 vCPU, 2 GB, 1 custom domain and $5 of usage credits, all of which match the Starter card exactly. Still worth thirty seconds with the live page before acting."
+      "why_not_just_wording": "The same two named metrics, in the same unit, are larger on the free tier than the paid one.",
+      "caveat": "Paid figures come from a grid built from divs, so we checked the column against the plan cards. It also gives Starter 1 vCPU, 2 GB, 1 domain and $5 credits, all matching."
     },
     {
       "type": "missing_information",
       "severity": "medium",
       "confidence": "high",
-      "headline": "Your pricing page says \"start for free\" but never shows the free plan or what it includes",
-      "explanation": "\"Start for free, scale as you go\" is the first line of your pricing page and the closing call to action repeats it. The plans below begin at $5 a month, and no free tier appears anywhere on the page. The free plan does exist, and it is specified in your billing documentation with real numbers — 150,000 API requests a month, 7 days of log retention, no team members. A developer evaluating you is told twice that they can start for free and then shown nothing they can start with, which turns the most important question on the page into a support conversation.",
+      "headline": "Pricing page says start for free. No free plan is shown.",
+      "explanation": "The free plan exists with real numbers: 150,000 API requests a month, 7 days of log retention, no team members.",
       "claim_a": {
-        "statement": "The pricing page invites developers to start for free",
+        "statement": "Start for free, twice on page",
         "quote": "Start for free, scale as you go with predictable usage-based pricing.",
         "url": "https://www.unkey.com/pricing"
       },
       "claim_b": {
-        "statement": "The free plan and its allowances exist, but are documented only in the billing docs",
+        "statement": "Free plan is in the docs only",
         "quote": "| API requests per month | 150,000 | Varies by plan |",
         "url": "https://unkey.com/docs/platform/workspaces/billing"
       },
-      "why_not_just_wording": "A whole plan with published quotas is absent from the page whose job is to list the plans, so the pricing page cannot answer what \"free\" means.",
-      "caveat": "The free tier may be in the process of being retired, or may be offered only at signup. Either way the pricing page still promises it twice."
+      "why_not_just_wording": "A whole plan with published quotas is missing from the page whose job is to list the plans.",
+      "caveat": "The free tier may be being retired, or offered only at signup. The pricing page still promises it twice."
     }
   ],
   "coverage_notes": {
     "unusable_pages": [],
-    "what_was_not_checkable": "The pricing page's FAQ rendered as a heading with no questions, so anything it says about the free plan, trials or overage was not visible to us. The pricing page states API request allowances nowhere at all — the docs give the free plan 150,000 a month and say paid plans vary, but no page we read says by how much, so we could not check request quotas against each other. The interactive cost calculator produced a single $188 estimate from its default inputs rather than a price list."
+    "what_was_not_checkable": "The pricing page FAQ rendered as a heading with no questions, so anything it says about the free plan, trials or overage was not visible to us. The pricing page states API request allowances nowhere at all. The docs give the free plan 150,000 a month and say paid plans vary, but no page we read says by how much, so request quotas could not be checked against each other. The cost calculator produced a single $188 estimate from its default inputs rather than a price list."
   }
 }

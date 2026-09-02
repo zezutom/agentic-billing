@@ -1,52 +1,202 @@
 {
   "company": "Checkly",
   "plans": [
-    {"name": "Hobby", "headline_price": "$0 per month", "billing_periods": ["free"],
-     "evidence": {"quote": "Perfect for personal projects and learning", "url": "https://www.checklyhq.com/pricing"}},
-    {"name": "Starter", "headline_price": "$24 per month, billed annually", "billing_periods": ["monthly", "annual"],
-     "evidence": {"quote": "$ 24 per month, billed annually", "url": "https://www.checklyhq.com/pricing"}},
-    {"name": "Team", "headline_price": "$64 per month, billed annually", "billing_periods": ["monthly", "annual"],
-     "evidence": {"quote": "$ 64 per month, billed annually", "url": "https://www.checklyhq.com/pricing"}},
-    {"name": "Enterprise", "headline_price": "Custom", "billing_periods": ["custom"],
-     "evidence": {"quote": "Custom solutions for large organizations", "url": "https://www.checklyhq.com/pricing"}}
+    {
+      "name": "Hobby",
+      "headline_price": "$0 per month",
+      "billing_periods": [
+        "free"
+      ],
+      "evidence": {
+        "quote": "Perfect for personal projects and learning",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    },
+    {
+      "name": "Starter",
+      "headline_price": "$24 per month, billed annually",
+      "billing_periods": [
+        "monthly",
+        "annual"
+      ],
+      "evidence": {
+        "quote": "$ 24 per month, billed annually",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    },
+    {
+      "name": "Team",
+      "headline_price": "$64 per month, billed annually",
+      "billing_periods": [
+        "monthly",
+        "annual"
+      ],
+      "evidence": {
+        "quote": "$ 64 per month, billed annually",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    },
+    {
+      "name": "Enterprise",
+      "headline_price": "Custom",
+      "billing_periods": [
+        "custom"
+      ],
+      "evidence": {
+        "quote": "Custom solutions for large organizations",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    }
   ],
   "promises": [
-    {"kind": "plan_price", "statement": "Hobby is free", "plan": "Hobby",
-     "evidence": {"quote": "$ 0 per month", "url": "https://www.checklyhq.com/pricing"}},
-    {"kind": "plan_price", "statement": "Starter is $24 per month", "plan": "Starter",
-     "evidence": {"quote": "$ 24 per month", "url": "https://www.checklyhq.com/pricing"}},
-    {"kind": "plan_price", "statement": "Team is $64 per month", "plan": "Team",
-     "evidence": {"quote": "$ 64 per month", "url": "https://www.checklyhq.com/pricing"}},
-    {"kind": "condition", "statement": "Annual billing saves up to 20%", "plan": null,
-     "evidence": {"quote": "Monthly Annual Save up to 20 %", "url": "https://www.checklyhq.com/pricing"}},
-    {"kind": "limit", "statement": "Hobby includes 10 uptime monitors", "plan": "Hobby",
-     "evidence": {"quote": "## Uptime Monitors\n10", "url": "https://www.checklyhq.com/pricing"}},
-    {"kind": "limit", "statement": "Hobby includes 1,000 browser/Playwright checks and 10,000 API checks", "plan": "Hobby",
-     "evidence": {"quote": "Browser/Playwright Checks 1,000", "url": "https://www.checklyhq.com/pricing"}},
-    {"kind": "limit", "statement": "Included browser check runs are 1,000, 3,000 and 12,000 per month across the plans", "plan": null,
-     "evidence": {"quote": "The total number of browser check or Playwright check suite executions included per month.", "url": "https://www.checklyhq.com/pricing"}},
-    {"kind": "limit", "statement": "Included API check runs are 10,000, 25,000 and 100,000 per month across the plans", "plan": null,
-     "evidence": {"quote": "The total number of API check executions included per month.", "url": "https://www.checklyhq.com/pricing"}},
-    {"kind": "addon", "statement": "Additional uptime monitors are sold in blocks of 25 at $8", "plan": null,
-     "evidence": {"quote": "Purchase additional monitors in blocks of 25 to scale beyond the included amount.", "url": "https://www.checklyhq.com/pricing"}},
-    {"kind": "condition", "statement": "Extra browser check runs can be pre-purchased at $4.00 per 1k", "plan": null,
-     "evidence": {"quote": "$4.00 per 1k", "url": "https://www.checklyhq.com/pricing"}},
-    {"kind": "condition", "statement": "Exceeding purchased browser check runs is charged automatically at a higher per-1k rate", "plan": null,
-     "evidence": {"quote": "The per-1k cost charged automatically when you exceed your purchased browser check runs.", "url": "https://www.checklyhq.com/pricing"}},
-    {"kind": "condition", "statement": "Exceeding purchased API check runs is charged automatically at a higher per-10k rate", "plan": null,
-     "evidence": {"quote": "The per-10k cost charged automatically when you exceed your purchased API check runs.", "url": "https://www.checklyhq.com/pricing"}},
-    {"kind": "limit", "statement": "Check run results, logs and traces are retained for 7, 30 or 180 days depending on plan", "plan": null,
-     "evidence": {"quote": "How long individual check run results, logs, and traces are stored before being purged.", "url": "https://www.checklyhq.com/pricing"}},
-    {"kind": "limit", "statement": "SMS alert credits are 0, 100/month and 200/month across the plans", "plan": null,
-     "evidence": {"quote": "Receive alert notifications via text message. The number shown is your included monthly SMS credits.", "url": "https://www.checklyhq.com/pricing"}},
-    {"kind": "entitlement", "statement": "Enterprise adds premium support, guided onboarding, a dedicated Customer Success Engineer and 24x7 phone escalation", "plan": "Enterprise",
-     "evidence": {"quote": "Enterprise plans add a support layer on top of everything above.", "url": "https://www.checklyhq.com/support"}},
-    {"kind": "entitlement", "statement": "Enterprise offers custom contracts and invoicing", "plan": "Enterprise",
-     "evidence": {"quote": "Custom contracts and invoicing options tailored to your organization's procurement needs.", "url": "https://www.checklyhq.com/pricing"}}
+    {
+      "kind": "plan_price",
+      "statement": "Hobby is free",
+      "plan": "Hobby",
+      "evidence": {
+        "quote": "$ 0 per month",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    },
+    {
+      "kind": "plan_price",
+      "statement": "Starter is $24 per month",
+      "plan": "Starter",
+      "evidence": {
+        "quote": "$ 24 per month",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    },
+    {
+      "kind": "plan_price",
+      "statement": "Team is $64 per month",
+      "plan": "Team",
+      "evidence": {
+        "quote": "$ 64 per month",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Annual billing saves up to 20%",
+      "plan": null,
+      "evidence": {
+        "quote": "Monthly Annual Save up to 20 %",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Hobby includes 10 uptime monitors",
+      "plan": "Hobby",
+      "evidence": {
+        "quote": "## Uptime Monitors\n10",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Hobby includes 1,000 browser/Playwright checks and 10,000 API checks",
+      "plan": "Hobby",
+      "evidence": {
+        "quote": "Browser/Playwright Checks 1,000",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Included browser check runs are 1,000, 3,000 and 12,000 per month across the plans",
+      "plan": null,
+      "evidence": {
+        "quote": "The total number of browser check or Playwright check suite executions included per month.",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Included API check runs are 10,000, 25,000 and 100,000 per month across the plans",
+      "plan": null,
+      "evidence": {
+        "quote": "The total number of API check executions included per month.",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    },
+    {
+      "kind": "addon",
+      "statement": "Additional uptime monitors are sold in blocks of 25 at $8",
+      "plan": null,
+      "evidence": {
+        "quote": "Purchase additional monitors in blocks of 25 to scale beyond the included amount.",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Extra browser check runs can be pre-purchased at $4.00 per 1k",
+      "plan": null,
+      "evidence": {
+        "quote": "$4.00 per 1k",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Exceeding purchased browser check runs is charged automatically at a higher per-1k rate",
+      "plan": null,
+      "evidence": {
+        "quote": "The per-1k cost charged automatically when you exceed your purchased browser check runs.",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Exceeding purchased API check runs is charged automatically at a higher per-10k rate",
+      "plan": null,
+      "evidence": {
+        "quote": "The per-10k cost charged automatically when you exceed your purchased API check runs.",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Check run results, logs and traces are retained for 7, 30 or 180 days depending on plan",
+      "plan": null,
+      "evidence": {
+        "quote": "How long individual check run results, logs, and traces are stored before being purged.",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "SMS alert credits are 0, 100/month and 200/month across the plans",
+      "plan": null,
+      "evidence": {
+        "quote": "Receive alert notifications via text message. The number shown is your included monthly SMS credits.",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    },
+    {
+      "kind": "entitlement",
+      "statement": "Enterprise adds premium support, guided onboarding, a dedicated Customer Success Engineer and 24x7 phone escalation",
+      "plan": "Enterprise",
+      "evidence": {
+        "quote": "Enterprise plans add a support layer on top of everything above.",
+        "url": "https://www.checklyhq.com/support"
+      }
+    },
+    {
+      "kind": "entitlement",
+      "statement": "Enterprise offers custom contracts and invoicing",
+      "plan": "Enterprise",
+      "evidence": {
+        "quote": "Custom contracts and invoicing options tailored to your organization's procurement needs.",
+        "url": "https://www.checklyhq.com/pricing"
+      }
+    }
   ],
   "findings": [],
   "coverage_notes": {
     "unusable_pages": [],
-    "what_was_not_checkable": "Nothing on the pages we read contradicts anything else, and this is a genuinely tidy set of pages: the pricing page publishes included volumes, the pre-purchase rate AND the higher automatic overage rate for both check types, retention periods, SMS credits and seat counts inline, which is more than most companies disclose anywhere. Two caveats on coverage. First, the plan comparison is built from styled divs rather than a real table, so when flattened to text the per-plan values lose their column alignment; we could read the numbers but not always which plan each belongs to, so most allowances above are recorded without a plan. Second, discovery found no billing or usage-limit help article — the other pages we reached are product documentation and integration guides that make no commercial claims — so there was little opportunity for the documentation to disagree with the pricing page. A tidier way to say it: we found nothing wrong, but we also had less to compare than at most companies. The 'Try for Free' button on Starter is not explained anywhere we read: no trial length, and no statement about whether a card is required."
+    "what_was_not_checkable": "Nothing on the pages we read contradicts anything else, and this is a genuinely tidy set of pages. Your pricing page publishes included volumes, the pre-purchase rate and the higher automatic overage rate for both check types, retention periods, SMS credits and seat counts inline. That is more than most companies disclose anywhere. Two caveats on coverage. The plan comparison is built from styled divs rather than a real table, so per-plan values lose their column alignment when flattened to text. We could read the numbers but not always which plan they belong to, so most allowances above are recorded without a plan. Discovery also found no billing or usage-limit help article. The other pages we reached are product documentation and integration guides that make no commercial claims, so there was little opportunity for the documentation to disagree with the pricing page. We found nothing wrong, and we also had less to compare than at most companies. The Try for Free button on Starter is not explained anywhere we read: no trial length, and no statement about whether a card is required."
   }
 }

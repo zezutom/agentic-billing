@@ -1,86 +1,202 @@
 {
   "company": "Bento",
   "plans": [
-    {"name": "Marketing Platform", "headline_price": "$29/mo up to 5,000 Active Users, then tiered from $0.01 per Active User",
-     "billing_periods": ["monthly"],
-     "evidence": {"quote": "$29 Up to 5,000 Active Users *", "url": "https://bentonow.com/pricing"}},
-    {"name": "Transactional Email", "headline_price": "$0/mo — first 100 emails free, then $5/mo to 12,500 and $0.09 per 1,000 after",
-     "billing_periods": ["monthly", "usage"],
-     "evidence": {"quote": "First 100 emails are free. Then $5/mo through 12,500 emails, plus $0.09 per 1,000 after that.", "url": "https://bentonow.com/pricing"}},
-    {"name": "Bento Chat (add-on)", "headline_price": "+$30/mo, requires Marketing Platform",
-     "billing_periods": ["monthly"],
-     "evidence": {"quote": "Or add Bento Chat for $30/mo", "url": "https://bentonow.com/pricing"}}
+    {
+      "name": "Marketing Platform",
+      "headline_price": "$29/mo up to 5,000 Active Users, then tiered from $0.01 per Active User",
+      "billing_periods": [
+        "monthly"
+      ],
+      "evidence": {
+        "quote": "$29 Up to 5,000 Active Users *",
+        "url": "https://bentonow.com/pricing"
+      }
+    },
+    {
+      "name": "Transactional Email",
+      "headline_price": "$0/mo, first 100 emails free, then $5/mo to 12,500 and $0.09 per 1,000 after",
+      "billing_periods": [
+        "monthly",
+        "usage"
+      ],
+      "evidence": {
+        "quote": "First 100 emails are free. Then $5/mo through 12,500 emails, plus $0.09 per 1,000 after that.",
+        "url": "https://bentonow.com/pricing"
+      }
+    },
+    {
+      "name": "Bento Chat (add-on)",
+      "headline_price": "+$30/mo, requires Marketing Platform",
+      "billing_periods": [
+        "monthly"
+      ],
+      "evidence": {
+        "quote": "Or add Bento Chat for $30/mo",
+        "url": "https://bentonow.com/pricing"
+      }
+    }
   ],
   "promises": [
-    {"kind": "plan_price", "statement": "Marketing Platform is $29/mo for up to 5,000 Active Users", "plan": "Marketing Platform",
-     "evidence": {"quote": "$29 Up to 5,000 Active Users *", "url": "https://bentonow.com/pricing"}},
-    {"kind": "plan_price", "statement": "Above 5,000, Active Users are charged at $0.01 each up to 50,000", "plan": "Marketing Platform",
-     "evidence": {"quote": "$0.01 Active Users * 5,001-50,000", "url": "https://bentonow.com/pricing"}},
-    {"kind": "plan_price", "statement": "Transactional email is free for the first 100 emails", "plan": "Transactional Email",
-     "evidence": {"quote": "Free First 100 emails", "url": "https://bentonow.com/pricing"}},
-    {"kind": "addon", "statement": "Bento Chat costs $30/mo and requires the Marketing Platform", "plan": "Bento Chat (add-on)",
-     "evidence": {"quote": "+$30/mo adds shared inbox, live chat, SMS, routing, saved replies, and AI agents. Requires Marketing Platform.", "url": "https://bentonow.com/pricing"}},
-    {"kind": "trial", "statement": "There is a 30-day trial with no charge during it", "plan": null,
-     "evidence": {"quote": "30-day trial. No charge during the trial.", "url": "https://bentonow.com/pricing"}},
-    {"kind": "unlimited", "statement": "Marketing sends are unlimited on paid plans", "plan": "Marketing Platform",
-     "evidence": {"quote": "Unlimited marketing sends on paid plans", "url": "https://bentonow.com/pricing"}},
-    {"kind": "condition", "statement": "Uncapped marketing sends are subject to fair use", "plan": "Marketing Platform",
-     "evidence": {"quote": "No marketing send caps on paid plans, subject to fair-use.", "url": "https://bentonow.com/pricing"}},
-    {"kind": "condition", "statement": "The billing metric is Active Users, defined as subscribed users or anyone with an event in the last 30 days", "plan": "Marketing Platform",
-     "evidence": {"quote": "Subscribed users or people with an event in the last 30 days.", "url": "https://bentonow.com/pricing"}},
-    {"kind": "entitlement", "statement": "Team seats are included at no extra charge", "plan": "Marketing Platform",
-     "evidence": {"quote": "Team seats included", "url": "https://bentonow.com/pricing"}},
-    {"kind": "condition", "statement": "The billing metric is the number of subscribers, defined as unique email addresses in the account", "plan": null,
-     "evidence": {"quote": "Bento charges based on the number of subscribers you have.", "url": "https://bentonow.com/docs/faq"}},
-    {"kind": "condition", "statement": "There are no long-term contracts and the account can be cancelled at any time", "plan": null,
-     "evidence": {"quote": "We don't do long-term contracts - you can cancel anytime.", "url": "https://bentonow.com/docs/faq"}},
-    {"kind": "condition", "statement": "Refunds are considered case by case rather than guaranteed", "plan": null,
-     "evidence": {"quote": "We offer refunds on a case-by-case basis.", "url": "https://bentonow.com/docs/faq"}},
-    {"kind": "limit", "statement": "Fetch and batch API endpoints are limited to about 60 requests per minute per IP", "plan": null,
-     "evidence": {"quote": "About 60 requests per minute per IP", "url": "https://bentonow.com/docs/faq"}}
+    {
+      "kind": "plan_price",
+      "statement": "Marketing Platform is $29/mo for up to 5,000 Active Users",
+      "plan": "Marketing Platform",
+      "evidence": {
+        "quote": "$29 Up to 5,000 Active Users *",
+        "url": "https://bentonow.com/pricing"
+      }
+    },
+    {
+      "kind": "plan_price",
+      "statement": "Above 5,000, Active Users are charged at $0.01 each up to 50,000",
+      "plan": "Marketing Platform",
+      "evidence": {
+        "quote": "$0.01 Active Users * 5,001-50,000",
+        "url": "https://bentonow.com/pricing"
+      }
+    },
+    {
+      "kind": "plan_price",
+      "statement": "Transactional email is free for the first 100 emails",
+      "plan": "Transactional Email",
+      "evidence": {
+        "quote": "Free First 100 emails",
+        "url": "https://bentonow.com/pricing"
+      }
+    },
+    {
+      "kind": "addon",
+      "statement": "Bento Chat costs $30/mo and requires the Marketing Platform",
+      "plan": "Bento Chat (add-on)",
+      "evidence": {
+        "quote": "+$30/mo adds shared inbox, live chat, SMS, routing, saved replies, and AI agents. Requires Marketing Platform.",
+        "url": "https://bentonow.com/pricing"
+      }
+    },
+    {
+      "kind": "trial",
+      "statement": "There is a 30-day trial with no charge during it",
+      "plan": null,
+      "evidence": {
+        "quote": "30-day trial. No charge during the trial.",
+        "url": "https://bentonow.com/pricing"
+      }
+    },
+    {
+      "kind": "unlimited",
+      "statement": "Marketing sends are unlimited on paid plans",
+      "plan": "Marketing Platform",
+      "evidence": {
+        "quote": "Unlimited marketing sends on paid plans",
+        "url": "https://bentonow.com/pricing"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Uncapped marketing sends are subject to fair use",
+      "plan": "Marketing Platform",
+      "evidence": {
+        "quote": "No marketing send caps on paid plans, subject to fair-use.",
+        "url": "https://bentonow.com/pricing"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "The billing metric is Active Users, defined as subscribed users or anyone with an event in the last 30 days",
+      "plan": "Marketing Platform",
+      "evidence": {
+        "quote": "Subscribed users or people with an event in the last 30 days.",
+        "url": "https://bentonow.com/pricing"
+      }
+    },
+    {
+      "kind": "entitlement",
+      "statement": "Team seats are included at no extra charge",
+      "plan": "Marketing Platform",
+      "evidence": {
+        "quote": "Team seats included",
+        "url": "https://bentonow.com/pricing"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "The billing metric is the number of subscribers, defined as unique email addresses in the account",
+      "plan": null,
+      "evidence": {
+        "quote": "Bento charges based on the number of subscribers you have.",
+        "url": "https://bentonow.com/docs/faq"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "There are no long-term contracts and the account can be cancelled at any time",
+      "plan": null,
+      "evidence": {
+        "quote": "We don't do long-term contracts - you can cancel anytime.",
+        "url": "https://bentonow.com/docs/faq"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Refunds are considered case by case rather than guaranteed",
+      "plan": null,
+      "evidence": {
+        "quote": "We offer refunds on a case-by-case basis.",
+        "url": "https://bentonow.com/docs/faq"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Fetch and batch API endpoints are limited to about 60 requests per minute per IP",
+      "plan": null,
+      "evidence": {
+        "quote": "About 60 requests per minute per IP",
+        "url": "https://bentonow.com/docs/faq"
+      }
+    }
   ],
   "findings": [
     {
       "type": "likely_contradiction",
       "severity": "high",
       "confidence": "high",
-      "headline": "Your pricing page bills on active users; your FAQ says you bill on total subscribers",
-      "explanation": "The entire argument of your pricing page is that you charge for Active Users — people who are subscribed or who did something in the last 30 days — and that dormant contacts do not inflate the bill. Your documentation FAQ answers \"How does pricing work?\" with a flat statement that you charge on the number of subscribers, and then defines a subscriber as any unique email address in the account. For a list with a long tail of dormant addresses those two rules produce materially different invoices, and the difference is the single reason a prospect would choose you over the competitors your own comparison table names.",
+      "headline": "Pricing page bills on active users. FAQ says total subscribers.",
+      "explanation": "On a list with a long dormant tail those two rules produce different invoices. It is also the reason a prospect picks you over the competitors in your own table.",
       "claim_a": {
-        "statement": "Billing is based on Active Users — subscribed, or active in the last 30 days",
+        "statement": "Active users, last 30 days",
         "quote": "Subscribed users or people with an event in the last 30 days.",
         "url": "https://bentonow.com/pricing"
       },
       "claim_b": {
-        "statement": "Billing is based on the total number of subscribers, meaning every unique email address held",
+        "statement": "Every unique email address",
         "quote": "Bento charges based on the number of subscribers you have.",
         "url": "https://bentonow.com/docs/faq"
       },
-      "why_not_just_wording": "\"Active Users in the last 30 days\" and \"every unique email address in your account\" are two different countable populations, so they are two different prices for the same list.",
-      "caveat": "The FAQ answer is probably just older copy written before the Active Users model, and \"subscriber\" may be intended loosely. That is exactly the problem: it is the page a customer searches when they want to know what drives their bill."
+      "why_not_just_wording": "Active users in the last 30 days and every email address on file are different countable populations.",
+      "caveat": "The FAQ is probably older copy from before the Active Users model. It is still the page customers search when they want to know what drives their bill."
     },
     {
       "type": "ambiguity",
       "severity": "medium",
       "confidence": "medium",
-      "headline": "Your FAQ says every feature is included with no gating, while your pricing page sells chat as a $30/month add-on",
-      "explanation": "\"All features are included at every tier - no feature gating\" is a strong promise, and it is the answer a prospect gets when they ask how pricing works. Your pricing page then sells Bento Chat — shared inbox, live chat, SMS, routing, AI agents — for an extra $30 a month, and requires the Marketing Platform underneath it. Someone who reads the FAQ first will budget $29 and be surprised at $59.",
+      "headline": "FAQ says nothing is gated. Pricing page sells chat at $30 a month.",
+      "explanation": "Someone who reads the FAQ first budgets $29 and is surprised at $59.",
       "claim_a": {
-        "statement": "No feature is gated; everything is included at every tier",
+        "statement": "No feature gating at any tier",
         "quote": "All features are included at every tier",
         "url": "https://bentonow.com/docs/faq"
       },
       "claim_b": {
-        "statement": "Chat, SMS and AI agents cost an additional $30/month on top of the Marketing Platform",
+        "statement": "Chat costs $30 a month extra",
         "quote": "+$30/mo adds shared inbox, live chat, SMS, routing, saved replies, and AI agents. Requires Marketing Platform.",
         "url": "https://bentonow.com/pricing"
       },
-      "why_not_just_wording": "One page states that nothing is behind a paywall while the other puts a named set of features behind a separate monthly charge.",
-      "caveat": "\"Tier\" almost certainly means volume tier — the features genuinely do not change as your list grows — and Chat is arguably a separate product rather than a gated feature. Adding four words to the FAQ answer would remove the ambiguity."
+      "why_not_just_wording": "One page says nothing is behind a paywall, the other puts a named feature set behind a separate charge.",
+      "caveat": "Tier almost certainly means volume tier, and Chat is arguably a separate product. Four words in the FAQ would settle it."
     }
   ],
   "coverage_notes": {
     "unusable_pages": [],
-    "what_was_not_checkable": "The FAQ's answer to \"What's the API rate limit?\" is collapsed and did not render, though a table of per-endpoint limits appears on the same page. Nothing we read states whether a credit card is required to start the 30-day trial, or what happens to a list that exceeds fair use on marketing sends — the term is used but never defined anywhere we could read."
+    "what_was_not_checkable": "The FAQ answer to \"What's the API rate limit?\" is collapsed and did not render, though a table of per-endpoint limits sits on the same page. Nothing we read says whether a card is required to start the 30-day trial, or what happens to a list that exceeds fair use on marketing sends. The term is used but never defined anywhere we could reach."
   }
 }

@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Commercial consistency audit — Baserow</title>
+<title>Baserow Promise Audit</title>
 <style>
 :root{--ink:#12151c;--muted:#5d6675;--line:#e3e6ec;--bg:#fbfbfc;--card:#fff;
 --high:#c0392b;--high-bg:#fdf0ee;--med:#b06f13;--med-bg:#fdf6ea;--low:#4a6b8a;--low-bg:#eff4f8;
@@ -73,7 +73,7 @@ Nothing here is inferred from anything private.</p>
 run 2026-09-02 07:57:07 UTC</p>
 
 <h2>What you appear to sell</h2>
-<div class="legend">Free — $0, Premium — $10 per user/month billed yearly, $12 billed monthly, Advanced — $18 per user/month billed yearly, $22 billed monthly, Enterprise — On request</div>
+<div class="legend">Free, $0, Premium, $10 per user/month billed yearly, $12 billed monthly, Advanced, $18 per user/month billed yearly, $22 billed monthly, Enterprise, On request</div>
 
 <h2>What we found</h2>
 <article class="f medium">
@@ -83,16 +83,16 @@ run 2026-09-02 07:57:07 UTC</p>
   <span class="chip conf">high confidence</span>
   <span class="chip ok">evidence verified</span>
 </div>
-<h3>Your pricing page offers Enterprise customers payment by invoice; your FAQ says you only accept credit cards</h3>
-<p>&quot;Payment by invoice&quot; is listed as a reason to choose Enterprise, and it appears again in the plan comparison table. Your FAQ answers the question of what payment methods are accepted with a flat statement that credit card is currently the only option. An enterprise buyer doing diligence — exactly the buyer who cannot put a five-figure annual contract on a corporate card — will read the FAQ and conclude that you cannot invoice them.</p>
+<h3>Pricing page offers invoicing. FAQ says card only.</h3>
+<p>An enterprise buyer doing diligence reads the FAQ and concludes you cannot invoice them.</p>
 <div class="pair"><div class="side"><div class="lab">What one page says</div>
-<div class="claim">Enterprise customers can pay by invoice</div>
+<div class="claim">Enterprise pays by invoice</div>
 <blockquote>&ldquo;Payment by invoice&rdquo;</blockquote>
 <a href="https://baserow.io/pricing" target="_blank" rel="noopener">https://baserow.io/pricing</a></div><div class="side"><div class="lab">What another page says</div>
-<div class="claim">Credit card is the only payment method accepted</div>
+<div class="claim">Credit card only</div>
 <blockquote>&ldquo;Currently, you can pay only with a credit card. We plan to add more payment methods in the future.&rdquo;</blockquote>
 <a href="https://baserow.io/faq" target="_blank" rel="noopener">https://baserow.io/faq</a></div></div>
-<div class="note"><div><b>Why this is not just wording:</b> One page names invoicing as a purchasable Enterprise benefit and the other states that no payment method other than credit card exists; those are different facts, not different phrasings.</div><div><b>What would make this a non-issue:</b> The FAQ answer is almost certainly about self-serve checkout, where credit card genuinely is the only route, and invoicing is arranged through sales. As written, though, neither page says so, and the FAQ is the page a buyer searches.</div></div>
+<div class="note"><div><b>Why this is not just wording:</b> One page sells invoicing as an Enterprise benefit, the other says no other payment method exists.</div><div><b>What would make this a non-issue:</b> The FAQ answer is probably about self-serve checkout, with invoicing arranged through sales. Neither page says so.</div></div>
 </article><article class="f medium">
 <div class="chips">
   <span class="chip medium">medium impact</span>
@@ -100,19 +100,19 @@ run 2026-09-02 07:57:07 UTC</p>
   <span class="chip conf">medium confidence</span>
   <span class="chip ok">evidence verified</span>
 </div>
-<h3>Every paid plan is capped at the same 10 concurrent API requests, and your plan comparison never mentions it</h3>
-<p>Your pricing page sells usage that scales with price: rows go from 3,000 to 1,000,000 and automation credits from 2,000 to 2,000,000 across the tiers. API throughput does not scale at all. The FAQ discloses a flat ceiling of 10 concurrent requests for every Baserow Cloud plan, adds that it is subject to fair use, and reserves the right to lower it. For a product that markets itself as API-first, a customer sizing an integration against the Advanced tier has no way of learning from the pricing page that paying nine times more buys no additional API concurrency.</p>
+<h3>API concurrency is 10 on every paid plan. The comparison never says so.</h3>
+<p>Rows scale from 3,000 to 1,000,000 across the tiers. API throughput does not move at all.</p>
 <div class="pair"><div class="side"><div class="lab">What one page says</div>
-<div class="claim">Usage allowances scale by plan on the pricing page — Advanced buys 250,000 rows per workspace</div>
+<div class="claim">Advanced buys 250,000 rows</div>
 <blockquote>&ldquo;250,000 rows per workspace&rdquo;</blockquote>
 <a href="https://baserow.io/pricing" target="_blank" rel="noopener">https://baserow.io/pricing</a></div><div class="side"><div class="lab">What another page says</div>
-<div class="claim">API concurrency is fixed at 10 for every Cloud plan and may be reduced at Baserow&#x27;s discretion</div>
+<div class="claim">10 concurrent requests, any plan</div>
 <blockquote>&ldquo;In Baserow Cloud, there&#x27;s a limit of 10 concurrent API requests. This limit is subject to a fair use policy, and we reserve the right to lower it if it affects overall performance.&rdquo;</blockquote>
 <a href="https://baserow.io/faq" target="_blank" rel="noopener">https://baserow.io/faq</a></div></div>
-<div class="note"><div><b>Why this is not just wording:</b> The plan comparison lists every other usage dimension by tier and omits this one entirely, so a reader cannot infer either the cap or the fact that it does not improve with price.</div><div><b>What would make this a non-issue:</b> Your pricing page does carry a collapsed FAQ item titled &quot;What are the limitations in records, rows, and API requests?&quot;, so the answer may be one click away rather than on another page. We could not read the collapsed panel, only its heading.</div></div>
+<div class="note"><div><b>Why this is not just wording:</b> Every other usage dimension is listed by tier and this one is absent, so a reader cannot infer either the cap or that it never improves.</div><div><b>What would make this a non-issue:</b> Your pricing page carries a collapsed FAQ titled &quot;What are the limitations in records, rows, and API requests?&quot;. We could read the heading, not the panel.</div></div>
 </article>
 
-<h2>How to read these</h2><div class="legend"><div><b>Likely contradiction</b> — Two public statements that cannot both be true.</div><div><b>Missing information</b> — Something that changes the deal, published somewhere the buyer will not look.</div></div>
+<h2>How to read these</h2><div class="legend"><div><b>Likely contradiction:</b> Two public statements that cannot both be true.</div><div><b>Missing information:</b> Something that changes the deal, published somewhere the buyer will not look.</div></div>
 
 <h2>Pages we read</h2>
 <table><thead><tr><th>Page</th><th>Words</th><th>Status</th></tr></thead>
@@ -142,7 +142,7 @@ Install with Docker</a><br><span class="tag">Product documentation</span></td><t
 <td>&mdash;</td><td>HTTP 404</td></tr><tr><td>https://baserow.io/terms<br><span class="tag">not reached</span></td>
 <td>&mdash;</td><td>HTTP 404</td></tr></tbody></table>
 
-<div class="close"><h2>These are the promises your customers can see. Do your billing system and product deliver the same thing?</h2><p>This audit only reads what is published on your website. It cannot see what your billing system actually meters, what your product actually enforces, or what your customer records actually entitle people to. In most companies those three answers have drifted apart quietly, and the public pages are the only place the drift is visible from outside. If the contradictions above are news to you, the more expensive question is what else is out of step behind them.</p></div>
+<div class="close"><h2>These are the promises your customers can see. Do your billing system and product deliver the same thing?</h2><p>This audit reads your public pages only. It cannot see what your billing system meters, what your product enforces, or what your customer records entitle people to. If the findings above are news to you, the question worth asking is what else is out of step behind them.</p></div>
 <footer>Automated read of public pages only, then checked: every quote above was located in
 the page it is attributed to, and
 0 candidate finding(s) were discarded because their evidence

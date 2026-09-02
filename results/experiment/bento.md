@@ -1,50 +1,50 @@
-# Commercial consistency audit — Bento
+# Bento: commercial consistency audit
 
 **We found 2 commercial promises worth checking.**
 
-Source: https://bentonow.com/ · 13 public pages read · 13 commercial promises extracted · 20 quotes verified against their source page · 2026-09-02 07:57:10 UTC
+https://bentonow.com/ | 13 pages read | 13 promises extracted | 20 quotes verified | 2026-09-02 07:57:10 UTC
 
 ## What you appear to sell
 
-- **Marketing Platform** — $29/mo up to 5,000 Active Users, then tiered from $0.01 per Active User
-- **Transactional Email** — $0/mo — first 100 emails free, then $5/mo to 12,500 and $0.09 per 1,000 after
-- **Bento Chat (add-on)** — +$30/mo, requires Marketing Platform
+- **Marketing Platform**: $29/mo up to 5,000 Active Users, then tiered from $0.01 per Active User
+- **Transactional Email**: $0/mo, first 100 emails free, then $5/mo to 12,500 and $0.09 per 1,000 after
+- **Bento Chat (add-on)**: +$30/mo, requires Marketing Platform
 
-## 1. Your pricing page bills on active users; your FAQ says you bill on total subscribers
+## 1. Pricing page bills on active users. FAQ says total subscribers.
 
-`high impact` · `Likely contradiction` · `high confidence`
+`high` `Likely contradiction` `high confidence`
 
-The entire argument of your pricing page is that you charge for Active Users — people who are subscribed or who did something in the last 30 days — and that dormant contacts do not inflate the bill. Your documentation FAQ answers "How does pricing work?" with a flat statement that you charge on the number of subscribers, and then defines a subscriber as any unique email address in the account. For a list with a long tail of dormant addresses those two rules produce materially different invoices, and the difference is the single reason a prospect would choose you over the competitors your own comparison table names.
+On a list with a long dormant tail those two rules produce different invoices. It is also the reason a prospect picks you over the competitors in your own table.
 
-**What one page says:** Billing is based on Active Users — subscribed, or active in the last 30 days
+**What one page says:** Active users, last 30 days
 > Subscribed users or people with an event in the last 30 days.
-> — [https://bentonow.com/pricing](https://bentonow.com/pricing)
+> [https://bentonow.com/pricing](https://bentonow.com/pricing)
 
-**What another page says:** Billing is based on the total number of subscribers, meaning every unique email address held
+**What another page says:** Every unique email address
 > Bento charges based on the number of subscribers you have.
-> — [https://bentonow.com/docs/faq](https://bentonow.com/docs/faq)
+> [https://bentonow.com/docs/faq](https://bentonow.com/docs/faq)
 
-*Why this is not just wording: "Active Users in the last 30 days" and "every unique email address in your account" are two different countable populations, so they are two different prices for the same list.*
+*Why this is not just wording: Active users in the last 30 days and every email address on file are different countable populations.*
 
-*What would make this a non-issue: The FAQ answer is probably just older copy written before the Active Users model, and "subscriber" may be intended loosely. That is exactly the problem: it is the page a customer searches when they want to know what drives their bill.*
+*What would make this a non-issue: The FAQ is probably older copy from before the Active Users model. It is still the page customers search when they want to know what drives their bill.*
 
-## 2. Your FAQ says every feature is included with no gating, while your pricing page sells chat as a $30/month add-on
+## 2. FAQ says nothing is gated. Pricing page sells chat at $30 a month.
 
-`medium impact` · `Ambiguity` · `medium confidence`
+`medium` `Ambiguity` `medium confidence`
 
-"All features are included at every tier - no feature gating" is a strong promise, and it is the answer a prospect gets when they ask how pricing works. Your pricing page then sells Bento Chat — shared inbox, live chat, SMS, routing, AI agents — for an extra $30 a month, and requires the Marketing Platform underneath it. Someone who reads the FAQ first will budget $29 and be surprised at $59.
+Someone who reads the FAQ first budgets $29 and is surprised at $59.
 
-**What one page says:** No feature is gated; everything is included at every tier
+**What one page says:** No feature gating at any tier
 > All features are included at every tier
-> — [https://bentonow.com/docs/faq](https://bentonow.com/docs/faq)
+> [https://bentonow.com/docs/faq](https://bentonow.com/docs/faq)
 
-**What another page says:** Chat, SMS and AI agents cost an additional $30/month on top of the Marketing Platform
+**What another page says:** Chat costs $30 a month extra
 > +$30/mo adds shared inbox, live chat, SMS, routing, saved replies, and AI agents. Requires Marketing Platform.
-> — [https://bentonow.com/pricing](https://bentonow.com/pricing)
+> [https://bentonow.com/pricing](https://bentonow.com/pricing)
 
-*Why this is not just wording: One page states that nothing is behind a paywall while the other puts a named set of features behind a separate monthly charge.*
+*Why this is not just wording: One page says nothing is behind a paywall, the other puts a named feature set behind a separate charge.*
 
-*What would make this a non-issue: "Tier" almost certainly means volume tier — the features genuinely do not change as your list grows — and Chat is arguably a separate product rather than a gated feature. Adding four words to the FAQ answer would remove the ambiguity.*
+*What would make this a non-issue: Tier almost certainly means volume tier, and Chat is arguably a separate product. Four words in the FAQ would settle it.*
 
 ## Pages we read
 
@@ -63,18 +63,18 @@ The entire argument of your pricing page is that you charge for Active Users —
 | [Documentation & Help Center - Bento Email Marketing - Bent](https://bentonow.com/help) | Help centre | 2449 | read |
 | [Bento Skills for AI Agents - Bento Documentation](https://bentonow.com/docs/integrations/skills) | Add-ons & integrations | 383 | read |
 | [Acceptable Use Policy - Bento](https://bentonow.com/legal/acceptable-use-policy) | Terms / legal | 1281 | read |
-| https://bentonow.com/pricing.md | — | — | skipped: content-type text/markdown; charset= |
-| https://bentonow.com/faq | — | — | HTTP 404 |
-| https://app.bentonow.com/pricing?source=pricing&plan=starter&users=5000 | — | — | blocked by robots.txt |
-| https://app.bentonow.com/pricing?source=pricing&package=transactional-email&emails=0 | — | — | blocked by robots.txt |
-| https://bentonow.com/docs/integrations/cli.md | — | — | skipped: content-type text/markdown; charset= |
+| https://bentonow.com/pricing.md | | | skipped: content-type text/markdown; charset= |
+| https://bentonow.com/faq | | | HTTP 404 |
+| https://app.bentonow.com/pricing?source=pricing&plan=starter&users=5000 | | | blocked by robots.txt |
+| https://app.bentonow.com/pricing?source=pricing&package=transactional-email&emails=0 | | | blocked by robots.txt |
+| https://bentonow.com/docs/integrations/cli.md | | | skipped: content-type text/markdown; charset= |
 
 ## What we could not check
 
-The FAQ's answer to "What's the API rate limit?" is collapsed and did not render, though a table of per-endpoint limits appears on the same page. Nothing we read states whether a credit card is required to start the 30-day trial, or what happens to a list that exceeds fair use on marketing sends — the term is used but never defined anywhere we could read.
+The FAQ answer to "What's the API rate limit?" is collapsed and did not render, though a table of per-endpoint limits sits on the same page. Nothing we read says whether a card is required to start the 30-day trial, or what happens to a list that exceeds fair use on marketing sends. The term is used but never defined anywhere we could reach.
 
 ---
 
 **These are the promises your customers can see. Do your billing system and product deliver the same thing?**
 
-This audit only reads what is published on your website. It cannot see what your billing system actually meters, what your product actually enforces, or what your customer records actually entitle people to. In most companies those three answers have drifted apart quietly, and the public pages are the only place the drift is visible from outside. If the contradictions above are news to you, the more expensive question is what else is out of step behind them.
+This audit reads your public pages only. It cannot see what your billing system meters, what your product enforces, or what your customer records entitle people to. If the findings above are news to you, the question worth asking is what else is out of step behind them.

@@ -1,11 +1,11 @@
 """Run the analysis. Two backends, one prompt.
 
-`agent`  — the analyst is the Claude session you are already running this in.
+`agent`: the analyst is the Claude session you are already running this in.
            The dossier is written to a request file; the agent reads it, does
            the analysis and writes the JSON back. No API key, no extra spend
            beyond the subscription already paying for the session.
 
-`api`    — the analyst is the Claude API, for running this unattended.
+`api`: the analyst is the Claude API, for running this unattended.
            Same system prompt, same task, same schema.
 
 Both go through `verify` afterwards, so neither is trusted on its word.

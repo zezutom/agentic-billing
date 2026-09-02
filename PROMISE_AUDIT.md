@@ -4,8 +4,8 @@
 > Give us your website and we'll find conflicting promises about what customers receive.
 
 Point it at a SaaS company's homepage. It finds the pricing page, discovers the other public
-pages that make commercial promises — plan comparisons, product docs, help articles, FAQs,
-usage-limit pages, trial and signup pages, add-ons, billing terms — and reports where the
+pages that make commercial promises (plan comparisons, product docs, help articles, FAQs,
+usage-limit pages, trial and signup pages, add-ons, billing terms) and reports where the
 company's own pages disagree about what a customer gets.
 
 Every finding comes with two verbatim quotes and two links, and **every quote is checked
@@ -34,7 +34,7 @@ URL
 ```
 
 **The model is the analyst; the verifier is why trusting it is reasonable.** The prompt
-(`prompts.py`) does the judgement — telling apart real tiering from a contradiction, an API
+(`prompts.py`) does the judgement: telling apart real tiering from a contradiction, an API
 pagination default from a plan allowance, standard legal boilerplate from a buried
 condition. The verifier (`verify.py`) makes sure it cannot get away with inventing evidence.
 
@@ -46,7 +46,8 @@ A finding is discarded if:
 * the type, severity or confidence is not one of the allowed values.
 
 A quote that is real but attributed to the wrong page is **corrected**, not discarded, and
-the correction is counted separately — that is a citation slip, not a fabrication.
+the correction is counted separately, because that is a citation slip rather than a
+fabrication.
 
 ## Two ways to run the analysis
 
@@ -71,7 +72,7 @@ pip install playwright && playwright install chromium   # optional, for JS-only 
 
 Or from the repository: `pip install -e ".[audit]"` (add `,audit-js` for the browser fallback).
 
-## Run one company — agent backend
+## Run one company, agent backend
 
 ```bash
 # 1. crawl and build the dossier
@@ -87,7 +88,7 @@ Step 1 prints the exact paths. Step 3 writes `results/example.{html,md,json}` pl
 dossier it was judged against, and tells you how many quotes were checked and how many
 candidate findings were thrown away.
 
-## Run one company — API backend
+## Run one company, API backend
 
 ```bash
 export ANTHROPIC_API_KEY=...
@@ -129,7 +130,7 @@ With an API key the middle step is automatic: `finish --backend api`.
 ## Politeness and scope
 
 robots.txt is honoured, one request per second per host by default, 20-second timeout,
-pages cached on disk for seven days. Roughly 10–20 pages per company. Public information
+pages cached on disk for seven days. Roughly 10 to 20 pages per company. Public information
 only: no authentication, no billing systems, no customer records.
 
 ## Deliberate limits
@@ -140,6 +141,6 @@ only: no authentication, no billing systems, no customer records.
   returns no readable text; the dossier marks such pages unusable and tells the analyst so,
   and the report shows them. The headless-Chromium fallback exists for exactly this and runs
   automatically when a page comes back thin.
-* It does not know which of two conflicting statements is correct — only that they disagree.
+* It does not know which of two conflicting statements is correct, only that they disagree.
 * It cannot see your billing system, entitlement service or customer records. That is the
   point of the closing question, not an oversight.

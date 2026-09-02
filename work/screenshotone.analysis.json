@@ -1,112 +1,270 @@
 {
   "company": "ScreenshotOne",
   "plans": [
-    {"name": "Free", "headline_price": "$0 — 100 screenshots per month", "billing_periods": ["free"],
-     "evidence": {"quote": "You can take up to 100 screenshots of any URL for free per month", "url": "https://screenshotone.com/pricing"}},
-    {"name": "Basic", "headline_price": "$17 per month", "billing_periods": ["monthly", "annual"],
-     "evidence": {"quote": "The essentials to start rendering screenshots today.", "url": "https://screenshotone.com/pricing"}},
-    {"name": "Growth", "headline_price": "$79 per month", "billing_periods": ["monthly", "annual"],
-     "evidence": {"quote": "A plan that scales with your rapidly growing business.", "url": "https://screenshotone.com/pricing"}},
-    {"name": "Scale", "headline_price": "$259 per month", "billing_periods": ["monthly", "annual"],
-     "evidence": {"quote": "Prioritized support and infrastructure for your company.", "url": "https://screenshotone.com/pricing"}}
+    {
+      "name": "Free",
+      "headline_price": "$0, 100 screenshots per month",
+      "billing_periods": [
+        "free"
+      ],
+      "evidence": {
+        "quote": "You can take up to 100 screenshots of any URL for free per month",
+        "url": "https://screenshotone.com/pricing"
+      }
+    },
+    {
+      "name": "Basic",
+      "headline_price": "$17 per month",
+      "billing_periods": [
+        "monthly",
+        "annual"
+      ],
+      "evidence": {
+        "quote": "The essentials to start rendering screenshots today.",
+        "url": "https://screenshotone.com/pricing"
+      }
+    },
+    {
+      "name": "Growth",
+      "headline_price": "$79 per month",
+      "billing_periods": [
+        "monthly",
+        "annual"
+      ],
+      "evidence": {
+        "quote": "A plan that scales with your rapidly growing business.",
+        "url": "https://screenshotone.com/pricing"
+      }
+    },
+    {
+      "name": "Scale",
+      "headline_price": "$259 per month",
+      "billing_periods": [
+        "monthly",
+        "annual"
+      ],
+      "evidence": {
+        "quote": "Prioritized support and infrastructure for your company.",
+        "url": "https://screenshotone.com/pricing"
+      }
+    }
   ],
   "promises": [
-    {"kind": "plan_price", "statement": "Basic is $17 per month", "plan": "Basic",
-     "evidence": {"quote": "$17 per month", "url": "https://screenshotone.com/pricing"}},
-    {"kind": "plan_price", "statement": "Growth is $79 per month", "plan": "Growth",
-     "evidence": {"quote": "$79 per month", "url": "https://screenshotone.com/pricing"}},
-    {"kind": "plan_price", "statement": "Scale is $259 per month", "plan": "Scale",
-     "evidence": {"quote": "$259 per month", "url": "https://screenshotone.com/pricing"}},
-    {"kind": "condition", "statement": "Annual billing gives two months free", "plan": null,
-     "evidence": {"quote": "Annually (2 months free)", "url": "https://screenshotone.com/pricing"}},
-    {"kind": "limit", "statement": "Basic includes 2,000 screenshots and 40 requests per minute", "plan": "Basic",
-     "evidence": {"quote": "2,000 screenshots", "url": "https://screenshotone.com/pricing"}},
-    {"kind": "limit", "statement": "Growth includes 10,000 screenshots and 80 requests per minute", "plan": "Growth",
-     "evidence": {"quote": "10,000 screenshots", "url": "https://screenshotone.com/pricing"}},
-    {"kind": "limit", "statement": "Scale includes 50,000 screenshots and 150 requests per minute", "plan": "Scale",
-     "evidence": {"quote": "50,000 screenshots", "url": "https://screenshotone.com/pricing"}},
-    {"kind": "condition", "statement": "Extra screenshots beyond the plan cost $0.009 on Basic", "plan": "Basic",
-     "evidence": {"quote": "$0.009 per extra", "url": "https://screenshotone.com/pricing"}},
-    {"kind": "condition", "statement": "Only successful, uncached screenshots count toward the quota", "plan": null,
-     "evidence": {"quote": "Only screenshots that are successfully rendered (without HTTP, browser, or network errors) and not served from cache count toward your quota.", "url": "https://screenshotone.com/pricing"}},
-    {"kind": "trial", "statement": "No credit card is required to start", "plan": null,
-     "evidence": {"quote": "No credit card required.", "url": "https://screenshotone.com/pricing"}},
-    {"kind": "condition", "statement": "A full refund is available within 30 days, no questions asked", "plan": null,
-     "evidence": {"quote": "email us at support@screenshotone.com within 30 days, and we will refund you in full, no questions asked", "url": "https://screenshotone.com/pricing"}},
-    {"kind": "condition", "statement": "Usage alerts are sent at 90% and 100% of the monthly quota", "plan": null,
-     "evidence": {"quote": "You will receive an email when you are at 90% and 100% usage of your monthly quota.", "url": "https://screenshotone.com/pricing"}},
-    {"kind": "condition", "statement": "Unused credits do not roll over and expire at the end of each cycle", "plan": null,
-     "evidence": {"quote": "Unused credits expire at the end of the cycle", "url": "https://screenshotone.com/docs/credits"}},
-    {"kind": "condition", "statement": "Overage is billed automatically only when extra charging is enabled", "plan": null,
-     "evidence": {"quote": "If you go over your limit and extra charging is enabled, extra screenshots are billed automatically", "url": "https://screenshotone.com/docs/credits"}},
-    {"kind": "condition", "statement": "Unused credits are not refunded", "plan": null,
-     "evidence": {"quote": "No refunds for unused credits", "url": "https://screenshotone.com/docs/credits"}},
-    {"kind": "condition", "statement": "Exceeding plan limits may lead to extra charges, throttling or suspension", "plan": null,
-     "evidence": {"quote": "throttling, or temporary suspension of access", "url": "https://screenshotone.com/terms-of-service"}},
-    {"kind": "condition", "statement": "Pricing, features, usage limits, quotas and plan structures may be changed at any time", "plan": null,
-     "evidence": {"quote": "We reserve the right to modify pricing, features, usage limits, quotas, or plan structures at any time.", "url": "https://screenshotone.com/terms-of-service"}}
+    {
+      "kind": "plan_price",
+      "statement": "Basic is $17 per month",
+      "plan": "Basic",
+      "evidence": {
+        "quote": "$17 per month",
+        "url": "https://screenshotone.com/pricing"
+      }
+    },
+    {
+      "kind": "plan_price",
+      "statement": "Growth is $79 per month",
+      "plan": "Growth",
+      "evidence": {
+        "quote": "$79 per month",
+        "url": "https://screenshotone.com/pricing"
+      }
+    },
+    {
+      "kind": "plan_price",
+      "statement": "Scale is $259 per month",
+      "plan": "Scale",
+      "evidence": {
+        "quote": "$259 per month",
+        "url": "https://screenshotone.com/pricing"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Annual billing gives two months free",
+      "plan": null,
+      "evidence": {
+        "quote": "Annually (2 months free)",
+        "url": "https://screenshotone.com/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Basic includes 2,000 screenshots and 40 requests per minute",
+      "plan": "Basic",
+      "evidence": {
+        "quote": "2,000 screenshots",
+        "url": "https://screenshotone.com/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Growth includes 10,000 screenshots and 80 requests per minute",
+      "plan": "Growth",
+      "evidence": {
+        "quote": "10,000 screenshots",
+        "url": "https://screenshotone.com/pricing"
+      }
+    },
+    {
+      "kind": "limit",
+      "statement": "Scale includes 50,000 screenshots and 150 requests per minute",
+      "plan": "Scale",
+      "evidence": {
+        "quote": "50,000 screenshots",
+        "url": "https://screenshotone.com/pricing"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Extra screenshots beyond the plan cost $0.009 on Basic",
+      "plan": "Basic",
+      "evidence": {
+        "quote": "$0.009 per extra",
+        "url": "https://screenshotone.com/pricing"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Only successful, uncached screenshots count toward the quota",
+      "plan": null,
+      "evidence": {
+        "quote": "Only screenshots that are successfully rendered (without HTTP, browser, or network errors) and not served from cache count toward your quota.",
+        "url": "https://screenshotone.com/pricing"
+      }
+    },
+    {
+      "kind": "trial",
+      "statement": "No credit card is required to start",
+      "plan": null,
+      "evidence": {
+        "quote": "No credit card required.",
+        "url": "https://screenshotone.com/pricing"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "A full refund is available within 30 days, no questions asked",
+      "plan": null,
+      "evidence": {
+        "quote": "email us at support@screenshotone.com within 30 days, and we will refund you in full, no questions asked",
+        "url": "https://screenshotone.com/pricing"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Usage alerts are sent at 90% and 100% of the monthly quota",
+      "plan": null,
+      "evidence": {
+        "quote": "You will receive an email when you are at 90% and 100% usage of your monthly quota.",
+        "url": "https://screenshotone.com/pricing"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Unused credits do not roll over and expire at the end of each cycle",
+      "plan": null,
+      "evidence": {
+        "quote": "Unused credits expire at the end of the cycle",
+        "url": "https://screenshotone.com/docs/credits"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Overage is billed automatically only when extra charging is enabled",
+      "plan": null,
+      "evidence": {
+        "quote": "If you go over your limit and extra charging is enabled, extra screenshots are billed automatically",
+        "url": "https://screenshotone.com/docs/credits"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Unused credits are not refunded",
+      "plan": null,
+      "evidence": {
+        "quote": "No refunds for unused credits",
+        "url": "https://screenshotone.com/docs/credits"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Exceeding plan limits may lead to extra charges, throttling or suspension",
+      "plan": null,
+      "evidence": {
+        "quote": "throttling, or temporary suspension of access",
+        "url": "https://screenshotone.com/terms-of-service"
+      }
+    },
+    {
+      "kind": "condition",
+      "statement": "Pricing, features, usage limits, quotas and plan structures may be changed at any time",
+      "plan": null,
+      "evidence": {
+        "quote": "We reserve the right to modify pricing, features, usage limits, quotas, or plan structures at any time.",
+        "url": "https://screenshotone.com/terms-of-service"
+      }
+    }
   ],
   "findings": [
     {
       "type": "ambiguity",
       "severity": "high",
       "confidence": "high",
-      "headline": "Three of your pages give three different answers to what happens when a customer exceeds their plan",
-      "explanation": "This is the question every API customer asks before they build on you, and your site answers it three ways. The pricing page presents it as a simple per-unit price — go over, pay $0.009 each. The credits documentation adds a condition the pricing page never mentions: overage is billed automatically only if extra charging is enabled, leaving the reader to guess what happens when it is not. The terms of service describe a third outcome, where exceeding plan limits may bring throttling or temporary suspension of access. A developer whose product depends on your API cannot tell whether hitting the limit costs them money, degrades their service, or stops it.",
+      "headline": "Three pages give three answers to what happens when you exceed your plan.",
+      "explanation": "A third page says overage is billed only if extra charging is enabled, and never says what happens when it is not.",
       "claim_a": {
-        "statement": "Going over the plan is simply billed at a per-screenshot rate",
+        "statement": "$0.009 per extra screenshot",
         "quote": "$0.009 per extra",
         "url": "https://screenshotone.com/pricing"
       },
       "claim_b": {
-        "statement": "Exceeding plan limits may instead result in throttling or temporary suspension of access",
+        "statement": "Throttling or suspension",
         "quote": "throttling, or temporary suspension of access",
         "url": "https://screenshotone.com/terms-of-service"
       },
-      "why_not_just_wording": "Paying a few tenths of a cent more, having requests slowed, and losing access are three different outcomes for the same event, not three descriptions of one.",
-      "caveat": "The likely reality is that overage billing is the normal path and throttling is a reserve power for abuse. The docs page's \"if extra charging is enabled\" is the sentence that most needs finishing: it is the only hint that a customer might have the option switched off, and it never says what happens then."
+      "why_not_just_wording": "Paying more, being slowed, and losing access are three different outcomes for the same event.",
+      "caveat": "Overage billing is likely the normal path and throttling a reserve power for abuse. The sentence that needs finishing is if extra charging is enabled."
     },
     {
       "type": "likely_contradiction",
       "severity": "medium",
       "confidence": "medium",
-      "headline": "Your pricing page offers a full refund within 30 days, no questions asked; your credits documentation says unused credits are never refunded",
-      "explanation": "\"Email us within 30 days and we will refund you in full, no questions asked\" is an unconditional promise, and it is one of the reasons someone signs up. Your credits page carries a heading that says the opposite for the most common case: no refunds for unused credits. A customer who buys a Scale plan, uses a fraction of the 50,000 screenshots and asks for their money back inside the first month has been told both that they get everything back and that unused credits simply expire.",
+      "headline": "Pricing page promises a full refund. Docs say unused credits are not refunded.",
+      "explanation": "A customer who buys Scale, uses a fraction of the 50,000 screenshots and asks for their money back inside a month has been told both.",
       "claim_a": {
-        "statement": "A full refund is available for any reason within 30 days",
+        "statement": "Full refund within 30 days",
         "quote": "email us at support@screenshotone.com within 30 days, and we will refund you in full, no questions asked",
         "url": "https://screenshotone.com/pricing"
       },
       "claim_b": {
-        "statement": "Unused credits are not refunded; they expire at the end of the cycle",
+        "statement": "No refunds for unused credits",
         "quote": "No refunds for unused credits",
         "url": "https://screenshotone.com/docs/credits"
       },
-      "why_not_just_wording": "One page promises money back for any reason inside 30 days and the other rules out a refund in the situation where a customer would most often ask for one.",
-      "caveat": "These probably address different things — the 30-day guarantee refunds the subscription fee, while the credits page is explaining that credit balances have no cash value on cancellation. Read in that order they still conflict, and the credits page is the one a cancelling customer lands on."
+      "why_not_just_wording": "One page promises money back for any reason inside 30 days and the other rules it out for the most common case.",
+      "caveat": "These probably address different things, the subscription fee and the cash value of credits. The credits page is where a cancelling customer lands."
     },
     {
       "type": "missing_information",
       "severity": "medium",
       "confidence": "high",
-      "headline": "Your terms let you change the usage limits and quotas themselves at any time, not just the price",
-      "explanation": "Most terms of service reserve the right to change prices. Yours goes further and reserves the right to modify usage limits, quotas and plan structures too. The screenshot allowances are the product — 2,000, 10,000 and 50,000 a month are the reason a customer picks one plan over another — so this clause says the thing being bought can be redefined mid-subscription. Nothing on the pricing page hints at it, and no notice period is given anywhere we could read.",
+      "headline": "Terms allow you to change quotas, not just prices.",
+      "explanation": "The allowances are the product, so this says what a customer bought can be redefined mid-subscription.",
       "claim_a": {
-        "statement": "Each plan is sold on a specific monthly screenshot allowance",
+        "statement": "Scale includes 50,000 screenshots",
         "quote": "50,000 screenshots",
         "url": "https://screenshotone.com/pricing"
       },
       "claim_b": {
-        "statement": "Pricing, features, usage limits, quotas and plan structures may all be changed at any time",
+        "statement": "Quotas may change at any time",
         "quote": "We reserve the right to modify pricing, features, usage limits, quotas, or plan structures at any time.",
         "url": "https://screenshotone.com/terms-of-service"
       },
-      "why_not_just_wording": "A right to change quotas is materially different from a right to change prices, because it can reduce what a customer receives without changing what they pay.",
-      "caveat": "This is a clause you probably have no intention of using against existing customers, and a notice commitment on the pricing page would neutralise it entirely."
+      "why_not_just_wording": "A right to change quotas can reduce what a customer receives without changing what they pay.",
+      "caveat": "A notice commitment on the pricing page would neutralise this entirely."
     }
   ],
   "coverage_notes": {
     "unusable_pages": [],
-    "what_was_not_checkable": "This is the most complete set of pages of the ten companies: fifteen pages all readable, with a pricing page that publishes per-plan quotas, rate limits and overage rates inline, and a credits page that explains reset and rollover behaviour properly. What we could not check is what actually happens when extra charging is disabled and the quota runs out — no page we read says. We also could not confirm whether the free tier survives cancellation: the credits page says a cancelled customer is downgraded to the free plan \"or if the free plan is not available, you will lose access\", without saying when the free plan would not be available."
+    "what_was_not_checkable": "This is the most complete set of pages of the ten companies: fifteen pages all readable, a pricing page that publishes per-plan quotas, rate limits and overage rates inline, and a credits page that explains reset and rollover behaviour properly. What we could not check is what actually happens when extra charging is disabled and the quota runs out. No page we read says. We also could not confirm whether the free tier survives cancellation. The credits page says a cancelled customer is downgraded to the free plan, or loses access if the free plan is not available, without saying when that would be the case."
   }
 }

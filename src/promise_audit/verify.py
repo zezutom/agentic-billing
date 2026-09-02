@@ -5,10 +5,10 @@ Every quote is located, character by character, in the harvested text of the
 page the model attributed it to. A finding whose evidence cannot be found is
 discarded before anyone reads it, and the discard is counted and reported.
 
-The comparison is deliberately a little forgiving — whitespace, curly quotes,
+The comparison is deliberately a little forgiving. Whitespace, curly quotes,
 dashes and case are normalised, and an ellipsis inside a quote is treated as
-"these fragments, in this order" — because those are rendering artefacts, not
-fabrication. It is not forgiving about anything else.
+"these fragments, in this order", because those are rendering artefacts rather
+than fabrication. It is not forgiving about anything else.
 """
 
 from __future__ import annotations

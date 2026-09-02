@@ -448,6 +448,11 @@ def _page_label(dossier: Dossier, url: str) -> str:
     return "Another page"
 
 
+def _url_path(url: str) -> str:
+    path = re.sub(r"^https?://[^/]+", "", url or "") or "/"
+    return path if len(path) <= 28 else path[:27] + "\u2026"
+
+
 def _versus(where: str, claim: dict) -> str:
     quote = (claim.get("quote") or "").strip()
     url = claim.get("url") or ""
@@ -470,9 +475,17 @@ def render_artifact(analysis: dict, dossier: Dossier) -> str:
 
     records = []
     for i, f in enumerate(findings, 1):
-        where_a = _page_label(dossier, f["claim_a"].get("url"))
-        where_b = ("Same page, further down" if f.get("same_page")
-                   else _page_label(dossier, f["claim_b"].get("url")))
+        url_a, url_b = f["claim_a"].get("url"), f["claim_b"].get("url")
+        where_a = _page_label(dossier, url_a)
+        if f.get("same_page"):
+            where_b = "Same page, further down"
+        else:
+            where_b = _page_label(dossier, url_b)
+            # Two pages of the same type, such as a regional pricing page, would
+            # otherwise carry the same label. Add the path to tell them apart.
+            if where_a == where_b:
+                where_a = f"{where_a} {_url_path(url_a)}"
+                where_b = f"{where_b} {_url_path(url_b)}"
         meta = []
         if (f.get("explanation") or "").strip():
             meta.append(f'<dt>Impact</dt><dd>{_e(f["explanation"])}</dd>')

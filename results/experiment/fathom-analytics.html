@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Commercial consistency audit — Fathom Analytics</title>
+<title>Fathom Analytics Promise Audit</title>
 <style>
 :root{--ink:#12151c;--muted:#5d6675;--line:#e3e6ec;--bg:#fbfbfc;--card:#fff;
 --high:#c0392b;--high-bg:#fdf0ee;--med:#b06f13;--med-bg:#fdf6ea;--low:#4a6b8a;--low-bg:#eff4f8;
@@ -73,7 +73,7 @@ Nothing here is inferred from anything private.</p>
 run 2026-09-02 07:57:21 UTC</p>
 
 <h2>What you appear to sell</h2>
-<div class="legend">Up to 500,000 pageviews — $45 /month, Larger pageview tiers (2M, 10M, 25M+) — priced by pageview band; largest tiers contact us</div>
+<div class="legend">Up to 500,000 pageviews, $45 /month, Larger pageview tiers (2M, 10M, 25M+), priced by pageview band; largest tiers contact us</div>
 
 <h2>What we found</h2>
 <article class="f high">
@@ -83,16 +83,16 @@ run 2026-09-02 07:57:21 UTC</p>
   <span class="chip conf">high confidence</span>
   <span class="chip ok">evidence verified</span>
 </div>
-<h3>Your pricing page promises you will never switch analytics off for going over; your terms reserve the right to suspend the account</h3>
-<p>The FAQ on your pricing page is written to remove exactly this worry: you will never turn someone&#x27;s analytics off over a traffic spike, and if they go over two months running you simply offer an upgrade, which they can take or leave with no hard feelings. Your terms and conditions describe a different process. There, a customer who does not upgrade within seven days of being asked can have their account suspended, and an account left suspended for two months can be deleted — with no refund. The terms also add a trigger the FAQ never mentions: significantly exceeding the limit inside the first month, judged at your sole discretion. For a company whose whole brand is candour about pricing, this is the one page where the reassurance does not hold.</p>
+<h3>Pricing page says you never switch analytics off. Terms allow suspension.</h3>
+<p>The terms also add a first-month trigger the FAQ never mentions, and an account left suspended two months can be deleted with no refund.</p>
 <div class="pair"><div class="side"><div class="lab">What one page says</div>
-<div class="claim">Analytics are never switched off for going over; the customer chooses whether to upgrade or leave</div>
+<div class="claim">Never switched off for overage</div>
 <blockquote>&ldquo;We&#x27;ll never turn your analytics off for occasional traffic spikes or if a payment fails the first time&rdquo;</blockquote>
 <a href="https://usefathom.com/pricing" target="_blank" rel="noopener">https://usefathom.com/pricing</a></div><div class="side"><div class="lab">What another page says</div>
-<div class="claim">Failing to upgrade within seven days can lead to suspension, and continued suspension to deletion, with no refund</div>
+<div class="claim">Suspension after seven days</div>
 <blockquote>&ldquo;In the event you fail to upgrade your account within seven days of our request, we reserve the right to suspend your account and restrict your use of our Services anytime after the seventh day following our notice to you.&rdquo;</blockquote>
 <a href="https://usefathom.com/legal/terms" target="_blank" rel="noopener">https://usefathom.com/legal/terms</a></div></div>
-<div class="note"><div><b>Why this is not just wording:</b> &quot;We&#x27;ll never turn your analytics off&quot; and &quot;we reserve the right to suspend your account and restrict your use of our Services&quot; describe opposite outcomes for the same customer in the same situation.</div><div><b>What would make this a non-issue:</b> The terms describe a right you may never exercise, and the FAQ describes what you actually do in practice. Most companies have this gap; it is more visible here because the FAQ makes such a specific promise. Softening &quot;never&quot; to &quot;we won&#x27;t&quot; and mentioning the first-month trigger would close it.</div></div>
+<div class="note"><div><b>Why this is not just wording:</b> Never turn your analytics off and reserve the right to suspend your account describe opposite outcomes for the same customer.</div><div><b>What would make this a non-issue:</b> The terms describe a right you may never use and the FAQ describes what you actually do. Dropping the word never would close it.</div></div>
 </article><article class="f high">
 <div class="chips">
   <span class="chip high">high impact</span>
@@ -100,16 +100,16 @@ run 2026-09-02 07:57:21 UTC</p>
   <span class="chip conf">high confidence</span>
   <span class="chip ok">evidence verified</span>
 </div>
-<h3>&quot;Full API access&quot; is on the pricing page; the $19–$399 a month you may need to pay for it is not</h3>
-<p>Your pricing page lists &quot;Full API access with 600 requests per hour included&quot; as a plan feature, in a list whose other entries end with reassurances like &quot;No extra fees&quot;. A separate page reveals that 600 requests an hour is Tier 1 of a six-tier paid ladder, and that going beyond it costs $19, $39, $79, $199 or $399 a month. The top tier is nearly nine times the price of the $45 plan it sits on top of. Anyone sizing a real integration — the person most likely to care about the API at all — will build their business case from the pricing page and find the ladder only after they hit a 429.</p>
+<h3>Pricing page sells full API access. The $19 to $399 ladder is elsewhere.</h3>
+<p>600 an hour is Tier 1 of six. The top tier costs nearly nine times the $45 plan it sits on.</p>
 <div class="pair"><div class="side"><div class="lab">What one page says</div>
-<div class="claim">The plan includes full API access with 600 requests per hour</div>
+<div class="claim">Full API access, 600 per hour</div>
 <blockquote>&ldquo;Full API access with 600 requests per hour included.&rdquo;</blockquote>
 <a href="https://usefathom.com/pricing" target="_blank" rel="noopener">https://usefathom.com/pricing</a></div><div class="side"><div class="lab">What another page says</div>
-<div class="claim">API throughput above the included allowance is a paid upgrade costing up to $399 a month</div>
+<div class="claim">Up to $399 a month for more</div>
 <blockquote>&ldquo;Tier 6 | $399/mo | 16,000 | 25&rdquo;</blockquote>
 <a href="https://usefathom.com/api/v1/rate-limits" target="_blank" rel="noopener">https://usefathom.com/api/v1/rate-limits</a></div></div>
-<div class="note"><div><b>Why this is not just wording:</b> The pricing page names no price for API capacity at all, while the other page prices it in six steps up to $399 a month, so a reader of the pricing page cannot arrive at the real cost of the product they are buying.</div><div><b>What would make this a non-issue:</b> 600 requests an hour is generous for dashboard-style use, and most customers will never leave Tier 1. The issue is that the word &quot;Full&quot; is doing a lot of work in a list that otherwise advertises the absence of extra fees.</div></div>
+<div class="note"><div><b>Why this is not just wording:</b> The pricing page names no price for API capacity while another page prices it in six steps.</div><div><b>What would make this a non-issue:</b> 600 requests an hour is generous and most customers stay on Tier 1. The word Full is doing the work in a list that otherwise advertises no extra fees.</div></div>
 </article><article class="f medium">
 <div class="chips">
   <span class="chip medium">medium impact</span>
@@ -117,16 +117,16 @@ run 2026-09-02 07:57:21 UTC</p>
   <span class="chip conf">medium confidence</span>
   <span class="chip ok">evidence verified</span>
 </div>
-<h3>Event tracking is advertised with &quot;no extra fees&quot;, but events are counted as pageviews, which is what your price is based on</h3>
-<p>Your feature list says conversions, revenue and custom events are tracked on every plan with no extra fees. An FAQ answer much further down the same page confirms that custom events and API requests are counted as if they were pageviews. Since the plan price is set entirely by monthly pageviews, heavy event tracking does raise the bill — it moves the customer into a higher band, and by the terms it can eventually force an upgrade. Both statements are true; read in sequence they land as a contradiction.</p>
+<h3>Event tracking has no extra fees, but events count as pageviews.</h3>
+<p>Your price is set entirely by monthly pageviews, so heavy event tracking moves a customer into a higher band.</p>
 <div class="pair"><div class="side"><div class="lab">What one page says</div>
-<div class="claim">Event and ecommerce tracking is included on every plan with no extra fees</div>
+<div class="claim">Events included, no extra fees</div>
 <blockquote>&ldquo;Track conversions, revenue, and custom events on every plan. No extra fees.&rdquo;</blockquote>
 <a href="https://usefathom.com/pricing" target="_blank" rel="noopener">https://usefathom.com/pricing</a></div><div class="side"><div class="lab">What another page says</div>
-<div class="claim">Custom events and API requests consume the pageview allowance that sets the price</div>
+<div class="claim">Events counted as pageviews</div>
 <blockquote>&ldquo;those requests will be counted as if they were pageviews&rdquo;</blockquote>
 <a href="https://usefathom.com/pricing" target="_blank" rel="noopener">https://usefathom.com/pricing</a></div></div>
-<div class="note"><div><b>Why this is not just wording:</b> &quot;No extra fees&quot; and &quot;counted as if they were pageviews&quot; have different consequences for the invoice, because pageviews are the only thing your price depends on.</div><div><b>What would make this a non-issue:</b> &quot;No extra fees&quot; is fair if it means there is no separate line item for events, which is true. The two statements are roughly two thousand words apart on the page, so few readers will see both — which is also why it is worth a sentence next to the feature.</div></div>
+<div class="note"><div><b>Why this is not just wording:</b> No extra fees and counted as pageviews have different consequences for the invoice.</div><div><b>What would make this a non-issue:</b> No extra fees is fair if it means no separate line item, which is true. The two statements are about 2,000 words apart on the page.</div></div>
 </article><article class="f low">
 <div class="chips">
   <span class="chip low">low impact</span>
@@ -134,19 +134,19 @@ run 2026-09-02 07:57:21 UTC</p>
   <span class="chip conf">medium confidence</span>
   <span class="chip ok">evidence verified</span>
 </div>
-<h3>You state you have never given a discount, while your help centre carries an article called &quot;Discount codes&quot;</h3>
-<p>Your pricing FAQ is emphatic: never any sales or discounts, not even Black Friday, because everyone pays exactly the same price. That claim is part of your positioning. Every documentation page we read carries a help-centre link titled &quot;Discount codes&quot;. If discount codes exist for partners, non-profits or migrations, then &quot;everyone pays the exact same price&quot; needs a qualifier; if they do not, the article title is misleading.</p>
+<h3>You say you never discount. Your help centre lists an article on discount codes.</h3>
+<p>If codes exist for partners or non-profits, everyone pays the exact same price needs a qualifier.</p>
 <div class="pair"><div class="side"><div class="lab">What one page says</div>
-<div class="claim">There have never been and will never be discounts; everyone pays the same price</div>
+<div class="claim">Never any discounts, ever</div>
 <blockquote>&ldquo;We&#x27;ve never done discounts, nor will we ever.&rdquo;</blockquote>
 <a href="https://usefathom.com/pricing" target="_blank" rel="noopener">https://usefathom.com/pricing</a></div><div class="side"><div class="lab">What another page says</div>
-<div class="claim">The help centre documents discount codes</div>
+<div class="claim">Help centre: Discount codes</div>
 <blockquote>&ldquo;Discount codes&rdquo;</blockquote>
 <a href="https://usefathom.com/docs/integrations" target="_blank" rel="noopener">https://usefathom.com/docs/integrations</a></div></div>
-<div class="note"><div><b>Why this is not just wording:</b> A help article dedicated to discount codes implies a mechanism for paying less than list price, which is what the pricing FAQ says does not exist.</div><div><b>What would make this a non-issue:</b> This is the weakest item here and we want to be straight about why: we only saw the article&#x27;s title in a navigation sidebar, not its contents. The article may explain that Fathom does not issue discount codes, or cover codes from a bundle or acquisition. Thirty seconds of checking settles it.</div></div>
+<div class="note"><div><b>Why this is not just wording:</b> An article about discount codes implies a way to pay less than list price, which the FAQ says does not exist.</div><div><b>What would make this a non-issue:</b> This is the weakest item here. We saw the article title in a sidebar, not its contents, and it may say you do not issue codes.</div></div>
 </article>
 
-<h2>How to read these</h2><div class="legend"><div><b>Likely contradiction</b> — Two public statements that cannot both be true.</div><div><b>Ambiguity</b> — Both statements can be true, but a customer cannot tell what they get.</div><div><b>Missing information</b> — Something that changes the deal, published somewhere the buyer will not look.</div></div>
+<h2>How to read these</h2><div class="legend"><div><b>Likely contradiction:</b> Two public statements that cannot both be true.</div><div><b>Ambiguity:</b> Both statements can be true, but a customer cannot tell what they get.</div><div><b>Missing information:</b> Something that changes the deal, published somewhere the buyer will not look.</div></div>
 
 <h2>Pages we read</h2>
 <table><thead><tr><th>Page</th><th>Words</th><th>Status</th></tr></thead>
@@ -181,7 +181,7 @@ Webflow - Fathom Analytics</a><br><span class="tag">Add-ons &amp; integrations</
 <td>&mdash;</td><td>HTTP 404</td></tr><tr><td>https://usefathom.com/help<br><span class="tag">not reached</span></td>
 <td>&mdash;</td><td>HTTP 404</td></tr></tbody></table>
 
-<div class="close"><h2>These are the promises your customers can see. Do your billing system and product deliver the same thing?</h2><p>This audit only reads what is published on your website. It cannot see what your billing system actually meters, what your product actually enforces, or what your customer records actually entitle people to. In most companies those three answers have drifted apart quietly, and the public pages are the only place the drift is visible from outside. If the contradictions above are news to you, the more expensive question is what else is out of step behind them.</p></div>
+<div class="close"><h2>These are the promises your customers can see. Do your billing system and product deliver the same thing?</h2><p>This audit reads your public pages only. It cannot see what your billing system meters, what your product enforces, or what your customer records entitle people to. If the findings above are news to you, the question worth asking is what else is out of step behind them.</p></div>
 <footer>Automated read of public pages only, then checked: every quote above was located in
 the page it is attributed to, and
 0 candidate finding(s) were discarded because their evidence

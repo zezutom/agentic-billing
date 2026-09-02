@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Commercial consistency audit — Knock</title>
+<title>Knock Promise Audit</title>
 <style>
 :root{--ink:#12151c;--muted:#5d6675;--line:#e3e6ec;--bg:#fbfbfc;--card:#fff;
 --high:#c0392b;--high-bg:#fdf0ee;--med:#b06f13;--med-bg:#fdf6ea;--low:#4a6b8a;--low-bg:#eff4f8;
@@ -73,7 +73,7 @@ Nothing here is inferred from anything private.</p>
 run 2026-09-02 07:57:24 UTC</p>
 
 <h2>What you appear to sell</h2>
-<div class="legend">Developer — $0 / month, Starter — $250 / month, Enterprise — Contact us</div>
+<div class="legend">Developer, $0 / month, Starter, $250 / month, Enterprise, Contact us</div>
 
 <h2>What we found</h2>
 <article class="f medium">
@@ -83,16 +83,16 @@ run 2026-09-02 07:57:24 UTC</p>
   <span class="chip conf">high confidence</span>
   <span class="chip ok">evidence verified</span>
 </div>
-<h3>Your pricing page says workflow triggers are unlimited on every plan; your API reference rate limits every endpoint</h3>
-<p>&quot;Unlimited&quot; appears against workflow triggers, notification workflows, channels and recipients for all three plans, including the free one. Triggering a workflow is an API call, and your API reference states plainly that every endpoint is rate limited, on a five-tier scale that starts at one request per second, and returns a 429 when exceeded. The two statements are compatible — a rate limit caps the rate, not the total — but the pricing page does not say so, and the rate-limit tiers are never mapped to plans or to specific endpoints, so a developer sizing a launch cannot work out what throughput they have actually bought.</p>
+<h3>Pricing page says triggers are unlimited. Every endpoint is rate limited.</h3>
+<p>Triggering a workflow is an API call, and the tiers are never mapped to plans or endpoints.</p>
 <div class="pair"><div class="side"><div class="lab">What one page says</div>
-<div class="claim">Workflow triggers are unlimited on every plan, including the free one</div>
+<div class="claim">Unlimited workflow triggers</div>
 <blockquote>&ldquo;Workflow triggers | Unlimited | Unlimited | Unlimited&rdquo;</blockquote>
 <a href="https://knock.app/pricing" target="_blank" rel="noopener">https://knock.app/pricing</a></div><div class="side"><div class="lab">What another page says</div>
-<div class="claim">Every API endpoint is rate limited on a tier scale beginning at one request per second, returning 429 when exceeded</div>
+<div class="claim">1 to 1,000 requests per second</div>
 <blockquote>&ldquo;Each endpoint in the Knock API is rate limited. Knock uses a tier system to determine the rate limit scale for each endpoint.&rdquo;</blockquote>
 <a href="https://docs.knock.app/api-reference/overview/rate-limits" target="_blank" rel="noopener">https://docs.knock.app/api-reference/overview/rate-limits</a></div></div>
-<div class="note"><div><b>Why this is not just wording:</b> &quot;Unlimited triggers&quot; and &quot;one to a thousand requests per second depending on an unpublished endpoint tier&quot; answer the same buyer question — how much can I send — with different numbers.</div><div><b>What would make this a non-issue:</b> This is a clarity problem, not a broken promise: rate limits and volume allowances genuinely are different, and your docs invite customers to ask for a higher rate. Naming which tier the trigger endpoint sits in would resolve it in one line.</div></div>
+<div class="note"><div><b>Why this is not just wording:</b> Unlimited triggers and a per-second ceiling answer the same buyer question with different numbers.</div><div><b>What would make this a non-issue:</b> Rate limits and volume allowances are different, and your docs invite customers to ask for more. Naming the tier for the trigger endpoint would fix it.</div></div>
 </article><article class="f medium">
 <div class="chips">
   <span class="chip medium">medium impact</span>
@@ -100,19 +100,19 @@ run 2026-09-02 07:57:24 UTC</p>
   <span class="chip conf">high confidence</span>
   <span class="chip ok">evidence verified</span>
 </div>
-<h3>Enterprise customers get the same guides allowance as the $250 Starter plan, and only the FAQ says so</h3>
-<p>In your comparison table the Enterprise column for guide active users says &quot;Contact us&quot;, alongside a note about volume discounts. Every reasonable reading of that is &quot;this number is negotiated, and it will be bigger than Starter&#x27;s&quot;. An FAQ answer near the bottom of the same page says something different: unless guides were explicitly written into the enterprise agreement, an Enterprise customer gets 2,500 active users a month — exactly what Starter includes for $250. A customer paying well above Starter, who assumed guides scaled with their contract, finds out when you ask them to get in touch mid-quarter.</p>
+<h3>Enterprise guides default to the Starter allowance. Only the FAQ says so.</h3>
+<p>A customer paying well above Starter, who assumed guides scaled with their contract, finds out when you ask them to get in touch.</p>
 <div class="pair"><div class="side"><div class="lab">What one page says</div>
-<div class="claim">The Enterprise guides allowance is presented as something to negotiate, with volume discounts available</div>
+<div class="claim">Contact us, volume discounts</div>
 <blockquote>&ldquo;Contact us Volume-based discounts and monthly notified user pricing available.&rdquo;</blockquote>
 <a href="https://knock.app/pricing" target="_blank" rel="noopener">https://knock.app/pricing</a></div><div class="side"><div class="lab">What another page says</div>
-<div class="claim">Enterprise defaults to the Starter allowance of 2,500 guide active users a month</div>
+<div class="claim">2,500 users, same as Starter</div>
 <blockquote>&ldquo;you&#x27;ll have the same guides limit as our Starter plan: 2,500 active users a month&rdquo;</blockquote>
 <a href="https://knock.app/pricing" target="_blank" rel="noopener">https://knock.app/pricing</a></div></div>
-<div class="note"><div><b>Why this is not just wording:</b> &quot;Contact us&quot; invites the reader to assume a negotiated, larger number, while the FAQ states a specific default equal to the tier below — that is a fact about the deal, not a phrasing choice.</div><div><b>What would make this a non-issue:</b> The FAQ is on the same page as the table, so a thorough reader will find it. It is 40 rows below, under a question addressed to existing Enterprise customers rather than to buyers, and the table itself gives no hint that a default exists.</div></div>
+<div class="note"><div><b>Why this is not just wording:</b> Contact us invites the reader to assume a negotiated number while the FAQ states a specific default equal to the tier below.</div><div><b>What would make this a non-issue:</b> The FAQ is on the same page, forty rows down, under a question aimed at existing customers rather than buyers.</div></div>
 </article>
 
-<h2>How to read these</h2><div class="legend"><div><b>Ambiguity</b> — Both statements can be true, but a customer cannot tell what they get.</div><div><b>Missing information</b> — Something that changes the deal, published somewhere the buyer will not look.</div></div>
+<h2>How to read these</h2><div class="legend"><div><b>Ambiguity:</b> Both statements can be true, but a customer cannot tell what they get.</div><div><b>Missing information:</b> Something that changes the deal, published somewhere the buyer will not look.</div></div>
 
 <h2>Pages we read</h2>
 <table><thead><tr><th>Page</th><th>Words</th><th>Status</th></tr></thead>
@@ -135,7 +135,7 @@ API reference | Knock Docs</a><br><span class="tag">Usage limits / quotas</span>
 <td>read</td></tr><tr><td>https://dashboard.knock.app/signup<br><span class="tag">not reached</span></td>
 <td>&mdash;</td><td>blocked by robots.txt</td></tr></tbody></table>
 
-<div class="close"><h2>These are the promises your customers can see. Do your billing system and product deliver the same thing?</h2><p>This audit only reads what is published on your website. It cannot see what your billing system actually meters, what your product actually enforces, or what your customer records actually entitle people to. In most companies those three answers have drifted apart quietly, and the public pages are the only place the drift is visible from outside. If the contradictions above are news to you, the more expensive question is what else is out of step behind them.</p></div>
+<div class="close"><h2>These are the promises your customers can see. Do your billing system and product deliver the same thing?</h2><p>This audit reads your public pages only. It cannot see what your billing system meters, what your product enforces, or what your customer records entitle people to. If the findings above are news to you, the question worth asking is what else is out of step behind them.</p></div>
 <footer>Automated read of public pages only, then checked: every quote above was located in
 the page it is attributed to, and
 0 candidate finding(s) were discarded because their evidence

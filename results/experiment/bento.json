@@ -15,7 +15,7 @@
     },
     {
       "name": "Transactional Email",
-      "headline_price": "$0/mo \u2014 first 100 emails free, then $5/mo to 12,500 and $0.09 per 1,000 after",
+      "headline_price": "$0/mo, first 100 emails free, then $5/mo to 12,500 and $0.09 per 1,000 after",
       "billing_periods": [
         "monthly",
         "usage"
@@ -176,20 +176,20 @@
       "type": "likely_contradiction",
       "severity": "high",
       "confidence": "high",
-      "headline": "Your pricing page bills on active users; your FAQ says you bill on total subscribers",
-      "explanation": "The entire argument of your pricing page is that you charge for Active Users \u2014 people who are subscribed or who did something in the last 30 days \u2014 and that dormant contacts do not inflate the bill. Your documentation FAQ answers \"How does pricing work?\" with a flat statement that you charge on the number of subscribers, and then defines a subscriber as any unique email address in the account. For a list with a long tail of dormant addresses those two rules produce materially different invoices, and the difference is the single reason a prospect would choose you over the competitors your own comparison table names.",
+      "headline": "Pricing page bills on active users. FAQ says total subscribers.",
+      "explanation": "On a list with a long dormant tail those two rules produce different invoices. It is also the reason a prospect picks you over the competitors in your own table.",
       "claim_a": {
-        "statement": "Billing is based on Active Users \u2014 subscribed, or active in the last 30 days",
+        "statement": "Active users, last 30 days",
         "quote": "Subscribed users or people with an event in the last 30 days.",
         "url": "https://bentonow.com/pricing"
       },
       "claim_b": {
-        "statement": "Billing is based on the total number of subscribers, meaning every unique email address held",
+        "statement": "Every unique email address",
         "quote": "Bento charges based on the number of subscribers you have.",
         "url": "https://bentonow.com/docs/faq"
       },
-      "why_not_just_wording": "\"Active Users in the last 30 days\" and \"every unique email address in your account\" are two different countable populations, so they are two different prices for the same list.",
-      "caveat": "The FAQ answer is probably just older copy written before the Active Users model, and \"subscriber\" may be intended loosely. That is exactly the problem: it is the page a customer searches when they want to know what drives their bill.",
+      "why_not_just_wording": "Active users in the last 30 days and every email address on file are different countable populations.",
+      "caveat": "The FAQ is probably older copy from before the Active Users model. It is still the page customers search when they want to know what drives their bill.",
       "same_page": false,
       "score": 10.35
     },
@@ -197,27 +197,27 @@
       "type": "ambiguity",
       "severity": "medium",
       "confidence": "medium",
-      "headline": "Your FAQ says every feature is included with no gating, while your pricing page sells chat as a $30/month add-on",
-      "explanation": "\"All features are included at every tier - no feature gating\" is a strong promise, and it is the answer a prospect gets when they ask how pricing works. Your pricing page then sells Bento Chat \u2014 shared inbox, live chat, SMS, routing, AI agents \u2014 for an extra $30 a month, and requires the Marketing Platform underneath it. Someone who reads the FAQ first will budget $29 and be surprised at $59.",
+      "headline": "FAQ says nothing is gated. Pricing page sells chat at $30 a month.",
+      "explanation": "Someone who reads the FAQ first budgets $29 and is surprised at $59.",
       "claim_a": {
-        "statement": "No feature is gated; everything is included at every tier",
+        "statement": "No feature gating at any tier",
         "quote": "All features are included at every tier",
         "url": "https://bentonow.com/docs/faq"
       },
       "claim_b": {
-        "statement": "Chat, SMS and AI agents cost an additional $30/month on top of the Marketing Platform",
+        "statement": "Chat costs $30 a month extra",
         "quote": "+$30/mo adds shared inbox, live chat, SMS, routing, saved replies, and AI agents. Requires Marketing Platform.",
         "url": "https://bentonow.com/pricing"
       },
-      "why_not_just_wording": "One page states that nothing is behind a paywall while the other puts a named set of features behind a separate monthly charge.",
-      "caveat": "\"Tier\" almost certainly means volume tier \u2014 the features genuinely do not change as your list grows \u2014 and Chat is arguably a separate product rather than a gated feature. Adding four words to the FAQ answer would remove the ambiguity.",
+      "why_not_just_wording": "One page says nothing is behind a paywall, the other puts a named feature set behind a separate charge.",
+      "caveat": "Tier almost certainly means volume tier, and Chat is arguably a separate product. Four words in the FAQ would settle it.",
       "same_page": false,
       "score": 4.0
     }
   ],
   "coverage_notes": {
     "unusable_pages": [],
-    "what_was_not_checkable": "The FAQ's answer to \"What's the API rate limit?\" is collapsed and did not render, though a table of per-endpoint limits appears on the same page. Nothing we read states whether a credit card is required to start the 30-day trial, or what happens to a list that exceeds fair use on marketing sends \u2014 the term is used but never defined anywhere we could read."
+    "what_was_not_checkable": "The FAQ answer to \"What's the API rate limit?\" is collapsed and did not render, though a table of per-endpoint limits sits on the same page. Nothing we read says whether a card is required to start the 30-day trial, or what happens to a list that exceeds fair use on marketing sends. The term is used but never defined anywhere we could reach."
   },
   "backend": "agent",
   "verification": {

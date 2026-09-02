@@ -17,5 +17,22 @@ dependencies = [
     "langfuse>=2.0",
 ]
 
+[project.optional-dependencies]
+# The commercial-consistency auditor is self-contained and needs no LLM key.
+audit = [
+    "requests>=2.31",
+    "beautifulsoup4>=4.12",
+    "lxml>=5.0",
+]
+# Optional: headless-browser fallback for JavaScript-only pricing pages.
+audit-js = [
+    "playwright>=1.40",
+]
+
+[project.scripts]
+promise-audit = "promise_audit.cli:main"
+promise-audit-batch = "promise_audit.experiment.run_batch:main"
+promise-audit-report = "promise_audit.experiment.report:main"
+
 [tool.hatch.build.targets.wheel]
-packages = ["src/agentic_billing"]
+packages = ["src/agentic_billing", "src/promise_audit"]

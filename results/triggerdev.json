@@ -1,0 +1,609 @@
+{
+  "company": "Trigger.dev",
+  "plans": [
+    {
+      "name": "Free",
+      "headline_price": "$0 a month",
+      "billing_periods": [
+        "free"
+      ],
+      "evidence": {
+        "quote": "Begin for free, invite your team, and scale without limits.",
+        "url": "https://trigger.dev/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "name": "Hobby",
+      "headline_price": "$10 a month",
+      "billing_periods": [
+        "monthly"
+      ],
+      "evidence": {
+        "quote": "$10 /month",
+        "url": "https://trigger.dev/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "name": "Pro",
+      "headline_price": "$50 a month",
+      "billing_periods": [
+        "monthly"
+      ],
+      "evidence": {
+        "quote": "$50 /month",
+        "url": "https://trigger.dev/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "name": "Enterprise",
+      "headline_price": "Custom",
+      "billing_periods": [
+        "custom"
+      ],
+      "evidence": {
+        "quote": "All Pro plan features +",
+        "url": "https://trigger.dev/pricing"
+      },
+      "evidence_verified": true
+    }
+  ],
+  "promises": [
+    {
+      "kind": "plan_price",
+      "statement": "Hobby is $10 a month",
+      "plan": "Hobby",
+      "evidence": {
+        "quote": "$10 /month",
+        "url": "https://trigger.dev/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "plan_price",
+      "statement": "Pro is $50 a month",
+      "plan": "Pro",
+      "evidence": {
+        "quote": "$50 /month",
+        "url": "https://trigger.dev/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Compute is billed per second by machine size",
+      "plan": null,
+      "evidence": {
+        "quote": "Tasks are executed on our managed workers. You are only charged when your tasks are executing.",
+        "url": "https://trigger.dev/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Every run carries an invocation charge",
+      "plan": null,
+      "evidence": {
+        "quote": "Every run that starts executing on our managed workers is charged an invocation cost in addition to compute costs.",
+        "url": "https://trigger.dev/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Dev environment runs are free",
+      "plan": null,
+      "evidence": {
+        "quote": "Runs in the DEV environment are not charged for.",
+        "url": "https://trigger.dev/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "unlimited",
+      "statement": "Tasks have no time limit",
+      "plan": null,
+      "evidence": {
+        "quote": "Tasks can run for as long as you need, with no timeouts.",
+        "url": "https://trigger.dev/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Pro concurrency is 200 on the pricing page",
+      "plan": "Pro",
+      "evidence": {
+        "quote": "If your tasks require more than the Pro plan limit",
+        "url": "https://trigger.dev/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "addon",
+      "statement": "Extra concurrency is $10 a month per 50",
+      "plan": "Pro",
+      "evidence": {
+        "quote": "you can purchase bundles of 50 for $10 per month",
+        "url": "https://trigger.dev/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Docs give Free 10 concurrent runs",
+      "plan": "Free",
+      "evidence": {
+        "quote": "| Free | 10 concurrent runs |",
+        "url": "https://trigger.dev/docs/limits"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Docs give Hobby 25 concurrent runs",
+      "plan": "Hobby",
+      "evidence": {
+        "quote": "| Hobby | 25 concurrent runs |",
+        "url": "https://trigger.dev/docs/limits"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Docs give Pro 100+ concurrent runs",
+      "plan": "Pro",
+      "evidence": {
+        "quote": "| Pro | 100+ concurrent runs |",
+        "url": "https://trigger.dev/docs/limits"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "1,500 API requests per minute on all plans",
+      "plan": null,
+      "evidence": {
+        "quote": "All plans are limited to 1,500 API requests per minute",
+        "url": "https://trigger.dev/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Team members: 5 on Free, 25+ on Pro",
+      "plan": null,
+      "evidence": {
+        "quote": "| Free | 5 team members |",
+        "url": "https://trigger.dev/docs/limits"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Log retention 1, 7 and 30 days by tier",
+      "plan": null,
+      "evidence": {
+        "quote": "1 day log retention",
+        "url": "https://trigger.dev/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Task outputs must not exceed 10MB",
+      "plan": null,
+      "evidence": {
+        "quote": "| Task outputs | Must not exceed 10MB |",
+        "url": "https://trigger.dev/docs/limits"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Free plan stops after $5 of credits",
+      "plan": "Free",
+      "evidence": {
+        "quote": "On the Free plan, you'll need to upgrade to keep running tasks once the included $5 of credits is used.",
+        "url": "https://trigger.dev/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Paid plans keep running and are billed for overage",
+      "plan": null,
+      "evidence": {
+        "quote": "On paid plans, your tasks keep running. Compute past your included credits is billed at our compute usage rates",
+        "url": "https://trigger.dev/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Spend limits and billing alerts are available",
+      "plan": null,
+      "evidence": {
+        "quote": "Yes. Configure billing alerts in your dashboard's organization settings.",
+        "url": "https://trigger.dev/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Billing limits are soft, not hard caps",
+      "plan": null,
+      "evidence": {
+        "quote": "not instantaneous hard caps. Usage is evaluated on a short delay, so spend can briefly exceed your limit before enforcement applies.",
+        "url": "https://trigger.dev/docs/billing-limits"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Hitting a billing limit pauses queues for 24 hours",
+      "plan": null,
+      "evidence": {
+        "quote": "You have 24 hours to review and decide what to do.",
+        "url": "https://trigger.dev/docs/billing-limits"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "addon",
+      "statement": "A HIPAA BAA is a paid add-on",
+      "plan": null,
+      "evidence": {
+        "quote": "A signed Business Associate Agreement is available as a paid add-on",
+        "url": "https://trigger.dev/pricing"
+      },
+      "evidence_verified": true
+    }
+  ],
+  "findings": [
+    {
+      "type": "likely_contradiction",
+      "severity": "high",
+      "confidence": "high",
+      "headline": "Pricing page says Pro concurrency is 200. Docs say 100.",
+      "explanation": "Concurrency is the number that decides whether this product fits a workload. Your two pages differ on it by a factor of two.",
+      "claim_a": {
+        "statement": "Pro limit is 200",
+        "quote": "If your tasks require more than the Pro plan limit",
+        "url": "https://trigger.dev/pricing"
+      },
+      "claim_b": {
+        "statement": "Pro limit is 100+",
+        "quote": "| Pro | 100+ concurrent runs |",
+        "url": "https://trigger.dev/docs/limits"
+      },
+      "why_not_just_wording": "Both pages state a specific concurrent run ceiling for the same named plan and the numbers differ.",
+      "caveat": "Your plan cards appear to show 20, 50 and 200 against the docs table's 10, 25 and 100, so all three tiers look doubled on one side. The cards lost their row labels when we flattened them, so treat the tier pattern as a prompt to check rather than as proof.",
+      "same_page": false,
+      "score": 10.35
+    },
+    {
+      "type": "ambiguity",
+      "severity": "medium",
+      "confidence": "high",
+      "headline": "Pricing page promises scaling without limits. Docs list limits per tier.",
+      "explanation": "The limits page sets per-tier ceilings on concurrency, queue size, schedules, preview branches, realtime connections, batches and alert destinations.",
+      "claim_a": {
+        "statement": "Scale without limits",
+        "quote": "Begin for free, invite your team, and scale without limits.",
+        "url": "https://trigger.dev/pricing"
+      },
+      "claim_b": {
+        "statement": "Per-tier limits on eight dimensions",
+        "quote": "The limits below apply to Trigger.dev Cloud",
+        "url": "https://trigger.dev/docs/limits"
+      },
+      "why_not_just_wording": "Without limits and a documented ceiling on eight dimensions answer the same question differently.",
+      "caveat": "Read as scale without managing infrastructure, which is your actual pitch, the headline is fair. It sits directly above a grid of tiered numbers, which is what makes it read the other way.",
+      "same_page": false,
+      "score": 6.0
+    },
+    {
+      "type": "missing_information",
+      "severity": "medium",
+      "confidence": "high",
+      "headline": "Pricing page says you can cap spend. Docs say the cap is soft.",
+      "explanation": "Spend can exceed the limit before enforcement applies, and the pricing page does not say so. Anyone setting a cap to protect a budget is relying on the stronger reading.",
+      "claim_a": {
+        "statement": "Yes, set spend limits and alerts",
+        "quote": "Yes. Configure billing alerts in your dashboard's organization settings.",
+        "url": "https://trigger.dev/pricing"
+      },
+      "claim_b": {
+        "statement": "Soft limits, spend can exceed",
+        "quote": "not instantaneous hard caps. Usage is evaluated on a short delay, so spend can briefly exceed your limit before enforcement applies.",
+        "url": "https://trigger.dev/docs/billing-limits"
+      },
+      "why_not_just_wording": "A cap that can be exceeded and a cap that cannot are different products for a customer sizing their downside.",
+      "caveat": "The docs are unusually straight about this and most usage-based platforms never say it at all. The gap is that the pricing page answer stops at yes.",
+      "same_page": false,
+      "score": 5.1
+    },
+    {
+      "type": "missing_information",
+      "severity": "medium",
+      "confidence": "medium",
+      "headline": "The Free plan stops at $5 of credits. The limits page omits it.",
+      "explanation": "That $5 is the ceiling a free user actually hits. The page titled Limits says a spend cap is your setting rather than a platform limit, which is not true on Free.",
+      "claim_a": {
+        "statement": "Free stops at $5 of credits",
+        "quote": "On the Free plan, you'll need to upgrade to keep running tasks once the included $5 of credits is used.",
+        "url": "https://trigger.dev/pricing"
+      },
+      "claim_b": {
+        "statement": "Spend caps are not a platform limit",
+        "quote": "Looking to cap your monthly spend? That's a setting you control, not a platform limit",
+        "url": "https://trigger.dev/docs/limits"
+      },
+      "why_not_just_wording": "One page describes a platform-imposed spend ceiling and the other says spend ceilings are not platform limits.",
+      "caveat": "The limits page sentence is about the billing limits feature rather than about free credits, so the conflict is one of placement more than of fact.",
+      "same_page": false,
+      "score": 3.4
+    }
+  ],
+  "coverage_notes": {
+    "unusable_pages": [
+      "https://cloud.trigger.dev/ (36 words, the app shell)",
+      "https://trigger.dev/docs/help-slack (33 words)"
+    ],
+    "what_was_not_checkable": "Your plan comparison grid is built from styled divs, so the row labels did not survive flattening to text. We could read the values in each column but not always what they measure, and we did not report anything that depended on guessing. The Pro concurrency finding above rests on your own FAQ sentence rather than on the grid. Your terms of service run to about 6,200 words and were truncated to fit the dossier, so we could not check the refund policy that the billing limits page points at. Your legal page and terms page returned the same 6,200 word document at two URLs. Nothing on the pricing page states what the second value in each plan card means, so the word Unlimited appearing in all three cards could not be attributed to a metric."
+  },
+  "backend": "agent",
+  "verification": {
+    "findings_in": 4,
+    "findings_out": 4,
+    "findings_rejected": 0,
+    "quotes_checked": 33,
+    "quotes_failed": 0,
+    "url_corrections": 0,
+    "rejections": []
+  },
+  "source": {
+    "root_url": "https://trigger.dev/",
+    "domain": "trigger.dev",
+    "harvested_at": "2026-09-02 17:35:07 UTC",
+    "stats": {
+      "pages_selected": 14,
+      "pages_fetched_ok": 14,
+      "pages_usable": 12,
+      "pages_failed": 1,
+      "pages_js_rendered": 0,
+      "urls_considered": 60,
+      "dossier_chars": 38292,
+      "harvest_seconds": 16.2,
+      "fetcher": {
+        "network": 17,
+        "cache": 3,
+        "rendered": 0,
+        "blocked": 0,
+        "failed": 2
+      }
+    },
+    "pages": [
+      {
+        "url": "https://trigger.dev/pricing",
+        "final_url": "https://trigger.dev/pricing",
+        "title": "Cloud Pricing | Trigger.dev",
+        "category": "pricing",
+        "why_selected": "url path contains 'pricing'; link text 'pricing'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 1221,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://trigger.dev/docs/billing-limits",
+        "final_url": "https://trigger.dev/docs/billing-limits",
+        "title": "Billing limits and alerts - Trigger.dev",
+        "category": "billing_docs",
+        "why_selected": "url path contains 'billing'; link text 'billing limits & alerts'",
+        "discovered_via": "linked from docs hub https://trigger.dev/docs/introduction",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 211,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://trigger.dev/docs/limits",
+        "final_url": "https://trigger.dev/docs/limits",
+        "title": "Limits - Trigger.dev",
+        "category": "limits",
+        "why_selected": "url path contains 'limits'; link text 'limits docs'",
+        "discovered_via": "linked from pricing page https://trigger.dev/pricing",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 658,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://trigger.dev/docs/help-slack",
+        "final_url": "https://trigger.dev/docs/help-slack",
+        "title": "Slack support - Trigger.dev",
+        "category": "help",
+        "why_selected": "url path contains 'help'; link text 'slack support'",
+        "discovered_via": "linked from docs hub https://trigger.dev/docs/introduction",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 33,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://trigger.dev/docs/run-usage",
+        "final_url": "https://trigger.dev/docs/run-usage",
+        "title": "Usage - Trigger.dev",
+        "category": "limits",
+        "why_selected": "url path contains 'usage'",
+        "discovered_via": "linked from docs hub https://trigger.dev/docs/introduction",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 199,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://trigger.dev/docs/introduction",
+        "final_url": "https://trigger.dev/docs/introduction",
+        "title": "Welcome to the Trigger.dev docs - Trigger.dev",
+        "category": "docs",
+        "why_selected": "url path contains 'docs'; link text 'docs'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 544,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://trigger.dev/docs/errors-retrying",
+        "final_url": "https://trigger.dev/docs/errors-retrying",
+        "title": "Errors & Retrying - Trigger.dev",
+        "category": "docs",
+        "why_selected": "url path contains 'docs'; link text 'docs'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 565,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://trigger.dev/docs/open-source-self-hosting",
+        "final_url": "https://trigger.dev/docs/self-hosting/overview",
+        "title": "Self-hosting overview - Trigger.dev",
+        "category": "docs",
+        "why_selected": "url path contains 'docs'; link text 'self-hosting docs'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 410,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://trigger.dev/legal",
+        "final_url": "https://trigger.dev/legal",
+        "title": "Terms & privacy | Trigger.dev",
+        "category": "terms",
+        "why_selected": "url path contains 'legal'; link text 'terms'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 6164,
+        "text": "",
+        "truncated": true,
+        "usable": true
+      },
+      {
+        "url": "https://trigger.dev/docs/guides/introduction",
+        "final_url": "https://trigger.dev/docs/guides/introduction",
+        "title": "Frameworks, guides and examples - Trigger.dev",
+        "category": "help",
+        "why_selected": "url path contains 'guides'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 1329,
+        "text": "",
+        "truncated": true,
+        "usable": true
+      },
+      {
+        "url": "https://trigger.dev/docs/guides/ai-agents/overview",
+        "final_url": "https://trigger.dev/docs/guides/ai-agents/overview",
+        "title": "AI agents overview - Trigger.dev",
+        "category": "help",
+        "why_selected": "url path contains 'guides'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 257,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://cloud.trigger.dev/",
+        "final_url": "https://cloud.trigger.dev/login?redirectTo=%2F",
+        "title": "Login to Trigger.dev",
+        "category": "trial",
+        "why_selected": "link text 'get started'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 36,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://trigger.dev/terms",
+        "final_url": "https://trigger.dev/legal",
+        "title": "Terms & privacy | Trigger.dev",
+        "category": "terms",
+        "why_selected": "url path contains 'terms' (guessed conventional path, not linked)",
+        "discovered_via": "conventional path guess",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 6164,
+        "text": "",
+        "truncated": true,
+        "usable": true
+      },
+      {
+        "url": "https://trigger.dev/docs/tasks-overview",
+        "final_url": "https://trigger.dev/docs/tasks/overview",
+        "title": "Tasks: Overview - Trigger.dev",
+        "category": "docs",
+        "why_selected": "url path contains 'docs'; link text 'our docs'",
+        "discovered_via": "linked from pricing page https://trigger.dev/pricing",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 1962,
+        "text": "",
+        "truncated": true,
+        "usable": true
+      }
+    ],
+    "failures": [
+      {
+        "url": "https://trigger.dev/faq",
+        "category": "faq",
+        "reason": "HTTP 404"
+      }
+    ]
+  }
+}

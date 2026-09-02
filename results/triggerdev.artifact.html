@@ -1,0 +1,169 @@
+<title>Trigger.dev Promise Audit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#f6f7f9; --surface:#ffffff; --ink:#14181f; --ink-soft:#3b4350;
+  --muted:#5a6371; --rule:#dfe3ea; --rule-soft:#ebeef2;
+  --accent:#26547c; --high:#9e2b25; --medium:#8a5a16; --low:#4a5a6b;
+  --verified:#2c6b4f; --quote:#454f5d; --quote-rule:#c8d0da; --panel:#f0f2f5;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#12151a; --surface:#191d24; --ink:#e6e9ee; --ink-soft:#c3cad3;
+    --muted:#98a2b0; --rule:#2a3038; --rule-soft:#21262d;
+    --accent:#7fb0dc; --high:#e08b84; --medium:#d7a455; --low:#9badc0;
+    --verified:#7fc4a0; --quote:#b3bcc7; --quote-rule:#3a424c; --panel:#1e232a;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#12151a; --surface:#191d24; --ink:#e6e9ee; --ink-soft:#c3cad3;
+  --muted:#98a2b0; --rule:#2a3038; --rule-soft:#21262d;
+  --accent:#7fb0dc; --high:#e08b84; --medium:#d7a455; --low:#9badc0;
+  --verified:#7fc4a0; --quote:#b3bcc7; --quote-rule:#3a424c; --panel:#1e232a;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased;
+}
+.sheet{max-width:76ch;margin:0 auto;padding:clamp(30px,6vw,60px) clamp(18px,5vw,32px) 80px;}
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0 0 16px;
+}
+h1{
+  font-family:Newsreader,Georgia,"Times New Roman",serif;
+  font-size:clamp(29px,5vw,40px); line-height:1.12; font-weight:500;
+  letter-spacing:-.015em; margin:0 0 12px; text-wrap:balance;
+}
+.standfirst{font-size:15.5px;color:var(--muted);margin:0;max-width:60ch;}
+.standfirst a{color:var(--accent);text-decoration:none;}
+.standfirst a:hover{text-decoration:underline}
+.ledger{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:1px; background:var(--rule); border:1px solid var(--rule); margin:30px 0 0;
+}
+.ledger div{background:var(--surface);padding:12px 14px;}
+.ledger dt{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin:0 0 4px;
+}
+.ledger dd{margin:0;font-size:20px;font-weight:600;font-variant-numeric:tabular-nums;}
+h2{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; font-weight:500;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
+  margin:56px 0 0; padding-bottom:8px; border-bottom:1px solid var(--rule);
+}
+.sells{margin:16px 0 0;font-size:15px;color:var(--ink-soft);}
+.sells span{display:block;padding:3px 0;}
+.sells b{font-weight:600;color:var(--ink);}
+.finding{padding:28px 0 6px;border-bottom:1px solid var(--rule-soft);}
+.finding:last-of-type{border-bottom:0}
+.tags{
+  display:flex; flex-wrap:wrap; align-items:center; gap:6px 16px;
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10.5px;
+  letter-spacing:.1em; text-transform:uppercase; margin-bottom:10px;
+}
+.num{color:var(--muted);font-variant-numeric:tabular-nums;}
+.sev{display:inline-flex;align-items:center;gap:6px;font-weight:500}
+.sev::before{content:"";width:8px;height:8px;flex:0 0 auto}
+.sev.high{color:var(--high)} .sev.high::before{background:var(--high)}
+.sev.medium{color:var(--medium)} .sev.medium::before{background:var(--medium)}
+.sev.low{color:var(--low)} .sev.low::before{background:var(--low)}
+.tags .kind,.tags .conf{color:var(--muted)}
+.finding h3{
+  font-family:Newsreader,Georgia,serif; font-weight:500; font-size:23px;
+  line-height:1.22; letter-spacing:-.012em; margin:0 0 16px; text-wrap:balance;
+}
+.versus{
+  display:grid; grid-template-columns:1fr 1fr; gap:1px;
+  background:var(--rule); border:1px solid var(--rule);
+}
+.versus > div{background:var(--surface);padding:14px 16px;}
+@media (max-width:600px){.versus{grid-template-columns:1fr}}
+.where{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin:0 0 7px;
+}
+.value{font-size:17px;font-weight:600;line-height:1.3;margin:0 0 10px;}
+.versus blockquote{
+  margin:0 0 10px; padding-left:11px; border-left:2px solid var(--quote-rule);
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12px;
+  line-height:1.55; color:var(--quote); white-space:pre-wrap; overflow-wrap:anywhere;
+}
+.src{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px;
+  color:var(--accent); text-decoration:none; overflow-wrap:anywhere; display:block;
+}
+.src:hover{text-decoration:underline}
+.meta{
+  display:grid; grid-template-columns:auto 1fr; gap:5px 14px;
+  margin:14px 0 4px; font-size:14px; color:var(--ink-soft); align-items:baseline;
+}
+.meta dt{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
+}
+.meta dd{margin:0}
+.legend{margin:16px 0 0;font-size:14.5px;}
+.legend p{margin:0 0 7px;color:var(--muted);}
+.legend b{color:var(--ink);font-weight:600;}
+.scroller{overflow-x:auto;margin-top:14px;}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:430px;}
+th{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
+  text-align:left; font-weight:500; padding:0 12px 7px 0;
+  border-bottom:1px solid var(--rule);
+}
+td{padding:8px 12px 8px 0;border-bottom:1px solid var(--rule-soft);vertical-align:top;}
+td:last-child,th:last-child{padding-right:0}
+td a{color:var(--accent);text-decoration:none;}
+td a:hover{text-decoration:underline}
+.words{font-variant-numeric:tabular-nums;color:var(--muted);}
+.state{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;
+  color:var(--muted);white-space:nowrap;}
+.state.dim{opacity:.7}
+.kicker{margin:58px 0 0;padding:26px 0 0;border-top:2px solid var(--ink);}
+.kicker h2{
+  font-family:Newsreader,Georgia,serif; font-size:clamp(20px,3.3vw,25px);
+  font-weight:500; line-height:1.25; letter-spacing:-.01em; color:var(--ink);
+  text-transform:none; letter-spacing:-.01em; margin:0 0 12px; padding:0; border:0;
+  text-wrap:balance;
+}
+.kicker p{margin:0;color:var(--ink-soft);font-size:15px;}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:12px;color:var(--muted);}
+.none{margin-top:18px;padding:20px 22px;background:var(--surface);border:1px solid var(--rule);}
+.none p{margin:0 0 10px;color:var(--ink-soft);}
+.none p:last-child{margin-bottom:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<main class="sheet">
+  <p class="eyebrow">Commercial consistency audit</p>
+  <h1>We found 4 commercial promises worth checking.</h1>
+  <p class="standfirst">Every quote below was checked against the page it came from.
+    Public pages of <a href="https://trigger.dev/" target="_blank" rel="noopener">trigger.dev</a>
+    only. Nothing private was used.</p>
+  <dl class="ledger"><div><dt>Pages read</dt><dd>12</dd></div><div><dt>Promises</dt><dd>21</dd></div><div><dt>Quotes verified</dt><dd>33</dd></div><div><dt>Discarded</dt><dd>0</dd></div></dl>
+
+  <h2>Plans found</h2>
+  <p class="sells"><span><b>Free</b> $0 a month</span><span><b>Hobby</b> $10 a month</span><span><b>Pro</b> $50 a month</span><span><b>Enterprise</b> Custom</span></p>
+
+  <h2>Findings</h2>
+  <article class="finding"><p class="tags"><span class="num">01</span><span class="sev high">high</span><span class="kind">Likely contradiction</span><span class="conf">high confidence</span></p><h3>Pricing page says Pro concurrency is 200. Docs say 100.</h3><div class="versus"><div><p class="where">Pricing page</p><p class="value">Pro limit is 200</p><blockquote>If your tasks require more than the Pro plan limit</blockquote><a class="src" href="https://trigger.dev/pricing" target="_blank" rel="noopener">trigger.dev/pricing</a></div><div><p class="where">Usage limits / quotas</p><p class="value">Pro limit is 100+</p><blockquote>| Pro | 100+ concurrent runs |</blockquote><a class="src" href="https://trigger.dev/docs/limits" target="_blank" rel="noopener">trigger.dev/docs/limits</a></div></div><dl class="meta"><dt>Impact</dt><dd>Concurrency is the number that decides whether this product fits a workload. Your two pages differ on it by a factor of two.</dd><dt>Check</dt><dd>Your plan cards appear to show 20, 50 and 200 against the docs table&#x27;s 10, 25 and 100, so all three tiers look doubled on one side. The cards lost their row labels when we flattened them, so treat the tier pattern as a prompt to check rather than as proof.</dd></dl></article><article class="finding"><p class="tags"><span class="num">02</span><span class="sev medium">medium</span><span class="kind">Ambiguity</span><span class="conf">high confidence</span></p><h3>Pricing page promises scaling without limits. Docs list limits per tier.</h3><div class="versus"><div><p class="where">Pricing page</p><p class="value">Scale without limits</p><blockquote>Begin for free, invite your team, and scale without limits.</blockquote><a class="src" href="https://trigger.dev/pricing" target="_blank" rel="noopener">trigger.dev/pricing</a></div><div><p class="where">Usage limits / quotas</p><p class="value">Per-tier limits on eight dimensions</p><blockquote>The limits below apply to Trigger.dev Cloud</blockquote><a class="src" href="https://trigger.dev/docs/limits" target="_blank" rel="noopener">trigger.dev/docs/limits</a></div></div><dl class="meta"><dt>Impact</dt><dd>The limits page sets per-tier ceilings on concurrency, queue size, schedules, preview branches, realtime connections, batches and alert destinations.</dd><dt>Check</dt><dd>Read as scale without managing infrastructure, which is your actual pitch, the headline is fair. It sits directly above a grid of tiered numbers, which is what makes it read the other way.</dd></dl></article><article class="finding"><p class="tags"><span class="num">03</span><span class="sev medium">medium</span><span class="kind">Missing information</span><span class="conf">high confidence</span></p><h3>Pricing page says you can cap spend. Docs say the cap is soft.</h3><div class="versus"><div><p class="where">Pricing page</p><p class="value">Yes, set spend limits and alerts</p><blockquote>Yes. Configure billing alerts in your dashboard&#x27;s organization settings.</blockquote><a class="src" href="https://trigger.dev/pricing" target="_blank" rel="noopener">trigger.dev/pricing</a></div><div><p class="where">Billing &amp; subscription help</p><p class="value">Soft limits, spend can exceed</p><blockquote>not instantaneous hard caps. Usage is evaluated on a short delay, so spend can briefly exceed your limit before enforcement applies.</blockquote><a class="src" href="https://trigger.dev/docs/billing-limits" target="_blank" rel="noopener">trigger.dev/docs/billing-limits</a></div></div><dl class="meta"><dt>Impact</dt><dd>Spend can exceed the limit before enforcement applies, and the pricing page does not say so. Anyone setting a cap to protect a budget is relying on the stronger reading.</dd><dt>Check</dt><dd>The docs are unusually straight about this and most usage-based platforms never say it at all. The gap is that the pricing page answer stops at yes.</dd></dl></article><article class="finding"><p class="tags"><span class="num">04</span><span class="sev medium">medium</span><span class="kind">Missing information</span><span class="conf">medium confidence</span></p><h3>The Free plan stops at $5 of credits. The limits page omits it.</h3><div class="versus"><div><p class="where">Pricing page</p><p class="value">Free stops at $5 of credits</p><blockquote>On the Free plan, you&#x27;ll need to upgrade to keep running tasks once the included $5 of credits is used.</blockquote><a class="src" href="https://trigger.dev/pricing" target="_blank" rel="noopener">trigger.dev/pricing</a></div><div><p class="where">Usage limits / quotas</p><p class="value">Spend caps are not a platform limit</p><blockquote>Looking to cap your monthly spend? That&#x27;s a setting you control, not a platform limit</blockquote><a class="src" href="https://trigger.dev/docs/limits" target="_blank" rel="noopener">trigger.dev/docs/limits</a></div></div><dl class="meta"><dt>Impact</dt><dd>That $5 is the ceiling a free user actually hits. The page titled Limits says a spend cap is your setting rather than a platform limit, which is not true on Free.</dd><dt>Check</dt><dd>The limits page sentence is about the billing limits feature rather than about free credits, so the conflict is one of placement more than of fact.</dd></dl></article>
+
+  <h2>Definitions</h2><div class="legend"><p><b>Likely contradiction:</b> Two public statements that cannot both be true.</p><p><b>Ambiguity:</b> Both statements can be true, but a customer cannot tell what they get.</p><p><b>Missing information:</b> Something that changes the deal, published somewhere the buyer will not look.</p></div>
+
+  <h2>Pages read</h2>
+  <div class="scroller"><table><thead><tr><th>Page</th><th>Type</th><th>Words</th>
+    <th>Status</th></tr></thead><tbody><tr><td><a href="https://trigger.dev/pricing" target="_blank" rel="noopener">Cloud Pricing | Trigger.dev</a></td><td class="state">Pricing page</td><td class="words">1,221</td><td class="state">read</td></tr><tr><td><a href="https://trigger.dev/docs/billing-limits" target="_blank" rel="noopener">Billing limits and alerts - Trigger.dev</a></td><td class="state">Billing &amp; subscription help</td><td class="words">211</td><td class="state">read</td></tr><tr><td><a href="https://trigger.dev/docs/limits" target="_blank" rel="noopener">Limits - Trigger.dev</a></td><td class="state">Usage limits / quotas</td><td class="words">658</td><td class="state">read</td></tr><tr><td><a href="https://trigger.dev/docs/help-slack" target="_blank" rel="noopener">Slack support - Trigger.dev</a></td><td class="state">Help centre</td><td class="words">33</td><td class="state dim">no readable text</td></tr><tr><td><a href="https://trigger.dev/docs/run-usage" target="_blank" rel="noopener">Usage - Trigger.dev</a></td><td class="state">Usage limits / quotas</td><td class="words">199</td><td class="state">read</td></tr><tr><td><a href="https://trigger.dev/docs/introduction" target="_blank" rel="noopener">Welcome to the Trigger.dev docs - Trigger.dev</a></td><td class="state">Product documentation</td><td class="words">544</td><td class="state">read</td></tr><tr><td><a href="https://trigger.dev/docs/errors-retrying" target="_blank" rel="noopener">Errors &amp; Retrying - Trigger.dev</a></td><td class="state">Product documentation</td><td class="words">565</td><td class="state">read</td></tr><tr><td><a href="https://trigger.dev/docs/open-source-self-hosting" target="_blank" rel="noopener">Self-hosting overview - Trigger.dev</a></td><td class="state">Product documentation</td><td class="words">410</td><td class="state">read</td></tr><tr><td><a href="https://trigger.dev/legal" target="_blank" rel="noopener">Terms &amp; privacy | Trigger.dev</a></td><td class="state">Terms / legal</td><td class="words">6,164</td><td class="state">read</td></tr><tr><td><a href="https://trigger.dev/docs/guides/introduction" target="_blank" rel="noopener">Frameworks, guides and examples - Trigger.dev</a></td><td class="state">Help centre</td><td class="words">1,329</td><td class="state">read</td></tr><tr><td><a href="https://trigger.dev/docs/guides/ai-agents/overview" target="_blank" rel="noopener">AI agents overview - Trigger.dev</a></td><td class="state">Help centre</td><td class="words">257</td><td class="state">read</td></tr><tr><td><a href="https://cloud.trigger.dev/" target="_blank" rel="noopener">Login to Trigger.dev</a></td><td class="state">Trial / signup</td><td class="words">36</td><td class="state dim">no readable text</td></tr><tr><td><a href="https://trigger.dev/terms" target="_blank" rel="noopener">Terms &amp; privacy | Trigger.dev</a></td><td class="state">Terms / legal</td><td class="words">6,164</td><td class="state">read</td></tr><tr><td><a href="https://trigger.dev/docs/tasks-overview" target="_blank" rel="noopener">Tasks: Overview - Trigger.dev</a></td><td class="state">Product documentation</td><td class="words">1,962</td><td class="state">read</td></tr><tr><td>https://trigger.dev/faq</td><td class="state"></td><td class="words"></td><td class="state dim">HTTP 404</td></tr></tbody></table></div>
+
+  <section class="kicker"><h2>These are the promises your customers can see. Do your billing system and product deliver the same thing?</h2><p>This audit reads your public pages only. It cannot see what your billing system meters, what your product enforces, or what your customer records entitle people to. If the findings above are news to you, the question worth asking is what else is out of step behind them.</p></section>
+  <footer>Public pages only. Every quote above was located in the page it is attributed to.
+    0 candidate finding(s) were discarded because their evidence
+    could not be verified. No login, no billing data, no customer records.</footer>
+</main>

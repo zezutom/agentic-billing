@@ -42,8 +42,17 @@ def build(outdir: str | Path = "results/experiment") -> Path:
     kind = Counter()
     rule = Counter()
     with_finding = 0
-    credible = 0  # at least one finding that is not low-confidence
-    for _, r in rows:
+    credible = 0   # at least one finding that is not low-confidence
+    thin_pages = 0
+    total_pages = 0
+    blind_companies = []  # pricing page returned almost no readable text
+    for run, r in rows:
+        pages = [p for p in r.get("pages", []) if p["ok"]]
+        total_pages += len(pages)
+        thin_pages += sum(1 for p in pages if p["word_count"] < 150)
+        pricing = [p for p in pages if p["category"] == "pricing"]
+        if pricing and all(p["word_count"] < 150 for p in pricing):
+            blind_companies.append(run["candidate"]["name"])
         fs = r.get("findings", [])
         if fs:
             with_finding += 1
@@ -90,6 +99,11 @@ def build(outdir: str | Path = "results/experiment") -> Path:
     A(f"| Public pages read | {sum(r.get('stats',{}).get('pages_fetched_ok',0) for _,r in rows)} |")
     A(f"| Pages that could not be read | {sum(r.get('stats',{}).get('pages_failed',0) for _,r in rows)} |")
     A(f"| Commercial claims extracted | {sum(r.get('stats',{}).get('claims',0) for _,r in rows)} |")
+    A(f"| Pages that returned almost no readable text (client-rendered) | "
+      f"{thin_pages} of {total_pages} |")
+    A(f"| Companies whose pricing page could not be read at all | "
+      f"{len(blind_companies)}"
+      + (f" ({', '.join(blind_companies)})" if blind_companies else "") + " |")
     A("")
     A("**Findings by type**")
     A("")

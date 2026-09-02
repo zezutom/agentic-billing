@@ -1,0 +1,914 @@
+{
+  "company": "Unkey",
+  "root_url": "https://www.unkey.com/",
+  "domain": "unkey.com",
+  "started_at": "2026-09-02 07:43:24 UTC",
+  "duration_seconds": 5.5,
+  "pages": [
+    {
+      "url": "https://www.unkey.com/pricing",
+      "final_url": "https://www.unkey.com/pricing",
+      "title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "category": "pricing",
+      "why_selected": "url path contains 'pricing'; link text 'pricing'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 459,
+      "claim_count": 36
+    },
+    {
+      "url": "https://www.unkey.com/docs",
+      "final_url": "https://www.unkey.com/docs/introduction",
+      "title": "What is Unkey?",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text 'unkey docs home page'",
+      "discovered_via": "linked from docs hub https://unkey.com/docs/introduction",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 675,
+      "claim_count": 0
+    },
+    {
+      "url": "https://unkey.com/docs/platform/workspaces/billing",
+      "final_url": "https://www.unkey.com/docs/platform/workspaces/billing",
+      "title": "Billing",
+      "category": "billing_docs",
+      "why_selected": "url path contains 'billing'",
+      "discovered_via": "linked from pricing page https://www.unkey.com/pricing",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 503,
+      "claim_count": 1
+    },
+    {
+      "url": "https://unkey.com/docs/introduction",
+      "final_url": "https://www.unkey.com/docs/introduction",
+      "title": "What is Unkey?",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text 'docs'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 675,
+      "claim_count": 0
+    },
+    {
+      "url": "https://www.unkey.com/docs/llms.txt",
+      "final_url": "https://www.unkey.com/docs/llms.txt",
+      "title": "",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text '/docs/llms.txt'",
+      "discovered_via": "linked from docs hub https://unkey.com/docs/introduction",
+      "status": 200,
+      "ok": false,
+      "error": "skipped: content-type text/plain; charset=utf-8",
+      "rendered": false,
+      "word_count": 0,
+      "claim_count": 0
+    },
+    {
+      "url": "https://www.unkey.com/policies/terms",
+      "final_url": "https://www.unkey.com/policies/terms",
+      "title": "Website Terms of Use",
+      "category": "terms",
+      "why_selected": "url path contains 'terms'; link text 'terms of service'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 1839,
+      "claim_count": 0
+    },
+    {
+      "url": "https://www.unkey.com/faq",
+      "final_url": "https://www.unkey.com/faq",
+      "title": "",
+      "category": "faq",
+      "why_selected": "url path contains 'faq' (guessed conventional path, not linked)",
+      "discovered_via": "conventional path guess",
+      "status": 404,
+      "ok": false,
+      "error": "HTTP 404",
+      "rendered": false,
+      "word_count": 0,
+      "claim_count": 0
+    },
+    {
+      "url": "https://app.unkey.com/auth/sign-up",
+      "final_url": "https://app.unkey.com/auth/sign-up",
+      "title": "",
+      "category": "trial",
+      "why_selected": "url path contains 'sign-up'; link text 'sign up'; penalised for 'auth'",
+      "discovered_via": "homepage navigation",
+      "status": 429,
+      "ok": false,
+      "error": "HTTP 429",
+      "rendered": false,
+      "word_count": 0,
+      "claim_count": 0
+    },
+    {
+      "url": "https://app.unkey.com/",
+      "final_url": "https://app.unkey.com/",
+      "title": "",
+      "category": "trial",
+      "why_selected": "link text 'get started'",
+      "discovered_via": "linked from pricing page https://www.unkey.com/pricing",
+      "status": 429,
+      "ok": false,
+      "error": "HTTP 429",
+      "rendered": false,
+      "word_count": 0,
+      "claim_count": 0
+    },
+    {
+      "url": "https://www.unkey.com/help",
+      "final_url": "https://www.unkey.com/help",
+      "title": "",
+      "category": "help",
+      "why_selected": "url path contains 'help' (guessed conventional path, not linked)",
+      "discovered_via": "conventional path guess",
+      "status": 404,
+      "ok": false,
+      "error": "HTTP 404",
+      "rendered": false,
+      "word_count": 0,
+      "claim_count": 0
+    },
+    {
+      "url": "https://www.unkey.com/terms",
+      "final_url": "https://www.unkey.com/terms",
+      "title": "",
+      "category": "terms",
+      "why_selected": "url path contains 'terms' (guessed conventional path, not linked)",
+      "discovered_via": "conventional path guess",
+      "status": 404,
+      "ok": false,
+      "error": "HTTP 404",
+      "rendered": false,
+      "word_count": 0,
+      "claim_count": 0
+    },
+    {
+      "url": "https://www.unkey.com/docs/introduction",
+      "final_url": "https://www.unkey.com/docs/introduction",
+      "title": "What is Unkey?",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text 'documentation'",
+      "discovered_via": "linked from docs hub https://unkey.com/docs/introduction",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 675,
+      "claim_count": 0
+    },
+    {
+      "url": "https://unkey.com/docs/build-and-deploy/regions",
+      "final_url": "https://www.unkey.com/docs/build-and-deploy/regions",
+      "title": "Regions",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text 'read the docs'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 340,
+      "claim_count": 0
+    },
+    {
+      "url": "https://unkey.com/docs/observability/overview",
+      "final_url": "https://www.unkey.com/docs/observability/overview",
+      "title": "Observability",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text 'read the docs'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 294,
+      "claim_count": 0
+    },
+    {
+      "url": "https://www.unkey.com/docs/api-reference/overview",
+      "final_url": "https://www.unkey.com/docs/api-reference/overview",
+      "title": "Overview",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text 'api reference'",
+      "discovered_via": "linked from docs hub https://unkey.com/docs/introduction",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 203,
+      "claim_count": 0
+    },
+    {
+      "url": "https://www.unkey.com/docs/quickstart/deploy",
+      "final_url": "https://www.unkey.com/docs/quickstart/deploy",
+      "title": "Deploy your first app",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'",
+      "discovered_via": "linked from docs hub https://unkey.com/docs/introduction",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 351,
+      "claim_count": 0
+    },
+    {
+      "url": "https://www.unkey.com/docs/quickstart/quickstart",
+      "final_url": "https://www.unkey.com/docs/quickstart/quickstart",
+      "title": "Quickstart",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'",
+      "discovered_via": "linked from docs hub https://unkey.com/docs/introduction",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 485,
+      "claim_count": 0
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.unkey.com/docs/llms.txt",
+      "category": "docs",
+      "reason": "skipped: content-type text/plain; charset=utf-8"
+    },
+    {
+      "url": "https://www.unkey.com/faq",
+      "category": "faq",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://app.unkey.com/auth/sign-up",
+      "category": "trial",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://app.unkey.com/",
+      "category": "trial",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://www.unkey.com/help",
+      "category": "help",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.unkey.com/terms",
+      "category": "terms",
+      "reason": "HTTP 404"
+    }
+  ],
+  "claims": [
+    {
+      "kind": "plan_price",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "small production workloads with simple usage-based billing. $5 / mo Get started What\u2019s included Up to 1 vCPU / 2 GB per Instance 1 concurrent build 1 cu",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "amount": 5.0,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": false,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$5",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "GB per Instance 1 concurrent build 1 custom domain Includes $5/mo usage credits Email support",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "amount": 5.0,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": false,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$5",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Pro Run production APIs with more compute and headroom. $25 / mo Get started What\u2019s included Up to 4 vCPU / 8 GB per Instance 1 concurrent build Unli",
+      "plan": "pro",
+      "plan_raw": "Pro",
+      "data": {
+        "amount": 25.0,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": false,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$25",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "stance 1 concurrent build Unlimited custom domains Includes $25/mo usage credits Email support",
+      "plan": "pro",
+      "plan_raw": "Pro",
+      "data": {
+        "amount": 25.0,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": false,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$25",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "ess For higher workloads and growing teams at global scale. $50 / mo Get started What\u2019s included Up to 16 vCPU / 32 GB per Instance 1 concurrent build Un",
+      "plan": "business",
+      "plan_raw": "Business",
+      "data": {
+        "amount": 50.0,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": false,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$50",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "stance 1 concurrent build Unlimited custom domains Includes $50/mo usage credits Email support",
+      "plan": "business",
+      "plan_raw": "Business",
+      "data": {
+        "amount": 50.0,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": false,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$50",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Estimate Usage-based $188 Total $188 / mo vCPU/sec $ 0.000006944 Memory/GB/sec $ 0.000003472 Disk/GB/sec $ 0.000000",
+      "plan": "estimate",
+      "plan_raw": "Estimate",
+      "data": {
+        "amount": 188.0,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": false,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$188",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Estimate Usage-based $188 Total $188 / mo vCPU/sec $ 0.000006944 Memory/GB/sec $ 0.000003472 Disk/GB/sec $ 0.00000006 Egress/G",
+      "plan": "estimate",
+      "plan_raw": "Estimate",
+      "data": {
+        "amount": 188.0,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": false,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$188",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Estimate Usage-based $188 Total $188 / mo vCPU/sec $ 0.000006944 Memory/GB/sec $ 0.000003472 Disk/GB/sec $ 0.00000006 Egress/GB $ 0.05 Active key/m",
+      "plan": "estimate",
+      "plan_raw": "Estimate",
+      "data": {
+        "amount": 0.0,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": false,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$ 0.00",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "d $188 Total $188 / mo vCPU/sec $ 0.000006944 Memory/GB/sec $ 0.000003472 Disk/GB/sec $ 0.00000006 Egress/GB $ 0.05 Active key/month $ 0.002",
+      "plan": "estimate",
+      "plan_raw": "Estimate",
+      "data": {
+        "amount": 0.0,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": false,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$ 0.00",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "U/sec $ 0.000006944 Memory/GB/sec $ 0.000003472 Disk/GB/sec $ 0.00000006 Egress/GB $ 0.05 Active key/month $ 0.002",
+      "plan": "estimate",
+      "plan_raw": "Estimate",
+      "data": {
+        "amount": 0.0,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": false,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$ 0.00",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "ory/GB/sec $ 0.000003472 Disk/GB/sec $ 0.00000006 Egress/GB $ 0.05 Active key/month $ 0.002",
+      "plan": "estimate",
+      "plan_raw": "Estimate",
+      "data": {
+        "amount": 0.05,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": false,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$ 0.05",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Disk/GB/sec $ 0.00000006 Egress/GB $ 0.05 Active key/month $ 0.002",
+      "plan": "estimate",
+      "plan_raw": "Estimate",
+      "data": {
+        "amount": 0.0,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": false,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$ 0.00",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Unlimited custom domains",
+      "plan": "pro",
+      "plan_raw": "Pro",
+      "data": {
+        "subject": "custom domains",
+        "metric": "domains",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_phrase"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "1 custom domain",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "metric": "domains",
+        "value": 1.0,
+        "unit": "count",
+        "limit_kind": "quantity",
+        "subject": "custom domain",
+        "window": null,
+        "page_is_reference": false
+      },
+      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Starter plan includes: Up to 1 vCPU / 2 GB per Instance",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "feature": "Up to 1 vCPU / 2 GB per Instance",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Starter plan includes: 1 concurrent build",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "feature": "1 concurrent build",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Starter plan includes: 1 custom domain",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "feature": "1 custom domain",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Starter plan includes: Includes $5/mo usage credits",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "feature": "Includes $5/mo usage credits",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Starter plan includes: Email support",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "feature": "Email support",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Pro plan includes: Up to 4 vCPU / 8 GB per Instance",
+      "plan": "pro",
+      "plan_raw": "Pro",
+      "data": {
+        "feature": "Up to 4 vCPU / 8 GB per Instance",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Pro plan includes: 1 concurrent build",
+      "plan": "pro",
+      "plan_raw": "Pro",
+      "data": {
+        "feature": "1 concurrent build",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Pro plan includes: Unlimited custom domains",
+      "plan": "pro",
+      "plan_raw": "Pro",
+      "data": {
+        "feature": "Unlimited custom domains",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Pro plan includes: Includes $25/mo usage credits",
+      "plan": "pro",
+      "plan_raw": "Pro",
+      "data": {
+        "feature": "Includes $25/mo usage credits",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Pro plan includes: Email support",
+      "plan": "pro",
+      "plan_raw": "Pro",
+      "data": {
+        "feature": "Email support",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Business plan includes: Up to 16 vCPU / 32 GB per Instance",
+      "plan": "business",
+      "plan_raw": "Business",
+      "data": {
+        "feature": "Up to 16 vCPU / 32 GB per Instance",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Business plan includes: 1 concurrent build",
+      "plan": "business",
+      "plan_raw": "Business",
+      "data": {
+        "feature": "1 concurrent build",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Business plan includes: Unlimited custom domains",
+      "plan": "business",
+      "plan_raw": "Business",
+      "data": {
+        "feature": "Unlimited custom domains",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Business plan includes: Includes $50/mo usage credits",
+      "plan": "business",
+      "plan_raw": "Business",
+      "data": {
+        "feature": "Includes $50/mo usage credits",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Business plan includes: Email support",
+      "plan": "business",
+      "plan_raw": "Business",
+      "data": {
+        "feature": "Email support",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "plan_mention",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "pricing page heading 'Starter'",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "source": "heading",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_heading"
+    },
+    {
+      "kind": "plan_mention",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "pricing page heading 'Pro'",
+      "plan": "pro",
+      "plan_raw": "Pro",
+      "data": {
+        "source": "heading",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_heading"
+    },
+    {
+      "kind": "plan_mention",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "pricing page heading 'Business'",
+      "plan": "business",
+      "plan_raw": "Business",
+      "data": {
+        "source": "heading",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_heading"
+    },
+    {
+      "kind": "plan_mention",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "pricing page heading 'Enterprise'",
+      "plan": "enterprise",
+      "plan_raw": "Enterprise",
+      "data": {
+        "source": "heading",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_heading"
+    },
+    {
+      "kind": "plan_mention",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "pricing page heading 'Company'",
+      "plan": "company",
+      "plan_raw": "Company",
+      "data": {
+        "source": "heading",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_heading"
+    },
+    {
+      "kind": "plan_mention",
+      "page_url": "https://www.unkey.com/pricing",
+      "page_title": "Start for free, scale as you go with predictable usage-based pricing.",
+      "page_category": "pricing",
+      "evidence": "Estimate Usage-based $188 Total $188 / mo vCPU/sec $ 0.000006944 Memory/GB/sec $ 0.000003472 Disk/GB/sec $ 0.00000006 Egress/GB $ 0.05 Active key/month $ 0.002",
+      "plan": "estimate",
+      "plan_raw": "Estimate",
+      "data": {
+        "source": "card",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_mention",
+      "page_url": "https://unkey.com/docs/platform/workspaces/billing",
+      "page_title": "Billing",
+      "page_category": "billing_docs",
+      "evidence": "Free plan",
+      "plan": "free",
+      "plan_raw": "Free",
+      "data": {
+        "source": "prose",
+        "page_is_reference": false
+      },
+      "extractor": "prose_mention"
+    }
+  ],
+  "findings": [],
+  "discovery_notes": [],
+  "pricing_urls": [
+    "https://www.unkey.com/pricing"
+  ],
+  "stats": {
+    "pages_selected": 11,
+    "pages_fetched_ok": 11,
+    "pages_failed": 6,
+    "pages_js_rendered": 0,
+    "urls_considered": 11,
+    "claims": 37,
+    "claims_by_kind": {
+      "entitlement": 15,
+      "plan_price": 13,
+      "plan_mention": 7,
+      "unlimited": 1,
+      "limit": 1
+    },
+    "findings": 0,
+    "findings_by_severity": {},
+    "findings_by_confidence": {},
+    "findings_by_kind": {},
+    "fetcher": {
+      "network": 7,
+      "cache": 15,
+      "rendered": 0,
+      "blocked": 0,
+      "failed": 6
+    }
+  }
+}

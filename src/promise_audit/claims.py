@@ -51,7 +51,8 @@ def normalise_plan(name: str | None) -> str | None:
 METRIC_SYNONYMS: dict[str, list[str]] = {
     "seats": ["seat", "user", "users", "team member", "team members", "member", "editor",
               "collaborator", "admin", "agent", "contributor", "author", "licence", "license"],
-    "projects": ["project", "workspace", "site", "board", "app", "application", "repository",
+    # "app" alone is too ambiguous ("app users" are seats, not projects).
+    "projects": ["project", "workspace", "site", "board", "application", "repository",
                  "repo", "space", "brand", "store", "shop", "property", "environment", "pipeline"],
     "api_requests": ["api call", "api request", "api requests", "api calls", "request", "call",
                      "api credit", "api token", "endpoint call"],
@@ -66,8 +67,10 @@ METRIC_SYNONYMS: dict[str, list[str]] = {
                   "report", "template", "contract", "pdf"],
     "events": ["event", "pageview", "page view", "visit", "session", "tracked event",
                "monthly active user", "mau", "active user", "visitor", "impression"],
-    "minutes": ["minute", "hour", "video minute", "transcription minute", "recording minute",
-                "compute hour", "build minute"],
+    # "hour" is deliberately absent: in help content it almost always means a
+    # support response time, not an allowance.
+    "minutes": ["minute", "video minute", "transcription minute", "recording minute",
+                "build minute"],
     "retention": ["history", "retention", "data retention", "log retention", "version history",
                   "activity history", "backup"],
     "domains": ["domain", "custom domain", "subdomain", "website", "url"],
@@ -90,6 +93,18 @@ METRIC_LABELS = {
     "retention": "data retention", "domains": "domains", "webhooks": "webhooks",
     "dashboards": "dashboards",
 }
+
+
+# The smallest value that is credible as a published allowance for a metric.
+MIN_PLAUSIBLE_ALLOWANCE = {
+    "emails": 10, "api_requests": 10, "events": 10, "contacts": 10,
+    "credits": 10, "minutes": 10,
+    "seats": 1, "projects": 1, "storage": 1, "retention": 1, "domains": 1,
+    "webhooks": 1, "dashboards": 1, "integrations": 1, "documents": 1,
+}
+# Metrics counted in the thousands need an explicit allowance cue; a bare
+# "50 subscribers" in a docs example is not a commercial promise.
+CUE_REQUIRED_METRICS = {"emails", "api_requests", "events", "contacts", "credits", "minutes"}
 
 
 def normalise_metric(phrase: str | None) -> str | None:

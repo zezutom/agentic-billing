@@ -1,0 +1,1706 @@
+{
+  "run_at": "2026-09-02 07:43:30 UTC",
+  "random_seed": 20260902,
+  "sample_size": 10,
+  "audit_settings": {
+    "max_pages": 16,
+    "max_findings": 12
+  },
+  "pool": [
+    {
+      "name": "Fathom Analytics",
+      "url": "https://usefathom.com",
+      "category": "web analytics",
+      "discovered_via": "category sweep: privacy-focused web analytics",
+      "why_qualifies": "Independent, founder-led analytics vendor with a public per-plan pricing page and a public documentation site."
+    },
+    {
+      "name": "Simple Analytics",
+      "url": "https://www.simpleanalytics.com",
+      "category": "web analytics",
+      "discovered_via": "category sweep: privacy-focused web analytics",
+      "why_qualifies": "Small European analytics vendor publishing usage-based plans and public docs."
+    },
+    {
+      "name": "Pirsch Analytics",
+      "url": "https://pirsch.io",
+      "category": "web analytics",
+      "discovered_via": "category sweep: privacy-focused web analytics",
+      "why_qualifies": "Small independent analytics product with published pageview allowances and docs."
+    },
+    {
+      "name": "Umami",
+      "url": "https://umami.is",
+      "category": "web analytics",
+      "discovered_via": "category sweep: open-source analytics with a hosted tier",
+      "why_qualifies": "Open-source analytics with a commercial hosted plan and public documentation."
+    },
+    {
+      "name": "Buttondown",
+      "url": "https://buttondown.com",
+      "category": "email / newsletters",
+      "discovered_via": "category sweep: independent newsletter platforms",
+      "why_qualifies": "Solo-founder newsletter tool with subscriber-tiered public pricing and docs."
+    },
+    {
+      "name": "EmailOctopus",
+      "url": "https://emailoctopus.com",
+      "category": "email / newsletters",
+      "discovered_via": "category sweep: independent email marketing",
+      "why_qualifies": "Small email marketing vendor with public contact-tiered pricing and a help centre."
+    },
+    {
+      "name": "Loops",
+      "url": "https://loops.so",
+      "category": "email / newsletters",
+      "discovered_via": "category sweep: modern SaaS email tools",
+      "why_qualifies": "Early-stage email platform with public per-contact pricing and public docs."
+    },
+    {
+      "name": "Bento",
+      "url": "https://bentonow.com",
+      "category": "email / newsletters",
+      "discovered_via": "category sweep: modern SaaS email tools",
+      "why_qualifies": "Small marketing-automation vendor with published plans and a help centre."
+    },
+    {
+      "name": "Tally",
+      "url": "https://tally.so",
+      "category": "forms",
+      "discovered_via": "category sweep: independent form builders",
+      "why_qualifies": "Bootstrapped form builder with a public two-tier pricing page and a help centre."
+    },
+    {
+      "name": "Fillout",
+      "url": "https://www.fillout.com",
+      "category": "forms",
+      "discovered_via": "category sweep: independent form builders",
+      "why_qualifies": "Small form product with public plan tiers, response limits and documentation."
+    },
+    {
+      "name": "Formspree",
+      "url": "https://formspree.io",
+      "category": "forms",
+      "discovered_via": "category sweep: form back-end APIs",
+      "why_qualifies": "Long-running independent form back end with submission-limited plans and docs."
+    },
+    {
+      "name": "SavvyCal",
+      "url": "https://savvycal.com",
+      "category": "scheduling",
+      "discovered_via": "category sweep: independent scheduling tools",
+      "why_qualifies": "Bootstrapped scheduling product with public pricing and a help centre."
+    },
+    {
+      "name": "Cal.com",
+      "url": "https://cal.com",
+      "category": "scheduling",
+      "discovered_via": "category sweep: open-source scheduling",
+      "why_qualifies": "Open-source scheduling vendor with a public seat-based pricing page and docs."
+    },
+    {
+      "name": "ScrapingBee",
+      "url": "https://www.scrapingbee.com",
+      "category": "web data API",
+      "discovered_via": "category sweep: web-scraping APIs",
+      "why_qualifies": "Small API vendor with credit-based public pricing and full API documentation."
+    },
+    {
+      "name": "Scrapfly",
+      "url": "https://scrapfly.io",
+      "category": "web data API",
+      "discovered_via": "category sweep: web-scraping APIs",
+      "why_qualifies": "Independent scraping API with published credit allowances and detailed docs."
+    },
+    {
+      "name": "ScreenshotOne",
+      "url": "https://screenshotone.com",
+      "category": "media API",
+      "discovered_via": "category sweep: screenshot APIs",
+      "why_qualifies": "Solo-founder screenshot API with request-quota pricing and public documentation."
+    },
+    {
+      "name": "Bannerbear",
+      "url": "https://www.bannerbear.com",
+      "category": "media API",
+      "discovered_via": "category sweep: image generation APIs",
+      "why_qualifies": "Bootstrapped image-generation API with quota-based plans and public docs."
+    },
+    {
+      "name": "Placid",
+      "url": "https://placid.app",
+      "category": "media API",
+      "discovered_via": "category sweep: image generation APIs",
+      "why_qualifies": "Small creative-automation API with public usage tiers and documentation."
+    },
+    {
+      "name": "Baserow",
+      "url": "https://baserow.io",
+      "category": "no-code database",
+      "discovered_via": "category sweep: open-source Airtable alternatives",
+      "why_qualifies": "Open-core database vendor with public per-seat pricing and extensive docs."
+    },
+    {
+      "name": "NocoDB",
+      "url": "https://nocodb.com",
+      "category": "no-code database",
+      "discovered_via": "category sweep: open-source Airtable alternatives",
+      "why_qualifies": "Open-source database platform with a public cloud pricing page and docs."
+    },
+    {
+      "name": "Chartbrew",
+      "url": "https://chartbrew.com",
+      "category": "BI / dashboards",
+      "discovered_via": "category sweep: small open-source BI tools",
+      "why_qualifies": "Small open-source dashboard product with a hosted paid tier and public docs."
+    },
+    {
+      "name": "Outseta",
+      "url": "https://www.outseta.com",
+      "category": "subscription / CRM",
+      "discovered_via": "category sweep: all-in-one SaaS back-office tools",
+      "why_qualifies": "Small vendor bundling billing, CRM and help desk, with public pricing and a KB."
+    },
+    {
+      "name": "Userlist",
+      "url": "https://userlist.com",
+      "category": "lifecycle marketing",
+      "discovered_via": "category sweep: SaaS lifecycle messaging",
+      "why_qualifies": "Bootstrapped lifecycle email tool with user-count pricing and a help centre."
+    },
+    {
+      "name": "Encharge",
+      "url": "https://encharge.io",
+      "category": "lifecycle marketing",
+      "discovered_via": "category sweep: SaaS lifecycle messaging",
+      "why_qualifies": "Small marketing-automation vendor with public tiered pricing and documentation."
+    },
+    {
+      "name": "Resend",
+      "url": "https://resend.com",
+      "category": "email API",
+      "discovered_via": "category sweep: developer email APIs",
+      "why_qualifies": "Early-stage transactional email API with public volume pricing and docs."
+    },
+    {
+      "name": "Knock",
+      "url": "https://knock.app",
+      "category": "notifications API",
+      "discovered_via": "category sweep: notification infrastructure",
+      "why_qualifies": "Small notifications-infrastructure vendor with public MAU pricing and docs."
+    },
+    {
+      "name": "Svix",
+      "url": "https://www.svix.com",
+      "category": "webhooks API",
+      "discovered_via": "category sweep: webhook infrastructure",
+      "why_qualifies": "Small webhooks-as-a-service vendor with public message-volume pricing and docs."
+    },
+    {
+      "name": "Hookdeck",
+      "url": "https://hookdeck.com",
+      "category": "webhooks API",
+      "discovered_via": "category sweep: webhook infrastructure",
+      "why_qualifies": "Independent event-gateway vendor with public request-volume pricing and docs."
+    },
+    {
+      "name": "Cronitor",
+      "url": "https://cronitor.io",
+      "category": "monitoring",
+      "discovered_via": "category sweep: independent uptime and cron monitoring",
+      "why_qualifies": "Small monitoring vendor with public per-monitor pricing and documentation."
+    },
+    {
+      "name": "Checkly",
+      "url": "https://www.checklyhq.com",
+      "category": "monitoring",
+      "discovered_via": "category sweep: synthetic monitoring",
+      "why_qualifies": "Mid-size independent monitoring vendor with usage-based pricing and full docs."
+    },
+    {
+      "name": "Instatus",
+      "url": "https://instatus.com",
+      "category": "status pages",
+      "discovered_via": "category sweep: status page vendors",
+      "why_qualifies": "Small status-page vendor with public tiered pricing and a help centre."
+    },
+    {
+      "name": "Tinybird",
+      "url": "https://www.tinybird.co",
+      "category": "data infrastructure",
+      "discovered_via": "category sweep: real-time analytics back ends",
+      "why_qualifies": "Independent real-time data platform with public usage pricing and docs."
+    },
+    {
+      "name": "Turso",
+      "url": "https://turso.tech",
+      "category": "data infrastructure",
+      "discovered_via": "category sweep: hosted database startups",
+      "why_qualifies": "Early-stage hosted database with public row/storage allowances and docs."
+    },
+    {
+      "name": "Doppler",
+      "url": "https://www.doppler.com",
+      "category": "secrets management",
+      "discovered_via": "category sweep: developer secrets management",
+      "why_qualifies": "Small secrets-management vendor with public per-seat pricing and documentation."
+    },
+    {
+      "name": "Infisical",
+      "url": "https://infisical.com",
+      "category": "secrets management",
+      "discovered_via": "category sweep: open-source secrets management",
+      "why_qualifies": "Open-source secrets platform with a public cloud pricing page and docs."
+    },
+    {
+      "name": "Unkey",
+      "url": "https://www.unkey.com",
+      "category": "API management",
+      "discovered_via": "category sweep: API key management",
+      "why_qualifies": "Early-stage API management vendor with public request-volume pricing and docs."
+    }
+  ],
+  "eligibility": {
+    "checked_at": "2026-09-02 07:32:26 UTC",
+    "pool_size": 36,
+    "eligible": 35,
+    "criteria": [
+      "not on the excluded large-platform list",
+      "homepage reachable over HTTPS and allowed by robots.txt",
+      "a public pricing page can be discovered automatically",
+      "public documentation, help, FAQ, comparison or terms content can be discovered"
+    ],
+    "candidates": [
+      {
+        "name": "Fathom Analytics",
+        "url": "https://usefathom.com",
+        "category": "web analytics",
+        "discovered_via": "category sweep: privacy-focused web analytics",
+        "why_qualifies": "Independent, founder-led analytics vendor with a public per-plan pricing page and a public documentation site.",
+        "pricing_urls": [
+          "https://usefathom.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "limits",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 13,
+        "eligible": true,
+        "reason": "pricing page found (https://usefathom.com/pricing) and 5 supporting content types discovered"
+      },
+      {
+        "name": "Simple Analytics",
+        "url": "https://www.simpleanalytics.com",
+        "category": "web analytics",
+        "discovered_via": "category sweep: privacy-focused web analytics",
+        "why_qualifies": "Small European analytics vendor publishing usage-based plans and public docs.",
+        "pricing_urls": [
+          "https://www.simpleanalytics.com/pricing",
+          "https://www.simpleanalytics.com/plans"
+        ],
+        "categories_found": [
+          "addons",
+          "billing_docs",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 16,
+        "eligible": true,
+        "reason": "pricing page found (https://www.simpleanalytics.com/pricing) and 5 supporting content types discovered"
+      },
+      {
+        "name": "Pirsch Analytics",
+        "url": "https://pirsch.io",
+        "category": "web analytics",
+        "discovered_via": "category sweep: privacy-focused web analytics",
+        "why_qualifies": "Small independent analytics product with published pageview allowances and docs.",
+        "pricing_urls": [
+          "https://pirsch.io/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "billing_docs",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 16,
+        "eligible": true,
+        "reason": "pricing page found (https://pirsch.io/pricing) and 5 supporting content types discovered"
+      },
+      {
+        "name": "Umami",
+        "url": "https://umami.is",
+        "category": "web analytics",
+        "discovered_via": "category sweep: open-source analytics with a hosted tier",
+        "why_qualifies": "Open-source analytics with a commercial hosted plan and public documentation.",
+        "pricing_urls": [
+          "https://umami.is/pricing"
+        ],
+        "categories_found": [
+          "docs",
+          "pricing",
+          "terms"
+        ],
+        "pages_discovered": 3,
+        "eligible": true,
+        "reason": "pricing page found (https://umami.is/pricing) and 2 supporting content types discovered"
+      },
+      {
+        "name": "Buttondown",
+        "url": "https://buttondown.com",
+        "category": "email / newsletters",
+        "discovered_via": "category sweep: independent newsletter platforms",
+        "why_qualifies": "Solo-founder newsletter tool with subscriber-tiered public pricing and docs.",
+        "pricing_urls": [
+          "https://buttondown.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "billing_docs",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 13,
+        "eligible": true,
+        "reason": "pricing page found (https://buttondown.com/pricing) and 5 supporting content types discovered"
+      },
+      {
+        "name": "EmailOctopus",
+        "url": "https://emailoctopus.com",
+        "category": "email / newsletters",
+        "discovered_via": "category sweep: independent email marketing",
+        "why_qualifies": "Small email marketing vendor with public contact-tiered pricing and a help centre.",
+        "pricing_urls": [
+          "https://emailoctopus.com/pricing",
+          "https://emailoctopus.com/savings-calculator"
+        ],
+        "categories_found": [
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 11,
+        "eligible": true,
+        "reason": "pricing page found (https://emailoctopus.com/pricing) and 4 supporting content types discovered"
+      },
+      {
+        "name": "Loops",
+        "url": "https://loops.so",
+        "category": "email / newsletters",
+        "discovered_via": "category sweep: modern SaaS email tools",
+        "why_qualifies": "Early-stage email platform with public per-contact pricing and public docs.",
+        "pricing_urls": [
+          "https://loops.so/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "billing_docs",
+          "docs",
+          "faq",
+          "help",
+          "limits",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 14,
+        "eligible": true,
+        "reason": "pricing page found (https://loops.so/pricing) and 6 supporting content types discovered"
+      },
+      {
+        "name": "Bento",
+        "url": "https://bentonow.com",
+        "category": "email / newsletters",
+        "discovered_via": "category sweep: modern SaaS email tools",
+        "why_qualifies": "Small marketing-automation vendor with published plans and a help centre.",
+        "pricing_urls": [
+          "https://bentonow.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 14,
+        "eligible": true,
+        "reason": "pricing page found (https://bentonow.com/pricing) and 4 supporting content types discovered"
+      },
+      {
+        "name": "Tally",
+        "url": "https://tally.so",
+        "category": "forms",
+        "discovered_via": "category sweep: independent form builders",
+        "why_qualifies": "Bootstrapped form builder with a public two-tier pricing page and a help centre.",
+        "pricing_urls": [
+          "https://tally.so/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "billing_docs",
+          "compare",
+          "docs",
+          "faq",
+          "help",
+          "limits",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 16,
+        "eligible": true,
+        "reason": "pricing page found (https://tally.so/pricing) and 7 supporting content types discovered"
+      },
+      {
+        "name": "Fillout",
+        "url": "https://www.fillout.com",
+        "category": "forms",
+        "discovered_via": "category sweep: independent form builders",
+        "why_qualifies": "Small form product with public plan tiers, response limits and documentation.",
+        "pricing_urls": [
+          "https://www.fillout.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 14,
+        "eligible": true,
+        "reason": "pricing page found (https://www.fillout.com/pricing) and 4 supporting content types discovered"
+      },
+      {
+        "name": "Formspree",
+        "url": "https://formspree.io",
+        "category": "forms",
+        "discovered_via": "category sweep: form back-end APIs",
+        "why_qualifies": "Long-running independent form back end with submission-limited plans and docs.",
+        "pricing_urls": [
+          "https://formspree.io/plans",
+          "https://formspree.io/pricing"
+        ],
+        "categories_found": [
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 11,
+        "eligible": true,
+        "reason": "pricing page found (https://formspree.io/plans) and 4 supporting content types discovered"
+      },
+      {
+        "name": "SavvyCal",
+        "url": "https://savvycal.com",
+        "category": "scheduling",
+        "discovered_via": "category sweep: independent scheduling tools",
+        "why_qualifies": "Bootstrapped scheduling product with public pricing and a help centre.",
+        "pricing_urls": [
+          "https://savvycal.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "limits",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 14,
+        "eligible": true,
+        "reason": "pricing page found (https://savvycal.com/pricing) and 5 supporting content types discovered"
+      },
+      {
+        "name": "Cal.com",
+        "url": "https://cal.com",
+        "category": "scheduling",
+        "discovered_via": "category sweep: open-source scheduling",
+        "why_qualifies": "Open-source scheduling vendor with a public seat-based pricing page and docs.",
+        "pricing_urls": [
+          "https://cal.com/pricing",
+          "https://cal.com/subscribe"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "limits",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 15,
+        "eligible": true,
+        "reason": "pricing page found (https://cal.com/pricing) and 5 supporting content types discovered"
+      },
+      {
+        "name": "ScrapingBee",
+        "url": "https://www.scrapingbee.com",
+        "category": "web data API",
+        "discovered_via": "category sweep: web-scraping APIs",
+        "why_qualifies": "Small API vendor with credit-based public pricing and full API documentation.",
+        "pricing_urls": [
+          "https://www.scrapingbee.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 14,
+        "eligible": true,
+        "reason": "pricing page found (https://www.scrapingbee.com/pricing) and 4 supporting content types discovered"
+      },
+      {
+        "name": "Scrapfly",
+        "url": "https://scrapfly.io",
+        "category": "web data API",
+        "discovered_via": "category sweep: web-scraping APIs",
+        "why_qualifies": "Independent scraping API with published credit allowances and detailed docs.",
+        "pricing_urls": [
+          "https://scrapfly.io/pricing",
+          "https://scrapfly.io/use-case/travel-web-scraping"
+        ],
+        "categories_found": [
+          "addons",
+          "billing_docs",
+          "compare",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 16,
+        "eligible": true,
+        "reason": "pricing page found (https://scrapfly.io/pricing) and 6 supporting content types discovered"
+      },
+      {
+        "name": "ScreenshotOne",
+        "url": "https://screenshotone.com",
+        "category": "media API",
+        "discovered_via": "category sweep: screenshot APIs",
+        "why_qualifies": "Solo-founder screenshot API with request-quota pricing and public documentation.",
+        "pricing_urls": [
+          "https://screenshotone.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "limits",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 15,
+        "eligible": true,
+        "reason": "pricing page found (https://screenshotone.com/pricing) and 5 supporting content types discovered"
+      },
+      {
+        "name": "Bannerbear",
+        "url": "https://www.bannerbear.com",
+        "category": "media API",
+        "discovered_via": "category sweep: image generation APIs",
+        "why_qualifies": "Bootstrapped image-generation API with quota-based plans and public docs.",
+        "pricing_urls": [
+          "https://www.bannerbear.com/pricing",
+          "https://www.bannerbear.com/v5/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "billing_docs",
+          "docs",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 16,
+        "eligible": true,
+        "reason": "pricing page found (https://www.bannerbear.com/pricing) and 4 supporting content types discovered"
+      },
+      {
+        "name": "Placid",
+        "url": "https://placid.app",
+        "category": "media API",
+        "discovered_via": "category sweep: image generation APIs",
+        "why_qualifies": "Small creative-automation API with public usage tiers and documentation.",
+        "pricing_urls": [
+          "https://placid.app/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "limits",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 16,
+        "eligible": true,
+        "reason": "pricing page found (https://placid.app/pricing) and 5 supporting content types discovered"
+      },
+      {
+        "name": "Baserow",
+        "url": "https://baserow.io",
+        "category": "no-code database",
+        "discovered_via": "category sweep: open-source Airtable alternatives",
+        "why_qualifies": "Open-core database vendor with public per-seat pricing and extensive docs.",
+        "pricing_urls": [
+          "https://baserow.io/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "billing_docs",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 11,
+        "eligible": true,
+        "reason": "pricing page found (https://baserow.io/pricing) and 5 supporting content types discovered"
+      },
+      {
+        "name": "NocoDB",
+        "url": "https://nocodb.com",
+        "category": "no-code database",
+        "discovered_via": "category sweep: open-source Airtable alternatives",
+        "why_qualifies": "Open-source database platform with a public cloud pricing page and docs.",
+        "pricing_urls": [
+          "https://nocodb.com/pricing"
+        ],
+        "categories_found": [
+          "billing_docs",
+          "docs",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 12,
+        "eligible": true,
+        "reason": "pricing page found (https://nocodb.com/pricing) and 4 supporting content types discovered"
+      },
+      {
+        "name": "Chartbrew",
+        "url": "https://chartbrew.com",
+        "category": "BI / dashboards",
+        "discovered_via": "category sweep: small open-source BI tools",
+        "why_qualifies": "Small open-source dashboard product with a hosted paid tier and public docs.",
+        "pricing_urls": [
+          "https://chartbrew.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "billing_docs",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 15,
+        "eligible": true,
+        "reason": "pricing page found (https://chartbrew.com/pricing) and 5 supporting content types discovered"
+      },
+      {
+        "name": "Outseta",
+        "url": "https://www.outseta.com",
+        "category": "subscription / CRM",
+        "discovered_via": "category sweep: all-in-one SaaS back-office tools",
+        "why_qualifies": "Small vendor bundling billing, CRM and help desk, with public pricing and a KB.",
+        "pricing_urls": [
+          "https://www.outseta.com/pricing"
+        ],
+        "categories_found": [
+          "billing_docs",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 12,
+        "eligible": true,
+        "reason": "pricing page found (https://www.outseta.com/pricing) and 5 supporting content types discovered"
+      },
+      {
+        "name": "Userlist",
+        "url": "https://userlist.com",
+        "category": "lifecycle marketing",
+        "discovered_via": "category sweep: SaaS lifecycle messaging",
+        "why_qualifies": "Bootstrapped lifecycle email tool with user-count pricing and a help centre.",
+        "pricing_urls": [
+          "https://userlist.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "billing_docs",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 16,
+        "eligible": true,
+        "reason": "pricing page found (https://userlist.com/pricing) and 5 supporting content types discovered"
+      },
+      {
+        "name": "Encharge",
+        "url": "https://encharge.io",
+        "category": "lifecycle marketing",
+        "discovered_via": "category sweep: SaaS lifecycle messaging",
+        "why_qualifies": "Small marketing-automation vendor with public tiered pricing and documentation.",
+        "pricing_urls": [],
+        "categories_found": [
+          "docs",
+          "terms"
+        ],
+        "pages_discovered": 2,
+        "eligible": false,
+        "reason": "no public pricing page could be discovered"
+      },
+      {
+        "name": "Resend",
+        "url": "https://resend.com",
+        "category": "email API",
+        "discovered_via": "category sweep: developer email APIs",
+        "why_qualifies": "Early-stage transactional email API with public volume pricing and docs.",
+        "pricing_urls": [
+          "https://resend.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "limits",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 15,
+        "eligible": true,
+        "reason": "pricing page found (https://resend.com/pricing) and 5 supporting content types discovered"
+      },
+      {
+        "name": "Knock",
+        "url": "https://knock.app",
+        "category": "notifications API",
+        "discovered_via": "category sweep: notification infrastructure",
+        "why_qualifies": "Small notifications-infrastructure vendor with public MAU pricing and docs.",
+        "pricing_urls": [
+          "https://knock.app/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "billing_docs",
+          "docs",
+          "help",
+          "limits",
+          "pricing",
+          "trial"
+        ],
+        "pages_discovered": 16,
+        "eligible": true,
+        "reason": "pricing page found (https://knock.app/pricing) and 4 supporting content types discovered"
+      },
+      {
+        "name": "Svix",
+        "url": "https://www.svix.com",
+        "category": "webhooks API",
+        "discovered_via": "category sweep: webhook infrastructure",
+        "why_qualifies": "Small webhooks-as-a-service vendor with public message-volume pricing and docs.",
+        "pricing_urls": [
+          "https://www.svix.com/pricing",
+          "https://www.svix.com/build-vs-buy"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "limits",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 16,
+        "eligible": true,
+        "reason": "pricing page found (https://www.svix.com/pricing) and 5 supporting content types discovered"
+      },
+      {
+        "name": "Hookdeck",
+        "url": "https://hookdeck.com",
+        "category": "webhooks API",
+        "discovered_via": "category sweep: webhook infrastructure",
+        "why_qualifies": "Independent event-gateway vendor with public request-volume pricing and docs.",
+        "pricing_urls": [
+          "https://hookdeck.com/pricing",
+          "https://hookdeck.com/outpost/pricing"
+        ],
+        "categories_found": [
+          "docs",
+          "faq",
+          "help",
+          "limits",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 13,
+        "eligible": true,
+        "reason": "pricing page found (https://hookdeck.com/pricing) and 5 supporting content types discovered"
+      },
+      {
+        "name": "Cronitor",
+        "url": "https://cronitor.io",
+        "category": "monitoring",
+        "discovered_via": "category sweep: independent uptime and cron monitoring",
+        "why_qualifies": "Small monitoring vendor with public per-monitor pricing and documentation.",
+        "pricing_urls": [
+          "https://cronitor.io/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 12,
+        "eligible": true,
+        "reason": "pricing page found (https://cronitor.io/pricing) and 4 supporting content types discovered"
+      },
+      {
+        "name": "Checkly",
+        "url": "https://www.checklyhq.com",
+        "category": "monitoring",
+        "discovered_via": "category sweep: synthetic monitoring",
+        "why_qualifies": "Mid-size independent monitoring vendor with usage-based pricing and full docs.",
+        "pricing_urls": [
+          "https://www.checklyhq.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 12,
+        "eligible": true,
+        "reason": "pricing page found (https://www.checklyhq.com/pricing) and 4 supporting content types discovered"
+      },
+      {
+        "name": "Instatus",
+        "url": "https://instatus.com",
+        "category": "status pages",
+        "discovered_via": "category sweep: status page vendors",
+        "why_qualifies": "Small status-page vendor with public tiered pricing and a help centre.",
+        "pricing_urls": [
+          "https://instatus.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "billing_docs",
+          "docs",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 11,
+        "eligible": true,
+        "reason": "pricing page found (https://instatus.com/pricing) and 4 supporting content types discovered"
+      },
+      {
+        "name": "Tinybird",
+        "url": "https://www.tinybird.co",
+        "category": "data infrastructure",
+        "discovered_via": "category sweep: real-time analytics back ends",
+        "why_qualifies": "Independent real-time data platform with public usage pricing and docs.",
+        "pricing_urls": [
+          "https://www.tinybird.co/pricing",
+          "https://www.tinybird.co/pricing/calculator"
+        ],
+        "categories_found": [
+          "docs",
+          "faq",
+          "help",
+          "limits",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 15,
+        "eligible": true,
+        "reason": "pricing page found (https://www.tinybird.co/pricing) and 5 supporting content types discovered"
+      },
+      {
+        "name": "Turso",
+        "url": "https://turso.tech",
+        "category": "data infrastructure",
+        "discovered_via": "category sweep: hosted database startups",
+        "why_qualifies": "Early-stage hosted database with public row/storage allowances and docs.",
+        "pricing_urls": [
+          "https://turso.tech/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "billing_docs",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 14,
+        "eligible": true,
+        "reason": "pricing page found (https://turso.tech/pricing) and 5 supporting content types discovered"
+      },
+      {
+        "name": "Doppler",
+        "url": "https://www.doppler.com",
+        "category": "secrets management",
+        "discovered_via": "category sweep: developer secrets management",
+        "why_qualifies": "Small secrets-management vendor with public per-seat pricing and documentation.",
+        "pricing_urls": [
+          "https://www.doppler.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "limits",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 16,
+        "eligible": true,
+        "reason": "pricing page found (https://www.doppler.com/pricing) and 5 supporting content types discovered"
+      },
+      {
+        "name": "Infisical",
+        "url": "https://infisical.com",
+        "category": "secrets management",
+        "discovered_via": "category sweep: open-source secrets management",
+        "why_qualifies": "Open-source secrets platform with a public cloud pricing page and docs.",
+        "pricing_urls": [
+          "https://infisical.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 13,
+        "eligible": true,
+        "reason": "pricing page found (https://infisical.com/pricing) and 4 supporting content types discovered"
+      },
+      {
+        "name": "Unkey",
+        "url": "https://www.unkey.com",
+        "category": "API management",
+        "discovered_via": "category sweep: API key management",
+        "why_qualifies": "Early-stage API management vendor with public request-volume pricing and docs.",
+        "pricing_urls": [
+          "https://www.unkey.com/pricing"
+        ],
+        "categories_found": [
+          "billing_docs",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 11,
+        "eligible": true,
+        "reason": "pricing page found (https://www.unkey.com/pricing) and 5 supporting content types discovered"
+      }
+    ]
+  },
+  "selected": [
+    {
+      "name": "Baserow",
+      "url": "https://baserow.io",
+      "category": "no-code database",
+      "discovered_via": "category sweep: open-source Airtable alternatives",
+      "why_qualifies": "Open-core database vendor with public per-seat pricing and extensive docs.",
+      "pricing_urls": [
+        "https://baserow.io/pricing"
+      ],
+      "categories_found": [
+        "addons",
+        "billing_docs",
+        "docs",
+        "faq",
+        "help",
+        "pricing",
+        "terms",
+        "trial"
+      ],
+      "pages_discovered": 11,
+      "eligible": true,
+      "reason": "pricing page found (https://baserow.io/pricing) and 5 supporting content types discovered"
+    },
+    {
+      "name": "Bento",
+      "url": "https://bentonow.com",
+      "category": "email / newsletters",
+      "discovered_via": "category sweep: modern SaaS email tools",
+      "why_qualifies": "Small marketing-automation vendor with published plans and a help centre.",
+      "pricing_urls": [
+        "https://bentonow.com/pricing"
+      ],
+      "categories_found": [
+        "addons",
+        "docs",
+        "faq",
+        "help",
+        "pricing",
+        "terms",
+        "trial"
+      ],
+      "pages_discovered": 14,
+      "eligible": true,
+      "reason": "pricing page found (https://bentonow.com/pricing) and 4 supporting content types discovered"
+    },
+    {
+      "name": "Checkly",
+      "url": "https://www.checklyhq.com",
+      "category": "monitoring",
+      "discovered_via": "category sweep: synthetic monitoring",
+      "why_qualifies": "Mid-size independent monitoring vendor with usage-based pricing and full docs.",
+      "pricing_urls": [
+        "https://www.checklyhq.com/pricing"
+      ],
+      "categories_found": [
+        "addons",
+        "docs",
+        "faq",
+        "help",
+        "pricing",
+        "terms",
+        "trial"
+      ],
+      "pages_discovered": 12,
+      "eligible": true,
+      "reason": "pricing page found (https://www.checklyhq.com/pricing) and 4 supporting content types discovered"
+    },
+    {
+      "name": "Cronitor",
+      "url": "https://cronitor.io",
+      "category": "monitoring",
+      "discovered_via": "category sweep: independent uptime and cron monitoring",
+      "why_qualifies": "Small monitoring vendor with public per-monitor pricing and documentation.",
+      "pricing_urls": [
+        "https://cronitor.io/pricing"
+      ],
+      "categories_found": [
+        "addons",
+        "docs",
+        "faq",
+        "help",
+        "pricing",
+        "terms",
+        "trial"
+      ],
+      "pages_discovered": 12,
+      "eligible": true,
+      "reason": "pricing page found (https://cronitor.io/pricing) and 4 supporting content types discovered"
+    },
+    {
+      "name": "Fathom Analytics",
+      "url": "https://usefathom.com",
+      "category": "web analytics",
+      "discovered_via": "category sweep: privacy-focused web analytics",
+      "why_qualifies": "Independent, founder-led analytics vendor with a public per-plan pricing page and a public documentation site.",
+      "pricing_urls": [
+        "https://usefathom.com/pricing"
+      ],
+      "categories_found": [
+        "addons",
+        "docs",
+        "faq",
+        "help",
+        "limits",
+        "pricing",
+        "terms",
+        "trial"
+      ],
+      "pages_discovered": 13,
+      "eligible": true,
+      "reason": "pricing page found (https://usefathom.com/pricing) and 5 supporting content types discovered"
+    },
+    {
+      "name": "Knock",
+      "url": "https://knock.app",
+      "category": "notifications API",
+      "discovered_via": "category sweep: notification infrastructure",
+      "why_qualifies": "Small notifications-infrastructure vendor with public MAU pricing and docs.",
+      "pricing_urls": [
+        "https://knock.app/pricing"
+      ],
+      "categories_found": [
+        "addons",
+        "billing_docs",
+        "docs",
+        "help",
+        "limits",
+        "pricing",
+        "trial"
+      ],
+      "pages_discovered": 16,
+      "eligible": true,
+      "reason": "pricing page found (https://knock.app/pricing) and 4 supporting content types discovered"
+    },
+    {
+      "name": "SavvyCal",
+      "url": "https://savvycal.com",
+      "category": "scheduling",
+      "discovered_via": "category sweep: independent scheduling tools",
+      "why_qualifies": "Bootstrapped scheduling product with public pricing and a help centre.",
+      "pricing_urls": [
+        "https://savvycal.com/pricing"
+      ],
+      "categories_found": [
+        "addons",
+        "docs",
+        "faq",
+        "help",
+        "limits",
+        "pricing",
+        "terms",
+        "trial"
+      ],
+      "pages_discovered": 14,
+      "eligible": true,
+      "reason": "pricing page found (https://savvycal.com/pricing) and 5 supporting content types discovered"
+    },
+    {
+      "name": "ScreenshotOne",
+      "url": "https://screenshotone.com",
+      "category": "media API",
+      "discovered_via": "category sweep: screenshot APIs",
+      "why_qualifies": "Solo-founder screenshot API with request-quota pricing and public documentation.",
+      "pricing_urls": [
+        "https://screenshotone.com/pricing"
+      ],
+      "categories_found": [
+        "addons",
+        "docs",
+        "faq",
+        "help",
+        "limits",
+        "pricing",
+        "terms",
+        "trial"
+      ],
+      "pages_discovered": 15,
+      "eligible": true,
+      "reason": "pricing page found (https://screenshotone.com/pricing) and 5 supporting content types discovered"
+    },
+    {
+      "name": "Umami",
+      "url": "https://umami.is",
+      "category": "web analytics",
+      "discovered_via": "category sweep: open-source analytics with a hosted tier",
+      "why_qualifies": "Open-source analytics with a commercial hosted plan and public documentation.",
+      "pricing_urls": [
+        "https://umami.is/pricing"
+      ],
+      "categories_found": [
+        "docs",
+        "pricing",
+        "terms"
+      ],
+      "pages_discovered": 3,
+      "eligible": true,
+      "reason": "pricing page found (https://umami.is/pricing) and 2 supporting content types discovered"
+    },
+    {
+      "name": "Unkey",
+      "url": "https://www.unkey.com",
+      "category": "API management",
+      "discovered_via": "category sweep: API key management",
+      "why_qualifies": "Early-stage API management vendor with public request-volume pricing and docs.",
+      "pricing_urls": [
+        "https://www.unkey.com/pricing"
+      ],
+      "categories_found": [
+        "billing_docs",
+        "docs",
+        "faq",
+        "help",
+        "pricing",
+        "terms",
+        "trial"
+      ],
+      "pages_discovered": 11,
+      "eligible": true,
+      "reason": "pricing page found (https://www.unkey.com/pricing) and 5 supporting content types discovered"
+    }
+  ],
+  "runs": [
+    {
+      "candidate": {
+        "name": "Baserow",
+        "url": "https://baserow.io",
+        "category": "no-code database",
+        "discovered_via": "category sweep: open-source Airtable alternatives",
+        "why_qualifies": "Open-core database vendor with public per-seat pricing and extensive docs.",
+        "pricing_urls": [
+          "https://baserow.io/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "billing_docs",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 11,
+        "eligible": true,
+        "reason": "pricing page found (https://baserow.io/pricing) and 5 supporting content types discovered"
+      },
+      "result_file": "results/experiment/baserow.json",
+      "report_file": "results/experiment/baserow.html",
+      "summary": {
+        "pages_fetched_ok": 11,
+        "pages_failed": 2,
+        "claims": 59,
+        "findings": 0,
+        "by_severity": {},
+        "by_confidence": {},
+        "by_kind": {},
+        "duration_seconds": 3.9
+      }
+    },
+    {
+      "candidate": {
+        "name": "Bento",
+        "url": "https://bentonow.com",
+        "category": "email / newsletters",
+        "discovered_via": "category sweep: modern SaaS email tools",
+        "why_qualifies": "Small marketing-automation vendor with published plans and a help centre.",
+        "pricing_urls": [
+          "https://bentonow.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 14,
+        "eligible": true,
+        "reason": "pricing page found (https://bentonow.com/pricing) and 4 supporting content types discovered"
+      },
+      "result_file": "results/experiment/bento.json",
+      "report_file": "results/experiment/bento.html",
+      "summary": {
+        "pages_fetched_ok": 13,
+        "pages_failed": 5,
+        "claims": 38,
+        "findings": 1,
+        "by_severity": {
+          "medium": 1
+        },
+        "by_confidence": {
+          "high": 1
+        },
+        "by_kind": {
+          "ambiguity": 1
+        },
+        "duration_seconds": 3.8
+      }
+    },
+    {
+      "candidate": {
+        "name": "Checkly",
+        "url": "https://www.checklyhq.com",
+        "category": "monitoring",
+        "discovered_via": "category sweep: synthetic monitoring",
+        "why_qualifies": "Mid-size independent monitoring vendor with usage-based pricing and full docs.",
+        "pricing_urls": [
+          "https://www.checklyhq.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 12,
+        "eligible": true,
+        "reason": "pricing page found (https://www.checklyhq.com/pricing) and 4 supporting content types discovered"
+      },
+      "result_file": "results/experiment/checkly.json",
+      "report_file": "results/experiment/checkly.html",
+      "summary": {
+        "pages_fetched_ok": 12,
+        "pages_failed": 4,
+        "claims": 22,
+        "findings": 0,
+        "by_severity": {},
+        "by_confidence": {},
+        "by_kind": {},
+        "duration_seconds": 4.6
+      }
+    },
+    {
+      "candidate": {
+        "name": "Cronitor",
+        "url": "https://cronitor.io",
+        "category": "monitoring",
+        "discovered_via": "category sweep: independent uptime and cron monitoring",
+        "why_qualifies": "Small monitoring vendor with public per-monitor pricing and documentation.",
+        "pricing_urls": [
+          "https://cronitor.io/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 12,
+        "eligible": true,
+        "reason": "pricing page found (https://cronitor.io/pricing) and 4 supporting content types discovered"
+      },
+      "result_file": "results/experiment/cronitor.json",
+      "report_file": "results/experiment/cronitor.html",
+      "summary": {
+        "pages_fetched_ok": 12,
+        "pages_failed": 2,
+        "claims": 28,
+        "findings": 1,
+        "by_severity": {
+          "medium": 1
+        },
+        "by_confidence": {
+          "high": 1
+        },
+        "by_kind": {
+          "ambiguity": 1
+        },
+        "duration_seconds": 1.9
+      }
+    },
+    {
+      "candidate": {
+        "name": "Fathom Analytics",
+        "url": "https://usefathom.com",
+        "category": "web analytics",
+        "discovered_via": "category sweep: privacy-focused web analytics",
+        "why_qualifies": "Independent, founder-led analytics vendor with a public per-plan pricing page and a public documentation site.",
+        "pricing_urls": [
+          "https://usefathom.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "limits",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 13,
+        "eligible": true,
+        "reason": "pricing page found (https://usefathom.com/pricing) and 5 supporting content types discovered"
+      },
+      "result_file": "results/experiment/fathom-analytics.json",
+      "report_file": "results/experiment/fathom-analytics.html",
+      "summary": {
+        "pages_fetched_ok": 13,
+        "pages_failed": 3,
+        "claims": 28,
+        "findings": 2,
+        "by_severity": {
+          "low": 2
+        },
+        "by_confidence": {
+          "high": 2
+        },
+        "by_kind": {
+          "missing_information": 2
+        },
+        "duration_seconds": 4.2
+      }
+    },
+    {
+      "candidate": {
+        "name": "Knock",
+        "url": "https://knock.app",
+        "category": "notifications API",
+        "discovered_via": "category sweep: notification infrastructure",
+        "why_qualifies": "Small notifications-infrastructure vendor with public MAU pricing and docs.",
+        "pricing_urls": [
+          "https://knock.app/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "billing_docs",
+          "docs",
+          "help",
+          "limits",
+          "pricing",
+          "trial"
+        ],
+        "pages_discovered": 16,
+        "eligible": true,
+        "reason": "pricing page found (https://knock.app/pricing) and 4 supporting content types discovered"
+      },
+      "result_file": "results/experiment/knock.json",
+      "report_file": "results/experiment/knock.html",
+      "summary": {
+        "pages_fetched_ok": 16,
+        "pages_failed": 1,
+        "claims": 80,
+        "findings": 1,
+        "by_severity": {
+          "medium": 1
+        },
+        "by_confidence": {
+          "low": 1
+        },
+        "by_kind": {
+          "ambiguity": 1
+        },
+        "duration_seconds": 3.2
+      }
+    },
+    {
+      "candidate": {
+        "name": "SavvyCal",
+        "url": "https://savvycal.com",
+        "category": "scheduling",
+        "discovered_via": "category sweep: independent scheduling tools",
+        "why_qualifies": "Bootstrapped scheduling product with public pricing and a help centre.",
+        "pricing_urls": [
+          "https://savvycal.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "limits",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 14,
+        "eligible": true,
+        "reason": "pricing page found (https://savvycal.com/pricing) and 5 supporting content types discovered"
+      },
+      "result_file": "results/experiment/savvycal.json",
+      "report_file": "results/experiment/savvycal.html",
+      "summary": {
+        "pages_fetched_ok": 13,
+        "pages_failed": 3,
+        "claims": 8,
+        "findings": 1,
+        "by_severity": {
+          "low": 1
+        },
+        "by_confidence": {
+          "high": 1
+        },
+        "by_kind": {
+          "missing_information": 1
+        },
+        "duration_seconds": 3.5
+      }
+    },
+    {
+      "candidate": {
+        "name": "ScreenshotOne",
+        "url": "https://screenshotone.com",
+        "category": "media API",
+        "discovered_via": "category sweep: screenshot APIs",
+        "why_qualifies": "Solo-founder screenshot API with request-quota pricing and public documentation.",
+        "pricing_urls": [
+          "https://screenshotone.com/pricing"
+        ],
+        "categories_found": [
+          "addons",
+          "docs",
+          "faq",
+          "help",
+          "limits",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 15,
+        "eligible": true,
+        "reason": "pricing page found (https://screenshotone.com/pricing) and 5 supporting content types discovered"
+      },
+      "result_file": "results/experiment/screenshotone.json",
+      "report_file": "results/experiment/screenshotone.html",
+      "summary": {
+        "pages_fetched_ok": 15,
+        "pages_failed": 3,
+        "claims": 86,
+        "findings": 2,
+        "by_severity": {
+          "medium": 1,
+          "low": 1
+        },
+        "by_confidence": {
+          "high": 2
+        },
+        "by_kind": {
+          "missing_information": 2
+        },
+        "duration_seconds": 2.7
+      }
+    },
+    {
+      "candidate": {
+        "name": "Umami",
+        "url": "https://umami.is",
+        "category": "web analytics",
+        "discovered_via": "category sweep: open-source analytics with a hosted tier",
+        "why_qualifies": "Open-source analytics with a commercial hosted plan and public documentation.",
+        "pricing_urls": [
+          "https://umami.is/pricing"
+        ],
+        "categories_found": [
+          "docs",
+          "pricing",
+          "terms"
+        ],
+        "pages_discovered": 3,
+        "eligible": true,
+        "reason": "pricing page found (https://umami.is/pricing) and 2 supporting content types discovered"
+      },
+      "result_file": "results/experiment/umami.json",
+      "report_file": "results/experiment/umami.html",
+      "summary": {
+        "pages_fetched_ok": 3,
+        "pages_failed": 0,
+        "claims": 0,
+        "findings": 0,
+        "by_severity": {},
+        "by_confidence": {},
+        "by_kind": {},
+        "duration_seconds": 2.5
+      }
+    },
+    {
+      "candidate": {
+        "name": "Unkey",
+        "url": "https://www.unkey.com",
+        "category": "API management",
+        "discovered_via": "category sweep: API key management",
+        "why_qualifies": "Early-stage API management vendor with public request-volume pricing and docs.",
+        "pricing_urls": [
+          "https://www.unkey.com/pricing"
+        ],
+        "categories_found": [
+          "billing_docs",
+          "docs",
+          "faq",
+          "help",
+          "pricing",
+          "terms",
+          "trial"
+        ],
+        "pages_discovered": 11,
+        "eligible": true,
+        "reason": "pricing page found (https://www.unkey.com/pricing) and 5 supporting content types discovered"
+      },
+      "result_file": "results/experiment/unkey.json",
+      "report_file": "results/experiment/unkey.html",
+      "summary": {
+        "pages_fetched_ok": 11,
+        "pages_failed": 6,
+        "claims": 37,
+        "findings": 0,
+        "by_severity": {},
+        "by_confidence": {},
+        "by_kind": {},
+        "duration_seconds": 5.5
+      }
+    }
+  ]
+}

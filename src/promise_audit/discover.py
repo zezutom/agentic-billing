@@ -38,7 +38,7 @@ CATEGORIES: dict[str, dict] = {
     "trial": {
         "weight": 80,
         "path": ["trial", "free-trial", "start-free", "signup", "sign-up", "get-started",
-                 "start", "register", "free"],
+                 "register"],
         "anchor": ["free trial", "start free", "sign up", "get started", "try free"],
     },
     "addons": {
@@ -71,7 +71,7 @@ CATEGORIES: dict[str, dict] = {
 
 # Paths that never contain commercial promises but score highly by accident.
 NEGATIVE_PATH = [
-    "blog", "news", "press", "careers", "jobs", "about", "team", "contact", "customers",
+    "blog", "post", "posts", "article", "articles", "opinion", "essay", "news", "press", "careers", "jobs", "about", "team", "contact", "customers",
     "case-study", "case-studies", "story", "stories", "events", "webinar", "podcast",
     "changelog", "release-notes", "status", "security", "privacy", "cookie", "gdpr", "dpa",
     "login", "signin", "log-in", "sign-in", "auth", "account", "dashboard", "app",

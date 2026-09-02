@@ -80,6 +80,12 @@ def _rank(plan: str | None) -> int | None:
     return None
 
 
+def _short(s: str, words: int = 5, chars: int = 46) -> str:
+    """Comparison-table rows carry their tooltip text; headlines must not."""
+    s = " ".join((s or "").split()[:words])
+    return s if len(s) <= chars else s[:chars].rstrip(" ,.;:-") + "…"
+
+
 def _fmt_num(v: float) -> str:
     if v == int(v):
         return f"{int(v):,}"
@@ -97,10 +103,25 @@ def _pricing_pages(claims: list[Claim]) -> set[str]:
 
 # --------------------------------------------------------------------- rules
 
+def _commercial_limits(claims: list[Claim]) -> list[Claim]:
+    """Numeric limits that describe what a customer is entitled to.
+
+    A count taken from an API reference or a tutorial ("up to 10 actors",
+    "defaults to 50 per page", "a Vue.js 3 project") is a description of how the
+    software behaves, not of what the plan includes. Rate limits are the
+    exception: a published requests-per-second ceiling is a commercial promise
+    wherever it appears.
+    """
+    return [c for c in claims
+            if c.kind == "limit" and c.data.get("metric")
+            and (not c.data.get("page_is_reference")
+                 or c.data.get("limit_kind") == "rate")]
+
+
 def rule_unlimited_vs_limit(claims: list[Claim]) -> list[Finding]:
     out = []
     unlimited = [c for c in claims if c.kind == "unlimited" and c.data.get("metric")]
-    limits = [c for c in claims if c.kind == "limit" and c.data.get("metric")]
+    limits = _commercial_limits(claims)
     seen: set[tuple] = set()
     for u in unlimited:
         for l in limits:
@@ -128,7 +149,8 @@ def rule_unlimited_vs_limit(claims: list[Claim]) -> list[Finding]:
 
             if is_rate:
                 kind, severity = "ambiguity", "medium"
-                headline = f"“Unlimited {u.data['subject']}” is advertised, but a rate limit is documented"
+                headline = (f"“Unlimited {_short(u.data['subject'])}” is advertised, "
+                            f"but a rate limit is documented")
                 explanation = (
                     f"Your pricing pages promise unlimited {metric_label(metric)}"
                     f"{' on ' + (u.plan_raw or u.plan) if u.plan else ''}, while your documentation "
@@ -141,7 +163,8 @@ def rule_unlimited_vs_limit(claims: list[Claim]) -> list[Finding]:
             else:
                 kind = "likely_contradiction"
                 severity = "high" if (same_plan or u.plan or l.plan) else "medium"
-                headline = f"“Unlimited {u.data['subject']}” is advertised, but a hard limit of {amount} is documented"
+                headline = (f"“Unlimited {_short(u.data['subject'])}” is advertised, "
+                            f"but a hard limit of {amount} is documented")
                 explanation = (
                     f"One page promises unlimited {metric_label(metric)}"
                     f"{' on ' + (u.plan_raw or u.plan) if u.plan else ''}. Another states a specific "
@@ -164,7 +187,7 @@ def rule_unlimited_vs_limit(claims: list[Claim]) -> list[Finding]:
             out.append(Finding(
                 rule="unlimited_vs_limit", kind=kind, severity=severity, confidence=confidence,
                 headline=headline, explanation=explanation,
-                claim_a=f"Unlimited {u.data['subject']} ({_plan_str(u.plan_raw, u.plan)})",
+                claim_a=f"Unlimited {_short(u.data['subject'])} ({_plan_str(u.plan_raw, u.plan)})",
                 claim_b=(f"A limit of {amount} {metric_label(metric)}{window} "
                          f"({_plan_str(l.plan_raw, l.plan)})"),
                 evidence_a=Evidence.of(u), evidence_b=Evidence.of(l), caveat=caveat.strip(),
@@ -186,11 +209,11 @@ def rule_unlimited_vs_fair_use(claims: list[Claim]) -> list[Finding]:
             rule="unlimited_vs_fair_use", kind="ambiguity", severity="medium", confidence="high",
             headline="“Unlimited” is advertised, but a fair-use restriction is buried on another page",
             explanation=(
-                f"Your commercial pages advertise unlimited {u.data.get('subject', 'usage')}, while "
+                f"Your commercial pages advertise unlimited {_short(u.data.get('subject','usage'))}, while "
                 f"a separate page qualifies usage with a fair-use or acceptable-use restriction. "
                 f"A customer deciding on price never sees the qualifier; a customer who hits it "
                 f"experiences it as a broken promise."),
-            claim_a=f"Unlimited {u.data.get('subject', 'usage')} ({_plan_str(u.plan_raw, u.plan)})",
+            claim_a=f"Unlimited {_short(u.data.get('subject', 'usage'))} ({_plan_str(u.plan_raw, u.plan)})",
             claim_b="Usage is subject to a fair-use / acceptable-use restriction",
             evidence_a=Evidence.of(u), evidence_b=Evidence.of(f),
             caveat=("Fair-use clauses are standard practice. The issue is placement and wording, "
@@ -349,7 +372,7 @@ def rule_annual_monthly(claims: list[Claim]) -> list[Finding]:
 
 def rule_limit_conflict(claims: list[Claim]) -> list[Finding]:
     out = []
-    limits = [c for c in claims if c.kind == "limit" and c.data.get("metric")]
+    limits = _commercial_limits(claims)
     by_metric: dict[str, list[Claim]] = {}
     for l in limits:
         by_metric.setdefault(l.data["metric"], []).append(l)
@@ -524,10 +547,24 @@ def rule_condition_off_pricing(claims: list[Claim]) -> list[Finding]:
         if cond in CONDITION_SEVERITY and cond not in on_pricing and cond not in elsewhere:
             elsewhere[cond] = c
     unlimited_urls = {c.page_url for c in claims if c.kind == "unlimited"}
-    for cond, c in elsewhere.items():
+    BOILERPLATE_ON_TERMS = {"auto_renew", "no_refund", "price_change"}
+    emitted = 0
+    for cond, c in sorted(elsewhere.items(),
+                          key=lambda kv: SEVERITY_WEIGHT[CONDITION_SEVERITY[kv[0]][0]] * -1):
         if cond == "fair_use" and unlimited_urls:
             continue  # already reported as an "unlimited but fair use" finding
+        if emitted >= 2:
+            break  # two of these is a point; five is a listicle
         severity, desc = CONDITION_SEVERITY[cond]
+        on_terms = c.page_category == "terms"
+        if on_terms and cond in BOILERPLATE_ON_TERMS:
+            # Where else would a renewal clause live? Note it, do not headline it.
+            severity = "low"
+        elif on_terms and severity == "high":
+            # A generic reference to overages in the contract is weaker evidence
+            # than an actual overage table in the help centre.
+            severity = "medium"
+        emitted += 1
         out.append(Finding(
             rule="condition_off_pricing", kind="missing_information", severity=severity,
             confidence="high",
@@ -543,8 +580,11 @@ def rule_condition_off_pricing(claims: list[Claim]) -> list[Finding]:
                                 page_category="pricing",
                                 quote="(no equivalent statement found on the pricing page)"),
             evidence_b=Evidence.of(c),
-            caveat=("Detected by absence, so a condition stated in an image, a tooltip or a "
-                    "collapsed accordion on the pricing page would be missed."),
+            caveat=(("This is standard legal wording in the right place; the question is only "
+                     "whether the pricing page sets the same expectation. " if on_terms and
+                     cond in BOILERPLATE_ON_TERMS else "")
+                    + "Detected by absence, so a condition stated in an image, a tooltip or a "
+                      "collapsed accordion on the pricing page would be missed."),
             tags=["condition", cond]))
     return out
 
@@ -589,7 +629,8 @@ def rule_price_only_on_request(claims: list[Claim]) -> list[Finding]:
                 and c.page_url not in pricing_urls and _rank(c.plan) is not None:
             docs_plans.setdefault(c.plan, c)
     for plan, c in list(docs_plans.items())[:1]:
-        if plan in ("enterprise", "custom"):
+        # Enterprise is sales-led by design and a free plan has no price to publish.
+        if plan in ("enterprise", "custom", "free", "trial"):
             continue
         out.append(Finding(
             rule="unpriced_plan", kind="missing_information", severity="low", confidence="low",
@@ -623,25 +664,22 @@ ALL_RULES = (
 
 def dedupe(findings: list[Finding]) -> list[Finding]:
     """Keep the strongest version of each substantially identical finding."""
-    best: dict[tuple, Finding] = {}
+    exact: set[tuple] = set()
+    soft_seen: set[tuple] = set()
+    out: list[Finding] = []
     for f in sorted(findings, key=lambda f: -f.score):
         key = (f.rule, f.evidence_a.url, f.evidence_b.url if f.evidence_b else "",
                f.claim_a[:50], f.claim_b[:50])
+        if key in exact:
+            continue
         soft = (f.rule, tuple(sorted(f.tags)))
-        if key in best:
+        # These two rules can fire many times over the same metric; one is enough.
+        if f.rule in ("unlimited_vs_limit", "limit_conflict") and soft in soft_seen:
             continue
-        if soft in best and f.rule in ("unlimited_vs_limit", "limit_conflict"):
-            continue
-        best[key] = f
-        best.setdefault(soft, f)
-    seen_ids: set[int] = set()
-    out = []
-    for f in best.values():
-        if id(f) in seen_ids:
-            continue
-        seen_ids.add(id(f))
+        exact.add(key)
+        soft_seen.add(soft)
         out.append(f)
-    return sorted(out, key=lambda f: -f.score)
+    return out
 
 
 def run_rules(claims: list[Claim], max_findings: int = 12) -> list[Finding]:

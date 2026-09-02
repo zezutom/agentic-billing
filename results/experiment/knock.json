@@ -1,0 +1,1624 @@
+{
+  "company": "Knock",
+  "root_url": "https://knock.app/",
+  "domain": "knock.app",
+  "started_at": "2026-09-02 07:43:12 UTC",
+  "duration_seconds": 3.2,
+  "pages": [
+    {
+      "url": "https://knock.app/pricing",
+      "final_url": "https://knock.app/pricing",
+      "title": "Pricing that scales with you",
+      "category": "pricing",
+      "why_selected": "url path contains 'pricing'; link text 'pricing'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 1389,
+      "claim_count": 56
+    },
+    {
+      "url": "https://docs.knock.app/concepts/subscriptions",
+      "final_url": "https://docs.knock.app/concepts/subscriptions",
+      "title": "Subscriptions",
+      "category": "billing_docs",
+      "why_selected": "url path contains 'subscriptions'; link text 'subscriptions'",
+      "discovered_via": "linked from help hub https://docs.knock.app/guides/alerting",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 1524,
+      "claim_count": 0
+    },
+    {
+      "url": "https://docs.knock.app/api-reference/workflows/cancel",
+      "final_url": "https://docs.knock.app/api-reference/workflows/cancel",
+      "title": "Workflows API reference",
+      "category": "billing_docs",
+      "why_selected": "url path contains 'cancel'; link text 'cancel workflow'",
+      "discovered_via": "linked from docs hub https://docs.knock.app/reference",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 885,
+      "claim_count": 0
+    },
+    {
+      "url": "https://docs.knock.app/api-reference/users/list_subscriptions",
+      "final_url": "https://docs.knock.app/api-reference/users/list_subscriptions",
+      "title": "Users API reference",
+      "category": "billing_docs",
+      "why_selected": "url path contains 'subscriptions'; link text 'list user subscriptions'",
+      "discovered_via": "linked from docs hub https://docs.knock.app/reference",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 3894,
+      "claim_count": 3
+    },
+    {
+      "url": "https://docs.knock.app/reference",
+      "final_url": "https://docs.knock.app/api-reference/overview",
+      "title": "API reference",
+      "category": "docs",
+      "why_selected": "url path contains 'reference'; link text 'api reference'; documentation subdomain 'docs.knock.app'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 2297,
+      "claim_count": 4
+    },
+    {
+      "url": "https://dashboard.knock.app/signup",
+      "final_url": "https://dashboard.knock.app/signup",
+      "title": "",
+      "category": "trial",
+      "why_selected": "url path contains 'signup'; link text 'sign up s'",
+      "discovered_via": "homepage navigation",
+      "status": null,
+      "ok": false,
+      "error": "blocked by robots.txt",
+      "rendered": false,
+      "word_count": 0,
+      "claim_count": 0
+    },
+    {
+      "url": "https://docs.knock.app/api-reference/overview",
+      "final_url": "https://docs.knock.app/api-reference/overview",
+      "title": "API reference",
+      "category": "docs",
+      "why_selected": "url path contains 'api'; link text 'api reference'; documentation subdomain 'docs.knock.app'",
+      "discovered_via": "linked from docs hub https://docs.knock.app/reference",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 2297,
+      "claim_count": 4
+    },
+    {
+      "url": "https://docs.knock.app/api-reference/overview/rate-limits",
+      "final_url": "https://docs.knock.app/api-reference/overview/rate-limits",
+      "title": "API reference",
+      "category": "limits",
+      "why_selected": "url path contains 'limits'; link text 'rate limits'",
+      "discovered_via": "linked from docs hub https://docs.knock.app/reference",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 2297,
+      "claim_count": 4
+    },
+    {
+      "url": "https://docs.knock.app/api-reference/overview/batch-rate-limits",
+      "final_url": "https://docs.knock.app/api-reference/overview/batch-rate-limits",
+      "title": "API reference",
+      "category": "limits",
+      "why_selected": "url path contains 'limits'; link text 'batch rate limits'",
+      "discovered_via": "linked from docs hub https://docs.knock.app/reference",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 2297,
+      "claim_count": 4
+    },
+    {
+      "url": "https://docs.knock.app/integrations/overview",
+      "final_url": "https://docs.knock.app/integrations/overview",
+      "title": "Integrations overview",
+      "category": "addons",
+      "why_selected": "url path contains 'integrations'; link text 'integrations'",
+      "discovered_via": "linked from docs hub https://docs.knock.app/reference",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 1775,
+      "claim_count": 0
+    },
+    {
+      "url": "https://docs.knock.app/guides/alerting",
+      "final_url": "https://docs.knock.app/tutorials/alerting",
+      "title": "Powering cross-channel configurable alerts with Knock",
+      "category": "help",
+      "why_selected": "url path contains 'guides'; documentation subdomain 'docs.knock.app'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 1799,
+      "claim_count": 0
+    },
+    {
+      "url": "https://docs.knock.app/tutorials/guides-in-vue",
+      "final_url": "https://docs.knock.app/tutorials/guides-in-vue",
+      "title": "Implementing Knock guides in Vue.js",
+      "category": "help",
+      "why_selected": "url path contains 'guides'; documentation subdomain 'docs.knock.app'",
+      "discovered_via": "linked from help hub https://docs.knock.app/guides/alerting",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 775,
+      "claim_count": 1
+    },
+    {
+      "url": "https://docs.knock.app/developer-tools/mcp-server",
+      "final_url": "https://docs.knock.app/ai/mcp-server",
+      "title": "Knock MCP server",
+      "category": "docs",
+      "why_selected": "url path contains 'developer'; documentation subdomain 'docs.knock.app'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 1561,
+      "claim_count": 1
+    },
+    {
+      "url": "https://docs.knock.app/api-reference/users/guides/get_channel",
+      "final_url": "https://docs.knock.app/api-reference/users/guides/get_channel",
+      "title": "Users API reference",
+      "category": "help",
+      "why_selected": "url path contains 'guides'; documentation subdomain 'docs.knock.app'",
+      "discovered_via": "linked from docs hub https://docs.knock.app/reference",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 3894,
+      "claim_count": 3
+    },
+    {
+      "url": "https://knock.app/integrations",
+      "final_url": "https://knock.app/integrations",
+      "title": "Integrations",
+      "category": "addons",
+      "why_selected": "url path contains 'integrations'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 123,
+      "claim_count": 0
+    },
+    {
+      "url": "https://knock.app/compare",
+      "final_url": "https://knock.app/compare",
+      "title": "See how Knock compares",
+      "category": "compare",
+      "why_selected": "url path contains 'compare'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 147,
+      "claim_count": 0
+    },
+    {
+      "url": "https://docs.knock.app/api-reference/objects/list_subscriptions",
+      "final_url": "https://docs.knock.app/api-reference/objects/list_subscriptions",
+      "title": "Objects API reference",
+      "category": "billing_docs",
+      "why_selected": "url path contains 'subscriptions'; link text 'list subscriptions'",
+      "discovered_via": "linked from docs hub https://docs.knock.app/reference",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 2530,
+      "claim_count": 0
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://dashboard.knock.app/signup",
+      "category": "trial",
+      "reason": "blocked by robots.txt"
+    }
+  ],
+  "claims": [
+    {
+      "kind": "plan_price",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "per For testing and evaluation, or small-scale deployments. $ 0 / month 10K messages Includes messages sent from workflows and broadcasts. 500 guide acti",
+      "plan": "developer",
+      "plan_raw": "Developer",
+      "data": {
+        "amount": 0.0,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": false,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$ 0",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "I agent credits Credits consumed by AI agent function. then $.01 per credit Unlimited notification workflows Unlimited broadcasts Unlimited delivery chann",
+      "plan": "developer",
+      "plan_raw": "Developer",
+      "data": {
+        "amount": 0.01,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": false,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$.01",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "teams looking to start scaling cross-channel notifications. $ 250 / month 50K messages Includes messages sent from workflows and broadcasts. Prepaid usage,",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "amount": 250.0,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": false,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$ 250",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "ges sent from workflows and broadcasts. Prepaid usage, then $.005 per message. then $.005 per message 2.5K guide active users A user that sees at least on",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "amount": 0.0,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": true,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$.00",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "and broadcasts. Prepaid usage, then $.005 per message. then $.005 per message 2.5K guide active users A user that sees at least one guide in the month. Pr",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "amount": 0.0,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": true,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$.00",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "t sees at least one guide in the month. Prepaid usage, then $.05 per user. then $.05 per user 2,000 AI agent credits Credits consumed by AI agent function",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "amount": 0.05,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": true,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$.05",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "guide in the month. Prepaid usage, then $.05 per user. then $.05 per user 2,000 AI agent credits Credits consumed by AI agent function. then $.01 per cred",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "amount": 0.05,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": true,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$.05",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "plan_price",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "I agent credits Credits consumed by AI agent function. then $.01 per credit Everything in Developer, plus... Remove Knock branding Email client previews G",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "amount": 0.01,
+        "currency": "USD",
+        "period": "month",
+        "per_seat": true,
+        "billed_annually": false,
+        "billed_monthly": false,
+        "raw": "$.01",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Unlimited notification workflows",
+      "plan": "developer",
+      "plan_raw": "Developer",
+      "data": {
+        "subject": "notification workflows",
+        "metric": "emails",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_phrase"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Unlimited broadcasts",
+      "plan": "developer",
+      "plan_raw": "Developer",
+      "data": {
+        "subject": "broadcasts",
+        "metric": null,
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_phrase"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Unlimited delivery channels",
+      "plan": "developer",
+      "plan_raw": "Developer",
+      "data": {
+        "subject": "delivery channels",
+        "metric": null,
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_phrase"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Unlimited team members",
+      "plan": "developer",
+      "plan_raw": "Developer",
+      "data": {
+        "subject": "team members",
+        "metric": "seats",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_phrase"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Notification channels: Unlimited (Developer $0/mo plan)",
+      "plan": "developer 0 mo",
+      "plan_raw": "Developer $0/mo",
+      "data": {
+        "subject": "Notification channels",
+        "metric": "emails",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Notification channels: Unlimited (Starter $250/mo plan)",
+      "plan": "starter 250 mo",
+      "plan_raw": "Starter $250/mo",
+      "data": {
+        "subject": "Notification channels",
+        "metric": "emails",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Notification channels: Unlimited (Enterprise Contact us plan)",
+      "plan": "enterprise contact us",
+      "plan_raw": "Enterprise Contact us",
+      "data": {
+        "subject": "Notification channels",
+        "metric": "emails",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Team members A team member: Unlimited (Developer $0/mo plan)",
+      "plan": "developer 0 mo",
+      "plan_raw": "Developer $0/mo",
+      "data": {
+        "subject": "Team members A team member",
+        "metric": "seats",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Team members A team member: Unlimited (Starter $250/mo plan)",
+      "plan": "starter 250 mo",
+      "plan_raw": "Starter $250/mo",
+      "data": {
+        "subject": "Team members A team member",
+        "metric": "seats",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Team members A team member: Unlimited (Enterprise Contact us plan)",
+      "plan": "enterprise contact us",
+      "plan_raw": "Enterprise Contact us",
+      "data": {
+        "subject": "Team members A team member",
+        "metric": "seats",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Recipients A recipient is a: Unlimited (Developer $0/mo plan)",
+      "plan": "developer 0 mo",
+      "plan_raw": "Developer $0/mo",
+      "data": {
+        "subject": "Recipients A recipient is a",
+        "metric": null,
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Recipients A recipient is a: Unlimited (Starter $250/mo plan)",
+      "plan": "starter 250 mo",
+      "plan_raw": "Starter $250/mo",
+      "data": {
+        "subject": "Recipients A recipient is a",
+        "metric": null,
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Recipients A recipient is a: Unlimited (Enterprise Contact us plan)",
+      "plan": "enterprise contact us",
+      "plan_raw": "Enterprise Contact us",
+      "data": {
+        "subject": "Recipients A recipient is a",
+        "metric": null,
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Workflow triggers: Unlimited (Developer $0/mo plan)",
+      "plan": "developer 0 mo",
+      "plan_raw": "Developer $0/mo",
+      "data": {
+        "subject": "Workflow triggers",
+        "metric": "integrations",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Workflow triggers: Unlimited (Starter $250/mo plan)",
+      "plan": "starter 250 mo",
+      "plan_raw": "Starter $250/mo",
+      "data": {
+        "subject": "Workflow triggers",
+        "metric": "integrations",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Workflow triggers: Unlimited (Enterprise Contact us plan)",
+      "plan": "enterprise contact us",
+      "plan_raw": "Enterprise Contact us",
+      "data": {
+        "subject": "Workflow triggers",
+        "metric": "integrations",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Feeds per recipient Create as: Unlimited (Developer $0/mo plan)",
+      "plan": "developer 0 mo",
+      "plan_raw": "Developer $0/mo",
+      "data": {
+        "subject": "Feeds per recipient Create as",
+        "metric": null,
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Feeds per recipient Create as: Unlimited (Starter $250/mo plan)",
+      "plan": "starter 250 mo",
+      "plan_raw": "Starter $250/mo",
+      "data": {
+        "subject": "Feeds per recipient Create as",
+        "metric": null,
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Feeds per recipient Create as: Unlimited (Enterprise Contact us plan)",
+      "plan": "enterprise contact us",
+      "plan_raw": "Enterprise Contact us",
+      "data": {
+        "subject": "Feeds per recipient Create as",
+        "metric": null,
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Feed retention The number of: Unlimited (Developer $0/mo plan)",
+      "plan": "developer 0 mo",
+      "plan_raw": "Developer $0/mo",
+      "data": {
+        "subject": "Feed retention The number of",
+        "metric": "retention",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Feed retention The number of: Unlimited (Starter $250/mo plan)",
+      "plan": "starter 250 mo",
+      "plan_raw": "Starter $250/mo",
+      "data": {
+        "subject": "Feed retention The number of",
+        "metric": "retention",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Feed retention The number of: Unlimited (Enterprise Contact us plan)",
+      "plan": "enterprise contact us",
+      "plan_raw": "Enterprise Contact us",
+      "data": {
+        "subject": "Feed retention The number of",
+        "metric": "retention",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Unlimited guides Create as many: Unlimited (Developer $0/mo plan)",
+      "plan": "developer 0 mo",
+      "plan_raw": "Developer $0/mo",
+      "data": {
+        "subject": "Unlimited guides Create as many",
+        "metric": null,
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Unlimited guides Create as many: Unlimited (Starter $250/mo plan)",
+      "plan": "starter 250 mo",
+      "plan_raw": "Starter $250/mo",
+      "data": {
+        "subject": "Unlimited guides Create as many",
+        "metric": null,
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Unlimited guides Create as many: Unlimited (Enterprise Contact us plan)",
+      "plan": "enterprise contact us",
+      "plan_raw": "Enterprise Contact us",
+      "data": {
+        "subject": "Unlimited guides Create as many",
+        "metric": null,
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Isolated environments Create as many: Unlimited (Developer $0/mo plan)",
+      "plan": "developer 0 mo",
+      "plan_raw": "Developer $0/mo",
+      "data": {
+        "subject": "Isolated environments Create as many",
+        "metric": "projects",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Isolated environments Create as many: Unlimited (Starter $250/mo plan)",
+      "plan": "starter 250 mo",
+      "plan_raw": "Starter $250/mo",
+      "data": {
+        "subject": "Isolated environments Create as many",
+        "metric": "projects",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Isolated environments Create as many: Unlimited (Enterprise Contact us plan)",
+      "plan": "enterprise contact us",
+      "plan_raw": "Enterprise Contact us",
+      "data": {
+        "subject": "Isolated environments Create as many",
+        "metric": "projects",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "30-day retention",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "retention",
+        "value": 30.0,
+        "unit": "day",
+        "limit_kind": "quantity",
+        "subject": "retention",
+        "window": null,
+        "page_is_reference": false
+      },
+      "extractor": "retention_limit"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "90-day retention",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "retention",
+        "value": 90.0,
+        "unit": "day",
+        "limit_kind": "quantity",
+        "subject": "retention",
+        "window": null,
+        "page_is_reference": false
+      },
+      "extractor": "retention_limit"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "If you don't already have Knock guides included in your enterprise agreement, you'll have the same guides limit as our Starter plan: 2,500 active users a month. When you exceed that limit, we'll ask you to get in touch to add guides to your enterprise agreement.",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "metric": "seats",
+        "value": 2500.0,
+        "unit": "count",
+        "limit_kind": "quantity",
+        "subject": "active users a month",
+        "window": null,
+        "page_is_reference": false
+      },
+      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Developer plan includes: Unlimited notification workflows",
+      "plan": "developer",
+      "plan_raw": "Developer",
+      "data": {
+        "feature": "Unlimited notification workflows",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Developer plan includes: Unlimited broadcasts",
+      "plan": "developer",
+      "plan_raw": "Developer",
+      "data": {
+        "feature": "Unlimited broadcasts",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Developer plan includes: Unlimited delivery channels",
+      "plan": "developer",
+      "plan_raw": "Developer",
+      "data": {
+        "feature": "Unlimited delivery channels",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Developer plan includes: Unlimited team members",
+      "plan": "developer",
+      "plan_raw": "Developer",
+      "data": {
+        "feature": "Unlimited team members",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Developer plan includes: Batch and delay notifications",
+      "plan": "developer",
+      "plan_raw": "Developer",
+      "data": {
+        "feature": "Batch and delay notifications",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Developer plan includes: Built-in multi-tenancy",
+      "plan": "developer",
+      "plan_raw": "Developer",
+      "data": {
+        "feature": "Built-in multi-tenancy",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Developer plan includes: SSO via Google",
+      "plan": "developer",
+      "plan_raw": "Developer",
+      "data": {
+        "feature": "SSO via Google",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Starter plan includes: Everything in Developer, plus...",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "feature": "Everything in Developer, plus...",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Starter plan includes: Remove Knock branding",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "feature": "Remove Knock branding",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "Starter plan includes: Email client previews",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "feature": "Email client previews",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_card_bullet"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "We do! But only on our enterprise plan. You can get in touch with us if you're interested.",
+      "plan": "our enterprise",
+      "plan_raw": "our enterprise",
+      "data": {
+        "feature": "We do! But",
+        "page_is_reference": false
+      },
+      "extractor": "prose_entitlement"
+    },
+    {
+      "kind": "plan_mention",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "pricing page heading 'Developer'",
+      "plan": "developer",
+      "plan_raw": "Developer",
+      "data": {
+        "source": "heading",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_heading"
+    },
+    {
+      "kind": "plan_mention",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "pricing page heading 'Starter'",
+      "plan": "starter",
+      "plan_raw": "Starter",
+      "data": {
+        "source": "heading",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_heading"
+    },
+    {
+      "kind": "plan_mention",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "pricing page heading 'Enterprise'",
+      "plan": "enterprise",
+      "plan_raw": "Enterprise",
+      "data": {
+        "source": "heading",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_heading"
+    },
+    {
+      "kind": "plan_mention",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "comparison table column 'Developer $0/mo'",
+      "plan": "developer 0 mo",
+      "plan_raw": "Developer $0/mo",
+      "data": {
+        "source": "table",
+        "page_is_reference": false
+      },
+      "extractor": "comparison_table"
+    },
+    {
+      "kind": "plan_mention",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "comparison table column 'Starter $250/mo'",
+      "plan": "starter 250 mo",
+      "plan_raw": "Starter $250/mo",
+      "data": {
+        "source": "table",
+        "page_is_reference": false
+      },
+      "extractor": "comparison_table"
+    },
+    {
+      "kind": "plan_mention",
+      "page_url": "https://knock.app/pricing",
+      "page_title": "Pricing that scales with you",
+      "page_category": "pricing",
+      "evidence": "comparison table column 'Enterprise Contact us'",
+      "plan": "enterprise contact us",
+      "plan_raw": "Enterprise Contact us",
+      "data": {
+        "source": "table",
+        "page_is_reference": false
+      },
+      "extractor": "comparison_table"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://docs.knock.app/api-reference/users/list_subscriptions",
+      "page_title": "Users API reference",
+      "page_category": "billing_docs",
+      "evidence": "Retrieve a paginated list of users in the environment. Defaults to 50 users per page.",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "seats",
+        "value": 50.0,
+        "unit": "count",
+        "limit_kind": "quantity",
+        "subject": "users",
+        "window": null,
+        "page_is_reference": true
+      },
+      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://docs.knock.app/api-reference/users/list_subscriptions",
+      "page_title": "Users API reference",
+      "page_category": "billing_docs",
+      "evidence": "Identifies multiple users in a single operation. Allows creating or updating up to 1,000 users in a single batch with various properties, preferences, and channel data.",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "seats",
+        "value": 1000.0,
+        "unit": "count",
+        "limit_kind": "quantity",
+        "subject": "users",
+        "window": null,
+        "page_is_reference": true
+      },
+      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://docs.knock.app/api-reference/users/list_subscriptions",
+      "page_title": "Users API reference",
+      "page_category": "billing_docs",
+      "evidence": "The locale to render the feed items in. Must be in the IETF 5646 format (e.g. en-US ). When not provided, will default to the locale that the feed items were rendered in. Only available for enterprise plan customers using custom translations.",
+      "plan": "enterprise",
+      "plan_raw": "enterprise",
+      "data": {
+        "feature": "n the IETF 5646 format (e.g. en-US ). When not provided, will default to the locale that the feed items were rendered in",
+        "page_is_reference": true
+      },
+      "extractor": "prose_entitlement"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://docs.knock.app/reference",
+      "page_title": "API reference",
+      "page_category": "docs",
+      "evidence": "60 requests / second",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "api_requests",
+        "value": 60.0,
+        "unit": "count",
+        "limit_kind": "rate",
+        "subject": "requests",
+        "window": "second",
+        "page_is_reference": true
+      },
+      "extractor": "rate_limit"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://docs.knock.app/reference",
+      "page_title": "API reference",
+      "page_category": "docs",
+      "evidence": "200 requests / second",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "api_requests",
+        "value": 200.0,
+        "unit": "count",
+        "limit_kind": "rate",
+        "subject": "requests",
+        "window": "second",
+        "page_is_reference": true
+      },
+      "extractor": "rate_limit"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://docs.knock.app/reference",
+      "page_title": "API reference",
+      "page_category": "docs",
+      "evidence": "1,000 requests / second",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "api_requests",
+        "value": 1000.0,
+        "unit": "count",
+        "limit_kind": "rate",
+        "subject": "requests",
+        "window": "second",
+        "page_is_reference": true
+      },
+      "extractor": "rate_limit"
+    },
+    {
+      "kind": "condition",
+      "page_url": "https://docs.knock.app/reference",
+      "page_title": "API reference",
+      "page_category": "docs",
+      "evidence": "If you're concerned about exceeding a Knock rate limit, please contact us and we can help figure out a usage rate that's right for your specific needs.",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "condition": "contact_sales",
+        "description": "pricing only available by contacting sales",
+        "page_is_reference": true
+      },
+      "extractor": "condition_contact_sales"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://docs.knock.app/api-reference/overview",
+      "page_title": "API reference",
+      "page_category": "docs",
+      "evidence": "60 requests / second",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "api_requests",
+        "value": 60.0,
+        "unit": "count",
+        "limit_kind": "rate",
+        "subject": "requests",
+        "window": "second",
+        "page_is_reference": true
+      },
+      "extractor": "rate_limit"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://docs.knock.app/api-reference/overview",
+      "page_title": "API reference",
+      "page_category": "docs",
+      "evidence": "200 requests / second",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "api_requests",
+        "value": 200.0,
+        "unit": "count",
+        "limit_kind": "rate",
+        "subject": "requests",
+        "window": "second",
+        "page_is_reference": true
+      },
+      "extractor": "rate_limit"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://docs.knock.app/api-reference/overview",
+      "page_title": "API reference",
+      "page_category": "docs",
+      "evidence": "1,000 requests / second",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "api_requests",
+        "value": 1000.0,
+        "unit": "count",
+        "limit_kind": "rate",
+        "subject": "requests",
+        "window": "second",
+        "page_is_reference": true
+      },
+      "extractor": "rate_limit"
+    },
+    {
+      "kind": "condition",
+      "page_url": "https://docs.knock.app/api-reference/overview",
+      "page_title": "API reference",
+      "page_category": "docs",
+      "evidence": "If you're concerned about exceeding a Knock rate limit, please contact us and we can help figure out a usage rate that's right for your specific needs.",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "condition": "contact_sales",
+        "description": "pricing only available by contacting sales",
+        "page_is_reference": true
+      },
+      "extractor": "condition_contact_sales"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://docs.knock.app/api-reference/overview/rate-limits",
+      "page_title": "API reference",
+      "page_category": "limits",
+      "evidence": "60 requests / second",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "api_requests",
+        "value": 60.0,
+        "unit": "count",
+        "limit_kind": "rate",
+        "subject": "requests",
+        "window": "second",
+        "page_is_reference": true
+      },
+      "extractor": "rate_limit"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://docs.knock.app/api-reference/overview/rate-limits",
+      "page_title": "API reference",
+      "page_category": "limits",
+      "evidence": "200 requests / second",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "api_requests",
+        "value": 200.0,
+        "unit": "count",
+        "limit_kind": "rate",
+        "subject": "requests",
+        "window": "second",
+        "page_is_reference": true
+      },
+      "extractor": "rate_limit"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://docs.knock.app/api-reference/overview/rate-limits",
+      "page_title": "API reference",
+      "page_category": "limits",
+      "evidence": "1,000 requests / second",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "api_requests",
+        "value": 1000.0,
+        "unit": "count",
+        "limit_kind": "rate",
+        "subject": "requests",
+        "window": "second",
+        "page_is_reference": true
+      },
+      "extractor": "rate_limit"
+    },
+    {
+      "kind": "condition",
+      "page_url": "https://docs.knock.app/api-reference/overview/rate-limits",
+      "page_title": "API reference",
+      "page_category": "limits",
+      "evidence": "If you're concerned about exceeding a Knock rate limit, please contact us and we can help figure out a usage rate that's right for your specific needs.",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "condition": "contact_sales",
+        "description": "pricing only available by contacting sales",
+        "page_is_reference": true
+      },
+      "extractor": "condition_contact_sales"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://docs.knock.app/api-reference/overview/batch-rate-limits",
+      "page_title": "API reference",
+      "page_category": "limits",
+      "evidence": "60 requests / second",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "api_requests",
+        "value": 60.0,
+        "unit": "count",
+        "limit_kind": "rate",
+        "subject": "requests",
+        "window": "second",
+        "page_is_reference": true
+      },
+      "extractor": "rate_limit"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://docs.knock.app/api-reference/overview/batch-rate-limits",
+      "page_title": "API reference",
+      "page_category": "limits",
+      "evidence": "200 requests / second",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "api_requests",
+        "value": 200.0,
+        "unit": "count",
+        "limit_kind": "rate",
+        "subject": "requests",
+        "window": "second",
+        "page_is_reference": true
+      },
+      "extractor": "rate_limit"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://docs.knock.app/api-reference/overview/batch-rate-limits",
+      "page_title": "API reference",
+      "page_category": "limits",
+      "evidence": "1,000 requests / second",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "api_requests",
+        "value": 1000.0,
+        "unit": "count",
+        "limit_kind": "rate",
+        "subject": "requests",
+        "window": "second",
+        "page_is_reference": true
+      },
+      "extractor": "rate_limit"
+    },
+    {
+      "kind": "condition",
+      "page_url": "https://docs.knock.app/api-reference/overview/batch-rate-limits",
+      "page_title": "API reference",
+      "page_category": "limits",
+      "evidence": "If you're concerned about exceeding a Knock rate limit, please contact us and we can help figure out a usage rate that's right for your specific needs.",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "condition": "contact_sales",
+        "description": "pricing only available by contacting sales",
+        "page_is_reference": true
+      },
+      "extractor": "condition_contact_sales"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://docs.knock.app/tutorials/guides-in-vue",
+      "page_title": "Implementing Knock guides in Vue.js",
+      "page_category": "help",
+      "evidence": "A Vue.js 3 project",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "projects",
+        "value": 3.0,
+        "unit": "count",
+        "limit_kind": "quantity",
+        "subject": "project",
+        "window": null,
+        "page_is_reference": true
+      },
+      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
+    },
+    {
+      "kind": "condition",
+      "page_url": "https://docs.knock.app/developer-tools/mcp-server",
+      "page_title": "Knock MCP server",
+      "page_category": "docs",
+      "evidence": "To opt into this behavior, contact us or refer to your MCP client's tool configuration options.",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "condition": "contact_sales",
+        "description": "pricing only available by contacting sales",
+        "page_is_reference": false
+      },
+      "extractor": "condition_contact_sales"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://docs.knock.app/api-reference/users/guides/get_channel",
+      "page_title": "Users API reference",
+      "page_category": "help",
+      "evidence": "Retrieve a paginated list of users in the environment. Defaults to 50 users per page.",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "seats",
+        "value": 50.0,
+        "unit": "count",
+        "limit_kind": "quantity",
+        "subject": "users",
+        "window": null,
+        "page_is_reference": true
+      },
+      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://docs.knock.app/api-reference/users/guides/get_channel",
+      "page_title": "Users API reference",
+      "page_category": "help",
+      "evidence": "Identifies multiple users in a single operation. Allows creating or updating up to 1,000 users in a single batch with various properties, preferences, and channel data.",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "seats",
+        "value": 1000.0,
+        "unit": "count",
+        "limit_kind": "quantity",
+        "subject": "users",
+        "window": null,
+        "page_is_reference": true
+      },
+      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://docs.knock.app/api-reference/users/guides/get_channel",
+      "page_title": "Users API reference",
+      "page_category": "help",
+      "evidence": "The locale to render the feed items in. Must be in the IETF 5646 format (e.g. en-US ). When not provided, will default to the locale that the feed items were rendered in. Only available for enterprise plan customers using custom translations.",
+      "plan": "enterprise",
+      "plan_raw": "enterprise",
+      "data": {
+        "feature": "n the IETF 5646 format (e.g. en-US ). When not provided, will default to the locale that the feed items were rendered in",
+        "page_is_reference": true
+      },
+      "extractor": "prose_entitlement"
+    }
+  ],
+  "findings": [
+    {
+      "rule": "limit_conflict",
+      "kind": "ambiguity",
+      "severity": "medium",
+      "confidence": "low",
+      "headline": "Two different allowances are published for API requests",
+      "explanation": "API reference states 60 per second and API reference states 200 per second for API requests. Neither figure is tied to a named plan, so a customer cannot work out which applies to them.",
+      "claim_a": "60 API requests per second (no specific plan)",
+      "claim_b": "200 API requests per second (no specific plan)",
+      "evidence_a": {
+        "url": "https://docs.knock.app/reference",
+        "page_title": "API reference",
+        "page_category": "docs",
+        "quote": "60 requests / second"
+      },
+      "evidence_b": {
+        "url": "https://docs.knock.app/api-reference/overview",
+        "page_title": "API reference",
+        "page_category": "docs",
+        "quote": "200 requests / second"
+      },
+      "caveat": "The two numbers may be scoped to different plans or to different objects (per workspace vs per account). Treat this as a prompt to check, not proof.",
+      "tags": [
+        "limit",
+        "api_requests"
+      ],
+      "score": 2.0
+    }
+  ],
+  "discovery_notes": [],
+  "pricing_urls": [
+    "https://knock.app/pricing"
+  ],
+  "stats": {
+    "pages_selected": 16,
+    "pages_fetched_ok": 16,
+    "pages_failed": 1,
+    "pages_js_rendered": 0,
+    "urls_considered": 19,
+    "claims": 80,
+    "claims_by_kind": {
+      "unlimited": 28,
+      "limit": 20,
+      "entitlement": 13,
+      "plan_price": 8,
+      "plan_mention": 6,
+      "condition": 5
+    },
+    "findings": 1,
+    "findings_by_severity": {
+      "medium": 1
+    },
+    "findings_by_confidence": {
+      "low": 1
+    },
+    "findings_by_kind": {
+      "ambiguity": 1
+    },
+    "fetcher": {
+      "network": 1,
+      "cache": 20,
+      "rendered": 0,
+      "blocked": 1,
+      "failed": 1
+    }
+  }
+}

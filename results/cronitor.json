@@ -1,0 +1,708 @@
+{
+  "company": "Cronitor",
+  "root_url": "https://cronitor.io/",
+  "domain": "cronitor.io",
+  "started_at": "2026-09-02 07:46:13 UTC",
+  "duration_seconds": 2.0,
+  "pages": [
+    {
+      "url": "https://cronitor.io/pricing",
+      "final_url": "https://cronitor.io/pricing",
+      "title": "Simple Pricing",
+      "category": "pricing",
+      "why_selected": "url path contains 'pricing'; link text 'pricing'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 360,
+      "claim_count": 22
+    },
+    {
+      "url": "https://cronitor.io/sign-up",
+      "final_url": "https://cronitor.io/sign-up",
+      "title": "Monitoring made for developers.",
+      "category": "trial",
+      "why_selected": "url path contains 'sign-up'; link text 'get started'",
+      "discovered_via": "linked from pricing page https://cronitor.io/pricing",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 127,
+      "claim_count": 1
+    },
+    {
+      "url": "https://cronitor.io/sign-up?flow=trial&plan=metered&billing_frequency=month",
+      "final_url": "https://cronitor.io/sign-up?flow=trial&plan=metered&billing_frequency=month",
+      "title": "Start your free trial",
+      "category": "trial",
+      "why_selected": "url path contains 'sign-up'; link text 'start free trial'",
+      "discovered_via": "linked from pricing page https://cronitor.io/pricing",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 181,
+      "claim_count": 2
+    },
+    {
+      "url": "https://cronitor.io/docs/integrations",
+      "final_url": "https://cronitor.io/docs/integrations",
+      "title": "Integrations",
+      "category": "addons",
+      "why_selected": "url path contains 'integrations'; link text 'integrations'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 253,
+      "claim_count": 0
+    },
+    {
+      "url": "https://cronitor.io/help",
+      "final_url": "https://cronitor.io/help",
+      "title": "We're here to help.",
+      "category": "help",
+      "why_selected": "url path contains 'help'; link text 'support'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 125,
+      "claim_count": 0
+    },
+    {
+      "url": "https://cronitor.io/docs",
+      "final_url": "https://cronitor.io/docs",
+      "title": "Cronitor Developer Docs",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text 'developers'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 260,
+      "claim_count": 0
+    },
+    {
+      "url": "https://cronitor.io/docs/api",
+      "final_url": "https://cronitor.io/docs/api",
+      "title": "Cronitor API Docs",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'; link text 'api docs'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 675,
+      "claim_count": 1
+    },
+    {
+      "url": "https://cronitor.io/terms",
+      "final_url": "https://cronitor.io/terms",
+      "title": "",
+      "category": "terms",
+      "why_selected": "url path contains 'terms'; link text 'terms & conditions'",
+      "discovered_via": "homepage navigation",
+      "status": null,
+      "ok": false,
+      "error": "blocked by robots.txt",
+      "rendered": false,
+      "word_count": 0,
+      "claim_count": 0
+    },
+    {
+      "url": "https://cronitor.io/guides",
+      "final_url": "https://cronitor.io/guides",
+      "title": "Cronitor Developer Guides",
+      "category": "help",
+      "why_selected": "url path contains 'guides'",
+      "discovered_via": "linked from docs hub https://cronitor.io/docs",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 839,
+      "claim_count": 1
+    },
+    {
+      "url": "https://cronitor.io/guides/where-are-cron-logs-stored",
+      "final_url": "https://cronitor.io/guides/where-are-cron-logs-stored",
+      "title": "How to find and read crontab logs",
+      "category": "help",
+      "why_selected": "url path contains 'guides'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 338,
+      "claim_count": 0
+    },
+    {
+      "url": "https://cronitor.io/docs/sdks",
+      "final_url": "https://cronitor.io/docs/sdks",
+      "title": "SDKs & Agents",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 209,
+      "claim_count": 0
+    },
+    {
+      "url": "https://cronitor.io/faq",
+      "final_url": "https://cronitor.io/faq",
+      "title": "",
+      "category": "faq",
+      "why_selected": "url path contains 'faq' (guessed conventional path, not linked)",
+      "discovered_via": "conventional path guess",
+      "status": 404,
+      "ok": false,
+      "error": "HTTP 404",
+      "rendered": false,
+      "word_count": 0,
+      "claim_count": 0
+    },
+    {
+      "url": "https://cronitor.io/docs/saml-sso",
+      "final_url": "https://cronitor.io/docs/saml-sso",
+      "title": "Configuring SAML SSO",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'",
+      "discovered_via": "homepage navigation",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 701,
+      "claim_count": 1
+    },
+    {
+      "url": "https://cronitor.io/docs/cron-job-monitoring",
+      "final_url": "https://cronitor.io/docs/cron-job-monitoring",
+      "title": "[Cron] Job Monitoring",
+      "category": "docs",
+      "why_selected": "url path contains 'docs'",
+      "discovered_via": "linked from docs hub https://cronitor.io/docs",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 697,
+      "claim_count": 0
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://cronitor.io/terms",
+      "category": "terms",
+      "reason": "blocked by robots.txt"
+    },
+    {
+      "url": "https://cronitor.io/faq",
+      "category": "faq",
+      "reason": "HTTP 404"
+    }
+  ],
+  "claims": [
+    {
+      "kind": "trial",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "The Business plan starts with a 14 day free trial \u2014 then pay monthly based on your actual usage.",
+      "plan": "business",
+      "plan_raw": "Business",
+      "data": {
+        "days": 14,
+        "card_required": false,
+        "no_card": false,
+        "page_is_reference": false
+      },
+      "extractor": "trial_length"
+    },
+    {
+      "kind": "trial",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "14 day free trial, then pay only for the monitors and users you have.",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "days": 14,
+        "card_required": false,
+        "no_card": false,
+        "page_is_reference": false
+      },
+      "extractor": "trial_length"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "Unlimited API requests",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "subject": "API requests",
+        "metric": "api_requests",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_phrase"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "Status pages: Unlimited (Enterprise plan)",
+      "plan": "enterprise",
+      "plan_raw": "Enterprise",
+      "data": {
+        "subject": "Status pages",
+        "metric": null,
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "unlimited",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "Included subscribers: Unlimited (Enterprise plan)",
+      "plan": "enterprise",
+      "plan_raw": "Enterprise",
+      "data": {
+        "subject": "Included subscribers",
+        "metric": "contacts",
+        "page_is_reference": false
+      },
+      "extractor": "unlimited_table"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "All 11 alert integrations",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "integrations",
+        "value": 11.0,
+        "unit": "count",
+        "limit_kind": "quantity",
+        "subject": "alert integrations",
+        "window": null,
+        "page_is_reference": false
+      },
+      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "6 month data retention",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "retention",
+        "value": 6.0,
+        "unit": "month",
+        "limit_kind": "quantity",
+        "subject": "data retention",
+        "window": null,
+        "page_is_reference": false
+      },
+      "extractor": "retention_limit"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "Included subscribers: 500 (Business plan)",
+      "plan": "business",
+      "plan_raw": "Business",
+      "data": {
+        "metric": "contacts",
+        "value": 500.0,
+        "unit": "count",
+        "limit_kind": "quantity",
+        "subject": "Included subscribers",
+        "window": null,
+        "page_is_reference": false
+      },
+      "extractor": "comparison_table"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "Email and chat alerts Slack, Discord, Teams, webhooks: included in Business",
+      "plan": "business",
+      "plan_raw": "Business",
+      "data": {
+        "feature": "Email and chat alerts Slack, Discord, Teams, webhooks",
+        "page_is_reference": false
+      },
+      "extractor": "comparison_table"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "Email and chat alerts Slack, Discord, Teams, webhooks: included in Enterprise",
+      "plan": "enterprise",
+      "plan_raw": "Enterprise",
+      "data": {
+        "feature": "Email and chat alerts Slack, Discord, Teams, webhooks",
+        "page_is_reference": false
+      },
+      "extractor": "comparison_table"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "SMS alerts: included in Business",
+      "plan": "business",
+      "plan_raw": "Business",
+      "data": {
+        "feature": "SMS alerts",
+        "page_is_reference": false
+      },
+      "extractor": "comparison_table"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "SMS alerts: included in Enterprise",
+      "plan": "enterprise",
+      "plan_raw": "Enterprise",
+      "data": {
+        "feature": "SMS alerts",
+        "page_is_reference": false
+      },
+      "extractor": "comparison_table"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "On-call integrations PagerDuty, Datadog On-Call, OpsGenie, Splunk On-Call: included in Business",
+      "plan": "business",
+      "plan_raw": "Business",
+      "data": {
+        "feature": "On-call integrations PagerDuty, Datadog On-Call, OpsGenie, Splunk On-Call",
+        "page_is_reference": false
+      },
+      "extractor": "comparison_table"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "On-call integrations PagerDuty, Datadog On-Call, OpsGenie, Splunk On-Call: included in Enterprise",
+      "plan": "enterprise",
+      "plan_raw": "Enterprise",
+      "data": {
+        "feature": "On-call integrations PagerDuty, Datadog On-Call, OpsGenie, Splunk On-Call",
+        "page_is_reference": false
+      },
+      "extractor": "comparison_table"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "SAML single sign-on: included in Enterprise",
+      "plan": "enterprise",
+      "plan_raw": "Enterprise",
+      "data": {
+        "feature": "SAML single sign-on",
+        "page_is_reference": false
+      },
+      "extractor": "comparison_table"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "Admin, user and read-only roles: included in Business",
+      "plan": "business",
+      "plan_raw": "Business",
+      "data": {
+        "feature": "Admin, user and read-only roles",
+        "page_is_reference": false
+      },
+      "extractor": "comparison_table"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "Admin, user and read-only roles: included in Enterprise",
+      "plan": "enterprise",
+      "plan_raw": "Enterprise",
+      "data": {
+        "feature": "Admin, user and read-only roles",
+        "page_is_reference": false
+      },
+      "extractor": "comparison_table"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "SCIM provisioning: included in Business",
+      "plan": "business",
+      "plan_raw": "Business",
+      "data": {
+        "feature": "SCIM provisioning",
+        "page_is_reference": false
+      },
+      "extractor": "comparison_table"
+    },
+    {
+      "kind": "entitlement",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "SCIM provisioning: included in Enterprise",
+      "plan": "enterprise",
+      "plan_raw": "Enterprise",
+      "data": {
+        "feature": "SCIM provisioning",
+        "page_is_reference": false
+      },
+      "extractor": "comparison_table"
+    },
+    {
+      "kind": "plan_mention",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "pricing page heading 'COMPANY'",
+      "plan": "company",
+      "plan_raw": "COMPANY",
+      "data": {
+        "source": "heading",
+        "page_is_reference": false
+      },
+      "extractor": "pricing_heading"
+    },
+    {
+      "kind": "plan_mention",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "comparison table column 'Business'",
+      "plan": "business",
+      "plan_raw": "Business",
+      "data": {
+        "source": "table",
+        "page_is_reference": false
+      },
+      "extractor": "comparison_table"
+    },
+    {
+      "kind": "plan_mention",
+      "page_url": "https://cronitor.io/pricing",
+      "page_title": "Simple Pricing",
+      "page_category": "pricing",
+      "evidence": "comparison table column 'Enterprise'",
+      "plan": "enterprise",
+      "plan_raw": "Enterprise",
+      "data": {
+        "source": "table",
+        "page_is_reference": false
+      },
+      "extractor": "comparison_table"
+    },
+    {
+      "kind": "trial",
+      "page_url": "https://cronitor.io/sign-up",
+      "page_title": "Monitoring made for developers.",
+      "page_category": "trial",
+      "evidence": "FREE PLAN 5 monitors, no credit card, and no trial clock.",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "days": null,
+        "no_card": true,
+        "page_is_reference": false
+      },
+      "extractor": "trial_no_card"
+    },
+    {
+      "kind": "trial",
+      "page_url": "https://cronitor.io/sign-up?flow=trial&plan=metered&billing_frequency=month",
+      "page_title": "Start your free trial",
+      "page_category": "trial",
+      "evidence": "Start your free trial",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "days": null,
+        "page_is_reference": false
+      },
+      "extractor": "trial_unspecified"
+    },
+    {
+      "kind": "trial",
+      "page_url": "https://cronitor.io/sign-up?flow=trial&plan=metered&billing_frequency=month",
+      "page_title": "Start your free trial",
+      "page_category": "trial",
+      "evidence": "FREE PLAN 5 monitors, no credit card, and no trial clock.",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "days": null,
+        "no_card": true,
+        "page_is_reference": false
+      },
+      "extractor": "trial_no_card"
+    },
+    {
+      "kind": "condition",
+      "page_url": "https://cronitor.io/docs/api",
+      "page_title": "Cronitor API Docs",
+      "page_category": "docs",
+      "evidence": "The API has rate limits to ensure fair usage.",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "condition": "fair_use",
+        "description": "a fair-use or acceptable-use restriction",
+        "page_is_reference": false
+      },
+      "extractor": "condition_fair_use"
+    },
+    {
+      "kind": "limit",
+      "page_url": "https://cronitor.io/guides",
+      "page_title": "Cronitor Developer Guides",
+      "page_category": "help",
+      "evidence": "5 Incident Communication Templates",
+      "plan": null,
+      "plan_raw": null,
+      "data": {
+        "metric": "documents",
+        "value": 5.0,
+        "unit": "count",
+        "limit_kind": "quantity",
+        "subject": "Incident Communication Templates",
+        "window": null,
+        "page_is_reference": false
+      },
+      "extractor": "\\b(?P<num>\\d{1,3}(?:,\\d{"
+    },
+    {
+      "kind": "plan_mention",
+      "page_url": "https://cronitor.io/docs/saml-sso",
+      "page_title": "Configuring SAML SSO",
+      "page_category": "docs",
+      "evidence": "Note: If the button is disabled, ensure your team is subscribed to the Business plan.",
+      "plan": "business",
+      "plan_raw": "Business",
+      "data": {
+        "source": "prose",
+        "page_is_reference": false
+      },
+      "extractor": "prose_mention"
+    }
+  ],
+  "findings": [
+    {
+      "rule": "unlimited_vs_fair_use",
+      "kind": "ambiguity",
+      "severity": "medium",
+      "confidence": "high",
+      "headline": "\u201cUnlimited\u201d is advertised, but a fair-use restriction is buried on another page",
+      "explanation": "Your commercial pages advertise unlimited API requests, while a separate page qualifies usage with a fair-use or acceptable-use restriction. A customer deciding on price never sees the qualifier; a customer who hits it experiences it as a broken promise.",
+      "claim_a": "Unlimited API requests (no specific plan)",
+      "claim_b": "Usage is subject to a fair-use / acceptable-use restriction",
+      "evidence_a": {
+        "url": "https://cronitor.io/pricing",
+        "page_title": "Simple Pricing",
+        "page_category": "pricing",
+        "quote": "Unlimited API requests"
+      },
+      "evidence_b": {
+        "url": "https://cronitor.io/docs/api",
+        "page_title": "Cronitor API Docs",
+        "page_category": "docs",
+        "quote": "The API has rate limits to ensure fair usage."
+      },
+      "caveat": "Fair-use clauses are standard practice. The issue is placement and wording, not the existence of the clause.",
+      "tags": [
+        "unlimited",
+        "fair_use"
+      ],
+      "score": 6.0
+    }
+  ],
+  "discovery_notes": [],
+  "pricing_urls": [
+    "https://cronitor.io/pricing"
+  ],
+  "stats": {
+    "pages_selected": 12,
+    "pages_fetched_ok": 12,
+    "pages_failed": 2,
+    "pages_js_rendered": 0,
+    "urls_considered": 12,
+    "claims": 28,
+    "claims_by_kind": {
+      "entitlement": 11,
+      "trial": 5,
+      "limit": 4,
+      "plan_mention": 4,
+      "unlimited": 3,
+      "condition": 1
+    },
+    "findings": 1,
+    "findings_by_severity": {
+      "medium": 1
+    },
+    "findings_by_confidence": {
+      "high": 1
+    },
+    "findings_by_kind": {
+      "ambiguity": 1
+    },
+    "fetcher": {
+      "network": 2,
+      "cache": 16,
+      "rendered": 0,
+      "blocked": 1,
+      "failed": 2
+    }
+  }
+}

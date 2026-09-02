@@ -12,21 +12,22 @@ from dataclasses import dataclass, field
 from bs4 import BeautifulSoup, NavigableString, Tag
 
 from .claims import (
-    KNOWN_PLAN_WORDS, Claim, normalise_metric, normalise_plan,
+    CUE_REQUIRED_METRICS, KNOWN_PLAN_WORDS, MIN_PLAUSIBLE_ALLOWANCE, Claim,
+    normalise_metric, normalise_plan,
 )
 
 BLOCK_TAGS = {
     "p", "li", "td", "th", "h1", "h2", "h3", "h4", "h5", "h6", "div", "section",
     "article", "figcaption", "dd", "dt", "blockquote", "summary", "label", "caption",
 }
-DROP_TAGS = {"script", "style", "noscript", "svg", "iframe", "template", "head"}
+DROP_TAGS = {"script", "style", "noscript", "svg", "iframe", "template", "head", "pre"}
 
 CURRENCY = {"$": "USD", "€": "EUR", "£": "GBP", "usd": "USD", "eur": "EUR", "gbp": "GBP",
             "us$": "USD", "a$": "AUD", "c$": "CAD", "₹": "INR", "¥": "JPY"}
 
 PRICE_RE = re.compile(
     r"(?P<sym>[$€£₹¥]|\bUSD\b|\bEUR\b|\bGBP\b|\bAUD\b|\bCAD\b)\s?"
-    r"(?P<amt>\d{1,3}(?:,\d{3})*(?:\.\d{1,2})?|\d+(?:\.\d{1,2})?)",
+    r"(?P<amt>\d{1,3}(?:,\d{3})*(?:\.\d{1,2})?|\.\d{1,2}|\d+(?:\.\d{1,2})?)",
     re.I,
 )
 PERIOD_PATTERNS = [
@@ -74,6 +75,15 @@ ALLOWANCE_CUE_RE = re.compile(
     r"\bup\s+to\b|\bincluded?\b|\bincludes\b|\blimit(?:ed|s)?\b|\bmaximum\b|\bmax\.?\b"
     r"|\ballowance\b|\bquota\b|\bper\s+month\b|/\s*month\b|/\s*mo\b|\ba\s+month\b"
     r"|\bmonthly\b|\bcapped\b|\bstarting\s+at\b|\beach\s+month\b|\bat\s+most\b", re.I)
+# Response-time promises, quoted examples and numbered contract clauses all
+# look like allowances to a regex and never are.
+SLA_RE = re.compile(r"within\s+\d+\s*(?:hours?|business\s+days?|days?)\b|response\s+time"
+                    r"|\bSLA\b|reply\s+within|turnaround", re.I)
+QUOTED_EXAMPLE_RE = re.compile(r'^\s*[\"“\'‘]')
+CLAUSE_NUMBER_RE = re.compile(r"^\s*\d+\.\d+[\s.)]")
+HTTP_STATUS_CODES = {400, 401, 402, 403, 404, 405, 409, 410, 422, 429, 500, 502, 503, 504}
+HTTP_CONTEXT_RE = re.compile(r"\bHTTP\b|status\s+code|response|error|too\s+many\s+requests"
+                             r"|unauthorized|forbidden|not\s+found", re.I)
 LEADING_STOPWORD_RE = re.compile(
     r"^(?:with|and|or|for|of|to|in|on|at|by|from|that|which|the|a|an|is|are|was|were|"
     r"times|more|less|other|such)\b", re.I)
@@ -106,7 +116,7 @@ PLAN_MENTION_RE = re.compile(r"\b(?P<plan>[A-Z][A-Za-z+]{2,18})\s+(?:plan|tier|e
 # Gating language that never names an actual tier.
 VAGUE_GATE_RE = re.compile(
     r"(?:available\s+(?:on|to|for|with)|requires?|included\s+(?:in|with)|only\s+(?:on|for|in)|"
-    r"upgrade\s+to|reserved\s+for)\s+(?:a\s+|an\s+|our\s+|the\s+|any\s+)?"
+    r"reserved\s+for)\s+(?:a\s+|an\s+|our\s+|the\s+|any\s+)?"
     r"(?P<gate>paid|premium|higher|upgraded|advanced|certain|selected|eligible|some)\s+"
     r"(?:plans?|tiers?|subscriptions?|accounts?)", re.I)
 
@@ -115,7 +125,7 @@ CONTACT_SALES_RE = re.compile(r"contact\s+(?:us|sales|our\s+sales)|talk\s+to\s+(
                               r"let'?s\s+talk|custom\s+pricing|book\s+a\s+(?:call|demo)", re.I)
 FAIR_USE_RE = re.compile(r"fair\s+use|fair\s+usage|acceptable\s+use|reasonable\s+use|"
                          r"subject\s+to\s+(?:a\s+)?(?:fair|reasonable|acceptable)", re.I)
-OVERAGE_RE = re.compile(r"overage|over[\s-]?limit|additional\s+(?:usage\s+)?(?:is\s+)?(?:billed|charged)|"
+OVERAGE_RE = re.compile(r"\boverage\b|\bover[\s-]?limit\b|additional\s+(?:usage\s+)?(?:is\s+)?(?:billed|charged)|"
                         r"exceed[s]?\s+(?:your|the)\s+(?:limit|quota|allowance)|"
                         r"charged?\s+(?:\$|€|£)?[\d.]+\s*(?:per|for\s+each)|extra\s+charge", re.I)
 SEAT_MINIMUM_RE = re.compile(r"minimum\s+of\s+(\d{1,3})\s*(?:seats?|users?|licen[cs]es?)|"
@@ -131,6 +141,13 @@ CHECK_MARK_RE = re.compile(r"^\s*(?:✓|✔|✅|●|•|yes|included|included\.|
 CROSS_MARK_RE = re.compile(r"^\s*(?:—|-|–|✗|✕|❌|×|no|not\s+included|n/?a|unavailable|false)\s*$", re.I)
 
 
+REFERENCE_URL_RE = re.compile(
+    r"/api-reference|/reference|/tutorial|/guides?/|/sdk|/quickstart|/examples?|"
+    r"/cookbook|/recipes|/changelog|/migrat|/troubleshoot", re.I)
+REFERENCE_TITLE_RE = re.compile(
+    r"api reference|reference\b|tutorial|quickstart|sdk\b|code example", re.I)
+
+
 @dataclass
 class PageDoc:
     url: str
@@ -140,8 +157,10 @@ class PageDoc:
     text: str = ""
     plan_cards: list[dict] = field(default_factory=list)
     tables: list[dict] = field(default_factory=list)
+    headings: list[str] = field(default_factory=list)
     word_count: int = 0
     rendered: bool = False
+    is_reference: bool = False
 
 
 # ---------------------------------------------------------------- page parse
@@ -150,7 +169,9 @@ def _clean_text(s: str) -> str:
     return " ".join((s or "").replace("\xa0", " ").split())
 
 
-_PHRASE_CUT_RE = re.compile(r"\s+(?:per|for|on|in|with|and|of|to|at|are|is|that|which)\b.*$", re.I)
+_PHRASE_CUT_RE = re.compile(
+    r"\s+(?:per|for|on|in|with|and|of|to|at|are|is|that|which|if|when|unless|so|but|"
+    r"because|where|while|from|by)\b.*$", re.I)
 
 
 def _trim_phrase(s: str, max_words: int = 4) -> str:
@@ -247,7 +268,8 @@ def _extract_plan_cards(soup: BeautifulSoup) -> list[dict]:
             prices.append({
                 "raw": m.group(0),
                 "currency": CURRENCY.get(m.group("sym").lower(), m.group("sym").upper()),
-                "amount": float(m.group("amt").replace(",", "")),
+                "amount": float(("0" + m.group("amt")) if m.group("amt").startswith(".")
+                            else m.group("amt").replace(",", "")),
                 "context": window,
             })
         bullets = [_clean_text(li.get_text(" ", strip=True)) for li in card.find_all("li")]
@@ -255,12 +277,20 @@ def _extract_plan_cards(soup: BeautifulSoup) -> list[dict]:
         cards.append({"plan_raw": name, "text": text, "prices": prices, "bullets": bullets})
     # Drop cards nested inside a bigger card we already captured.
     cards = [c for c in cards if c["plan_raw"]]
-    deduped: list[dict] = []
-    for c in sorted(cards, key=lambda c: len(c["text"])):
-        if any(c["text"] in d["text"] for d in deduped):
+    # Pricing grids nest: the same plan is often captured as a bare heading+price
+    # and again as the full card. Keep the fullest version, which is the one that
+    # carries the "billed yearly / billed monthly" labels.
+    by_plan: dict[str, dict] = {}
+    loose: list[dict] = []
+    for c in cards:
+        key = normalise_plan(c["plan_raw"])
+        if not key:
+            loose.append(c)
             continue
-        deduped.append(c)
-    return deduped
+        prev = by_plan.get(key)
+        if prev is None or len(c["text"]) > len(prev["text"]):
+            by_plan[key] = c
+    return list(by_plan.values()) + loose
 
 
 def _extract_tables(soup: BeautifulSoup) -> list[dict]:
@@ -325,11 +355,15 @@ def parse_page(html: str, url: str, category: str, rendered: bool = False) -> Pa
         h1 = soup.find("h1")
         title = _clean_text(h1.get_text(" ", strip=True))[:140] if h1 else url
     segments = _leaf_blocks(soup)
+    headings = [_clean_text(h.get_text(" ", strip=True))
+                for h in soup.find_all(["h1", "h2", "h3", "h4"])]
+    headings = [h for h in headings if 1 < len(h) <= 32]
     doc = PageDoc(
         url=url, title=title, category=category, segments=segments,
         text=" \n".join(segments),
         plan_cards=_accept_cards(_extract_plan_cards(soup), category),
-        tables=_extract_tables(soup), rendered=rendered,
+        tables=_extract_tables(soup), headings=headings, rendered=rendered,
+        is_reference=bool(REFERENCE_URL_RE.search(url) or REFERENCE_TITLE_RE.search(title)),
     )
     doc.word_count = len(doc.text.split())
     return doc
@@ -346,6 +380,7 @@ def _period_of(context: str) -> tuple[str, bool]:
 
 def _claim(doc: PageDoc, kind: str, evidence: str, extractor: str,
            plan_raw: str | None = None, **data) -> Claim:
+    data.setdefault("page_is_reference", doc.is_reference)
     return Claim(
         kind=kind, page_url=doc.url, page_title=doc.title, page_category=doc.category,
         evidence=_clean_text(evidence)[:400], plan=normalise_plan(plan_raw),
@@ -356,14 +391,30 @@ def _claim(doc: PageDoc, kind: str, evidence: str, extractor: str,
 def extract_prices(doc: PageDoc) -> list[Claim]:
     claims: list[Claim] = []
     for card in doc.plan_cards:
+        card_has_both = bool(BILLED_ANNUALLY_RE.search(card["text"])
+                             and BILLED_MONTHLY_RE.search(card["text"]))
         for price in card["prices"]:
             ctx = price["context"]
             period, per_seat = _period_of(ctx)
             if period == "unknown":
                 period, per_seat2 = _period_of(card["text"][:400])
                 per_seat = per_seat or per_seat2
-            annual_commit = bool(BILLED_ANNUALLY_RE.search(ctx) or BILLED_ANNUALLY_RE.search(card["text"]))
-            monthly_commit = bool(BILLED_MONTHLY_RE.search(ctx))
+            # Attach the billing label that follows this price, not any label
+            # anywhere in the card: a monthly/annual toggle card contains both,
+            # and guessing pairs the wrong number with the wrong commitment.
+            after = ctx[ctx.find(price["raw"]) + len(price["raw"]):][:48] if price["raw"] in ctx else ""
+            # A toggle card reads "$10 /mo billed yearly $12 billed monthly", so
+            # both labels fall inside the window. Only the nearer one belongs to
+            # this price.
+            ann_m, mon_m = BILLED_ANNUALLY_RE.search(after), BILLED_MONTHLY_RE.search(after)
+            if ann_m and mon_m:
+                annual_commit = ann_m.start() < mon_m.start()
+                monthly_commit = not annual_commit
+            else:
+                annual_commit, monthly_commit = bool(ann_m), bool(mon_m)
+            if not annual_commit and not monthly_commit and not card_has_both:
+                annual_commit = bool(BILLED_ANNUALLY_RE.search(card["text"]))
+                monthly_commit = bool(BILLED_MONTHLY_RE.search(card["text"]))
             # A "save 20%" badge or a struck-through price is not the plan price.
             if re.search(r"sav(?:e|ings)|discount|%\s*off", ctx, re.I) and price["amount"] < 100:
                 if re.search(r"\d\s*%", ctx):
@@ -465,7 +516,7 @@ def extract_unlimited(doc: PageDoc) -> list[Claim]:
     # Comparison tables often say "Unlimited" in a cell for a named plan.
     for table in doc.tables:
         for row in table["rows"]:
-            feature = row[0]
+            feature = " ".join(row[0].split()[:5])[:48]
             metric = normalise_metric(feature)
             for idx, plan_raw in table["plan_cols"].items():
                 if idx < len(row) and re.fullmatch(r"\s*unlimited\s*", row[idx], re.I):
@@ -488,6 +539,8 @@ def extract_limits(doc: PageDoc) -> list[Claim]:
     seen: set[tuple] = set()
 
     def add(seg, plan_raw, metric, value, unit, limit_kind, subject, extractor, window=None):
+        if value in HTTP_STATUS_CODES and HTTP_CONTEXT_RE.search(seg):
+            return  # "429 Too Many Requests" is a status code, not a quota
         key = (metric, value, unit, normalise_plan(plan_raw) or "", limit_kind)
         if key in seen:
             return
@@ -497,7 +550,12 @@ def extract_limits(doc: PageDoc) -> list[Claim]:
                              window=window))
 
     for seg in doc.segments:
+        if SLA_RE.search(seg) or QUOTED_EXAMPLE_RE.match(seg) or CLAUSE_NUMBER_RE.match(seg):
+            continue
         plan = _plan_for_segment(doc, seg)
+        # A bullet inside a pricing card is an allowance by construction, so it
+        # does not need the cue words that prose does.
+        in_card = any(seg in card["text"] for card in doc.plan_cards)
         consumed: list[tuple[int, int]] = []
 
         for m in RATE_LIMIT_RE.finditer(seg):
@@ -508,7 +566,10 @@ def extract_limits(doc: PageDoc) -> list[Claim]:
             consumed.append((m.start(), m.end()))
             if not metric:
                 continue
-            add(seg, plan, metric, float(m.group("num").replace(",", "")), "count",
+            rate_value = float(m.group("num").replace(",", ""))
+            if rate_value < MIN_PLAUSIBLE_ALLOWANCE.get(metric, 1):
+                continue
+            add(seg, plan, metric, rate_value, "count",
                 "rate", what, "rate_limit", window=m.group("window").lower())
 
         for m in RETENTION_RE.finditer(seg):
@@ -551,6 +612,12 @@ def extract_limits(doc: PageDoc) -> list[Claim]:
                 else:
                     unit = "count"
                 if value <= 0 or value > 5_000_000_000:
+                    continue
+                if unit == "count" and value != int(value):
+                    continue  # "12.5" is a clause number, not an allowance
+                if value < MIN_PLAUSIBLE_ALLOWANCE.get(metric, 1):
+                    continue
+                if metric in CUE_REQUIRED_METRICS and not has_cue and not in_card:
                     continue
                 add(seg, plan, metric, value, unit, "quantity", what, rx.pattern[:24])
                 break
@@ -641,9 +708,28 @@ def extract_entitlements(doc: PageDoc) -> list[Claim]:
     return claims
 
 
+def extract_plan_headings(soup_text_headings: list[str]) -> list[str]:
+    """Headings on a pricing page that name a tier, priced or not."""
+    out = []
+    for h in soup_text_headings:
+        n = normalise_plan(h)
+        if n and len(n.split()) <= 2 and any(w in KNOWN_PLAN_WORDS for w in n.split()):
+            out.append(h)
+    return out
+
+
 def extract_plan_mentions(doc: PageDoc) -> list[Claim]:
     claims: list[Claim] = []
     seen: set[str] = set()
+    # An "Enterprise — contact us" column has no price and so is never captured
+    # as a card, but it is still a plan the company sells.
+    if doc.category in ("pricing", "compare"):
+        for h in extract_plan_headings(doc.headings):
+            n = normalise_plan(h)
+            if n and n not in seen:
+                seen.add(n)
+                claims.append(_claim(doc, "plan_mention", f"pricing page heading '{h}'",
+                                     "pricing_heading", plan_raw=h, source="heading"))
     for card in doc.plan_cards:
         n = normalise_plan(card["plan_raw"])
         if n and n not in seen:
@@ -702,6 +788,23 @@ CONDITION_RULES = [
 ]
 
 
+_SENTENCE_SPLIT_RE = re.compile(r"(?<=[.!?])\s+(?=[A-Z(])")
+
+
+def _matching_sentence(seg: str, match: re.Match) -> str:
+    """The sentence containing the match, so the quoted evidence shows the point."""
+    start = 0
+    for sent in _SENTENCE_SPLIT_RE.split(seg):
+        end = start + len(sent)
+        if start <= match.start() <= end + 1:
+            return sent.strip()
+        start = end + 1
+    return seg
+
+
+MIN_CONDITION_CHARS = 45
+
+
 def extract_conditions(doc: PageDoc) -> list[Claim]:
     claims: list[Claim] = []
     seen: set[str] = set()
@@ -709,11 +812,18 @@ def extract_conditions(doc: PageDoc) -> list[Claim]:
         for name, rx, desc in CONDITION_RULES:
             if name in seen:
                 continue
-            if rx.search(seg):
-                seen.add(name)
-                plan = _plan_for_segment(doc, seg)
-                claims.append(_claim(doc, "condition", seg, f"condition_{name}", plan_raw=plan,
-                                     condition=name, description=desc))
+            m = rx.search(seg)
+            if not m:
+                continue
+            sentence = _matching_sentence(seg, m)
+            # "Acceptable Use" as a heading or footer link states no restriction;
+            # only prose that actually says something counts.
+            if len(sentence) < MIN_CONDITION_CHARS:
+                continue
+            seen.add(name)
+            plan = _plan_for_segment(doc, seg)
+            claims.append(_claim(doc, "condition", sentence, f"condition_{name}",
+                                 plan_raw=plan, condition=name, description=desc))
     return claims
 
 

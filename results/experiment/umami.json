@@ -1,0 +1,78 @@
+{
+  "company": "Umami",
+  "root_url": "https://umami.is/",
+  "domain": "umami.is",
+  "started_at": "2026-09-02 07:43:22 UTC",
+  "duration_seconds": 2.5,
+  "pages": [
+    {
+      "url": "https://umami.is/pricing",
+      "final_url": "https://umami.is/pricing",
+      "title": "https://umami.is/pricing",
+      "category": "pricing",
+      "why_selected": "url path contains 'pricing' (guessed conventional path, not linked)",
+      "discovered_via": "conventional path guess",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 0,
+      "claim_count": 0
+    },
+    {
+      "url": "https://umami.is/docs",
+      "final_url": "https://docs.umami.is/docs/",
+      "title": "Introduction",
+      "category": "docs",
+      "why_selected": "url path contains 'docs' (guessed conventional path, not linked)",
+      "discovered_via": "conventional path guess",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 471,
+      "claim_count": 0
+    },
+    {
+      "url": "https://umami.is/terms",
+      "final_url": "https://umami.is/terms",
+      "title": "https://umami.is/terms",
+      "category": "terms",
+      "why_selected": "url path contains 'terms' (guessed conventional path, not linked)",
+      "discovered_via": "conventional path guess",
+      "status": 200,
+      "ok": true,
+      "error": "",
+      "rendered": false,
+      "word_count": 0,
+      "claim_count": 0
+    }
+  ],
+  "failures": [],
+  "claims": [],
+  "findings": [],
+  "discovery_notes": [],
+  "pricing_urls": [
+    "https://umami.is/pricing"
+  ],
+  "stats": {
+    "pages_selected": 3,
+    "pages_fetched_ok": 3,
+    "pages_failed": 0,
+    "pages_js_rendered": 0,
+    "urls_considered": 6,
+    "claims": 0,
+    "claims_by_kind": {},
+    "findings": 0,
+    "findings_by_severity": {},
+    "findings_by_confidence": {},
+    "findings_by_kind": {},
+    "fetcher": {
+      "network": 3,
+      "cache": 5,
+      "rendered": 0,
+      "blocked": 0,
+      "failed": 3
+    }
+  }
+}

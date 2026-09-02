@@ -106,6 +106,9 @@ class Fetcher:
         })
         self._browser = None
         self._playwright = None
+        self.render_error = ""
+        self._render_failures = 0
+        self.max_render_failures = 2
         self.stats = {"network": 0, "cache": 0, "rendered": 0, "blocked": 0, "failed": 0}
 
     # ---------------- robots ----------------
@@ -252,6 +255,34 @@ class Fetcher:
 
     # ---------------- JS rendering ----------------
 
+    @staticmethod
+    def _find_chromium() -> str | None:
+        """Locate a Chromium build already on the machine.
+
+        Playwright refuses to launch when the pip package and the installed
+        browser revisions disagree, which is common on pre-baked images. If a
+        usable binary exists we point at it rather than downloading another.
+        """
+        explicit = os.environ.get("PROMISE_AUDIT_CHROMIUM")
+        if explicit and Path(explicit).exists():
+            return explicit
+        roots = [Path(os.environ.get("PLAYWRIGHT_BROWSERS_PATH", "/opt/pw-browsers"))]
+        roots.append(Path.home() / ".cache" / "ms-playwright")
+        for root in roots:
+            if not root.is_dir():
+                continue
+            for pattern in ("chromium-*/chrome-linux/chrome",
+                            "chromium_headless_shell-*/chrome-linux/headless_shell",
+                            "chromium-*/chrome-mac/Chromium.app/Contents/MacOS/Chromium"):
+                found = sorted(root.glob(pattern))
+                if found:
+                    return str(found[-1])
+        for fallback in ("/usr/bin/chromium", "/usr/bin/chromium-browser",
+                         "/usr/bin/google-chrome"):
+            if Path(fallback).exists():
+                return fallback
+        return None
+
     def _ensure_browser(self):
         if self._browser is not None:
             return self._browser
@@ -262,17 +293,21 @@ class Fetcher:
             return None
         try:
             self._playwright = sync_playwright().start()
-            launch_kwargs = {"headless": True}
-            exec_path = os.environ.get("PROMISE_AUDIT_CHROMIUM")
+            launch_kwargs: dict = {"headless": True,
+                                   "args": ["--no-sandbox", "--disable-dev-shm-usage"]}
+            exec_path = self._find_chromium()
             if exec_path:
                 launch_kwargs["executable_path"] = exec_path
             self._browser = self._playwright.chromium.launch(**launch_kwargs)
-        except Exception:
+        except Exception as exc:
+            self.render_error = f"{type(exc).__name__}: {exc}"[:160]
             self.allow_render = False
             self._browser = None
         return self._browser
 
     def _render(self, url: str) -> FetchResult | None:
+        if self._render_failures >= self.max_render_failures:
+            return None
         cached = self._read_cache(url, rendered=True)
         if cached is not None and cached.ok:
             self.stats["cache"] += 1
@@ -290,14 +325,22 @@ class Fetcher:
             final = page.url
             ctx.close()
             self.stats["rendered"] += 1
+            self._render_failures = 0
             res = FetchResult(url, final, 200, html, True, "", rendered=True)
             self._write_cache(res)
             return res
-        except Exception:
+        except Exception as exc:
             try:
                 ctx.close()
             except Exception:
                 pass
+            self._render_failures += 1
+            self.render_error = f"{type(exc).__name__}: {exc}"[:160]
+            if self._render_failures >= self.max_render_failures:
+                # A sandbox where the browser has no outbound access would
+                # otherwise cost a full timeout on every thin page.
+                self.allow_render = False
+                self.stats["render_disabled"] = self.render_error
             return None
 
     def close(self) -> None:

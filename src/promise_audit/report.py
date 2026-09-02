@@ -110,7 +110,7 @@ footer{margin-top:40px;color:var(--muted);font-size:13px;border-top:1px solid va
 
 
 def _esc(s) -> str:
-    return html.escape(str(s or ""))
+    return html.escape("" if s is None else str(s))
 
 
 def _side(label: str, claim: str, ev: dict | None) -> str:

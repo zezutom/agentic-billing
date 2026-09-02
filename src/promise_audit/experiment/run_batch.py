@@ -95,7 +95,7 @@ def select(eligibility: dict, seed: int = RANDOM_SEED, n: int = SAMPLE_SIZE) -> 
 
 
 def run_batch(outdir: str | Path = "results/experiment", delay: float = 1.0,
-              skip_precheck: bool = False) -> dict:
+              skip_precheck: bool = False, allow_render: bool = True) -> dict:
     outdir = Path(outdir)
     outdir.mkdir(parents=True, exist_ok=True)
 
@@ -115,7 +115,8 @@ def run_batch(outdir: str | Path = "results/experiment", delay: float = 1.0,
     runs = []
     for i, cand in enumerate(selected, 1):
         print(f"[{i}/{len(selected)}] auditing {cand['name']} ({cand['url']})", flush=True)
-        fetcher = Fetcher(cache_dir=".promise_audit_cache", delay=delay)
+        fetcher = Fetcher(cache_dir=".promise_audit_cache", delay=delay,
+                          allow_render=allow_render)
         try:
             result = audit_site(cand["url"], company=cand["name"], fetcher=fetcher,
                                 verbose=False, **AUDIT_SETTINGS)
@@ -171,13 +172,17 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--precheck-only", action="store_true")
     ap.add_argument("--skip-precheck", action="store_true",
                     help="reuse an existing eligibility.json instead of re-checking")
+    ap.add_argument("--no-render", action="store_true",
+                    help="skip the headless-browser fallback (much faster where the "
+                         "browser has no outbound network access)")
     args = ap.parse_args(argv)
     outdir = Path(args.out)
     if args.precheck_only:
         e = precheck(outdir, delay=args.delay)
         print(f"{e['eligible']}/{e['pool_size']} eligible; wrote {outdir/'eligibility.json'}")
         return 0
-    run_batch(outdir, delay=args.delay, skip_precheck=args.skip_precheck)
+    run_batch(outdir, delay=args.delay, skip_precheck=args.skip_precheck,
+              allow_render=not args.no_render)
     return 0
 
 

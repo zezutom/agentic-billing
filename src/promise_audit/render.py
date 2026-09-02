@@ -15,12 +15,10 @@ CLOSING = ("These are the promises your customers can see. "
            "Do your billing system and product deliver the same thing?")
 
 CLOSING_BODY = (
-    "This audit only reads what is published on your website. It cannot see what your "
-    "billing system actually meters, what your product actually enforces, or what your "
-    "customer records actually entitle people to. In most companies those three answers "
-    "have drifted apart quietly, and the public pages are the only place the drift is "
-    "visible from outside. If the contradictions above are news to you, the more expensive "
-    "question is what else is out of step behind them."
+    "This audit reads your public pages only. It cannot see what your billing system "
+    "meters, what your product enforces, or what your customer records entitle people to. "
+    "If the findings above are news to you, the question worth asking is what else is out "
+    "of step behind them."
 )
 
 
@@ -133,12 +131,12 @@ def render_html(analysis: dict, dossier: Dossier) -> str:
     if not findings:
         usable = dossier.stats.get("pages_usable", 0)
         cards = [f"""<div class="none"><p>We read {usable} of your public pages and could not
-find two statements that clearly disagree with each other. That is a good result — plenty of
-sites we look at have at least one.</p>
+find two statements that clearly disagree with each other. Most sites we look at have at
+least one.</p>
 <p>It does not mean everything reconciles. We only report a conflict when we can show you
 both halves of it, quoted from two different pages of your own site.</p></div>"""]
 
-    legend = "".join(f"<div><b>{_e(FINDING_TYPE_LABEL[k])}</b> — {_e(FINDING_TYPE_BLURB[k])}</div>"
+    legend = "".join(f"<div><b>{_e(FINDING_TYPE_LABEL[k])}:</b> {_e(FINDING_TYPE_BLURB[k])}</div>"
                      for k in kinds)
 
     rows = []
@@ -159,12 +157,12 @@ both halves of it, quoted from two different pages of your own site.</p></div>""
     promises = analysis.get("promises", [])
     plans = analysis.get("plans", [])
     plan_line = ", ".join(
-        f"{p.get('name')}{' — ' + p['headline_price'] if p.get('headline_price') else ''}"
+        f"{p.get('name')}{', ' + p['headline_price'] if p.get('headline_price') else ''}"
         for p in plans) or "no plans could be read from these pages"
 
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Commercial consistency audit — {_e(analysis.get('company'))}</title>
+<title>{_e(analysis.get('company'))} Promise Audit</title>
 <style>{CSS}</style></head><body><div class="wrap">
 <p class="eyebrow">Commercial consistency audit</p>
 <h1>{_e(headline(n))}</h1>
@@ -199,26 +197,25 @@ could not be verified. No login, no billing data and no customer records were in
 def render_markdown(analysis: dict, dossier: Dossier) -> str:
     findings = analysis.get("findings", [])
     v = analysis.get("verification", {})
-    L = [f"# Commercial consistency audit — {analysis.get('company')}", "",
+    L = [f"# {analysis.get('company')}: commercial consistency audit", "",
          f"**{headline(len(findings))}**", "",
-         f"Source: {dossier.root_url} · {dossier.stats.get('pages_usable',0)} public pages read · "
-         f"{len(analysis.get('promises', []))} commercial promises extracted · "
-         f"{v.get('quotes_checked',0)} quotes verified against their source page · "
-         f"{dossier.harvested_at}", ""]
+         f"{dossier.root_url} | {dossier.stats.get('pages_usable',0)} pages read | "
+         f"{len(analysis.get('promises', []))} promises extracted | "
+         f"{v.get('quotes_checked',0)} quotes verified | {dossier.harvested_at}", ""]
     plans = analysis.get("plans", [])
     if plans:
         L += ["## What you appear to sell", ""]
         for p in plans:
-            L.append(f"- **{p.get('name')}** — {p.get('headline_price') or 'no published price'}")
+            L.append(f"- **{p.get('name')}**: {p.get('headline_price') or 'no published price'}")
         L.append("")
     for i, f in enumerate(findings, 1):
         L += [f"## {i}. {f['headline']}", "",
-              f"`{f['severity']} impact` · `{FINDING_TYPE_LABEL.get(f['type'], f['type'])}` "
-              f"· `{f['confidence']} confidence`", "", f["explanation"], ""]
+              f"`{f['severity']}` `{FINDING_TYPE_LABEL.get(f['type'], f['type'])}` "
+              f"`{f['confidence']} confidence`", "", f["explanation"], ""]
         for lab, c in (("What one page says", f["claim_a"]),
                        ("What another page says", f["claim_b"])):
             L += [f"**{lab}:** {c.get('statement')}", f"> {c.get('quote')}",
-                  f"> — [{c.get('url')}]({c.get('url')})", ""]
+                  f"> [{c.get('url')}]({c.get('url')})", ""]
         L += [f"*Why this is not just wording: {f.get('why_not_just_wording')}*", ""]
         if (f.get("caveat") or "").strip():
             L += [f"*What would make this a non-issue: {f['caveat']}*", ""]
@@ -233,7 +230,7 @@ def render_markdown(analysis: dict, dossier: Dossier) -> str:
         L.append(f"| [{(p.title or p.url)[:58].replace('|','-')}]({p.url}) | {label} | "
                  f"{p.word_count} | {st} |")
     for f in dossier.failures:
-        L.append(f"| {f['url']} | — | — | {f['reason'][:45]} |")
+        L.append(f"| {f['url']} | | | {f['reason'][:45]} |")
     notes = analysis.get("coverage_notes") or {}
     if notes.get("what_was_not_checkable"):
         L += ["", "## What we could not check", "", notes["what_was_not_checkable"]]
@@ -245,13 +242,13 @@ def render_terminal(analysis: dict, dossier: Dossier) -> str:
     findings = analysis.get("findings", [])
     v = analysis.get("verification", {})
     out = ["", "=" * 78, headline(len(findings)).upper(), "=" * 78,
-           f"{analysis.get('company')}  ·  {dossier.stats.get('pages_usable',0)} pages read  ·  "
-           f"{len(analysis.get('promises', []))} promises  ·  "
-           f"{v.get('quotes_checked',0)} quotes verified, "
-           f"{v.get('findings_rejected',0)} finding(s) discarded as unverifiable", ""]
+           f"{analysis.get('company')}   {dossier.stats.get('pages_usable',0)} pages read   "
+           f"{len(analysis.get('promises', []))} promises   "
+           f"{v.get('quotes_checked',0)} quotes verified   "
+           f"{v.get('findings_rejected',0)} discarded", ""]
     for i, f in enumerate(findings, 1):
-        out += [f"{i}. [{f['severity'].upper()} · {f['confidence']} confidence · "
-                f"{FINDING_TYPE_LABEL.get(f['type'], f['type'])}]",
+        out += [f"{i}. [{f['severity'].upper()}] {FINDING_TYPE_LABEL.get(f['type'], f['type'])}"
+                f", {f['confidence']} confidence",
                 f"   {f['headline']}",
                 f"   A: {f['claim_a'].get('statement')}",
                 f"      {f['claim_a'].get('url')}",
@@ -283,170 +280,150 @@ def write_all(analysis: dict, dossier: Dossier, outdir: str | Path, slug: str) -
 
 
 # --------------------------------------------------------------- artifact view
-# A shareable, theme-aware version of the same report, written as artifact body
+# A shareable, theme-aware version of the report, written as artifact body
 # content (no doctype/html/head/body wrapper) so it can be published directly.
+#
+# The layout leads with the two conflicting values, because that contrast is
+# what the reader needs and everything else is support.
 
 ARTIFACT_CSS = """
 :root{
   --ground:#f6f7f9; --surface:#ffffff; --ink:#14181f; --ink-soft:#3b4350;
-  --muted:#5a6371; --rule:#e1e5eb; --rule-soft:#eceff3;
+  --muted:#5a6371; --rule:#dfe3ea; --rule-soft:#ebeef2;
   --accent:#26547c; --high:#9e2b25; --medium:#8a5a16; --low:#4a5a6b;
-  --verified:#2c6b4f; --quote:#404a58; --quote-rule:#c8d0da;
+  --verified:#2c6b4f; --quote:#454f5d; --quote-rule:#c8d0da; --panel:#f0f2f5;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --ground:#12151a; --surface:#191d24; --ink:#e6e9ee; --ink-soft:#c3cad3;
     --muted:#98a2b0; --rule:#2a3038; --rule-soft:#21262d;
     --accent:#7fb0dc; --high:#e08b84; --medium:#d7a455; --low:#9badc0;
-    --verified:#7fc4a0; --quote:#b3bcc7; --quote-rule:#3a424c;
+    --verified:#7fc4a0; --quote:#b3bcc7; --quote-rule:#3a424c; --panel:#1e232a;
   }
 }
 :root[data-theme="dark"]{
   --ground:#12151a; --surface:#191d24; --ink:#e6e9ee; --ink-soft:#c3cad3;
   --muted:#98a2b0; --rule:#2a3038; --rule-soft:#21262d;
   --accent:#7fb0dc; --high:#e08b84; --medium:#d7a455; --low:#9badc0;
-  --verified:#7fc4a0; --quote:#b3bcc7; --quote-rule:#3a424c;
+  --verified:#7fc4a0; --quote:#b3bcc7; --quote-rule:#3a424c; --panel:#1e232a;
 }
 *{box-sizing:border-box}
 body{
   margin:0; background:var(--ground); color:var(--ink);
   font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size:16px; line-height:1.62; -webkit-font-smoothing:antialiased;
+  font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased;
 }
-.sheet{max-width:74ch;margin:0 auto;padding:clamp(32px,6vw,68px) clamp(18px,5vw,32px) 88px;}
+.sheet{max-width:76ch;margin:0 auto;padding:clamp(30px,6vw,60px) clamp(18px,5vw,32px) 80px;}
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;}
 .eyebrow{
-  font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-  font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
-  color:var(--muted); margin:0 0 18px;
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0 0 16px;
 }
 h1{
   font-family:Newsreader,Georgia,"Times New Roman",serif;
-  font-size:clamp(30px,5.2vw,42px); line-height:1.14; font-weight:500;
-  letter-spacing:-.015em; margin:0 0 16px; text-wrap:balance;
+  font-size:clamp(29px,5vw,40px); line-height:1.12; font-weight:500;
+  letter-spacing:-.015em; margin:0 0 12px; text-wrap:balance;
 }
-.standfirst{font-size:17px;color:var(--ink-soft);margin:0;max-width:62ch;}
-.standfirst a{color:inherit;text-decoration:underline;text-underline-offset:2px;
-  text-decoration-color:var(--quote-rule);}
+.standfirst{font-size:15.5px;color:var(--muted);margin:0;max-width:60ch;}
+.standfirst a{color:var(--accent);text-decoration:none;}
+.standfirst a:hover{text-decoration:underline}
 .ledger{
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(128px,1fr));
-  gap:1px; background:var(--rule); border:1px solid var(--rule);
-  margin:34px 0 0;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:1px; background:var(--rule); border:1px solid var(--rule); margin:30px 0 0;
 }
-.ledger div{background:var(--surface);padding:13px 15px;}
+.ledger div{background:var(--surface);padding:12px 14px;}
 .ledger dt{
-  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10.5px;
-  letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin:0 0 5px;
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin:0 0 4px;
 }
-.ledger dd{
-  margin:0; font-size:19px; font-weight:600; font-variant-numeric:tabular-nums;
-  letter-spacing:-.01em;
-}
+.ledger dd{margin:0;font-size:20px;font-weight:600;font-variant-numeric:tabular-nums;}
 h2{
-  font-family:Newsreader,Georgia,serif; font-size:15px; font-weight:600;
-  letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
-  margin:62px 0 0; padding-bottom:9px; border-bottom:1px solid var(--rule);
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; font-weight:500;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
+  margin:56px 0 0; padding-bottom:8px; border-bottom:1px solid var(--rule);
 }
-.sells{margin:18px 0 0;font-size:15.5px;color:var(--ink-soft);}
+.sells{margin:16px 0 0;font-size:15px;color:var(--ink-soft);}
+.sells span{display:block;padding:3px 0;}
 .sells b{font-weight:600;color:var(--ink);}
-.finding{
-  display:grid; grid-template-columns:2.6rem 1fr; gap:0 14px;
-  padding:30px 0 4px; border-bottom:1px solid var(--rule-soft);
-}
+.finding{padding:28px 0 6px;border-bottom:1px solid var(--rule-soft);}
 .finding:last-of-type{border-bottom:0}
-.rank{
-  font-family:Newsreader,Georgia,serif; font-size:30px; line-height:1.05;
-  color:var(--quote-rule); font-variant-numeric:tabular-nums; font-weight:500;
-  padding-top:2px;
-}
 .tags{
-  display:flex; flex-wrap:wrap; align-items:center; gap:6px 14px;
+  display:flex; flex-wrap:wrap; align-items:center; gap:6px 16px;
   font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10.5px;
-  letter-spacing:.1em; text-transform:uppercase; margin-bottom:11px;
+  letter-spacing:.1em; text-transform:uppercase; margin-bottom:10px;
 }
-.sev{display:inline-flex;align-items:center;gap:7px;font-weight:500}
-.sev::before{content:"";width:9px;height:9px;flex:0 0 auto}
+.num{color:var(--muted);font-variant-numeric:tabular-nums;}
+.sev{display:inline-flex;align-items:center;gap:6px;font-weight:500}
+.sev::before{content:"";width:8px;height:8px;flex:0 0 auto}
 .sev.high{color:var(--high)} .sev.high::before{background:var(--high)}
 .sev.medium{color:var(--medium)} .sev.medium::before{background:var(--medium)}
 .sev.low{color:var(--low)} .sev.low::before{background:var(--low)}
 .tags .kind,.tags .conf{color:var(--muted)}
-.tags .ok{color:var(--verified)}
 .finding h3{
-  font-family:Newsreader,Georgia,serif; font-weight:500; font-size:22px;
-  line-height:1.26; letter-spacing:-.01em; margin:0 0 12px; text-wrap:balance;
+  font-family:Newsreader,Georgia,serif; font-weight:500; font-size:23px;
+  line-height:1.22; letter-spacing:-.012em; margin:0 0 16px; text-wrap:balance;
 }
-.finding p{margin:0 0 18px;color:var(--ink-soft);}
-.opposed{
-  display:grid; grid-template-columns:1fr 1fr; gap:0;
-  border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
+.versus{
+  display:grid; grid-template-columns:1fr 1fr; gap:1px;
+  background:var(--rule); border:1px solid var(--rule);
 }
-.opposed > div{padding:16px 0;}
-.opposed > div + div{border-left:1px solid var(--rule);padding-left:20px;}
-.opposed > div:first-child{padding-right:20px;}
-@media (max-width:620px){
-  .opposed{grid-template-columns:1fr}
-  .opposed > div + div{border-left:0;border-top:1px solid var(--rule);padding-left:0;}
-  .opposed > div:first-child{padding-right:0;}
-  .finding{grid-template-columns:1fr}
-  .rank{font-size:20px;padding-top:0;margin-bottom:2px}
+.versus > div{background:var(--surface);padding:14px 16px;}
+@media (max-width:600px){.versus{grid-template-columns:1fr}}
+.where{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin:0 0 7px;
 }
-.side-label{
-  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10.5px;
+.value{font-size:17px;font-weight:600;line-height:1.3;margin:0 0 10px;}
+.versus blockquote{
+  margin:0 0 10px; padding-left:11px; border-left:2px solid var(--quote-rule);
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12px;
+  line-height:1.55; color:var(--quote); white-space:pre-wrap; overflow-wrap:anywhere;
+}
+.src{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px;
+  color:var(--accent); text-decoration:none; overflow-wrap:anywhere; display:block;
+}
+.src:hover{text-decoration:underline}
+.meta{
+  display:grid; grid-template-columns:auto 1fr; gap:5px 14px;
+  margin:14px 0 4px; font-size:14px; color:var(--ink-soft); align-items:baseline;
+}
+.meta dt{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px;
   letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
-  margin-bottom:8px;
 }
-.statement{font-weight:600;font-size:15px;line-height:1.45;margin-bottom:12px;}
-blockquote{
-  margin:0 0 12px; padding-left:13px; border-left:2px solid var(--quote-rule);
-  font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-  font-size:12.5px; line-height:1.62; color:var(--quote);
-  white-space:pre-wrap; overflow-wrap:anywhere;
-}
-.cite{
-  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11.5px;
-  color:var(--accent); text-decoration:none; overflow-wrap:anywhere;
-  border-bottom:1px solid transparent;
-}
-.cite:hover,.cite:focus-visible{border-bottom-color:var(--accent)}
-.notes{margin:16px 0 22px;font-size:14px;color:var(--muted);}
-.notes p{margin:0 0 6px;color:var(--muted);}
-.notes b{color:var(--ink-soft);font-weight:600;}
-.legend{margin:18px 0 0;font-size:14.5px;color:var(--muted);}
-.legend p{margin:0 0 8px;color:var(--muted);}
+.meta dd{margin:0}
+.legend{margin:16px 0 0;font-size:14.5px;}
+.legend p{margin:0 0 7px;color:var(--muted);}
 .legend b{color:var(--ink);font-weight:600;}
-.scroller{overflow-x:auto;margin-top:16px;}
-table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:440px;}
+.scroller{overflow-x:auto;margin-top:14px;}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:430px;}
 th{
-  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10.5px;
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px;
   letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
-  text-align:left; font-weight:500; padding:0 12px 8px 0;
+  text-align:left; font-weight:500; padding:0 12px 7px 0;
   border-bottom:1px solid var(--rule);
 }
-td{padding:9px 12px 9px 0;border-bottom:1px solid var(--rule-soft);vertical-align:top;}
+td{padding:8px 12px 8px 0;border-bottom:1px solid var(--rule-soft);vertical-align:top;}
 td:last-child,th:last-child{padding-right:0}
 td a{color:var(--accent);text-decoration:none;}
 td a:hover{text-decoration:underline}
 .words{font-variant-numeric:tabular-nums;color:var(--muted);}
-.state{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;
+.state{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;
   color:var(--muted);white-space:nowrap;}
-.state.dim{opacity:.72}
-.kicker{
-  margin:64px 0 0; padding:30px 0 0; border-top:2px solid var(--ink);
-}
+.state.dim{opacity:.7}
+.kicker{margin:58px 0 0;padding:26px 0 0;border-top:2px solid var(--ink);}
 .kicker h2{
-  font-family:Newsreader,Georgia,serif; font-size:clamp(21px,3.4vw,26px);
-  font-weight:500; line-height:1.28; letter-spacing:-.01em; color:var(--ink);
-  text-transform:none; margin:0 0 14px; padding:0; border:0; text-wrap:balance;
+  font-family:Newsreader,Georgia,serif; font-size:clamp(20px,3.3vw,25px);
+  font-weight:500; line-height:1.25; letter-spacing:-.01em; color:var(--ink);
+  text-transform:none; letter-spacing:-.01em; margin:0 0 12px; padding:0; border:0;
+  text-wrap:balance;
 }
-.kicker p{margin:0;color:var(--ink-soft);font-size:15.5px;}
-footer{
-  margin-top:44px; padding-top:18px; border-top:1px solid var(--rule);
-  font-size:12.5px; color:var(--muted);
-}
-.none{
-  margin-top:20px; padding:22px 24px; background:var(--surface);
-  border:1px solid var(--rule);
-}
-.none p{margin:0 0 12px;color:var(--ink-soft);}
+.kicker p{margin:0;color:var(--ink-soft);font-size:15px;}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:12px;color:var(--muted);}
+.none{margin-top:18px;padding:20px 22px;background:var(--surface);border:1px solid var(--rule);}
+.none p{margin:0 0 10px;color:var(--ink-soft);}
 .none p:last-child{margin-bottom:0}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -456,21 +433,30 @@ FONT_LINK = (
     '<link rel="preconnect" href="https://fonts.googleapis.com">'
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'
-    "family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&"
+    "family=Newsreader:opsz,wght@6..72,400;6..72,500&"
     "family=IBM+Plex+Sans:wght@400;500;600&"
     "family=IBM+Plex+Mono:wght@400;500&display=swap\">"
 )
 
 
-def _artifact_side(label: str, claim: dict) -> str:
+def _page_label(dossier: Dossier, url: str) -> str:
+    """Name the page a claim came from, using the page type we crawled it as."""
+    key = (url or "").rstrip("/")
+    for p in dossier.pages:
+        if key in (p.url.rstrip("/"), (p.final_url or "").rstrip("/")):
+            return CATEGORIES.get(p.category, {}).get("label", p.category)
+    return "Another page"
+
+
+def _versus(where: str, claim: dict) -> str:
     quote = (claim.get("quote") or "").strip()
     url = claim.get("url") or ""
     short = re.sub(r"^https?://(www\.)?", "", url)
     return (
-        f'<div><p class="side-label">{_e(label)}</p>'
-        f'<p class="statement">{_e(claim.get("statement"))}</p>'
+        f'<div><p class="where">{_e(where)}</p>'
+        f'<p class="value">{_e(claim.get("statement"))}</p>'
         + (f"<blockquote>{_e(quote)}</blockquote>" if quote else "")
-        + f'<a class="cite" href="{_e(url)}" target="_blank" rel="noopener">{_e(short)}</a></div>'
+        + f'<a class="src" href="{_e(url)}" target="_blank" rel="noopener">{_e(short)}</a></div>'
     )
 
 
@@ -484,41 +470,42 @@ def render_artifact(analysis: dict, dossier: Dossier) -> str:
 
     records = []
     for i, f in enumerate(findings, 1):
-        same = f.get("same_page")
-        label_a = "One statement" if same else "What one page says"
-        label_b = "Elsewhere on the same page" if same else "What another page says"
-        notes = [f'<p><b>Why this is not just wording.</b> {_e(f.get("why_not_just_wording"))}</p>']
+        where_a = _page_label(dossier, f["claim_a"].get("url"))
+        where_b = ("Same page, further down" if f.get("same_page")
+                   else _page_label(dossier, f["claim_b"].get("url")))
+        meta = []
+        if (f.get("explanation") or "").strip():
+            meta.append(f'<dt>Impact</dt><dd>{_e(f["explanation"])}</dd>')
         if (f.get("caveat") or "").strip():
-            notes.append(f'<p><b>What would make this a non-issue.</b> {_e(f["caveat"])}</p>')
+            meta.append(f'<dt>Check</dt><dd>{_e(f["caveat"])}</dd>')
         records.append(
-            f'<article class="finding"><div class="rank">{i}</div><div>'
-            f'<p class="tags">'
-            f'<span class="sev {_e(f["severity"])}">{_e(f["severity"])} impact</span>'
+            f'<article class="finding"><p class="tags">'
+            f'<span class="num">{i:02d}</span>'
+            f'<span class="sev {_e(f["severity"])}">{_e(f["severity"])}</span>'
             f'<span class="kind">{_e(FINDING_TYPE_LABEL.get(f["type"], f["type"]))}</span>'
-            f'<span class="conf">{_e(f["confidence"])} confidence</span>'
-            f'<span class="ok">evidence verified</span></p>'
-            f'<h3>{_e(f["headline"])}</h3><p>{_e(f["explanation"])}</p>'
-            f'<div class="opposed">{_artifact_side(label_a, f["claim_a"])}'
-            f'{_artifact_side(label_b, f["claim_b"])}</div>'
-            f'<div class="notes">{"".join(notes)}</div></div></article>'
+            f'<span class="conf">{_e(f["confidence"])} confidence</span></p>'
+            f'<h3>{_e(f["headline"])}</h3>'
+            f'<div class="versus">{_versus(where_a, f["claim_a"])}'
+            f'{_versus(where_b, f["claim_b"])}</div>'
+            + (f'<dl class="meta">{"".join(meta)}</dl>' if meta else "")
+            + "</article>"
         )
     if not findings:
         records.append(
             f'<div class="none"><p>We read {st.get("pages_usable", 0)} of your public pages '
-            "and could not find two statements that clearly disagree with each other. That is "
-            "a good result — most sites we look at have at least one.</p><p>It does not mean "
-            "everything reconciles. We only report a conflict when we can show you both halves "
-            "of it, quoted from your own site.</p></div>"
+            "and found no two statements that clearly disagree. Most sites we look at have "
+            "at least one.</p><p>This does not mean everything reconciles. We only report a "
+            "conflict when we can show you both halves of it, quoted from your own site.</p></div>"
         )
 
     kinds = [k for k in FINDING_TYPE_LABEL if any(f["type"] == k for f in findings)]
     legend = "".join(
-        f"<p><b>{_e(FINDING_TYPE_LABEL[k])}</b> — {_e(FINDING_TYPE_BLURB[k])}</p>" for k in kinds)
+        f"<p><b>{_e(FINDING_TYPE_LABEL[k])}:</b> {_e(FINDING_TYPE_BLURB[k])}</p>" for k in kinds)
 
     rows = []
     for p in dossier.pages:
         label = CATEGORIES.get(p.category, {}).get("label", p.category)
-        state = "read" if p.usable else "too little text to read"
+        state = "read" if p.usable else "no readable text"
         dim = "" if p.usable else " dim"
         rows.append(
             f'<tr><td><a href="{_e(p.url)}" target="_blank" rel="noopener">'
@@ -526,53 +513,47 @@ def render_artifact(analysis: dict, dossier: Dossier) -> str:
             f'<td class="words">{p.word_count:,}</td>'
             f'<td class="state{dim}">{_e(state)}</td></tr>')
     for f in dossier.failures:
-        rows.append(f'<tr><td>{_e(f["url"])}</td><td class="state">—</td>'
-                    f'<td class="words">—</td>'
+        rows.append(f'<tr><td>{_e(f["url"])}</td><td class="state"></td>'
+                    f'<td class="words"></td>'
                     f'<td class="state dim">{_e(f["reason"])[:44]}</td></tr>')
 
-    plans = analysis.get("plans", [])
-    sells = " · ".join(
-        f"<b>{_e(p.get('name'))}</b> {_e(p.get('headline_price') or 'no published price')}"
-        for p in plans) or "No plans could be read from these pages."
+    plans = "".join(
+        f"<span><b>{_e(p.get('name'))}</b> {_e(p.get('headline_price') or 'no published price')}</span>"
+        for p in analysis.get("plans", [])
+    ) or "<span>No plans could be read from these pages.</span>"
 
-    ledger = [
-        ("Pages read", f"{st.get('pages_usable', 0)}"),
-        ("Promises extracted", f"{len(analysis.get('promises', []))}"),
-        ("Quotes verified", f"{v.get('quotes_checked', 0)}"),
-        ("Findings discarded", f"{v.get('findings_rejected', 0)}"),
-    ]
+    ledger = [("Pages read", st.get("pages_usable", 0)),
+              ("Promises", len(analysis.get("promises", []))),
+              ("Quotes verified", v.get("quotes_checked", 0)),
+              ("Discarded", v.get("findings_rejected", 0))]
     ledger_html = "".join(f"<div><dt>{_e(k)}</dt><dd>{_e(val)}</dd></div>" for k, val in ledger)
 
+    domain = _e(dossier.domain)
     return f"""<title>{_e(company)} Promise Audit</title>
 {FONT_LINK}
 <style>{ARTIFACT_CSS}</style>
 <main class="sheet">
-  <p class="eyebrow">Commercial consistency audit · {_e(dossier.domain)}</p>
+  <p class="eyebrow">Commercial consistency audit</p>
   <h1>{_e(headline(n))}</h1>
-  <p class="standfirst">Every line below is quoted word for word from
-    <a href="{_e(dossier.root_url)}" target="_blank" rel="noopener">{_e(dossier.domain)}</a>,
-    and each quote was checked against the page it came from before this was written.
-    Nothing here is inferred from anything private.</p>
+  <p class="standfirst">Every quote below was checked against the page it came from.
+    Public pages of <a href="{_e(dossier.root_url)}" target="_blank" rel="noopener">{domain}</a>
+    only. Nothing private was used.</p>
   <dl class="ledger">{ledger_html}</dl>
 
-  <h2>What you appear to sell</h2>
-  <p class="sells">{sells}</p>
+  <h2>Plans found</h2>
+  <p class="sells">{plans}</p>
 
-  <h2>What we found</h2>
+  <h2>Findings</h2>
   {''.join(records)}
 
-  {'<h2>How to read these</h2><div class="legend">' + legend + '</div>' if legend else ''}
+  {'<h2>Definitions</h2><div class="legend">' + legend + '</div>' if legend else ''}
 
-  <h2>Pages we read</h2>
+  <h2>Pages read</h2>
   <div class="scroller"><table><thead><tr><th>Page</th><th>Type</th><th>Words</th>
     <th>Status</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div>
 
-  <section class="kicker">
-    <h2>{_e(CLOSING)}</h2>
-    <p>{_e(CLOSING_BODY)}</p>
-  </section>
-  <footer>Automated read of public pages only, then checked: every quote above was located
-    in the page it is attributed to, and {v.get('findings_rejected', 0)} candidate finding(s)
-    were discarded because their evidence could not be verified. No login, no billing data
-    and no customer records were involved.</footer>
+  <section class="kicker"><h2>{_e(CLOSING)}</h2><p>{_e(CLOSING_BODY)}</p></section>
+  <footer>Public pages only. Every quote above was located in the page it is attributed to.
+    {v.get('findings_rejected', 0)} candidate finding(s) were discarded because their evidence
+    could not be verified. No login, no billing data, no customer records.</footer>
 </main>"""

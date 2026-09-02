@@ -151,9 +151,41 @@ Return **only** a JSON object, no commentary around it, in exactly this shape:
 }
 ```
 
-Write `explanation` and `headline` in plain commercial English. No technical \
-jargon, no "as an AI", no hedging filler. If there are no findings, return an \
-empty `findings` array and say why in `what_was_not_checkable`."""
+## How to write it
+
+The reader is a busy founder. They will scan, not read. Write like a colleague \
+sending a short note, not like a consultant justifying a fee.
+
+Hard limits, and they are limits, not targets:
+
+- `headline`: one statement of fact, 12 words or fewer. Say what disagrees with \
+what. Not a question, not a warning, not a sales line. \
+Good: "Trial is 30 days on one page and 14 days on another." \
+Bad: "Your trial length may be sending mixed signals to prospective buyers."
+- `statement` on each claim: the bare fact, 8 words or fewer. Usually just the \
+value. "30 days". "14 days, teams". "$0.30 per claim". "Billed on scheduling."
+- `explanation`: at most two sentences, and one is better. State the practical \
+consequence. No scene-setting, no restating the headline, no closing flourish.
+- `why_not_just_wording`: one sentence.
+- `caveat`: one sentence. Empty string if there genuinely is none.
+
+Banned outright, because they read as machine-written:
+
+- The characters em dash, en dash, and the middot as a connector. Use a full \
+stop, a comma, a colon, or start a new sentence.
+- "It is not X, it is Y" and "X is not just Y, it is Z".
+- "Precisely", "exactly the", "which is exactly", "the very thing".
+- Rhetorical questions, and sentences beginning "And" or "But" for effect.
+- "Simply", "seamlessly", "robust", "leverage", "delve", "landscape", \
+"crucial", "vital", "it is worth noting", "that said", "in today's".
+- Three-item lists used for rhythm rather than because there are three things.
+- Any sentence whose job is to make the finding sound more important.
+
+Prefer concrete nouns and real numbers over adjectives. If a sentence would \
+still be true with a different company's name in it, cut it.
+
+If there are no findings, return an empty `findings` array and say why in \
+`what_was_not_checkable`."""
 
 
 def build_prompt(briefing: str) -> str:

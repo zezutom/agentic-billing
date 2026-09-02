@@ -1,0 +1,169 @@
+<title>Upheal Promise Audit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#f6f7f9; --surface:#ffffff; --ink:#14181f; --ink-soft:#3b4350;
+  --muted:#5a6371; --rule:#dfe3ea; --rule-soft:#ebeef2;
+  --accent:#26547c; --high:#9e2b25; --medium:#8a5a16; --low:#4a5a6b;
+  --verified:#2c6b4f; --quote:#454f5d; --quote-rule:#c8d0da; --panel:#f0f2f5;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#12151a; --surface:#191d24; --ink:#e6e9ee; --ink-soft:#c3cad3;
+    --muted:#98a2b0; --rule:#2a3038; --rule-soft:#21262d;
+    --accent:#7fb0dc; --high:#e08b84; --medium:#d7a455; --low:#9badc0;
+    --verified:#7fc4a0; --quote:#b3bcc7; --quote-rule:#3a424c; --panel:#1e232a;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#12151a; --surface:#191d24; --ink:#e6e9ee; --ink-soft:#c3cad3;
+  --muted:#98a2b0; --rule:#2a3038; --rule-soft:#21262d;
+  --accent:#7fb0dc; --high:#e08b84; --medium:#d7a455; --low:#9badc0;
+  --verified:#7fc4a0; --quote:#b3bcc7; --quote-rule:#3a424c; --panel:#1e232a;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased;
+}
+.sheet{max-width:76ch;margin:0 auto;padding:clamp(30px,6vw,60px) clamp(18px,5vw,32px) 80px;}
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0 0 16px;
+}
+h1{
+  font-family:Newsreader,Georgia,"Times New Roman",serif;
+  font-size:clamp(29px,5vw,40px); line-height:1.12; font-weight:500;
+  letter-spacing:-.015em; margin:0 0 12px; text-wrap:balance;
+}
+.standfirst{font-size:15.5px;color:var(--muted);margin:0;max-width:60ch;}
+.standfirst a{color:var(--accent);text-decoration:none;}
+.standfirst a:hover{text-decoration:underline}
+.ledger{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:1px; background:var(--rule); border:1px solid var(--rule); margin:30px 0 0;
+}
+.ledger div{background:var(--surface);padding:12px 14px;}
+.ledger dt{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin:0 0 4px;
+}
+.ledger dd{margin:0;font-size:20px;font-weight:600;font-variant-numeric:tabular-nums;}
+h2{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; font-weight:500;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
+  margin:56px 0 0; padding-bottom:8px; border-bottom:1px solid var(--rule);
+}
+.sells{margin:16px 0 0;font-size:15px;color:var(--ink-soft);}
+.sells span{display:block;padding:3px 0;}
+.sells b{font-weight:600;color:var(--ink);}
+.finding{padding:28px 0 6px;border-bottom:1px solid var(--rule-soft);}
+.finding:last-of-type{border-bottom:0}
+.tags{
+  display:flex; flex-wrap:wrap; align-items:center; gap:6px 16px;
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10.5px;
+  letter-spacing:.1em; text-transform:uppercase; margin-bottom:10px;
+}
+.num{color:var(--muted);font-variant-numeric:tabular-nums;}
+.sev{display:inline-flex;align-items:center;gap:6px;font-weight:500}
+.sev::before{content:"";width:8px;height:8px;flex:0 0 auto}
+.sev.high{color:var(--high)} .sev.high::before{background:var(--high)}
+.sev.medium{color:var(--medium)} .sev.medium::before{background:var(--medium)}
+.sev.low{color:var(--low)} .sev.low::before{background:var(--low)}
+.tags .kind,.tags .conf{color:var(--muted)}
+.finding h3{
+  font-family:Newsreader,Georgia,serif; font-weight:500; font-size:23px;
+  line-height:1.22; letter-spacing:-.012em; margin:0 0 16px; text-wrap:balance;
+}
+.versus{
+  display:grid; grid-template-columns:1fr 1fr; gap:1px;
+  background:var(--rule); border:1px solid var(--rule);
+}
+.versus > div{background:var(--surface);padding:14px 16px;}
+@media (max-width:600px){.versus{grid-template-columns:1fr}}
+.where{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin:0 0 7px;
+}
+.value{font-size:17px;font-weight:600;line-height:1.3;margin:0 0 10px;}
+.versus blockquote{
+  margin:0 0 10px; padding-left:11px; border-left:2px solid var(--quote-rule);
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12px;
+  line-height:1.55; color:var(--quote); white-space:pre-wrap; overflow-wrap:anywhere;
+}
+.src{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px;
+  color:var(--accent); text-decoration:none; overflow-wrap:anywhere; display:block;
+}
+.src:hover{text-decoration:underline}
+.meta{
+  display:grid; grid-template-columns:auto 1fr; gap:5px 14px;
+  margin:14px 0 4px; font-size:14px; color:var(--ink-soft); align-items:baseline;
+}
+.meta dt{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
+}
+.meta dd{margin:0}
+.legend{margin:16px 0 0;font-size:14.5px;}
+.legend p{margin:0 0 7px;color:var(--muted);}
+.legend b{color:var(--ink);font-weight:600;}
+.scroller{overflow-x:auto;margin-top:14px;}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:430px;}
+th{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
+  text-align:left; font-weight:500; padding:0 12px 7px 0;
+  border-bottom:1px solid var(--rule);
+}
+td{padding:8px 12px 8px 0;border-bottom:1px solid var(--rule-soft);vertical-align:top;}
+td:last-child,th:last-child{padding-right:0}
+td a{color:var(--accent);text-decoration:none;}
+td a:hover{text-decoration:underline}
+.words{font-variant-numeric:tabular-nums;color:var(--muted);}
+.state{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;
+  color:var(--muted);white-space:nowrap;}
+.state.dim{opacity:.7}
+.kicker{margin:58px 0 0;padding:26px 0 0;border-top:2px solid var(--ink);}
+.kicker h2{
+  font-family:Newsreader,Georgia,serif; font-size:clamp(20px,3.3vw,25px);
+  font-weight:500; line-height:1.25; letter-spacing:-.01em; color:var(--ink);
+  text-transform:none; letter-spacing:-.01em; margin:0 0 12px; padding:0; border:0;
+  text-wrap:balance;
+}
+.kicker p{margin:0;color:var(--ink-soft);font-size:15px;}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:12px;color:var(--muted);}
+.none{margin-top:18px;padding:20px 22px;background:var(--surface);border:1px solid var(--rule);}
+.none p{margin:0 0 10px;color:var(--ink-soft);}
+.none p:last-child{margin-bottom:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<main class="sheet">
+  <p class="eyebrow">Commercial consistency audit</p>
+  <h1>We found 7 commercial promises worth checking.</h1>
+  <p class="standfirst">Every quote below was checked against the page it came from.
+    Public pages of <a href="https://upheal.io/" target="_blank" rel="noopener">upheal.io</a>
+    only. Nothing private was used.</p>
+  <dl class="ledger"><div><dt>Pages read</dt><dd>10</dd></div><div><dt>Promises</dt><dd>21</dd></div><div><dt>Quotes verified</dt><dd>42</dd></div><div><dt>Discarded</dt><dd>0</dd></div></dl>
+
+  <h2>Plans found</h2>
+  <p class="sells"><span><b>Free</b> $0</span><span><b>Premium</b> $1 per session, capped at $69 a month</span><span><b>Group plan</b> no published price</span><span><b>Custom Enterprise plan</b> Contact Sales</span><span><b>Starter (legacy)</b> $29 a month, or $19 billed annually</span><span><b>Premium (legacy)</b> $99 a month, or $69 billed annually</span><span><b>Managed insurance billing</b> 5.9% of collections</span></p>
+
+  <h2>Findings</h2>
+  <article class="finding"><p class="tags"><span class="num">01</span><span class="sev high">high</span><span class="kind">Ambiguity</span><span class="conf">high confidence</span></p><h3>You say you charge for work done. Scheduling alone is billable.</h3><div class="versus"><div><p class="where">Pricing page</p><p class="value">Charge for jobs done, not access</p><blockquote>Legacy EHRs charge for access. We charge for jobs done.</blockquote><a class="src" href="https://www.upheal.io/pricing" target="_blank" rel="noopener">upheal.io/pricing</a></div><div><p class="where">Same page, further down</p><p class="value">Scheduling counts, note or not</p><blockquote>A session is counted each time you generate an AI note or schedule a session with a client</blockquote><a class="src" href="https://www.upheal.io/pricing" target="_blank" rel="noopener">upheal.io/pricing</a></div></div><dl class="meta"><dt>Impact</dt><dd>Book 40 appointments, write 20 notes, pay for 40. Telehealth calls count too, with or without a note.</dd><dt>Check</dt><dd>The $69 cap bounds it, and the same answer says the fee covers the whole platform rather than the note.</dd></dl></article><article class="finding"><p class="tags"><span class="num">02</span><span class="sev high">high</span><span class="kind">Missing information</span><span class="conf">high confidence</span></p><h3>Free claims offer runs on four pages. One of them says solo only.</h3><div class="versus"><div><p class="where">Pricing page</p><p class="value">$0.30 per claim, free till September</p><blockquote>$0.30 per claim submission, $0.15 per eligibility check</blockquote><a class="src" href="https://www.upheal.io/pricing" target="_blank" rel="noopener">upheal.io/pricing</a></div><div><p class="where">Billing &amp; subscription help</p><p class="value">Solo practices only</p><blockquote>Applicable only for solo practicies.</blockquote><a class="src" href="https://www.upheal.io/features/insurance-billing" target="_blank" rel="noopener">upheal.io/features/insurance-billing</a></div></div><dl class="meta"><dt>Impact</dt><dd>Group practices file the most claims and are the ones putting the wrong number in a budget.</dd><dt>Check</dt><dd>Four words on the pricing page fixes it. The restriction line also has a typo, so it looks like a late addition.</dd></dl></article><article class="finding"><p class="tags"><span class="num">03</span><span class="sev high">high</span><span class="kind">Likely contradiction</span><span class="conf">medium confidence</span></p><h3>Trial is 30 days on one page and 14 days on another.</h3><div class="versus"><div><p class="where">Pricing page /pricing</p><p class="value">30 days</p><blockquote>30-day full trial</blockquote><a class="src" href="https://www.upheal.io/pricing" target="_blank" rel="noopener">upheal.io/pricing</a></div><div><p class="where">Pricing page /pricing-reference</p><p class="value">14 days for teams</p><blockquote>14-day full-featured trial</blockquote><a class="src" href="https://www.upheal.io/pricing-reference" target="_blank" rel="noopener">upheal.io/pricing-reference</a></div></div><dl class="meta"><dt>Impact</dt><dd>The Group plan card sits under the 30-day claim and invites a team to start that trial.</dd><dt>Check</dt><dd>The 14-day figure sits under a Legacy plans heading, and nothing marks where legacy ends on that page.</dd></dl></article><article class="finding"><p class="tags"><span class="num">04</span><span class="sev medium">medium</span><span class="kind">Likely contradiction</span><span class="conf">high confidence</span></p><h3>Canadian page prices card fees in C$ and claim fees in US$.</h3><div class="versus"><div><p class="where">Pricing page</p><p class="value">2.9% plus C$0.30 per card charge</p><blockquote>Low fees for card transactions: 2.9% + C$0.30</blockquote><a class="src" href="https://www.upheal.io/en-ca/pricing" target="_blank" rel="noopener">upheal.io/en-ca/pricing</a></div><div><p class="where">Same page, further down</p><p class="value">$0.30 per claim, no C</p><blockquote>$0.30 per claim submission, $0.15 per eligibility check</blockquote><a class="src" href="https://www.upheal.io/en-ca/pricing" target="_blank" rel="noopener">upheal.io/en-ca/pricing</a></div></div><dl class="meta"><dt>Impact</dt><dd>A Canadian reader cannot tell whether a claim costs C$0.30 or roughly C$0.41.</dd><dt>Check</dt><dd>This looks like a localisation pass that skipped the insurance billing block.</dd></dl></article><article class="finding"><p class="tags"><span class="num">05</span><span class="sev medium">medium</span><span class="kind">Possibly out of date</span><span class="conf">high confidence</span></p><h3>Premium names your current tier and a discontinued $99 plan.</h3><div class="versus"><div><p class="where">Pricing page /pricing</p><p class="value">Current tier, $1 per session</p><blockquote>you won&#x27;t be able to use features only included in our Premium plan</blockquote><a class="src" href="https://www.upheal.io/pricing" target="_blank" rel="noopener">upheal.io/pricing</a></div><div><p class="where">Pricing page /pricing-reference</p><p class="value">Legacy plan, $99 a month</p><blockquote>$99 $69 /month billed annually</blockquote><a class="src" href="https://www.upheal.io/pricing-reference" target="_blank" rel="noopener">upheal.io/pricing-reference</a></div></div><dl class="meta"><dt>Impact</dt><dd>Search for the price of Premium and you find $99, $69, or $1 per session capped at $69.</dd><dt>Check</dt><dd>Your FAQ says outright that pricing changed and links to the legacy page, which is more than most companies do.</dd></dl></article><article class="finding"><p class="tags"><span class="num">06</span><span class="sev low">low</span><span class="kind">Possibly out of date</span><span class="conf">medium confidence</span></p><h3>One offer names a month now past. Another names no year.</h3><div class="versus"><div><p class="where">Billing &amp; subscription help</p><p class="value">Beta opens August 2026, now past</p><blockquote>Closed beta opens August 2026</blockquote><a class="src" href="https://www.upheal.io/features/managed-insurance-billing" target="_blank" rel="noopener">upheal.io/features/managed-insurance-billing</a></div><div><p class="where">Pricing page</p><p class="value">Free till September, no year</p><blockquote>Free till end of September</blockquote><a class="src" href="https://www.upheal.io/pricing" target="_blank" rel="noopener">upheal.io/pricing</a></div></div><dl class="meta"><dt>Impact</dt><dd>A reader cannot tell from either page whether the offer is open.</dd><dt>Check</dt><dd>The beta may have opened on time and the wording simply not been updated.</dd></dl></article><article class="finding"><p class="tags"><span class="num">07</span><span class="sev low">low</span><span class="kind">Missing information</span><span class="conf">medium confidence</span></p><h3>Treatment Plans are sold at no added cost and gated by plan.</h3><div class="versus"><div><p class="where">Pricing page /features/treatment-plans</p><p class="value">No added cost, no plan named</p><blockquote>Built into Upheal at no added cost.</blockquote><a class="src" href="https://www.upheal.io/features/treatment-plans" target="_blank" rel="noopener">upheal.io/features/treatment-plans</a></div><div><p class="where">Pricing page /pricing</p><p class="value">A row in the plan comparison</p><blockquote>Get insurance-compliant, AI-generated Treatment Plans, plus our Golden Thread feature to track client progress session-to-session.</blockquote><a class="src" href="https://www.upheal.io/pricing" target="_blank" rel="noopener">upheal.io/pricing</a></div></div><dl class="meta"><dt>Impact</dt><dd>The feature page names no plan. The pricing page lists Treatment Plans as a comparison row, so it varies by tier.</dd><dt>Check</dt><dd>No added cost is fair if it means no add-on fee on top of your plan, which competitors do charge. The comparison table is built from divs, so we could not read which column holds it.</dd></dl></article>
+
+  <h2>Definitions</h2><div class="legend"><p><b>Likely contradiction:</b> Two public statements that cannot both be true.</p><p><b>Ambiguity:</b> Both statements can be true, but a customer cannot tell what they get.</p><p><b>Possibly out of date:</b> Content that looks left over from an earlier version of your packaging.</p><p><b>Missing information:</b> Something that changes the deal, published somewhere the buyer will not look.</p></div>
+
+  <h2>Pages read</h2>
+  <div class="scroller"><table><thead><tr><th>Page</th><th>Type</th><th>Words</th>
+    <th>Status</th></tr></thead><tbody><tr><td><a href="https://www.upheal.io/pricing" target="_blank" rel="noopener">Pricing | Upheal</a></td><td class="state">Pricing page</td><td class="words">2,570</td><td class="state">read</td></tr><tr><td><a href="https://www.upheal.io/features/treatment-plans" target="_blank" rel="noopener">Mental Health Treatment Plan Software | Built Into Your EHR | Up</a></td><td class="state">Pricing page</td><td class="words">547</td><td class="state">read</td></tr><tr><td><a href="https://www.upheal.io/features/insurance-billing" target="_blank" rel="noopener">Insurance Billing for Therapists | Claims, Eligibility &amp; ERAs | </a></td><td class="state">Billing &amp; subscription help</td><td class="words">983</td><td class="state">read</td></tr><tr><td><a href="https://www.upheal.io/features/managed-insurance-billing" target="_blank" rel="noopener">Managed insurance billing | Upheal</a></td><td class="state">Billing &amp; subscription help</td><td class="words">1,091</td><td class="state">read</td></tr><tr><td><a href="https://upheal.io/support/en/collections/19715205-insurance-billing" target="_blank" rel="noopener">Insurance billing | Upheal Support Center</a></td><td class="state">Billing &amp; subscription help</td><td class="words">54</td><td class="state dim">no readable text</td></tr><tr><td><a href="https://www.upheal.io/signup" target="_blank" rel="noopener">Sign up | Upheal</a></td><td class="state">Trial / signup</td><td class="words">57</td><td class="state dim">no readable text</td></tr><tr><td><a href="https://upheal.io/support/en/collections/4586561-using-upheal-with-other-apps" target="_blank" rel="noopener">Using Upheal with other apps | Upheal Support Center</a></td><td class="state">Add-ons &amp; integrations</td><td class="words">99</td><td class="state dim">no readable text</td></tr><tr><td><a href="https://www.upheal.io/support/en" target="_blank" rel="noopener">Home | Upheal Support Center</a></td><td class="state">Help centre</td><td class="words">244</td><td class="state">read</td></tr><tr><td><a href="https://www.upheal.io/documentation" target="_blank" rel="noopener">Documentation | Upheal</a></td><td class="state">Product documentation</td><td class="words">180</td><td class="state">read</td></tr><tr><td><a href="https://upheal.io/support/en/collections/3656417-getting-started-with-upheal" target="_blank" rel="noopener">Getting started with Upheal | Upheal Support Center</a></td><td class="state">Help centre</td><td class="words">117</td><td class="state dim">no readable text</td></tr><tr><td><a href="https://upheal.io/support/en/collections/3982277-therapy-documentation" target="_blank" rel="noopener">Therapy documentation | Upheal Support Center</a></td><td class="state">Product documentation</td><td class="words">203</td><td class="state">read</td></tr><tr><td><a href="https://www.upheal.io/documentation/soap-note-example-2026" target="_blank" rel="noopener">SOAP note example: how to write one (free template)</a></td><td class="state">Product documentation</td><td class="words">40</td><td class="state dim">no readable text</td></tr><tr><td><a href="https://upheal.io/support/en/collections/3836341-session-capture-methods" target="_blank" rel="noopener">Session capture methods | Upheal Support Center</a></td><td class="state">Help centre</td><td class="words">220</td><td class="state">read</td></tr><tr><td><a href="https://www.upheal.io/pricing-reference" target="_blank" rel="noopener">Pricing reference</a></td><td class="state">Pricing page</td><td class="words">1,150</td><td class="state">read</td></tr><tr><td><a href="https://www.upheal.io/en-ca/pricing" target="_blank" rel="noopener">Pricing | Upheal</a></td><td class="state">Pricing page</td><td class="words">2,553</td><td class="state">read</td></tr><tr><td>https://upheal.io/faq</td><td class="state"></td><td class="words"></td><td class="state dim">HTTP 404</td></tr><tr><td>https://upheal.io/terms</td><td class="state"></td><td class="words"></td><td class="state dim">HTTP 404</td></tr></tbody></table></div>
+
+  <section class="kicker"><h2>These are the promises your customers can see. Do your billing system and product deliver the same thing?</h2><p>This audit reads your public pages only. It cannot see what your billing system meters, what your product enforces, or what your customer records entitle people to. If the findings above are news to you, the question worth asking is what else is out of step behind them.</p></section>
+  <footer>Public pages only. Every quote above was located in the page it is attributed to.
+    0 candidate finding(s) were discarded because their evidence
+    could not be verified. No login, no billing data, no customer records.</footer>
+</main>

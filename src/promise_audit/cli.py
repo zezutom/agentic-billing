@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import re
 import sys
+import tempfile
 from pathlib import Path
 
 from .analyze import AnalysisPending, analyse, analysis_path, write_request
@@ -29,7 +30,11 @@ def _dossier_path(workdir: Path, slug: str) -> Path:
 def cmd_harvest(args) -> int:
     workdir = Path(args.work)
     workdir.mkdir(parents=True, exist_ok=True)
-    fetcher = Fetcher(cache_dir=args.cache_dir, delay=args.delay,
+    cache_dir = args.cache_dir
+    if getattr(args, "no_cache", False):
+        cache_dir = tempfile.mkdtemp(prefix="promise-audit-")
+        print(f"Cache bypassed. Fetching everything fresh into {cache_dir}")
+    fetcher = Fetcher(cache_dir=cache_dir, delay=args.delay,
                       allow_render=not args.no_render)
     try:
         print(f"Harvesting {args.url} ...")
@@ -103,6 +108,8 @@ def main(argv: list[str] | None = None) -> int:
             p.add_argument("--no-render", action="store_true",
                            help="skip the headless-browser fallback for JS-only pages")
             p.add_argument("--cache-dir", default=".promise_audit_cache")
+            p.add_argument("--no-cache", action="store_true",
+                           help="refetch every page instead of reusing the disk cache")
             p.add_argument("--delay", type=float, default=1.0)
         p.add_argument("--work", default="work", help="where dossiers and requests live")
         p.add_argument("--slug", help="short id for this company (default: derived from name)")

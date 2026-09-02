@@ -1,0 +1,226 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Commercial consistency audit — Upheal</title>
+<style>
+:root{--ink:#12151c;--muted:#5d6675;--line:#e3e6ec;--bg:#fbfbfc;--card:#fff;
+--high:#c0392b;--high-bg:#fdf0ee;--med:#b06f13;--med-bg:#fdf6ea;--low:#4a6b8a;--low-bg:#eff4f8;
+--accent:#1a4fa0;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;}
+.wrap{max-width:860px;margin:0 auto;padding:56px 24px 96px;}
+.eyebrow{font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+font-weight:600;margin:0 0 12px;}
+h1{font-size:34px;line-height:1.22;margin:0 0 14px;letter-spacing:-.02em;font-weight:700;}
+.sub{color:var(--muted);font-size:17px;margin:0 0 8px;}
+.meta{color:var(--muted);font-size:14px;margin:22px 0 0;padding-top:18px;border-top:1px solid var(--line);}
+.meta b{color:var(--ink);font-weight:600}
+h2{font-size:20px;margin:52px 0 14px;letter-spacing:-.01em;}
+.f{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 24px;
+margin:0 0 18px;box-shadow:0 1px 2px rgba(16,24,40,.04);}
+.f.high{border-left:4px solid var(--high)} .f.medium{border-left:4px solid var(--med)}
+.f.low{border-left:4px solid var(--low)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+.chip{font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+padding:4px 9px;border-radius:5px;}
+.chip.high{background:var(--high-bg);color:var(--high)}
+.chip.medium{background:var(--med-bg);color:var(--med)}
+.chip.low{background:var(--low-bg);color:var(--low)}
+.chip.kind{background:#f1f2f5;color:var(--muted)}
+.chip.conf{background:transparent;color:var(--muted);border:1px solid var(--line);font-weight:600}
+.chip.ok{background:#eef7f0;color:#2f6b40}
+.f h3{font-size:18px;margin:0 0 10px;line-height:1.35;letter-spacing:-.01em}
+.f p{margin:0 0 14px;color:#2b3140}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 0}
+@media(max-width:660px){.pair{grid-template-columns:1fr}}
+.side{background:#f7f8fa;border:1px solid var(--line);border-radius:9px;padding:14px 15px;}
+.side .lab{font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);
+font-weight:700;margin-bottom:6px}
+.side .claim{font-weight:600;font-size:15px;margin-bottom:9px;line-height:1.4}
+.side blockquote{margin:0 0 9px;padding-left:11px;border-left:2px solid #cdd3dd;color:#4a5262;
+font-size:13.5px;line-height:1.5;font-style:italic;}
+.side a{font-size:13px;color:var(--accent);text-decoration:none;word-break:break-all}
+.side a:hover{text-decoration:underline}
+.note{margin-top:15px;padding-top:13px;border-top:1px dashed var(--line);color:var(--muted);
+font-size:13.5px;}
+.note b{color:#4a5262;font-weight:600}
+.note div{margin:4px 0}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+td a{color:var(--accent);text-decoration:none;word-break:break-all}
+.tag{display:inline-block;background:#f1f2f5;color:var(--muted);font-size:11.5px;
+padding:2px 7px;border-radius:4px;margin-right:4px}
+.close{margin-top:56px;padding:28px 30px;background:#12151c;color:#f2f4f7;border-radius:12px}
+.close h2{color:#fff;margin:0 0 12px;font-size:22px;line-height:1.35}
+.close p{color:#c2c8d2;margin:0;font-size:15.5px}
+.legend{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 20px;
+font-size:14px;color:var(--muted)}
+.legend div{margin:5px 0}
+.legend b{color:var(--ink)}
+.none{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px}
+details{margin-top:10px}summary{cursor:pointer;color:var(--muted);font-size:14px}
+footer{margin-top:40px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:18px}
+</style></head><body><div class="wrap">
+<p class="eyebrow">Commercial consistency audit</p>
+<h1>We found 6 commercial promises worth checking.</h1>
+<p class="sub">Everything below is quoted word-for-word from
+<a href="https://upheal.io/" style="color:inherit">upheal.io</a>.
+Nothing here is inferred from anything private.</p>
+<p class="meta"><b>10</b> public pages read &middot;
+<b>20</b> commercial promises extracted &middot;
+<b>39</b> quotes checked against their source page &middot;
+run 2026-09-02 09:25:10 UTC</p>
+
+<h2>What you appear to sell</h2>
+<div class="legend">Free — $0, Premium (usage-based) — $1 /session, capped at $69/month, Group plan — not published; webinar or trial signup, Custom Enterprise plan — Contact Sales, Starter (legacy, flat-rate) — $29/month, or $19/month billed annually, Premium (legacy, flat-rate) — $99/month, or $69/month billed annually, Managed insurance billing — 5.9% of collections</div>
+
+<h2>What we found</h2>
+<article class="f high">
+<div class="chips">
+  <span class="chip high">high impact</span>
+  <span class="chip kind">Ambiguity</span>
+  <span class="chip conf">high confidence</span>
+  <span class="chip ok">evidence verified</span>
+</div>
+<h3>Your headline says you charge for jobs done; your FAQ says scheduling an appointment is chargeable on its own</h3>
+<p>The whole positioning of your pricing page rests on one sentence: legacy EHRs charge for access, you charge for work completed. Your own FAQ then defines a billable session as generating an AI note or simply scheduling a session with a client, and adds that a telehealth call counts even when no note is produced. A therapist who schedules forty appointments and writes twenty notes pays for forty. That may be entirely reasonable given the cap, and you explain the logic in the same answer, but it is not what the headline led them to expect, and this is the number that determines their bill.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">You charge for work completed, not for access to the platform</div>
+<blockquote>&ldquo;Legacy EHRs charge for access. We charge for jobs done.&rdquo;</blockquote>
+<a href="https://www.upheal.io/pricing" target="_blank" rel="noopener">https://www.upheal.io/pricing</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">A session is billable when an appointment is scheduled, whether or not a note is ever produced</div>
+<blockquote>&ldquo;A session is counted each time you generate an AI note or schedule a session with a client&rdquo;</blockquote>
+<a href="https://www.upheal.io/pricing" target="_blank" rel="noopener">https://www.upheal.io/pricing</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> Scheduling an appointment is an act of access rather than a job done, so the billing rule charges for precisely the thing the headline says you do not charge for.</div><div><b>What would make this a non-issue:</b> The $69 monthly cap bounds the damage, and the same FAQ answer explains the reasoning: the per-session fee covers the whole platform, not just the note. A clause on the headline claim would close the gap without weakening it.</div></div>
+</article><article class="f high">
+<div class="chips">
+  <span class="chip high">high impact</span>
+  <span class="chip kind">Missing information</span>
+  <span class="chip conf">high confidence</span>
+  <span class="chip ok">evidence verified</span>
+</div>
+<h3>Your free insurance-billing launch offer is advertised without restriction and limited to solo practices only in the small print</h3>
+<p>Your pricing page states the insurance billing fees and marks them free until the end of September, with no qualification. The insurance billing feature page repeats the launch offer twice more, in the hero and in the pricing block, again without qualification. The restriction appears once, inside the answer to &quot;What does it cost?&quot;: solo practices only. Group practices are exactly the customers who submit enough claims for $0.30 apiece to matter, and they are the ones your pricing page leaves with the wrong number in their model.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">Insurance billing fees are free until the end of September, stated with no restriction</div>
+<blockquote>&ldquo;$0.30 per claim submission, $0.15 per eligibility check&rdquo;</blockquote>
+<a href="https://www.upheal.io/pricing" target="_blank" rel="noopener">https://www.upheal.io/pricing</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">The launch offer applies only to solo practices</div>
+<blockquote>&ldquo;Applicable only for solo practicies.&rdquo;</blockquote>
+<a href="https://www.upheal.io/features/insurance-billing" target="_blank" rel="noopener">https://www.upheal.io/features/insurance-billing</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> Three places advertise the offer to everyone and one place restricts it to a subset of customers, so a group practice reading any of the first three gets a fee schedule that does not apply to them.</div><div><b>What would make this a non-issue:</b> Adding four words to the pricing page and the two banners would resolve this entirely. Note also that the restriction sentence contains a typo, which suggests it was added late rather than written alongside the offer.</div></div>
+</article><article class="f high">
+<div class="chips">
+  <span class="chip high">high impact</span>
+  <span class="chip kind">Likely contradiction</span>
+  <span class="chip conf">medium confidence</span>
+  <span class="chip ok">evidence verified</span>
+</div>
+<h3>Your trial is 30 days on the pricing page and 14 days for teams on your pricing reference page</h3>
+<p>&quot;30-day full trial&quot; sits directly under the price on both your pricing pages, and the Group plan card on the same page invites a team to start that trial. Your pricing reference page answers &quot;Is there a free option for teams?&quot; with a 14-day full-featured trial, after which the team drops to the Free plan. Trial length is one of the first things a practice manager writes down when comparing tools, and right now your site gives them two answers depending on which page they landed on.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">The trial is 30 days, stated beneath the price and next to the Group plan</div>
+<blockquote>&ldquo;30-day full trial&rdquo;</blockquote>
+<a href="https://www.upheal.io/pricing" target="_blank" rel="noopener">https://www.upheal.io/pricing</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">Teams get a 14-day full-featured trial before moving to the Free plan</div>
+<blockquote>&ldquo;14-day full-featured trial&rdquo;</blockquote>
+<a href="https://www.upheal.io/pricing-reference" target="_blank" rel="noopener">https://www.upheal.io/pricing-reference</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> Thirty days and fourteen days are different lengths of the same offer, and both pages present theirs as the trial a team would get.</div><div><b>What would make this a non-issue:</b> The 14-day figure sits on a page headed &quot;Legacy plans&quot;, so it may describe an older team offer that no longer applies. That is not obvious to a reader: the team and enterprise sections appear below the legacy tables without anything marking where legacy ends.</div></div>
+</article><article class="f medium">
+<div class="chips">
+  <span class="chip medium">medium impact</span>
+  <span class="chip kind">Likely contradiction</span>
+  <span class="chip conf">high confidence</span>
+  <span class="chip ok">evidence verified</span>
+</div>
+<h3>Your Canadian pricing page quotes card fees in Canadian dollars and insurance billing fees in US dollars</h3>
+<p>The Canadian version of your pricing page converts carefully: C$1 per session, capped at C$69 a month, and card transactions at 2.9% + C$0.30. In the same feature list, insurance billing is quoted as $0.30 per claim and $0.15 per eligibility check, with no C. One of the comparison rows lower down does the same thing, mixing C$ figures with a plain $15. A Canadian customer cannot tell whether a claim costs them C$0.30 or C$0.30-plus-exchange, and the difference on the page is roughly a third.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">Card transaction fees on the Canadian page are given in Canadian dollars</div>
+<blockquote>&ldquo;Low fees for card transactions: 2.9% + C$0.30&rdquo;</blockquote>
+<a href="https://www.upheal.io/en-ca/pricing" target="_blank" rel="noopener">https://www.upheal.io/en-ca/pricing</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">Insurance billing fees on the same Canadian page are given without the C, in US dollars</div>
+<blockquote>&ldquo;$0.30 per claim submission, $0.15 per eligibility check&rdquo;</blockquote>
+<a href="https://www.upheal.io/en-ca/pricing" target="_blank" rel="noopener">https://www.upheal.io/en-ca/pricing</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> The page localises every other price on it, so a fee left in plain dollars reads as a different currency rather than a different style, and the two amounts are not the same money.</div><div><b>What would make this a non-issue:</b> Your page already carries the line that exact amounts may vary with exchange rates, which covers you in spirit. This looks like a localisation pass that missed the insurance billing block, not a pricing decision.</div></div>
+</article><article class="f medium">
+<div class="chips">
+  <span class="chip medium">medium impact</span>
+  <span class="chip kind">Possibly out of date</span>
+  <span class="chip conf">high confidence</span>
+  <span class="chip ok">evidence verified</span>
+</div>
+<h3>&quot;Premium&quot; is the name of both your current paid tier and a discontinued $99 a month plan</h3>
+<p>Your pricing page uses Premium for the plan customers buy today — $1 per session, capped at $69 a month — and your FAQ tells customers they lose Premium features if they drop to Free. Your pricing reference page, under the heading Legacy plans, uses Premium for a flat-rate plan at $99 a month, or $69 a month billed annually. A prospect searching for what Upheal Premium costs can find $99, $69, or $1 per session capped at $69, and the coincidence that the old annual rate and the new monthly cap are both $69 makes it harder, not easier, to tell which is current.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">Premium is the current paid tier, priced per session with a $69 monthly cap</div>
+<blockquote>&ldquo;you won&#x27;t be able to use features only included in our Premium plan&rdquo;</blockquote>
+<a href="https://www.upheal.io/pricing" target="_blank" rel="noopener">https://www.upheal.io/pricing</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">Premium is also a legacy flat-rate plan at $99 a month, or $69 billed annually</div>
+<blockquote>&ldquo;$99 $69 /month billed annually&rdquo;</blockquote>
+<a href="https://www.upheal.io/pricing-reference" target="_blank" rel="noopener">https://www.upheal.io/pricing-reference</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> The same plan name carries two different prices and two different billing models, so the name no longer identifies what a customer is buying.</div><div><b>What would make this a non-issue:</b> You are being unusually transparent about this — the FAQ says outright that pricing changed recently and links to the legacy page, which is more than most companies do. Renaming the current tier, or labelling the old one &quot;Premium (legacy)&quot;, would finish the job.</div></div>
+</article><article class="f low">
+<div class="chips">
+  <span class="chip low">low impact</span>
+  <span class="chip kind">Possibly out of date</span>
+  <span class="chip conf">medium confidence</span>
+  <span class="chip ok">evidence verified</span>
+</div>
+<h3>Two of your dated offers have no year on them, and one of them describes a date that has passed</h3>
+<p>Your managed insurance billing page invites people onto a waitlist for a closed beta that opens in August 2026. It is now September. Separately, the free-claims launch offer runs &quot;till the end of September&quot; on four different pages without a year attached, so a reader in any September cannot tell whether they have four weeks or missed it last year. Neither is serious on its own; together they make time-limited offers on the site hard to trust, which is the opposite of what a launch offer is for.</p>
+<div class="pair"><div class="side"><div class="lab">What one page says</div>
+<div class="claim">A closed beta is described as opening in a month that has now passed</div>
+<blockquote>&ldquo;Closed beta opens August 2026&rdquo;</blockquote>
+<a href="https://www.upheal.io/features/managed-insurance-billing" target="_blank" rel="noopener">https://www.upheal.io/features/managed-insurance-billing</a></div><div class="side"><div class="lab">What another page says</div>
+<div class="claim">The launch offer names a month but no year</div>
+<blockquote>&ldquo;Free till end of September&rdquo;</blockquote>
+<a href="https://www.upheal.io/pricing" target="_blank" rel="noopener">https://www.upheal.io/pricing</a></div></div>
+<div class="note"><div><b>Why this is not just wording:</b> Both are statements about when an offer applies, and in each case a reader cannot work out from the page whether it applies to them today.</div><div><b>What would make this a non-issue:</b> The beta may well have opened on time and the page simply not been reworded, and the September offer is almost certainly current. Adding the year, and switching to the past tense once a date passes, costs nothing.</div></div>
+</article>
+
+<h2>How to read these</h2><div class="legend"><div><b>Likely contradiction</b> — Two public statements that cannot both be true.</div><div><b>Ambiguity</b> — Both statements can be true, but a customer cannot tell what they get.</div><div><b>Possibly out of date</b> — Content that looks left over from an earlier version of your packaging.</div><div><b>Missing information</b> — Something that changes the deal, published somewhere the buyer will not look.</div></div>
+
+<h2>Pages we read</h2>
+<table><thead><tr><th>Page</th><th>Words</th><th>Status</th></tr></thead>
+<tbody><tr><td><a href="https://www.upheal.io/pricing" target="_blank" rel="noopener">
+Pricing | Upheal</a><br><span class="tag">Pricing page</span></td><td>2570</td>
+<td>read</td></tr><tr><td><a href="https://www.upheal.io/features/treatment-plans" target="_blank" rel="noopener">
+Mental Health Treatment Plan Software | Built Into Your EHR | Upheal</a><br><span class="tag">Pricing page</span></td><td>547</td>
+<td>read</td></tr><tr><td><a href="https://www.upheal.io/features/insurance-billing" target="_blank" rel="noopener">
+Insurance Billing for Therapists | Claims, Eligibility &amp; ERAs | Upheal</a><br><span class="tag">Billing &amp; subscription help</span></td><td>983</td>
+<td>read</td></tr><tr><td><a href="https://www.upheal.io/features/managed-insurance-billing" target="_blank" rel="noopener">
+Managed insurance billing | Upheal</a><br><span class="tag">Billing &amp; subscription help</span></td><td>1091</td>
+<td>read</td></tr><tr><td><a href="https://upheal.io/support/en/collections/19715205-insurance-billing" target="_blank" rel="noopener">
+Insurance billing | Upheal Support Center</a><br><span class="tag">Billing &amp; subscription help</span><span class="tag">too little text to read</span></td><td>54</td>
+<td>read</td></tr><tr><td><a href="https://www.upheal.io/signup" target="_blank" rel="noopener">
+Sign up | Upheal</a><br><span class="tag">Trial / signup</span><span class="tag">too little text to read</span></td><td>57</td>
+<td>read</td></tr><tr><td><a href="https://upheal.io/support/en/collections/4586561-using-upheal-with-other-apps" target="_blank" rel="noopener">
+Using Upheal with other apps | Upheal Support Center</a><br><span class="tag">Add-ons &amp; integrations</span><span class="tag">too little text to read</span></td><td>99</td>
+<td>read</td></tr><tr><td><a href="https://www.upheal.io/support/en" target="_blank" rel="noopener">
+Home | Upheal Support Center</a><br><span class="tag">Help centre</span></td><td>244</td>
+<td>read</td></tr><tr><td><a href="https://www.upheal.io/documentation" target="_blank" rel="noopener">
+Documentation | Upheal</a><br><span class="tag">Product documentation</span></td><td>180</td>
+<td>read</td></tr><tr><td><a href="https://upheal.io/support/en/collections/3656417-getting-started-with-upheal" target="_blank" rel="noopener">
+Getting started with Upheal | Upheal Support Center</a><br><span class="tag">Help centre</span><span class="tag">too little text to read</span></td><td>117</td>
+<td>read</td></tr><tr><td><a href="https://upheal.io/support/en/collections/3982277-therapy-documentation" target="_blank" rel="noopener">
+Therapy documentation | Upheal Support Center</a><br><span class="tag">Product documentation</span></td><td>203</td>
+<td>read</td></tr><tr><td><a href="https://www.upheal.io/documentation/soap-note-example-2026" target="_blank" rel="noopener">
+SOAP note example: how to write one (free template)</a><br><span class="tag">Product documentation</span><span class="tag">too little text to read</span></td><td>40</td>
+<td>read</td></tr><tr><td><a href="https://upheal.io/support/en/collections/3836341-session-capture-methods" target="_blank" rel="noopener">
+Session capture methods | Upheal Support Center</a><br><span class="tag">Help centre</span></td><td>220</td>
+<td>read</td></tr><tr><td><a href="https://www.upheal.io/pricing-reference" target="_blank" rel="noopener">
+Pricing reference</a><br><span class="tag">Pricing page</span></td><td>1150</td>
+<td>read</td></tr><tr><td><a href="https://www.upheal.io/en-ca/pricing" target="_blank" rel="noopener">
+Pricing | Upheal</a><br><span class="tag">Pricing page</span></td><td>2553</td>
+<td>read</td></tr><tr><td>https://upheal.io/faq<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>HTTP 404</td></tr><tr><td>https://upheal.io/terms<br><span class="tag">not reached</span></td>
+<td>&mdash;</td><td>HTTP 404</td></tr></tbody></table>
+
+<div class="close"><h2>These are the promises your customers can see. Do your billing system and product deliver the same thing?</h2><p>This audit only reads what is published on your website. It cannot see what your billing system actually meters, what your product actually enforces, or what your customer records actually entitle people to. In most companies those three answers have drifted apart quietly, and the public pages are the only place the drift is visible from outside. If the contradictions above are news to you, the more expensive question is what else is out of step behind them.</p></div>
+<footer>Automated read of public pages only, then checked: every quote above was located in
+the page it is attributed to, and
+0 candidate finding(s) were discarded because their evidence
+could not be verified. No login, no billing data and no customer records were involved.</footer>
+</div></body></html>

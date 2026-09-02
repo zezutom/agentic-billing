@@ -1,0 +1,702 @@
+{
+  "company": "Upheal",
+  "plans": [
+    {
+      "name": "Free",
+      "headline_price": "$0",
+      "billing_periods": [
+        "free"
+      ],
+      "evidence": {
+        "quote": "If you switch to our Free plan, you'll still have access to all your notes and records",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "name": "Premium (usage-based)",
+      "headline_price": "$1 /session, capped at $69/month",
+      "billing_periods": [
+        "monthly"
+      ],
+      "evidence": {
+        "quote": "Capped at $69/month",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "name": "Group plan",
+      "headline_price": "not published; webinar or trial signup",
+      "billing_periods": [
+        "monthly"
+      ],
+      "evidence": {
+        "quote": "One documentation standard for every clinician on your team.",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "name": "Custom Enterprise plan",
+      "headline_price": "Contact Sales",
+      "billing_periods": [
+        "custom"
+      ],
+      "evidence": {
+        "quote": "Security, compliance, and clinical customization",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "name": "Starter (legacy, flat-rate)",
+      "headline_price": "$29/month, or $19/month billed annually",
+      "billing_periods": [
+        "monthly",
+        "annual"
+      ],
+      "evidence": {
+        "quote": "$29 $19 /month billed annually",
+        "url": "https://www.upheal.io/pricing-reference"
+      },
+      "evidence_verified": true
+    },
+    {
+      "name": "Premium (legacy, flat-rate)",
+      "headline_price": "$99/month, or $69/month billed annually",
+      "billing_periods": [
+        "monthly",
+        "annual"
+      ],
+      "evidence": {
+        "quote": "$99 $69 /month billed annually",
+        "url": "https://www.upheal.io/pricing-reference"
+      },
+      "evidence_verified": true
+    },
+    {
+      "name": "Managed insurance billing",
+      "headline_price": "5.9% of collections",
+      "billing_periods": [
+        "usage"
+      ],
+      "evidence": {
+        "quote": "5.9% of collections",
+        "url": "https://www.upheal.io/features/managed-insurance-billing"
+      },
+      "evidence_verified": true
+    }
+  ],
+  "promises": [
+    {
+      "kind": "plan_price",
+      "statement": "Usage-based pricing is $1 per session",
+      "plan": "Premium (usage-based)",
+      "evidence": {
+        "quote": "$1 /session",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "limit",
+      "statement": "Per-session charges are capped at $69 a month",
+      "plan": "Premium (usage-based)",
+      "evidence": {
+        "quote": "Capped at $69/month",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Billing is monthly based on usage with no minimum spend",
+      "plan": "Premium (usage-based)",
+      "evidence": {
+        "quote": "Billed monthly based on usage \u00b7 No minimum spend",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "trial",
+      "statement": "A 30-day full trial is offered, with no credit card required",
+      "plan": null,
+      "evidence": {
+        "quote": "30-day full trial",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "trial",
+      "statement": "No credit card is required for the trial",
+      "plan": null,
+      "evidence": {
+        "quote": "No credit card required for trial",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "trial",
+      "statement": "Teams get a 14-day full-featured trial before moving to the Free plan",
+      "plan": "Group plan",
+      "evidence": {
+        "quote": "14-day full-featured trial",
+        "url": "https://www.upheal.io/pricing-reference"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "There is a 30-day money back guarantee",
+      "plan": null,
+      "evidence": {
+        "quote": "30-day money back guarantee",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "A session is counted when a note is generated or an appointment is scheduled",
+      "plan": null,
+      "evidence": {
+        "quote": "A session is counted each time you generate an AI note or schedule a session with a client",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Sessions imported from another EHR are never charged",
+      "plan": null,
+      "evidence": {
+        "quote": "Imported sessions from another EHR are never counted or charged.",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Billing follows calendar months and is charged in arrears on the first of the next month",
+      "plan": null,
+      "evidence": {
+        "quote": "You'll be charged for a month's sessions on the first day of the following month.",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "addon",
+      "statement": "Card payments cost 2.9% + $0.30 per transaction",
+      "plan": null,
+      "evidence": {
+        "quote": "2.9% + $0.30 per card transaction",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "addon",
+      "statement": "Insurance billing costs $0.30 per claim and $0.15 per eligibility check",
+      "plan": null,
+      "evidence": {
+        "quote": "$0.30 per claim submission, $0.15 per eligibility check",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "addon",
+      "statement": "There is no monthly fee for insurance billing",
+      "plan": null,
+      "evidence": {
+        "quote": "Billing isn't a subscription add-on. You pay per claim, only when you bill.",
+        "url": "https://www.upheal.io/features/insurance-billing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Claims and eligibility checks are free until the end of September as a launch offer",
+      "plan": null,
+      "evidence": {
+        "quote": "Launch offer: Free claims and eligibility checks till the end of September",
+        "url": "https://www.upheal.io/features/insurance-billing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "The launch offer applies only to solo practices",
+      "plan": null,
+      "evidence": {
+        "quote": "Applicable only for solo practicies.",
+        "url": "https://www.upheal.io/features/insurance-billing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "unlimited",
+      "statement": "Session notes are unlimited on both Free and Premium",
+      "plan": null,
+      "evidence": {
+        "quote": "Session notes per month Unlimited Unlimited",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "entitlement",
+      "statement": "Students and associates get 50% off for the first 12 months",
+      "plan": null,
+      "evidence": {
+        "quote": "Get 50% off your first 12 months of Upheal",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Accounts cannot be shared between providers, on pain of suspension",
+      "plan": null,
+      "evidence": {
+        "quote": "Multiple providers cannot share an Upheal account.",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "condition",
+      "statement": "Unpaid balances past the grace period lock all features except viewing and exporting records",
+      "plan": null,
+      "evidence": {
+        "quote": "you won't be able to use any of Upheal's other features, or switch to our Free plan, until your balance is paid",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "evidence_verified": true
+    },
+    {
+      "kind": "plan_price",
+      "statement": "Canadian pricing is C$1 per session capped at C$69 a month",
+      "plan": "Premium (usage-based)",
+      "evidence": {
+        "quote": "Capped at C$69/month",
+        "url": "https://www.upheal.io/en-ca/pricing"
+      },
+      "evidence_verified": true
+    }
+  ],
+  "findings": [
+    {
+      "type": "ambiguity",
+      "severity": "high",
+      "confidence": "high",
+      "headline": "Your headline says you charge for jobs done; your FAQ says scheduling an appointment is chargeable on its own",
+      "explanation": "The whole positioning of your pricing page rests on one sentence: legacy EHRs charge for access, you charge for work completed. Your own FAQ then defines a billable session as generating an AI note or simply scheduling a session with a client, and adds that a telehealth call counts even when no note is produced. A therapist who schedules forty appointments and writes twenty notes pays for forty. That may be entirely reasonable given the cap, and you explain the logic in the same answer, but it is not what the headline led them to expect, and this is the number that determines their bill.",
+      "claim_a": {
+        "statement": "You charge for work completed, not for access to the platform",
+        "quote": "Legacy EHRs charge for access. We charge for jobs done.",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "claim_b": {
+        "statement": "A session is billable when an appointment is scheduled, whether or not a note is ever produced",
+        "quote": "A session is counted each time you generate an AI note or schedule a session with a client",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "why_not_just_wording": "Scheduling an appointment is an act of access rather than a job done, so the billing rule charges for precisely the thing the headline says you do not charge for.",
+      "caveat": "The $69 monthly cap bounds the damage, and the same FAQ answer explains the reasoning: the per-session fee covers the whole platform, not just the note. A clause on the headline claim would close the gap without weakening it.",
+      "same_page": true,
+      "score": 9.0
+    },
+    {
+      "type": "missing_information",
+      "severity": "high",
+      "confidence": "high",
+      "headline": "Your free insurance-billing launch offer is advertised without restriction and limited to solo practices only in the small print",
+      "explanation": "Your pricing page states the insurance billing fees and marks them free until the end of September, with no qualification. The insurance billing feature page repeats the launch offer twice more, in the hero and in the pricing block, again without qualification. The restriction appears once, inside the answer to \"What does it cost?\": solo practices only. Group practices are exactly the customers who submit enough claims for $0.30 apiece to matter, and they are the ones your pricing page leaves with the wrong number in their model.",
+      "claim_a": {
+        "statement": "Insurance billing fees are free until the end of September, stated with no restriction",
+        "quote": "$0.30 per claim submission, $0.15 per eligibility check",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "claim_b": {
+        "statement": "The launch offer applies only to solo practices",
+        "quote": "Applicable only for solo practicies.",
+        "url": "https://www.upheal.io/features/insurance-billing"
+      },
+      "why_not_just_wording": "Three places advertise the offer to everyone and one place restricts it to a subset of customers, so a group practice reading any of the first three gets a fee schedule that does not apply to them.",
+      "caveat": "Adding four words to the pricing page and the two banners would resolve this entirely. Note also that the restriction sentence contains a typo, which suggests it was added late rather than written alongside the offer.",
+      "same_page": false,
+      "score": 7.65
+    },
+    {
+      "type": "likely_contradiction",
+      "severity": "high",
+      "confidence": "medium",
+      "headline": "Your trial is 30 days on the pricing page and 14 days for teams on your pricing reference page",
+      "explanation": "\"30-day full trial\" sits directly under the price on both your pricing pages, and the Group plan card on the same page invites a team to start that trial. Your pricing reference page answers \"Is there a free option for teams?\" with a 14-day full-featured trial, after which the team drops to the Free plan. Trial length is one of the first things a practice manager writes down when comparing tools, and right now your site gives them two answers depending on which page they landed on.",
+      "claim_a": {
+        "statement": "The trial is 30 days, stated beneath the price and next to the Group plan",
+        "quote": "30-day full trial",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "claim_b": {
+        "statement": "Teams get a 14-day full-featured trial before moving to the Free plan",
+        "quote": "14-day full-featured trial",
+        "url": "https://www.upheal.io/pricing-reference"
+      },
+      "why_not_just_wording": "Thirty days and fourteen days are different lengths of the same offer, and both pages present theirs as the trial a team would get.",
+      "caveat": "The 14-day figure sits on a page headed \"Legacy plans\", so it may describe an older team offer that no longer applies. That is not obvious to a reader: the team and enterprise sections appear below the legacy tables without anything marking where legacy ends.",
+      "same_page": false,
+      "score": 6.9
+    },
+    {
+      "type": "likely_contradiction",
+      "severity": "medium",
+      "confidence": "high",
+      "headline": "Your Canadian pricing page quotes card fees in Canadian dollars and insurance billing fees in US dollars",
+      "explanation": "The Canadian version of your pricing page converts carefully: C$1 per session, capped at C$69 a month, and card transactions at 2.9% + C$0.30. In the same feature list, insurance billing is quoted as $0.30 per claim and $0.15 per eligibility check, with no C. One of the comparison rows lower down does the same thing, mixing C$ figures with a plain $15. A Canadian customer cannot tell whether a claim costs them C$0.30 or C$0.30-plus-exchange, and the difference on the page is roughly a third.",
+      "claim_a": {
+        "statement": "Card transaction fees on the Canadian page are given in Canadian dollars",
+        "quote": "Low fees for card transactions: 2.9% + C$0.30",
+        "url": "https://www.upheal.io/en-ca/pricing"
+      },
+      "claim_b": {
+        "statement": "Insurance billing fees on the same Canadian page are given without the C, in US dollars",
+        "quote": "$0.30 per claim submission, $0.15 per eligibility check",
+        "url": "https://www.upheal.io/en-ca/pricing"
+      },
+      "why_not_just_wording": "The page localises every other price on it, so a fee left in plain dollars reads as a different currency rather than a different style, and the two amounts are not the same money.",
+      "caveat": "Your page already carries the line that exact amounts may vary with exchange rates, which covers you in spirit. This looks like a localisation pass that missed the insurance billing block, not a pricing decision.",
+      "same_page": true,
+      "score": 6.9
+    },
+    {
+      "type": "potentially_outdated",
+      "severity": "medium",
+      "confidence": "high",
+      "headline": "\"Premium\" is the name of both your current paid tier and a discontinued $99 a month plan",
+      "explanation": "Your pricing page uses Premium for the plan customers buy today \u2014 $1 per session, capped at $69 a month \u2014 and your FAQ tells customers they lose Premium features if they drop to Free. Your pricing reference page, under the heading Legacy plans, uses Premium for a flat-rate plan at $99 a month, or $69 a month billed annually. A prospect searching for what Upheal Premium costs can find $99, $69, or $1 per session capped at $69, and the coincidence that the old annual rate and the new monthly cap are both $69 makes it harder, not easier, to tell which is current.",
+      "claim_a": {
+        "statement": "Premium is the current paid tier, priced per session with a $69 monthly cap",
+        "quote": "you won't be able to use features only included in our Premium plan",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "claim_b": {
+        "statement": "Premium is also a legacy flat-rate plan at $99 a month, or $69 billed annually",
+        "quote": "$99 $69 /month billed annually",
+        "url": "https://www.upheal.io/pricing-reference"
+      },
+      "why_not_just_wording": "The same plan name carries two different prices and two different billing models, so the name no longer identifies what a customer is buying.",
+      "caveat": "You are being unusually transparent about this \u2014 the FAQ says outright that pricing changed recently and links to the legacy page, which is more than most companies do. Renaming the current tier, or labelling the old one \"Premium (legacy)\", would finish the job.",
+      "same_page": false,
+      "score": 5.7
+    },
+    {
+      "type": "potentially_outdated",
+      "severity": "low",
+      "confidence": "medium",
+      "headline": "Two of your dated offers have no year on them, and one of them describes a date that has passed",
+      "explanation": "Your managed insurance billing page invites people onto a waitlist for a closed beta that opens in August 2026. It is now September. Separately, the free-claims launch offer runs \"till the end of September\" on four different pages without a year attached, so a reader in any September cannot tell whether they have four weeks or missed it last year. Neither is serious on its own; together they make time-limited offers on the site hard to trust, which is the opposite of what a launch offer is for.",
+      "claim_a": {
+        "statement": "A closed beta is described as opening in a month that has now passed",
+        "quote": "Closed beta opens August 2026",
+        "url": "https://www.upheal.io/features/managed-insurance-billing"
+      },
+      "claim_b": {
+        "statement": "The launch offer names a month but no year",
+        "quote": "Free till end of September",
+        "url": "https://www.upheal.io/pricing"
+      },
+      "why_not_just_wording": "Both are statements about when an offer applies, and in each case a reader cannot work out from the page whether it applies to them today.",
+      "caveat": "The beta may well have opened on time and the page simply not been reworded, and the September offer is almost certainly current. Adding the year, and switching to the past tense once a date passes, costs nothing.",
+      "same_page": false,
+      "score": 1.9
+    }
+  ],
+  "coverage_notes": {
+    "unusable_pages": [
+      "https://www.upheal.io/signup (57 words)",
+      "https://upheal.io/support/en/collections/19715205-insurance-billing (54 words)",
+      "https://upheal.io/support/en/collections/3656417-getting-started-with-upheal (117 words)",
+      "https://upheal.io/support/en/collections/4586561-using-upheal-with-other-apps (99 words)",
+      "https://www.upheal.io/documentation/soap-note-example-2026 (40 words)"
+    ],
+    "what_was_not_checkable": "Your support centre is the biggest gap. Every collection page we reached returned only its title and a few links, because the content is built in the browser, so we could not check a single help article against the pricing page \u2014 and billing help is where the answers to most of the findings above would live. We also could not reach your terms of service (upheal.io/terms returns a 404 from our crawl), so renewal, refund and price-change terms were not reviewed at all; the only refund language we could read is the 30-day guarantee on the pricing pages. The Group plan and Custom Enterprise plan publish no prices anywhere we looked, so we could not check team pricing for consistency. Finally, the plan comparison tables on your pricing pages are built from styled divs rather than real tables, so per-plan values lose their column alignment when flattened to text; we did not report anything that depended on reading them."
+  },
+  "backend": "agent",
+  "verification": {
+    "findings_in": 6,
+    "findings_out": 6,
+    "findings_rejected": 0,
+    "quotes_checked": 39,
+    "quotes_failed": 0,
+    "url_corrections": 0,
+    "rejections": []
+  },
+  "source": {
+    "root_url": "https://upheal.io/",
+    "domain": "upheal.io",
+    "harvested_at": "2026-09-02 09:25:10 UTC",
+    "stats": {
+      "pages_selected": 15,
+      "pages_fetched_ok": 15,
+      "pages_usable": 10,
+      "pages_failed": 2,
+      "pages_js_rendered": 0,
+      "urls_considered": 20,
+      "dossier_chars": 43845,
+      "harvest_seconds": 15.2,
+      "fetcher": {
+        "network": 18,
+        "cache": 4,
+        "rendered": 0,
+        "blocked": 0,
+        "failed": 2
+      }
+    },
+    "pages": [
+      {
+        "url": "https://www.upheal.io/pricing",
+        "final_url": "https://www.upheal.io/pricing",
+        "title": "Pricing | Upheal",
+        "category": "pricing",
+        "why_selected": "url path contains 'pricing'; link text 'pricing'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 2570,
+        "text": "",
+        "truncated": true,
+        "usable": true
+      },
+      {
+        "url": "https://www.upheal.io/features/treatment-plans",
+        "final_url": "https://www.upheal.io/features/treatment-plans",
+        "title": "Mental Health Treatment Plan Software | Built Into Your EHR | Upheal",
+        "category": "pricing",
+        "why_selected": "url path contains 'plans'; link text 'ai treatment plan maintain the \"golden t'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 547,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://www.upheal.io/features/insurance-billing",
+        "final_url": "https://www.upheal.io/features/insurance-billing",
+        "title": "Insurance Billing for Therapists | Claims, Eligibility & ERAs | Upheal",
+        "category": "billing_docs",
+        "why_selected": "url path contains 'billing'; link text 'new insurance billing'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 983,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://www.upheal.io/features/managed-insurance-billing",
+        "final_url": "https://www.upheal.io/features/managed-insurance-billing",
+        "title": "Managed insurance billing | Upheal",
+        "category": "billing_docs",
+        "why_selected": "url path contains 'billing'; link text 'managed billing waitlist full-service bi'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 1091,
+        "text": "",
+        "truncated": true,
+        "usable": true
+      },
+      {
+        "url": "https://upheal.io/support/en/collections/19715205-insurance-billing",
+        "final_url": "https://www.upheal.io/support/en/collections/19715205-insurance-billing",
+        "title": "Insurance billing | Upheal Support Center",
+        "category": "billing_docs",
+        "why_selected": "url path contains 'billing'; link text 'insurance billing submit and manage insu'",
+        "discovered_via": "linked from help hub https://www.upheal.io/support/en",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 54,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://www.upheal.io/signup",
+        "final_url": "https://www.upheal.io/signup",
+        "title": "Sign up | Upheal",
+        "category": "trial",
+        "why_selected": "url path contains 'signup'; link text 'start free trial'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 57,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://upheal.io/support/en/collections/4586561-using-upheal-with-other-apps",
+        "final_url": "https://www.upheal.io/support/en/collections/4586561-using-upheal-with-other-apps",
+        "title": "Using Upheal with other apps | Upheal Support Center",
+        "category": "addons",
+        "why_selected": "url path contains 'apps'; link text 'using upheal with other apps integration'",
+        "discovered_via": "linked from help hub https://www.upheal.io/support/en",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 99,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://www.upheal.io/support/en",
+        "final_url": "https://www.upheal.io/support/en",
+        "title": "Home | Upheal Support Center",
+        "category": "help",
+        "why_selected": "url path contains 'support'; link text 'support find tutorials and contact our t'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 244,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://www.upheal.io/documentation",
+        "final_url": "https://www.upheal.io/documentation",
+        "title": "Documentation | Upheal",
+        "category": "docs",
+        "why_selected": "url path contains 'documentation'; link text 'clinical documentation templates and gui'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 180,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://upheal.io/support/en/collections/3656417-getting-started-with-upheal",
+        "final_url": "https://www.upheal.io/support/en/collections/3656417-getting-started-with-upheal",
+        "title": "Getting started with Upheal | Upheal Support Center",
+        "category": "help",
+        "why_selected": "url path contains 'support'; link text 'getting started with upheal a helpful gu'",
+        "discovered_via": "linked from help hub https://www.upheal.io/support/en",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 117,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://upheal.io/support/en/collections/3982277-therapy-documentation",
+        "final_url": "https://www.upheal.io/support/en/collections/3982277-therapy-documentation",
+        "title": "Therapy documentation | Upheal Support Center",
+        "category": "docs",
+        "why_selected": "url path contains 'documentation'; link text 'therapy documentation notes, insights, t'",
+        "discovered_via": "linked from help hub https://www.upheal.io/support/en",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 203,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://www.upheal.io/documentation/soap-note-example-2026",
+        "final_url": "https://www.upheal.io/documentation/soap-note-example-2026",
+        "title": "SOAP note example: how to write one (free template)",
+        "category": "docs",
+        "why_selected": "url path contains 'documentation'",
+        "discovered_via": "homepage navigation",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 40,
+        "text": "",
+        "truncated": false,
+        "usable": false
+      },
+      {
+        "url": "https://upheal.io/support/en/collections/3836341-session-capture-methods",
+        "final_url": "https://www.upheal.io/support/en/collections/3836341-session-capture-methods",
+        "title": "Session capture methods | Upheal Support Center",
+        "category": "help",
+        "why_selected": "url path contains 'support'",
+        "discovered_via": "linked from help hub https://www.upheal.io/support/en",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 220,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://www.upheal.io/pricing-reference",
+        "final_url": "https://www.upheal.io/pricing-reference",
+        "title": "Pricing reference",
+        "category": "pricing",
+        "why_selected": "url path contains 'pricing'",
+        "discovered_via": "linked from pricing page https://www.upheal.io/pricing",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 1150,
+        "text": "",
+        "truncated": false,
+        "usable": true
+      },
+      {
+        "url": "https://www.upheal.io/en-ca/pricing",
+        "final_url": "https://www.upheal.io/en-ca/pricing",
+        "title": "Pricing | Upheal",
+        "category": "pricing",
+        "why_selected": "url path contains 'pricing'",
+        "discovered_via": "linked from pricing page https://www.upheal.io/pricing",
+        "ok": true,
+        "error": "",
+        "rendered": false,
+        "word_count": 2553,
+        "text": "",
+        "truncated": true,
+        "usable": true
+      }
+    ],
+    "failures": [
+      {
+        "url": "https://upheal.io/faq",
+        "category": "faq",
+        "reason": "HTTP 404"
+      },
+      {
+        "url": "https://upheal.io/terms",
+        "category": "terms",
+        "reason": "HTTP 404"
+      }
+    ]
+  }
+}
